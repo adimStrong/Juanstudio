@@ -57,13 +57,18 @@ export default function Comments() {
   const topPage = pages.reduce((max, p) =>
     (p.total_comments || 0) > (max?.total_comments || 0) ? p : max, pages[0]);
 
-  // Prepare chart data
-  const commentsByPage = pages.map(p => ({
-    name: p.page_name?.replace('Juana Babe ', ''),
-    comments: p.total_comments || 0,
-    posts: p.post_count || 0,
-    avgPerPost: p.post_count > 0 ? Math.round((p.total_comments || 0) / p.post_count) : 0
-  }));
+  // Prepare chart data - shorten names for chart
+  const commentsByPage = pages.map(p => {
+    let shortName = p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '') || '';
+    if (shortName.length > 12) shortName = shortName.slice(0, 10) + '..';
+    return {
+      name: shortName,
+      fullName: p.page_name,
+      comments: p.total_comments || 0,
+      posts: p.post_count || 0,
+      avgPerPost: p.post_count > 0 ? Math.round((p.total_comments || 0) / p.post_count) : 0
+    };
+  });
 
   const commentsByType = postTypes.map(pt => ({
     type: pt.post_type,
@@ -114,13 +119,23 @@ export default function Comments() {
         {/* Comments by Page Bar Chart */}
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-lg font-semibold mb-4">Comments Distribution by Page</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={commentsByPage} layout="vertical">
-              <CartesianGrid strokeDasharray="3 3" />
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart data={commentsByPage} layout="vertical" margin={{ left: 10 }}>
+              <CartesianGrid strokeDasharray="3 3" horizontal={false} />
               <XAxis type="number" fontSize={11} tickFormatter={(val) => val?.toLocaleString()} />
-              <YAxis type="category" dataKey="name" fontSize={10} width={80} tick={{ fill: '#374151' }} />
-              <Tooltip formatter={(value) => value?.toLocaleString()} />
-              <Bar dataKey="comments" name="Comments" fill="#6366f1" radius={[0, 4, 4, 0]}>
+              <YAxis
+                type="category"
+                dataKey="name"
+                fontSize={11}
+                width={90}
+                tickLine={false}
+                axisLine={false}
+              />
+              <Tooltip
+                formatter={(value) => value?.toLocaleString()}
+                labelFormatter={(label, payload) => payload?.[0]?.payload?.fullName || label}
+              />
+              <Bar dataKey="comments" name="Comments" fill="#6366f1" radius={[0, 4, 4, 0]} barSize={20}>
                 {commentsByPage.map((_, index) => (
                   <Cell key={index} fill={COLORS[index % COLORS.length]} />
                 ))}
