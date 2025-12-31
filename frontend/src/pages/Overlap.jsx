@@ -296,7 +296,7 @@ export default function Overlap() {
       {/* Efficiency Stats */}
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg shadow p-6">
         <h2 className="text-lg font-semibold mb-4 text-indigo-900">Efficiency Comparison</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {pages.map((page, index) => {
             const engPerView = page.views > 0 ? ((page.engagement / page.views) * 100).toFixed(2) : 0;
             const engPerReach = page.reach > 0 ? ((page.engagement / page.reach) * 100).toFixed(2) : 0;
