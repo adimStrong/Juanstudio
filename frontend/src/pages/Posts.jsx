@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getPosts, getPages } from '../services/api';
+import DateFilter from '../components/DateFilter';
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
@@ -10,6 +11,7 @@ export default function Posts() {
   const [hasNext, setHasNext] = useState(false);
   const [filter, setFilter] = useState({ post_type: '', page_id: '', search: '' });
   const [searchInput, setSearchInput] = useState('');
+  const [dateRange, setDateRange] = useState({ startDate: null, endDate: null });
 
   // Load pages for filter dropdown
   useEffect(() => {
@@ -28,7 +30,7 @@ export default function Posts() {
         if (filter.post_type) params.post_type = filter.post_type;
         if (filter.page_id) params.page_id = filter.page_id;
         if (filter.search) params.search = filter.search;
-        const data = await getPosts(params);
+        const data = await getPosts(params, dateRange);
         setPosts(data.results || data);
         setTotalCount(data.count || 0);
         setHasNext(!!data.next);
@@ -39,7 +41,7 @@ export default function Posts() {
       }
     }
     fetchPosts();
-  }, [page, filter]);
+  }, [page, filter, dateRange]);
 
   const formatDate = (date) => {
     if (!date) return 'N/A';
@@ -117,6 +119,11 @@ export default function Posts() {
             <option value="Text">Text</option>
           </select>
         </div>
+      </div>
+
+      {/* Date Filter */}
+      <div className="bg-white rounded-lg shadow p-4">
+        <DateFilter onDateChange={(range) => { setDateRange(range); setPage(1); }} defaultDays={0} />
       </div>
 
       <div className="bg-white rounded-lg shadow overflow-hidden">

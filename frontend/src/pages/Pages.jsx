@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import DateFilter from '../components/DateFilter';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { getPages } from '../services/api';
 
@@ -7,11 +8,12 @@ const COLORS = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899'
 export default function Pages() {
   const [pages, setPages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [dateRange, setDateRange] = useState({ startDate: null, endDate: null });
 
   useEffect(() => {
     async function fetchPages() {
       try {
-        const data = await getPages();
+        const data = await getPages(dateRange);
         setPages(data);
       } catch (err) {
         console.error(err);
@@ -20,7 +22,7 @@ export default function Pages() {
       }
     }
     fetchPages();
-  }, []);
+  }, [dateRange]);
 
   if (loading) {
     return (
@@ -46,6 +48,11 @@ export default function Pages() {
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-900">JuanStudio - JuanKada Pages</h1>
         <span className="text-sm text-gray-500">{pages.length} pages tracked</span>
+      </div>
+
+      {/* Date Filter */}
+      <div className="bg-white rounded-lg shadow p-4">
+        <DateFilter onDateChange={setDateRange} defaultDays={0} />
       </div>
 
       {/* Summary Stats */}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import DateFilter from '../components/DateFilter';
 import {
   PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, Legend
@@ -13,12 +14,13 @@ export default function Comments() {
   const [topCommented, setTopCommented] = useState([]);
   const [commentAnalysis, setCommentAnalysis] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [dateRange, setDateRange] = useState({ startDate: null, endDate: null });
 
   useEffect(() => {
     async function fetchData() {
       try {
         const [pageData, postTypeData, topPostsData, analysisData] = await Promise.all([
-          getPages(),
+          getPages(dateRange),
           getPostTypeStats(),
           getTopPosts(20, 'engagement'),
           getCommentAnalysis(),
@@ -36,7 +38,7 @@ export default function Comments() {
       }
     }
     fetchData();
-  }, []);
+  }, [dateRange]);
 
   if (loading) {
     return (
@@ -77,6 +79,11 @@ export default function Comments() {
           <h1 className="text-2xl font-bold text-gray-900">Comment Analysis</h1>
           <p className="text-sm text-gray-500">Analyze comment distribution across pages and post types</p>
         </div>
+      </div>
+
+      {/* Date Filter */}
+      <div className="bg-white rounded-lg shadow p-4">
+        <DateFilter onDateChange={setDateRange} defaultDays={0} />
       </div>
 
       {/* Summary Stats */}

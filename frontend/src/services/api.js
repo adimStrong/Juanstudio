@@ -180,11 +180,23 @@ export const getTopPosts = async (limit = 10, metric = 'engagement', pageId = nu
   return api.get(`/stats/top-posts/?${params}`).then(res => res.data);
 };
 
-export const getPosts = async (params = {}) => {
+export const getPosts = async (params = {}, dateRange = {}) => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
     // Normalize post_type (Videos/Reels -> Videos/Reels)
     let posts = (data.posts || []).map(normalizePostType);
+
+    // Apply date filter
+    const { startDate, endDate } = dateRange;
+    if (startDate || endDate) {
+      posts = posts.filter(p => {
+        const postDate = p.publish_time?.slice(0, 10);
+        if (!postDate) return true;
+        if (startDate && postDate < startDate) return false;
+        if (endDate && postDate > endDate) return false;
+        return true;
+      });
+    }
 
     // Apply filters
     if (params.post_type) {
@@ -221,10 +233,61 @@ export const getPosts = async (params = {}) => {
 
 export const getPost = (id) => api.get(`/posts/${id}/`).then(res => res.data);
 
-export const getPages = async () => {
+export const getPages = async (dateRange = {}) => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
-    return data.pages;
+    const { startDate, endDate } = dateRange;
+
+    // If no date filter, return cached pages
+    if (!startDate && !endDate) {
+      return data.pages;
+    }
+
+    // Filter posts by date and recalculate page stats
+    let posts = (data.posts || []);
+    posts = posts.filter(p => {
+      const postDate = p.publish_time?.slice(0, 10);
+      if (!postDate) return true;
+      if (startDate && postDate < startDate) return false;
+      if (endDate && postDate > endDate) return false;
+      return true;
+    });
+
+    // Aggregate by page
+    const pageStats = {};
+    posts.forEach(p => {
+      const pid = p.page_id;
+      if (!pageStats[pid]) {
+        pageStats[pid] = {
+          page_id: pid,
+          page_name: p.page_name,
+          name: p.page_name,
+          post_count: 0,
+          total_views: 0,
+          total_reach: 0,
+          total_reactions: 0,
+          total_comments: 0,
+          total_shares: 0,
+          total_engagement: 0,
+        };
+      }
+      pageStats[pid].post_count++;
+      pageStats[pid].total_views += p.views || 0;
+      pageStats[pid].total_reach += p.reach || 0;
+      pageStats[pid].total_reactions += p.reactions || 0;
+      pageStats[pid].total_comments += p.comments || 0;
+      pageStats[pid].total_shares += p.shares || 0;
+      pageStats[pid].total_engagement += p.engagement || 0;
+    });
+
+    // Calculate averages and sort by engagement
+    return Object.values(pageStats)
+      .map(p => ({
+        ...p,
+        avg_engagement: p.post_count > 0 ? Math.round(p.total_engagement / p.post_count) : 0,
+        avg_reach: p.post_count > 0 ? Math.round(p.total_reach / p.post_count) : 0,
+      }))
+      .sort((a, b) => b.total_engagement - a.total_engagement);
   }
   return api.get('/pages/').then(res => res.data);
 };
