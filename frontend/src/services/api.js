@@ -364,14 +364,89 @@ export const getCommentAnalysis = async () => {
   return api.get('/stats/comment-analysis/').then(res => res.data);
 };
 
-export const getPageComparison = async () => {
+export const getPageComparison = async (dateRange = {}) => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
-    return data.pageComparison || {
-      pages: [],
-      postTypesByPage: {},
-      dominantTypes: {}
-    };
+    const { startDate, endDate } = dateRange;
+
+    // If no date filter, return cached comparison
+    if (!startDate && !endDate) {
+      return data.pageComparison || {
+        pages: [],
+        postTypesByPage: {},
+        dominantTypes: {}
+      };
+    }
+
+    // Filter posts by date and recalculate page comparison
+    let posts = (data.posts || []);
+    posts = posts.filter(p => {
+      const postDate = p.publish_time?.slice(0, 10);
+      if (!postDate) return true;
+      if (startDate && postDate < startDate) return false;
+      if (endDate && postDate > endDate) return false;
+      return true;
+    });
+
+    // Aggregate by page
+    const pageStats = {};
+    const postTypesByPage = {};
+
+    posts.forEach(p => {
+      const pid = p.page_id;
+      if (!pageStats[pid]) {
+        pageStats[pid] = {
+          page_id: pid,
+          page_name: p.page_name,
+          posts: 0,
+          views: 0,
+          reach: 0,
+          reactions: 0,
+          comments: 0,
+          shares: 0,
+          engagement: 0,
+          fan_count: 0,
+        };
+        postTypesByPage[pid] = {};
+      }
+      pageStats[pid].posts++;
+      pageStats[pid].views += p.views || 0;
+      pageStats[pid].reach += p.reach || 0;
+      pageStats[pid].reactions += p.reactions || 0;
+      pageStats[pid].comments += p.comments || 0;
+      pageStats[pid].shares += p.shares || 0;
+      pageStats[pid].engagement += p.engagement || 0;
+
+      // Track post types
+      const ptype = p.post_type || 'Unknown';
+      if (!postTypesByPage[pid][ptype]) {
+        postTypesByPage[pid][ptype] = { type: ptype, count: 0, engagement: 0 };
+      }
+      postTypesByPage[pid][ptype].count++;
+      postTypesByPage[pid][ptype].engagement += p.engagement || 0;
+    });
+
+    // Calculate averages, sort, and add rankings
+    const totalEngagement = Object.values(pageStats).reduce((sum, p) => sum + p.engagement, 0);
+    const pages = Object.values(pageStats)
+      .map(p => ({
+        ...p,
+        avg_engagement: p.posts > 0 ? Math.round(p.engagement / p.posts) : 0,
+        engagement_share: totalEngagement > 0 ? Math.round((p.engagement / totalEngagement) * 100) : 0,
+      }))
+      .sort((a, b) => b.engagement - a.engagement)
+      .map((p, idx) => ({ ...p, rank: idx + 1 }));
+
+    // Convert postTypesByPage to arrays and find dominant types
+    const postTypesResult = {};
+    const dominantTypes = {};
+    Object.keys(postTypesByPage).forEach(pid => {
+      const types = Object.values(postTypesByPage[pid]).sort((a, b) => b.count - a.count);
+      postTypesResult[pid] = types;
+      dominantTypes[pid] = types[0] || { type: 'N/A' };
+    });
+
+    return { pages, postTypesByPage: postTypesResult, dominantTypes };
   }
   return api.get('/stats/page-comparison/').then(res => res.data);
 };

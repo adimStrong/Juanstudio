@@ -4,6 +4,7 @@ import {
   RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Cell
 } from 'recharts';
 import { getPageComparison } from '../services/api';
+import DateFilter from '../components/DateFilter';
 
 const COLORS = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316', '#06b6d4', '#84cc16', '#a855f7', '#d946ef', '#0ea5e9'];
 
@@ -11,11 +12,13 @@ export default function Overlap() {
   const [comparison, setComparison] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedMetric, setSelectedMetric] = useState('engagement');
+  const [dateRange, setDateRange] = useState({ startDate: null, endDate: null });
 
   useEffect(() => {
     async function fetchData() {
+      setLoading(true);
       try {
-        const data = await getPageComparison();
+        const data = await getPageComparison(dateRange);
         setComparison(data);
       } catch (err) {
         console.error(err);
@@ -24,7 +27,7 @@ export default function Overlap() {
       }
     }
     fetchData();
-  }, []);
+  }, [dateRange]);
 
   if (loading) {
     return (
@@ -97,11 +100,12 @@ export default function Overlap() {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Page Comparison</h1>
           <p className="text-sm text-gray-500">Compare performance across all JuanKada pages</p>
         </div>
+        <DateFilter onFilterChange={setDateRange} />
       </div>
 
       {/* Rankings Table */}

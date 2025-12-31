@@ -22,7 +22,7 @@ from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 
-DATABASE_PATH = "data/juanbabes_analytics.db"
+DATABASE_PATH = "data/juanstudio_analytics.db"
 
 # Load page tokens from page_tokens.json
 import json
