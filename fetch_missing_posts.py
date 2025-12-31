@@ -11,9 +11,8 @@ import time
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Telegram notifications - DISABLED during initial setup to avoid spam
-# Set to True once historical data is imported
-TELEGRAM_ENABLED = False
+# Telegram notifications - enabled for new post alerts
+TELEGRAM_ENABLED = True
 try:
     from telegram_notifier import send_new_post_alert
 except ImportError:
