@@ -12,13 +12,22 @@ export default function Overlap() {
   const [comparison, setComparison] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedMetric, setSelectedMetric] = useState('engagement');
-  const [dateRange, setDateRange] = useState({ startDate: null, endDate: null });
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+
+  // Handle date filter changes - only update if values actually changed
+  const handleDateChange = ({ startDate: newStart, endDate: newEnd }) => {
+    if (newStart !== startDate || newEnd !== endDate) {
+      setStartDate(newStart);
+      setEndDate(newEnd);
+    }
+  };
 
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
       try {
-        const data = await getPageComparison(dateRange);
+        const data = await getPageComparison({ startDate, endDate });
         setComparison(data);
       } catch (err) {
         console.error(err);
@@ -27,7 +36,7 @@ export default function Overlap() {
       }
     }
     fetchData();
-  }, [dateRange]);
+  }, [startDate, endDate]);
 
   if (loading) {
     return (
@@ -105,7 +114,7 @@ export default function Overlap() {
           <h1 className="text-2xl font-bold text-gray-900">Page Comparison</h1>
           <p className="text-sm text-gray-500">Compare performance across all JuanKada pages</p>
         </div>
-        <DateFilter onDateChange={setDateRange} />
+        <DateFilter onDateChange={handleDateChange} />
       </div>
 
       {/* Rankings Table */}
