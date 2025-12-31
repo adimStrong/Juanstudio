@@ -6,7 +6,7 @@ import {
 } from 'recharts';
 import { getPages, getPostTypeStats, getTopPosts, getCommentAnalysis } from '../services/api';
 
-const COLORS = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6'];
+const COLORS = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316', '#06b6d4', '#84cc16', '#a855f7', '#d946ef', '#0ea5e9'];
 
 export default function Comments() {
   const [pages, setPages] = useState([]);
@@ -111,30 +111,21 @@ export default function Comments() {
 
       {/* Charts Row */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Comments by Page Pie */}
+        {/* Comments by Page Bar Chart */}
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-lg font-semibold mb-4">Comments Distribution by Page</h2>
           <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie
-                data={commentsByPage}
-                dataKey="comments"
-                nameKey="name"
-                cx="50%"
-                cy="50%"
-                innerRadius={40}
-                outerRadius={80}
-                paddingAngle={2}
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                labelLine={{ stroke: '#666', strokeWidth: 1 }}
-              >
+            <BarChart data={commentsByPage} layout="vertical">
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis type="number" fontSize={11} tickFormatter={(val) => val?.toLocaleString()} />
+              <YAxis type="category" dataKey="name" fontSize={10} width={80} tick={{ fill: '#374151' }} />
+              <Tooltip formatter={(value) => value?.toLocaleString()} />
+              <Bar dataKey="comments" name="Comments" fill="#6366f1" radius={[0, 4, 4, 0]}>
                 {commentsByPage.map((_, index) => (
                   <Cell key={index} fill={COLORS[index % COLORS.length]} />
                 ))}
-              </Pie>
-              <Tooltip formatter={(value) => value?.toLocaleString()} />
-              <Legend />
-            </PieChart>
+              </Bar>
+            </BarChart>
           </ResponsiveContainer>
         </div>
 
