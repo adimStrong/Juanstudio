@@ -308,11 +308,11 @@ export default function Dashboard() {
                   nameKey="post_type"
                   cx="50%"
                   cy="50%"
-                  innerRadius={40}
-                  outerRadius={80}
+                  innerRadius={50}
+                  outerRadius={100}
                   paddingAngle={2}
-                  label={({ post_type, percent }) => `${post_type} ${(percent * 100).toFixed(0)}%`}
-                  labelLine={{ stroke: '#666', strokeWidth: 1 }}
+                  label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
+                  labelLine={false}
                 >
                   {postTypes.map((_, index) => (
                     <Cell key={index} fill={COLORS[index % COLORS.length]} />
@@ -322,7 +322,7 @@ export default function Dashboard() {
                 <Pie
                   data={pageComparison.map(p => ({
                     ...p,
-                    short_name: p.page_name?.replace('Juana Babe ', ''),
+                    short_name: p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('Juankada ', '').replace('JUANKada ', ''),
                     value: pageMetric === 'posts' ? p.post_count :
                            pageMetric === 'views' ? p.total_views :
                            pageMetric === 'reach' ? p.total_reach : p.total_engagement
@@ -331,11 +331,11 @@ export default function Dashboard() {
                   nameKey="short_name"
                   cx="50%"
                   cy="50%"
-                  innerRadius={40}
-                  outerRadius={80}
+                  innerRadius={50}
+                  outerRadius={100}
                   paddingAngle={2}
-                  label={({ short_name, percent }) => `${short_name} ${(percent * 100).toFixed(0)}%`}
-                  labelLine={{ stroke: '#666', strokeWidth: 1 }}
+                  label={false}
+                  labelLine={false}
                 >
                   {pageComparison.map((_, index) => (
                     <Cell key={index} fill={COLORS[index % COLORS.length]} />
