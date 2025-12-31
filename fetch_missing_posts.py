@@ -26,17 +26,18 @@ with open("page_tokens.json", "r") as f:
 
 
 def get_api_to_csv_mapping():
-    """Get mapping from API page_ids to CSV page_ids."""
+    """Get mapping from API page_ids to CSV page_ids (case-insensitive)."""
     conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()
-    cursor.execute('SELECT page_id, page_name FROM pages WHERE page_id LIKE "615%" OR page_id LIKE "100%"')
-    csv_pages = {row[1]: row[0] for row in cursor.fetchall()}
+    cursor.execute('SELECT page_id, page_name FROM pages WHERE page_id LIKE "61%" OR page_id LIKE "100%"')
+    # Use lowercase names for case-insensitive matching
+    csv_pages = {row[1].lower(): row[0] for row in cursor.fetchall()}
     conn.close()
 
     mapping = {}
     for label, data in PAGE_TOKENS.items():
         api_id = data.get("page_id")
-        name = data.get("page_name")
+        name = data.get("page_name", "").lower()
         if name in csv_pages:
             mapping[api_id] = csv_pages[name]
     return mapping
