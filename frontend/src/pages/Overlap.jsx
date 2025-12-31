@@ -5,7 +5,7 @@ import {
 } from 'recharts';
 import { getPageComparison } from '../services/api';
 
-const COLORS = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6'];
+const COLORS = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316', '#06b6d4', '#84cc16', '#a855f7', '#d946ef', '#0ea5e9'];
 
 export default function Overlap() {
   const [comparison, setComparison] = useState(null);
@@ -49,7 +49,7 @@ export default function Overlap() {
 
   // Prepare chart data
   const chartData = pages.map(p => ({
-    name: p.page_name?.replace('Juana Babe ', ''),
+    name: p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', ''),
     posts: p.posts,
     engagement: p.engagement,
     avgEngagement: p.avg_engagement,
@@ -79,7 +79,7 @@ export default function Overlap() {
   ];
 
   pages.forEach(p => {
-    const name = p.page_name?.replace('Juana Babe ', '');
+    const name = p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '');
     radarData[0][name] = Math.round((p.posts / maxValues.posts) * 100);
     radarData[1][name] = Math.round((p.avg_engagement / maxValues.engagement) * 100);
     radarData[2][name] = Math.round((p.views / maxValues.views) * 100);
@@ -100,7 +100,7 @@ export default function Overlap() {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Page Comparison</h1>
-          <p className="text-sm text-gray-500">Compare performance across all 5 JuanBabes pages</p>
+          <p className="text-sm text-gray-500">Compare performance across all JuanKada pages</p>
         </div>
       </div>
 
@@ -136,7 +136,7 @@ export default function Overlap() {
                     </span>
                   </td>
                   <td className="py-3 font-medium">
-                    {page.page_name?.replace('Juana Babe ', '')}
+                    {page.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
                     {index === 0 && (
                       <span className="ml-2 text-xs bg-indigo-600 text-white px-2 py-0.5 rounded">TOP</span>
                     )}
@@ -220,10 +220,10 @@ export default function Overlap() {
               {pages.slice(0, 3).map((p, index) => (
                 <Radar
                   key={p.page_id}
-                  name={p.page_name?.replace('Juana Babe ', '')}
-                  dataKey={p.page_name?.replace('Juana Babe ', '')}
-                  stroke={COLORS[index]}
-                  fill={COLORS[index]}
+                  name={p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
+                  dataKey={p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
+                  stroke={COLORS[index % COLORS.length]}
+                  fill={COLORS[index % COLORS.length]}
                   fillOpacity={0.2}
                 />
               ))}
@@ -239,15 +239,15 @@ export default function Overlap() {
       {/* Content Strategy */}
       <div className="bg-white rounded-lg shadow p-6">
         <h2 className="text-lg font-semibold mb-4">Content Strategy Comparison</h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {pages.map((page, index) => {
             const pageTypes = postTypesByPage[page.page_id] || [];
             const totalPosts = pageTypes.reduce((sum, t) => sum + t.count, 0);
 
             return (
               <div key={page.page_id} className="border rounded-lg p-4">
-                <h3 className="font-medium text-sm mb-2" style={{ color: COLORS[index] }}>
-                  {page.page_name?.replace('Juana Babe ', '')}
+                <h3 className="font-medium text-sm mb-2" style={{ color: COLORS[index % COLORS.length] }}>
+                  {page.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
                 </h3>
                 <div className="space-y-2">
                   {pageTypes.slice(0, 4).map(type => {
@@ -260,7 +260,7 @@ export default function Overlap() {
                             className="h-2 rounded-full"
                             style={{
                               width: `${pct}%`,
-                              backgroundColor: COLORS[index]
+                              backgroundColor: COLORS[index % COLORS.length]
                             }}
                           />
                         </div>
@@ -283,15 +283,15 @@ export default function Overlap() {
       {/* Efficiency Stats */}
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg shadow p-6">
         <h2 className="text-lg font-semibold mb-4 text-indigo-900">Efficiency Comparison</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {pages.map((page, index) => {
             const engPerView = page.views > 0 ? ((page.engagement / page.views) * 100).toFixed(2) : 0;
             const engPerReach = page.reach > 0 ? ((page.engagement / page.reach) * 100).toFixed(2) : 0;
 
             return (
               <div key={page.page_id} className="bg-white rounded-lg p-4 shadow-sm">
-                <h3 className="font-medium text-sm mb-2" style={{ color: COLORS[index] }}>
-                  {page.page_name?.replace('Juana Babe ', '')}
+                <h3 className="font-medium text-sm mb-2" style={{ color: COLORS[index % COLORS.length] }}>
+                  {page.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
                 </h3>
                 <div className="space-y-1">
                   <div className="flex justify-between text-xs">
