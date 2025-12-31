@@ -105,7 +105,7 @@ export default function Overlap() {
           <h1 className="text-2xl font-bold text-gray-900">Page Comparison</h1>
           <p className="text-sm text-gray-500">Compare performance across all JuanKada pages</p>
         </div>
-        <DateFilter onFilterChange={setDateRange} />
+        <DateFilter onDateChange={setDateRange} />
       </div>
 
       {/* Rankings Table */}
