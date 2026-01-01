@@ -125,7 +125,7 @@
         "avg_views": 395.7,
         "avg_reach": 145.0,
         "date_range_start": "2025-12-01",
-        "date_range_end": "2025-12-31"
+        "date_range_end": "2026-01-01"
       },
       "61584243275518": {
         "total_posts": 47,
@@ -260,8 +260,8 @@
       "page_id": "61584067509799",
       "name": "Juankada Ligaya",
       "page_name": "Juankada Ligaya",
-      "fan_count": 1147,
-      "followers_count": 1147,
+      "fan_count": 1146,
+      "followers_count": 1146,
       "post_count": 30,
       "total_reactions": 1672,
       "total_comments": 193,
@@ -276,8 +276,8 @@
       "page_id": "61584361885503",
       "name": "Juankada Sabbie",
       "page_name": "Juankada Sabbie",
-      "fan_count": 159,
-      "followers_count": 159,
+      "fan_count": 160,
+      "followers_count": 160,
       "post_count": 27,
       "total_reactions": 1081,
       "total_comments": 101,
@@ -12468,7 +12468,7 @@
         "page_id": "61584067509799",
         "name": "Juankada Ligaya",
         "page_name": "Juankada Ligaya",
-        "fan_count": 1147,
+        "fan_count": 1146,
         "posts": 30,
         "engagement": 2024,
         "avg_engagement": 67.5,
@@ -12485,7 +12485,7 @@
         "page_id": "61584361885503",
         "name": "Juankada Sabbie",
         "page_name": "Juankada Sabbie",
-        "fan_count": 159,
+        "fan_count": 160,
         "posts": 27,
         "engagement": 1201,
         "avg_engagement": 44.5,
@@ -12588,15 +12588,15 @@
         "name": "Juankada Papa Joe",
         "page_name": "Juankada Papa Joe",
         "fan_count": 1621,
-        "posts": 26,
+        "posts": 27,
         "engagement": 435,
-        "avg_engagement": 16.7,
+        "avg_engagement": 16.1,
         "views": 8967,
         "reach": 3357,
         "reactions": 355,
         "comments": 40,
         "shares": 40,
-        "avg_pes": 21.3,
+        "avg_pes": 20.6,
         "rank": 8,
         "engagement_share": 5.4
       },
@@ -12796,9 +12796,9 @@
         },
         {
           "type": "Videos",
-          "count": 9,
+          "count": 10,
           "engagement": 165,
-          "avg_engagement": 18.3
+          "avg_engagement": 16.5
         },
         {
           "type": "Text",
@@ -12995,7 +12995,7 @@
       },
       "61584233476725": {
         "type": "Photos",
-        "percentage": 42.3
+        "percentage": 40.7
       },
       "61584243275518": {
         "type": "Videos",
