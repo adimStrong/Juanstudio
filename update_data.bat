@@ -1,12 +1,12 @@
 @echo off
-title JuanBabes - Update Data
+title JuanStudio - Update Data
 color 0A
-cd /d C:\Users\us\Desktop\juanbabes_project
+cd /d C:\Users\us\Desktop\juanstudio_project
 
 :MENU
 echo.
 echo ============================================================
-echo JuanBabes Data Update Tool
+echo JuanStudio Data Update Tool
 echo ============================================================
 echo.
 echo   [1] CSV Import (Meta exports) + Export + Push
