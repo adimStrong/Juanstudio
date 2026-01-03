@@ -35,7 +35,7 @@ def fetch_page_info(page_id, token):
 
 def update_fan_counts():
     """Update fan counts in database for all pages."""
-    conn = sqlite3.connect(DATABASE_PATH)
+    conn = sqlite3.connect(DATABASE_PATH, timeout=30)
     cursor = conn.cursor()
 
     print("=" * 60)
