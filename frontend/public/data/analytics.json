@@ -1,20 +1,20 @@
 {
   "stats": {
     "all": {
-      "total_posts": 615,
-      "total_pages": 14,
-      "all_pages": 14,
-      "total_reactions": 11190,
-      "total_comments": 1054,
-      "total_shares": 658,
-      "total_engagement": 12902,
-      "total_pes": 13163.0,
-      "total_views": 298231,
-      "total_reach": 147279,
-      "avg_engagement": 21.0,
+      "total_posts": 603,
+      "total_pages": 13,
+      "all_pages": 13,
+      "total_reactions": 11044,
+      "total_comments": 1025,
+      "total_shares": 636,
+      "total_engagement": 12705,
+      "total_pes": 12893.0,
+      "total_views": 293760,
+      "total_reach": 144100,
+      "avg_engagement": 21.1,
       "avg_pes": 21.4,
-      "avg_views": 484.9,
-      "avg_reach": 239.5,
+      "avg_views": 487.2,
+      "avg_reach": 239.0,
       "date_range_start": "2025-11-25",
       "date_range_end": "2026-01-03"
     },
@@ -72,24 +72,6 @@
         "avg_reach": 38.3,
         "date_range_start": "2025-12-21",
         "date_range_end": "2026-01-03"
-      },
-      "61582036535912": {
-        "total_posts": 12,
-        "total_pages": 1,
-        "all_pages": 1,
-        "total_reactions": 146,
-        "total_comments": 29,
-        "total_shares": 22,
-        "total_engagement": 197,
-        "total_pes": 270.0,
-        "total_views": 4471,
-        "total_reach": 3179,
-        "avg_engagement": 16.4,
-        "avg_pes": 22.5,
-        "avg_views": 372.6,
-        "avg_reach": 264.9,
-        "date_range_start": "2025-12-31",
-        "date_range_end": "2026-01-02"
       },
       "61583996447175": {
         "total_posts": 55,
@@ -467,22 +449,6 @@
       "total_reach": 1944
     },
     {
-      "page_id": "61582036535912",
-      "name": "JuanSports",
-      "page_name": "JuanSports",
-      "fan_count": null,
-      "followers_count": null,
-      "post_count": 12,
-      "total_reactions": 146,
-      "total_comments": 29,
-      "total_shares": 22,
-      "total_engagement": 197,
-      "avg_engagement": 16.4,
-      "avg_pes": 22.5,
-      "total_views": 4471,
-      "total_reach": 3179
-    },
-    {
       "page_id": "61565865626361",
       "name": "Juankada Geoff",
       "page_name": "Juankada Geoff",
@@ -503,23 +469,23 @@
     "all": [
       {
         "post_type": "Videos",
-        "count": 273,
-        "reactions": 5991,
-        "comments": 649,
-        "shares": 308,
-        "total_engagement": 6948,
+        "count": 271,
+        "reactions": 5964,
+        "comments": 645,
+        "shares": 303,
+        "total_engagement": 6912,
         "avg_engagement": 25.5,
         "avg_pes": 25.5
       },
       {
         "post_type": "Photos",
-        "count": 249,
-        "reactions": 3982,
-        "comments": 311,
-        "shares": 264,
-        "total_engagement": 4557,
-        "avg_engagement": 18.3,
-        "avg_pes": 20.2
+        "count": 239,
+        "reactions": 3863,
+        "comments": 286,
+        "shares": 247,
+        "total_engagement": 4396,
+        "avg_engagement": 18.4,
+        "avg_pes": 20.1
       },
       {
         "post_type": "Text",
@@ -657,28 +623,6 @@
           "total_engagement": 9,
           "avg_engagement": 4.5,
           "avg_pes": 4.5
-        }
-      ],
-      "61582036535912": [
-        {
-          "post_type": "Photos",
-          "count": 10,
-          "reactions": 119,
-          "comments": 25,
-          "shares": 17,
-          "total_engagement": 161,
-          "avg_engagement": 16.1,
-          "avg_pes": 22.0
-        },
-        {
-          "post_type": "Videos",
-          "count": 2,
-          "reactions": 27,
-          "comments": 4,
-          "shares": 5,
-          "total_engagement": 36,
-          "avg_engagement": 18.0,
-          "avg_pes": 25.0
         }
       ],
       "61583996447175": [
@@ -1333,36 +1277,36 @@
       },
       {
         "date": "2025-12-31",
-        "posts": 68,
-        "reactions": 1010,
-        "comments": 123,
-        "shares": 41,
-        "engagement": 1174,
-        "pes": 1137.0,
-        "views": 31326,
-        "reach": 18452
+        "posts": 62,
+        "reactions": 930,
+        "comments": 96,
+        "shares": 27,
+        "engagement": 1053,
+        "pes": 961.0,
+        "views": 29110,
+        "reach": 16986
       },
       {
         "date": "2026-01-01",
-        "posts": 48,
-        "reactions": 663,
+        "posts": 44,
+        "reactions": 618,
         "comments": 38,
-        "shares": 50,
-        "engagement": 751,
-        "pes": 765.0,
-        "views": 14970,
-        "reach": 6583
+        "shares": 47,
+        "engagement": 703,
+        "pes": 711.0,
+        "views": 13401,
+        "reach": 5492
       },
       {
         "date": "2026-01-02",
-        "posts": 60,
-        "reactions": 738,
-        "comments": 48,
-        "shares": 62,
-        "engagement": 848,
-        "pes": 1014.0,
-        "views": 14334,
-        "reach": 5599
+        "posts": 58,
+        "reactions": 717,
+        "comments": 46,
+        "shares": 57,
+        "engagement": 820,
+        "pes": 974.0,
+        "views": 13648,
+        "reach": 4977
       },
       {
         "date": "2026-01-03",
@@ -1722,41 +1666,6 @@
           "pes": 2.0,
           "views": 0,
           "reach": 12
-        }
-      ],
-      "61582036535912": [
-        {
-          "date": "2025-12-31",
-          "posts": 6,
-          "reactions": 80,
-          "comments": 27,
-          "shares": 14,
-          "engagement": 121,
-          "pes": 176.0,
-          "views": 2216,
-          "reach": 1466
-        },
-        {
-          "date": "2026-01-01",
-          "posts": 4,
-          "reactions": 45,
-          "comments": 0,
-          "shares": 3,
-          "engagement": 48,
-          "pes": 54.0,
-          "views": 1569,
-          "reach": 1091
-        },
-        {
-          "date": "2026-01-02",
-          "posts": 2,
-          "reactions": 21,
-          "comments": 2,
-          "shares": 5,
-          "engagement": 28,
-          "pes": 40.0,
-          "views": 686,
-          "reach": 622
         }
       ],
       "61583996447175": [
@@ -3957,148 +3866,6 @@
           "pes": 4.0
         }
       ],
-      "61582036535912": [
-        {
-          "post_id": "122115170655067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "\ud835\ude3d\ud835\ude56\ud835\ude68\ud835\ude60\ud835\ude5a\ud835\ude69\ud835\ude57\ud835\ude56\ud835\ude61\ud835\ude61 \ud835\ude3e\ud835\ude5d\ud835\ude56\ud835\ude61\ud835\ude61\ud835\ude5a\ud835\ude63\ud835\ude5c\ud835\ude5a, \ud835\ude45\ud835\ude6a\ud835\ude56\ud835\ude63\ud835\ude60\ud835\ude56\ud835\ude59\ud835\ude56!\n\nSino kaya ang player na nagpa-wow sa court? I-drop ang guess mo sa comments \u2764\ufe0f\nShare na at tingnan kung sino ang tunay na fan! \ud83c\udfc0\n\n#Juan365PH #AllInJuanSaSaya #JuanKada",
-          "post_type": "Photos",
-          "publish_time": "2025-12-31T18:00:00",
-          "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid0R4xjT6qMgeq9qr8FxHXPKf5VDGxHoZnsheRM287tXqBPZp1DxqJk2dy6Rj1GqyRxl",
-          "reactions": 14,
-          "comments": 14,
-          "shares": 9,
-          "engagement": 37,
-          "pes": 69.0
-        },
-        {
-          "post_id": "122115304623067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "\ud835\udfd2\ud835\udfd3 \ud835\udc0f\ud835\udc0e\ud835\udc08\ud835\udc0d\ud835\udc13\ud835\udc12 \ud835\udc00\ud835\udc0b\ud835\udc04\ud835\udc11\ud835\udc13!\nKawhi Leonard doing it all sa clutch moments \ud83d\ude2e\u200d\ud83d\udd25\n\nJuankada, tap \u2665\ufe0f kung ramdam nyo energy nito and follow for more!\n\n#KawhiLeonard #Juankada #NBANight #BeastMode #Buckets #Juan365PH #",
-          "post_type": "Photos",
-          "publish_time": "2026-01-01T23:11:00",
-          "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid02Lcu1rD8rMentzTukhqk9cvdRZbCECPQc8yUCMnaCCRvpLbzErnTa4JKTxjQb5wTCl",
-          "reactions": 30,
-          "comments": 0,
-          "shares": 1,
-          "engagement": 31,
-          "pes": 33.0
-        },
-        {
-          "post_id": "122115193119067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "\ud835\udc09\ud835\udc14\ud835\udc0b\ud835\udc08\ud835\udc00\ud835\udc0d \ud835\udc02\ud835\udc07\ud835\udc00\ud835\udc0c\ud835\udc0f\ud835\udc00\ud835\udc06\ud835\udc0d\ud835\udc08\ud835\udc04 \ud835\udc0e\ud835\udc0d \ud835\udc05\ud835\udc08\ud835\udc11\ud835\udc04!\ud83d\udd25 \n36PTS, 6REB, 0AST pure scoring mode, Juankada \ud83d\ude0e\n\nJuanabies, sino pa ang impressed sa shooting spree nito? \ud83d\udc49 Drop a \ud83d\udd25 sa comments!\n\n#Juan365PH #AllInJuanSaSaya #JuanKada #J",
-          "post_type": "Photos",
-          "publish_time": "2025-12-31T21:58:00",
-          "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid02GrFyUUA3kzXxbQaPjm6sW7Qepdp74kYbKS7iKQ6gho42tCRPNGYcXbDMQ3QbZuVyl",
-          "reactions": 16,
-          "comments": 5,
-          "shares": 1,
-          "engagement": 22,
-          "pes": 29.0
-        },
-        {
-          "post_id": "122115194709067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "\ud835\udc12\ud835\udc07\ud835\udc00\ud835\udc08 \ud835\udc06\ud835\udc08\ud835\udc0b\ud835\udc06\ud835\udc04\ud835\udc0e\ud835\udc14\ud835\udc12-\ud835\udc00\ud835\udc0b\ud835\udc04\ud835\udc17\ud835\udc00\ud835\udc0d\ud835\udc03\ud835\udc04\ud835\udc11 \ud835\udc13\ud835\udc00\ud835\udc0a\ud835\udc08\ud835\udc0d\ud835\udc06 \ud835\udc0e\ud835\udc15\ud835\udc04\ud835\udc11!\n30PTS, 2REB, 6AST clutch at smooth sa court, Juankada \ud83d\ude0e\ud83d\udca5\n\nJuankada, sino pa ang feeling MVP vibes \ud83d\udc49 Comment mo na!\n\n#ShaiGilgeousAlexander #SGA #NBANight #Juankada",
-          "post_type": "Photos",
-          "publish_time": "2025-12-31T22:20:00",
-          "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid021sAX7dyZo5mAKwrbrh5NRkQhBkeFVGTZRaehQALAb8dB5ouTjdTCGk7LXuTZv3Qel",
-          "reactions": 16,
-          "comments": 3,
-          "shares": 1,
-          "engagement": 20,
-          "pes": 25.0
-        },
-        {
-          "post_id": "122115082191067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "\ud835\ude3d\ud835\ude56\ud835\ude68\ud835\ude60\ud835\ude5a\ud835\ude69\ud835\ude57\ud835\ude56\ud835\ude61\ud835\ude61 \ud835\ude3e\ud835\ude5d\ud835\ude56\ud835\ude61\ud835\ude61\ud835\ude5a\ud835\ude63\ud835\ude5c\ud835\ude5a, \ud835\ude45\ud835\ude6a\ud835\ude56\ud835\ude63\ud835\ude60\ud835\ude56\ud835\ude59\ud835\ude56!\n\nSino kaya ang player na nagpa-wow sa court? I-drop ang guess mo sa comments \u2764\ufe0f\nShare na at tingnan kung sino ang tunay na fan! \ud83c\udfc0\n\n#Juan365PH #AllInJuanSaSaya #JuanKada",
-          "post_type": "Videos",
-          "publish_time": "2025-12-31T02:01:00",
-          "permalink": "https://www.facebook.com/reel/1592058865546010/",
-          "reactions": 13,
-          "comments": 3,
-          "shares": 3,
-          "engagement": 19,
-          "pes": 28.0
-        },
-        {
-          "post_id": "122115317775067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "lebron james highlights \ud83d\udc51\n\nFollow for more! \n\n#LeBronJames #KingJames #NBAHighlights #GOATTalk #BasketballLegend #NBAReels #Hoops #LebronHighlights #Juan365PH #AllInJuanSaSaya #J",
-          "post_type": "Videos",
-          "publish_time": "2026-01-02T02:00:00",
-          "permalink": "https://www.facebook.com/reel/1204855988290641/",
-          "reactions": 14,
-          "comments": 1,
-          "shares": 2,
-          "engagement": 17,
-          "pes": 22.0
-        },
-        {
-          "post_id": "122115177597067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "\ud835\udc12\ud835\udc13\ud835\udc04\ud835\udc0f\ud835\udc07\ud835\udc04\ud835\udc0d \ud835\udc02\ud835\udc14\ud835\udc11\ud835\udc11\ud835\udc18 \ud835\udc02\ud835\udc0e\ud835\udc0e\ud835\udc0a\ud835\udc08\ud835\udc0d\ud835\udc06!\n\n26PTS, 2REB, 4AST  splash mode ON, Juankada \ud83d\ude2e\u200d\ud83d\udd25\ud83c\udfaf\nJuankada, ilang tres ang ramdam mo? \n\n#StephenCurry #NBANight #Juankada #SplashMode #Buckets #HoopsVibes #Juan365PH #AllInJuanS",
-          "post_type": "Photos",
-          "publish_time": "2025-12-31T19:13:00",
-          "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid0K3pN4QayXfFfqp5LNjRDwDsC9erSVcP22o1rx5tXbFWwLiPyJRi7wodXkp2k2JJJl",
-          "reactions": 10,
-          "comments": 2,
-          "shares": 0,
-          "engagement": 12,
-          "pes": 14.0
-        },
-        {
-          "post_id": "122115400749067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "\ud835\udc06\ud835\udc08\ud835\udc00\ud835\udc0d\ud835\udc0d\ud835\udc08\ud835\udc12 \ud835\udc13\ud835\udc00\ud835\udc0a\ud835\udc08\ud835\udc0d\ud835\udc06 \ud835\udc0e\ud835\udc15\ud835\udc04\ud835\udc11!\n\nJuankada, tap \u2665\ufe0f kung MVP kay Giannis or comment kung solid!\n\n#GiannisAntetokounmpo #GreekFreak #NBANight #Buckets #Juan365PH #AllInJuanSaSaya #JuanKada #JuanSports",
-          "post_type": "Photos",
-          "publish_time": "2026-01-02T23:04:00",
-          "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid02dSUH1QYVe8Mfbk73v9w2KVU6GeRJHfQfpYpGrYYnsVmrDaM9SGhFhU4T1Dv1M8d2l",
-          "reactions": 7,
-          "comments": 1,
-          "shares": 3,
-          "engagement": 11,
-          "pes": 18.0
-        },
-        {
-          "post_id": "122115188667067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "\ud835\udc03\ud835\udc0e\ud835\udc0d\ud835\udc0e\ud835\udc15\ud835\udc00\ud835\udc0d \ud835\udc0c\ud835\udc08\ud835\udc13\ud835\udc02\ud835\udc07\ud835\udc04\ud835\udc0b\ud835\udc0b \ud835\udc06\ud835\udc0e\ud835\udc08\ud835\udc0d\ud835\udc06 \ud835\udc01\ud835\udc04\ud835\udc00\ud835\udc12\ud835\udc13 \ud835\udc0c\ud835\udc0e\ud835\udc03\ud835\udc04!\n34PTS, 10REB, 7AST almost a triple-double, Juankada \ud83d\ude0e\ud83d\udd25\n\nJuankada, sino ang ramdam nyo MVP vibes ngayon? \ud83d\udc49 Comment mo na!\n\n#DonovanMitchell #NBANight #Juankada #Bucke",
-          "post_type": "Photos",
-          "publish_time": "2025-12-31T21:13:00",
-          "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid0huxN2AhAsx3uxJEJrsceUFMgW7WvsTFbZP1xRpYWH5Jn6drkwVctm4buqZfrcq9Ql",
-          "reactions": 11,
-          "comments": 0,
-          "shares": 0,
-          "engagement": 11,
-          "pes": 11.0
-        },
-        {
-          "post_id": "122115298083067884",
-          "page_id": "61582036535912",
-          "page_name": "JuanSports",
-          "title": "Victor Wembanyama heads to the locker room with an apparent leg injury. Prayers up! \ud83d\ude4f\n\n#VictorWembanyama #NBA #InjuryUpdate #PrayersUp #BasketballLife #HoopsPH #GameTime #TrendingNow #SportsUpdate #St",
-          "post_type": "Photos",
-          "publish_time": "2026-01-01T21:10:00",
-          "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid02nuuZu2ceGak6zqAr2z8uZv8GUZWMp2dq3KdSXBjWdNmuwqVSeW7wPzfzS18W9iuzl",
-          "reactions": 6,
-          "comments": 0,
-          "shares": 1,
-          "engagement": 7,
-          "pes": 9.0
-        }
-      ],
       "61583996447175": [
         {
           "post_id": "858606287343265_122111440203133214",
@@ -5971,22 +5738,6 @@
       "pes": 16.0
     },
     {
-      "post_id": "122115400749067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\udc06\ud835\udc08\ud835\udc00\ud835\udc0d\ud835\udc0d\ud835\udc08\ud835\udc12 \ud835\udc13\ud835\udc00\ud835\udc0a\ud835\udc08\ud835\udc0d\ud835\udc06 \ud835\udc0e\ud835\udc15\ud835\udc04\ud835\udc11!\n\nJuankada, tap \u2665\ufe0f kung MVP kay Giannis or comment kung solid!\n\n#GiannisAntetokounmpo #GreekFreak #NBANight #Buckets #Juan365PH #AllInJuanSaSaya #JuanKada #JuanSports",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T23:04:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid02dSUH1QYVe8Mfbk73v9w2KVU6GeRJHfQfpYpGrYYnsVmrDaM9SGhFhU4T1Dv1M8d2l",
-      "reactions": 7,
-      "comments": 1,
-      "shares": 3,
-      "views": 284,
-      "reach": 225,
-      "engagement": 11,
-      "pes": 18.0
-    },
-    {
       "post_id": "949473921576703_122104826343185509",
       "page_id": "61585565286734",
       "page_name": "JuanKada Star",
@@ -6787,22 +6538,6 @@
       "pes": 56.0
     },
     {
-      "post_id": "122115317775067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "lebron james highlights \ud83d\udc51\n\nFollow for more! \n\n#LeBronJames #KingJames #NBAHighlights #GOATTalk #BasketballLegend #NBAReels #Hoops #LebronHighlights #Juan365PH #AllInJuanSaSaya #J",
-      "post_type": "Videos",
-      "publish_time": "2026-01-02T02:00:00",
-      "permalink": "https://www.facebook.com/reel/1204855988290641/",
-      "reactions": 14,
-      "comments": 1,
-      "shares": 2,
-      "views": 402,
-      "reach": 397,
-      "engagement": 17,
-      "pes": 22.0
-    },
-    {
       "post_id": "924225234111144_122107162737170300",
       "page_id": "61585109026232",
       "page_name": "Juankada Charm",
@@ -6915,22 +6650,6 @@
       "pes": 9.0
     },
     {
-      "post_id": "122115304623067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\udfd2\ud835\udfd3 \ud835\udc0f\ud835\udc0e\ud835\udc08\ud835\udc0d\ud835\udc13\ud835\udc12 \ud835\udc00\ud835\udc0b\ud835\udc04\ud835\udc11\ud835\udc13!\nKawhi Leonard doing it all sa clutch moments \ud83d\ude2e\u200d\ud83d\udd25\n\nJuankada, tap \u2665\ufe0f kung ramdam nyo energy nito and follow for more!\n\n#KawhiLeonard #Juankada #NBANight #BeastMode #Buckets #Juan365PH #",
-      "post_type": "Photos",
-      "publish_time": "2026-01-01T23:11:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid02Lcu1rD8rMentzTukhqk9cvdRZbCECPQc8yUCMnaCCRvpLbzErnTa4JKTxjQb5wTCl",
-      "reactions": 30,
-      "comments": 0,
-      "shares": 1,
-      "views": 1001,
-      "reach": 696,
-      "engagement": 31,
-      "pes": 33.0
-    },
-    {
       "post_id": "122112504039145396",
       "page_id": "61584361885503",
       "page_name": "Juankada Sabbie",
@@ -6961,38 +6680,6 @@
       "reach": 217,
       "engagement": 40,
       "pes": 25.0
-    },
-    {
-      "post_id": "122115298083067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "Victor Wembanyama heads to the locker room with an apparent leg injury. Prayers up! \ud83d\ude4f\n\n#VictorWembanyama #NBA #InjuryUpdate #PrayersUp #BasketballLife #HoopsPH #GameTime #TrendingNow #SportsUpdate #St",
-      "post_type": "Photos",
-      "publish_time": "2026-01-01T21:10:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid02nuuZu2ceGak6zqAr2z8uZv8GUZWMp2dq3KdSXBjWdNmuwqVSeW7wPzfzS18W9iuzl",
-      "reactions": 6,
-      "comments": 0,
-      "shares": 1,
-      "views": 222,
-      "reach": 156,
-      "engagement": 7,
-      "pes": 9.0
-    },
-    {
-      "post_id": "122115295563067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\udc13\ud835\udc18\ud835\udc11\ud835\udc04\ud835\udc12\ud835\udc04 \ud835\udc0c\ud835\udc00\ud835\udc17\ud835\udc04\ud835\udc18 \ud835\udc16\ud835\udc08\ud835\udc13\ud835\udc07 \ud835\udc13\ud835\udc07\ud835\udc04 \ud835\udc13\ud835\udc11\ud835\udc08\ud835\udc0f\ud835\udc0b\ud835\udc04-\ud835\udc03\ud835\udc0e\ud835\udc14\ud835\udc01\ud835\udc0b\ud835\udc04!\n34PTS, 8REB, 10AST all-around domination, Juankada \ud83d\ude0e\ud83d\udd25\n\nJuankada, sino sa tingin nyo MVP ng game na ito? \ud83d\udc49 Comment mo na!\n\n#TyreseMaxey #NBANight #Juankada #TripleD",
-      "post_type": "Photos",
-      "publish_time": "2026-01-01T20:40:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid0QvE2G86VFpfd5WwDZPBg2yD8hq6yHQcgYZo8qYrxVcLhPv9fEWvAChY113k94Jqbl",
-      "reactions": 5,
-      "comments": 0,
-      "shares": 1,
-      "views": 195,
-      "reach": 140,
-      "engagement": 6,
-      "pes": 8.0
     },
     {
       "post_id": "122184577460383179",
@@ -7041,22 +6728,6 @@
       "reach": 104,
       "engagement": 9,
       "pes": 10.0
-    },
-    {
-      "post_id": "122115289371067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\udc0d\ud835\udc0e\ud835\udc11\ud835\udc0c\ud835\udc00\ud835\udc0d \ud835\udc0f\ud835\udc0e\ud835\udc16\ud835\udc04\ud835\udc0b\ud835\udc0b \ud835\udc04\ud835\udc17\ud835\udc0f\ud835\udc0b\ud835\udc0e\ud835\udc03\ud835\udc04\ud835\udc12!\n36PTS, 2REB, 2AST  pure bucket-getter mode, Juankada \ud83d\ude2e\u200d\ud83d\udd25\ud83d\udca5\n\nJuankada, rate this performance 1\u201310! \ud83d\udc40\n\n#NormanPowell #NBANight #Juankada #Buckets #HoopsVibes #ScoringMode #Juan365",
-      "post_type": "Photos",
-      "publish_time": "2026-01-01T19:14:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid02Rp6gBw4Axa2Ma1gq7Wu18M4GfSjNxbnowAM6jmiqH3Vd3e3pV3t2ccUvVmoHE4nWl",
-      "reactions": 4,
-      "comments": 0,
-      "shares": 0,
-      "views": 151,
-      "reach": 99,
-      "engagement": 4,
-      "pes": 4.0
     },
     {
       "post_id": "122109632745149417",
@@ -7747,22 +7418,6 @@
       "pes": 9.0
     },
     {
-      "post_id": "122115194709067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\udc12\ud835\udc07\ud835\udc00\ud835\udc08 \ud835\udc06\ud835\udc08\ud835\udc0b\ud835\udc06\ud835\udc04\ud835\udc0e\ud835\udc14\ud835\udc12-\ud835\udc00\ud835\udc0b\ud835\udc04\ud835\udc17\ud835\udc00\ud835\udc0d\ud835\udc03\ud835\udc04\ud835\udc11 \ud835\udc13\ud835\udc00\ud835\udc0a\ud835\udc08\ud835\udc0d\ud835\udc06 \ud835\udc0e\ud835\udc15\ud835\udc04\ud835\udc11!\n30PTS, 2REB, 6AST clutch at smooth sa court, Juankada \ud83d\ude0e\ud83d\udca5\n\nJuankada, sino pa ang feeling MVP vibes \ud83d\udc49 Comment mo na!\n\n#ShaiGilgeousAlexander #SGA #NBANight #Juankada",
-      "post_type": "Photos",
-      "publish_time": "2025-12-31T22:20:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid021sAX7dyZo5mAKwrbrh5NRkQhBkeFVGTZRaehQALAb8dB5ouTjdTCGk7LXuTZv3Qel",
-      "reactions": 16,
-      "comments": 3,
-      "shares": 1,
-      "views": 625,
-      "reach": 449,
-      "engagement": 20,
-      "pes": 25.0
-    },
-    {
       "post_id": "122106973635170300",
       "page_id": "61585109026232",
       "page_name": "Juankada Charm",
@@ -7793,22 +7448,6 @@
       "reach": 26,
       "engagement": 2,
       "pes": 2.0
-    },
-    {
-      "post_id": "122115193119067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\udc09\ud835\udc14\ud835\udc0b\ud835\udc08\ud835\udc00\ud835\udc0d \ud835\udc02\ud835\udc07\ud835\udc00\ud835\udc0c\ud835\udc0f\ud835\udc00\ud835\udc06\ud835\udc0d\ud835\udc08\ud835\udc04 \ud835\udc0e\ud835\udc0d \ud835\udc05\ud835\udc08\ud835\udc11\ud835\udc04!\ud83d\udd25 \n36PTS, 6REB, 0AST pure scoring mode, Juankada \ud83d\ude0e\n\nJuanabies, sino pa ang impressed sa shooting spree nito? \ud83d\udc49 Drop a \ud83d\udd25 sa comments!\n\n#Juan365PH #AllInJuanSaSaya #JuanKada #J",
-      "post_type": "Photos",
-      "publish_time": "2025-12-31T21:58:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid02GrFyUUA3kzXxbQaPjm6sW7Qepdp74kYbKS7iKQ6gho42tCRPNGYcXbDMQ3QbZuVyl",
-      "reactions": 16,
-      "comments": 5,
-      "shares": 1,
-      "views": 270,
-      "reach": 160,
-      "engagement": 22,
-      "pes": 29.0
     },
     {
       "post_id": "122109687561147740",
@@ -7859,22 +7498,6 @@
       "pes": 10.0
     },
     {
-      "post_id": "122115188667067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\udc03\ud835\udc0e\ud835\udc0d\ud835\udc0e\ud835\udc15\ud835\udc00\ud835\udc0d \ud835\udc0c\ud835\udc08\ud835\udc13\ud835\udc02\ud835\udc07\ud835\udc04\ud835\udc0b\ud835\udc0b \ud835\udc06\ud835\udc0e\ud835\udc08\ud835\udc0d\ud835\udc06 \ud835\udc01\ud835\udc04\ud835\udc00\ud835\udc12\ud835\udc13 \ud835\udc0c\ud835\udc0e\ud835\udc03\ud835\udc04!\n34PTS, 10REB, 7AST almost a triple-double, Juankada \ud83d\ude0e\ud83d\udd25\n\nJuankada, sino ang ramdam nyo MVP vibes ngayon? \ud83d\udc49 Comment mo na!\n\n#DonovanMitchell #NBANight #Juankada #Bucke",
-      "post_type": "Photos",
-      "publish_time": "2025-12-31T21:13:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid0huxN2AhAsx3uxJEJrsceUFMgW7WvsTFbZP1xRpYWH5Jn6drkwVctm4buqZfrcq9Ql",
-      "reactions": 11,
-      "comments": 0,
-      "shares": 0,
-      "views": 141,
-      "reach": 90,
-      "engagement": 11,
-      "pes": 11.0
-    },
-    {
       "post_id": "122110076913144249",
       "page_id": "61584327477246",
       "page_name": "Juankada Alexchoozy",
@@ -7889,22 +7512,6 @@
       "reach": 226,
       "engagement": 21,
       "pes": 24.0
-    },
-    {
-      "post_id": "122115177597067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\udc12\ud835\udc13\ud835\udc04\ud835\udc0f\ud835\udc07\ud835\udc04\ud835\udc0d \ud835\udc02\ud835\udc14\ud835\udc11\ud835\udc11\ud835\udc18 \ud835\udc02\ud835\udc0e\ud835\udc0e\ud835\udc0a\ud835\udc08\ud835\udc0d\ud835\udc06!\n\n26PTS, 2REB, 4AST  splash mode ON, Juankada \ud83d\ude2e\u200d\ud83d\udd25\ud83c\udfaf\nJuankada, ilang tres ang ramdam mo? \n\n#StephenCurry #NBANight #Juankada #SplashMode #Buckets #HoopsVibes #Juan365PH #AllInJuanS",
-      "post_type": "Photos",
-      "publish_time": "2025-12-31T19:13:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid0K3pN4QayXfFfqp5LNjRDwDsC9erSVcP22o1rx5tXbFWwLiPyJRi7wodXkp2k2JJJl",
-      "reactions": 10,
-      "comments": 2,
-      "shares": 0,
-      "views": 289,
-      "reach": 185,
-      "engagement": 12,
-      "pes": 14.0
     },
     {
       "post_id": "122109437451149417",
@@ -7937,22 +7544,6 @@
       "reach": 116,
       "engagement": 13,
       "pes": 16.0
-    },
-    {
-      "post_id": "122115170655067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\ude3d\ud835\ude56\ud835\ude68\ud835\ude60\ud835\ude5a\ud835\ude69\ud835\ude57\ud835\ude56\ud835\ude61\ud835\ude61 \ud835\ude3e\ud835\ude5d\ud835\ude56\ud835\ude61\ud835\ude61\ud835\ude5a\ud835\ude63\ud835\ude5c\ud835\ude5a, \ud835\ude45\ud835\ude6a\ud835\ude56\ud835\ude63\ud835\ude60\ud835\ude56\ud835\ude59\ud835\ude56!\n\nSino kaya ang player na nagpa-wow sa court? I-drop ang guess mo sa comments \u2764\ufe0f\nShare na at tingnan kung sino ang tunay na fan! \ud83c\udfc0\n\n#Juan365PH #AllInJuanSaSaya #JuanKada",
-      "post_type": "Photos",
-      "publish_time": "2025-12-31T18:00:00",
-      "permalink": "https://www.facebook.com/JuanSportsOfficial/posts/pfbid0R4xjT6qMgeq9qr8FxHXPKf5VDGxHoZnsheRM287tXqBPZp1DxqJk2dy6Rj1GqyRxl",
-      "reactions": 14,
-      "comments": 14,
-      "shares": 9,
-      "views": 434,
-      "reach": 222,
-      "engagement": 37,
-      "pes": 69.0
     },
     {
       "post_id": "122103968535185509",
@@ -8593,22 +8184,6 @@
       "reach": 115,
       "engagement": 12,
       "pes": 12.0
-    },
-    {
-      "post_id": "122115082191067884",
-      "page_id": "61582036535912",
-      "page_name": "JuanSports",
-      "title": "\ud835\ude3d\ud835\ude56\ud835\ude68\ud835\ude60\ud835\ude5a\ud835\ude69\ud835\ude57\ud835\ude56\ud835\ude61\ud835\ude61 \ud835\ude3e\ud835\ude5d\ud835\ude56\ud835\ude61\ud835\ude61\ud835\ude5a\ud835\ude63\ud835\ude5c\ud835\ude5a, \ud835\ude45\ud835\ude6a\ud835\ude56\ud835\ude63\ud835\ude60\ud835\ude56\ud835\ude59\ud835\ude56!\n\nSino kaya ang player na nagpa-wow sa court? I-drop ang guess mo sa comments \u2764\ufe0f\nShare na at tingnan kung sino ang tunay na fan! \ud83c\udfc0\n\n#Juan365PH #AllInJuanSaSaya #JuanKada",
-      "post_type": "Videos",
-      "publish_time": "2025-12-31T02:01:00",
-      "permalink": "https://www.facebook.com/reel/1592058865546010/",
-      "reactions": 13,
-      "comments": 3,
-      "shares": 3,
-      "views": 457,
-      "reach": 360,
-      "engagement": 19,
-      "pes": 28.0
     },
     {
       "post_id": "122109877881144249",
@@ -15368,27 +14943,27 @@
     "monthly": [
       {
         "month": "2026-01",
-        "posts": 133,
-        "reactions": 1580,
-        "comments": 98,
-        "shares": 125,
-        "views": 30542,
-        "reach": 12676,
-        "engagement": 1803,
+        "posts": 127,
+        "reactions": 1514,
+        "comments": 96,
+        "shares": 117,
+        "views": 28287,
+        "reach": 10963,
+        "engagement": 1727,
         "avg_engagement": 13.6,
-        "mom_change": -83.6
+        "mom_change": -84.1
       },
       {
         "month": "2025-12",
-        "posts": 470,
-        "reactions": 9498,
-        "comments": 945,
-        "shares": 523,
-        "views": 264785,
-        "reach": 133245,
-        "engagement": 10966,
-        "avg_engagement": 23.3,
-        "mom_change": 8145.1
+        "posts": 464,
+        "reactions": 9418,
+        "comments": 918,
+        "shares": 509,
+        "views": 262569,
+        "reach": 131779,
+        "engagement": 10845,
+        "avg_engagement": 23.4,
+        "mom_change": 8054.1
       },
       {
         "month": "2025-11",
@@ -15408,29 +14983,29 @@
         "week": "2026-00",
         "week_start": "2026-01-01",
         "week_end": "2026-01-03",
-        "posts": 133,
-        "reactions": 1580,
-        "comments": 98,
-        "shares": 125,
-        "views": 30542,
-        "reach": 12676,
-        "engagement": 1803,
+        "posts": 127,
+        "reactions": 1514,
+        "comments": 96,
+        "shares": 117,
+        "views": 28287,
+        "reach": 10963,
+        "engagement": 1727,
         "avg_engagement": 13.6,
-        "wow_change": -60.6
+        "wow_change": -61.3
       },
       {
         "week": "2025-52",
         "week_start": "2025-12-29",
         "week_end": "2025-12-31",
-        "posts": 210,
-        "reactions": 3991,
-        "comments": 398,
-        "shares": 190,
-        "views": 114518,
-        "reach": 62972,
-        "engagement": 4579,
-        "avg_engagement": 21.8,
-        "wow_change": -15.3
+        "posts": 204,
+        "reactions": 3911,
+        "comments": 371,
+        "shares": 176,
+        "views": 112302,
+        "reach": 61506,
+        "engagement": 4458,
+        "avg_engagement": 21.9,
+        "wow_change": -17.5
       },
       {
         "week": "2025-51",
@@ -15495,31 +15070,31 @@
       {
         "day": "Wed",
         "day_num": 3,
-        "posts": 99,
-        "total_engagement": 1936,
-        "avg_engagement": 19.6,
-        "views": 46255,
-        "reach": 24728,
+        "posts": 93,
+        "total_engagement": 1815,
+        "avg_engagement": 19.5,
+        "views": 44039,
+        "reach": 23262,
         "is_best": false
       },
       {
         "day": "Thu",
         "day_num": 4,
-        "posts": 75,
-        "total_engagement": 1570,
-        "avg_engagement": 20.9,
-        "views": 30070,
-        "reach": 12947,
+        "posts": 71,
+        "total_engagement": 1522,
+        "avg_engagement": 21.4,
+        "views": 28501,
+        "reach": 11856,
         "is_best": false
       },
       {
         "day": "Fri",
         "day_num": 5,
-        "posts": 99,
-        "total_engagement": 1890,
-        "avg_engagement": 19.1,
-        "views": 36980,
-        "reach": 16987,
+        "posts": 97,
+        "total_engagement": 1862,
+        "avg_engagement": 19.2,
+        "views": 36294,
+        "reach": 16365,
         "is_best": false
       },
       {
@@ -15668,17 +15243,6 @@
       },
       {
         "rank": 13,
-        "page_id": "61582036535912",
-        "name": "JuanSports",
-        "page_name": "JuanSports",
-        "posts": 12,
-        "views": 4471,
-        "reach": 3179,
-        "engagement": 197,
-        "avg_engagement": 16.4
-      },
-      {
-        "rank": 14,
         "page_id": "61565865626361",
         "name": "Juankada Geoff",
         "page_name": "Juankada Geoff",
@@ -15692,21 +15256,21 @@
     "postTypePerf": [
       {
         "type": "Videos",
-        "count": 273,
-        "views": 148203,
-        "reach": 82898,
-        "engagement": 6948,
+        "count": 271,
+        "views": 147344,
+        "reach": 82141,
+        "engagement": 6912,
         "avg_engagement": 25.5,
-        "avg_views": 542.9
+        "avg_views": 543.7
       },
       {
         "type": "Photos",
-        "count": 249,
-        "views": 117265,
-        "reach": 50026,
-        "engagement": 4557,
-        "avg_engagement": 18.3,
-        "avg_views": 470.9
+        "count": 239,
+        "views": 113653,
+        "reach": 47604,
+        "engagement": 4396,
+        "avg_engagement": 18.4,
+        "avg_views": 475.5
       },
       {
         "type": "Text",
@@ -15749,7 +15313,7 @@
       {
         "type": "trend_down",
         "title": "Engagement Declining",
-        "text": "Engagement dropped 83.6% - consider increasing content quality"
+        "text": "Engagement dropped 84.1% - consider increasing content quality"
       },
       {
         "type": "best_day",
@@ -15770,11 +15334,11 @@
   },
   "commentAnalysis": {
     "summary": {
-      "total_posts_with_comments": 237,
-      "posts_analyzed": 237,
+      "total_posts_with_comments": 230,
+      "posts_analyzed": 230,
       "posts_with_self_comment": 0,
       "total_self_comments": 0,
-      "total_organic_comments": 1054,
+      "total_organic_comments": 1025,
       "self_comment_rate": 0.0,
       "posts_with_self_pct": 0.0
     },
@@ -15803,15 +15367,6 @@
         "posts_with_comments": 2,
         "self_comments": 0,
         "organic_comments": 4,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
-        "page_name": "JuanSports",
-        "page_id": "61582036535912",
-        "posts_with_comments": 7,
-        "self_comments": 0,
-        "organic_comments": 29,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
@@ -15908,10 +15463,10 @@
     ],
     "effectivity": {
       "avg_engagement_with_self": 0,
-      "avg_engagement_without_self": 40.0,
+      "avg_engagement_without_self": 40.7,
       "engagement_boost_pct": -100.0,
       "avg_reactions_with": 0,
-      "avg_reactions_without": 33.5
+      "avg_reactions_without": 34.1
     },
     "topSelfCommented": []
   },
@@ -15932,7 +15487,7 @@
         "shares": 183,
         "avg_pes": 76.6,
         "rank": 1,
-        "engagement_share": 26.3
+        "engagement_share": 26.7
       },
       {
         "page_id": "61584361885503",
@@ -15949,7 +15504,7 @@
         "shares": 29,
         "avg_pes": 41.1,
         "rank": 2,
-        "engagement_share": 13.5
+        "engagement_share": 13.7
       },
       {
         "page_id": "61561495390240",
@@ -15966,7 +15521,7 @@
         "shares": 52,
         "avg_pes": 30.4,
         "rank": 3,
-        "engagement_share": 10.1
+        "engagement_share": 10.2
       },
       {
         "page_id": "61584327477246",
@@ -15983,7 +15538,7 @@
         "shares": 37,
         "avg_pes": 17.0,
         "rank": 4,
-        "engagement_share": 8.8
+        "engagement_share": 8.9
       },
       {
         "page_id": "61585565286734",
@@ -16000,7 +15555,7 @@
         "shares": 65,
         "avg_pes": 20.0,
         "rank": 5,
-        "engagement_share": 6.7
+        "engagement_share": 6.8
       },
       {
         "page_id": "61584243275518",
@@ -16017,7 +15572,7 @@
         "shares": 67,
         "avg_pes": 15.8,
         "rank": 6,
-        "engagement_share": 6.2
+        "engagement_share": 6.3
       },
       {
         "page_id": "61584233476725",
@@ -16034,7 +15589,7 @@
         "shares": 64,
         "avg_pes": 21.6,
         "rank": 7,
-        "engagement_share": 6.0
+        "engagement_share": 6.1
       },
       {
         "page_id": "61583996447175",
@@ -16051,7 +15606,7 @@
         "shares": 27,
         "avg_pes": 13.6,
         "rank": 8,
-        "engagement_share": 5.5
+        "engagement_share": 5.6
       },
       {
         "page_id": "61585109026232",
@@ -16068,7 +15623,7 @@
         "shares": 25,
         "avg_pes": 12.4,
         "rank": 9,
-        "engagement_share": 5.3
+        "engagement_share": 5.4
       },
       {
         "page_id": "61584482528597",
@@ -16085,7 +15640,7 @@
         "shares": 36,
         "avg_pes": 7.0,
         "rank": 10,
-        "engagement_share": 4.5
+        "engagement_share": 4.6
       },
       {
         "page_id": "61584432221426",
@@ -16102,7 +15657,7 @@
         "shares": 47,
         "avg_pes": 16.2,
         "rank": 11,
-        "engagement_share": 2.9
+        "engagement_share": 3.0
       },
       {
         "page_id": "100064672885113",
@@ -16119,24 +15674,7 @@
         "shares": 4,
         "avg_pes": 7.7,
         "rank": 12,
-        "engagement_share": 1.8
-      },
-      {
-        "page_id": "61582036535912",
-        "name": "JuanSports",
-        "page_name": "JuanSports",
-        "fan_count": null,
-        "posts": 12,
-        "engagement": 197,
-        "avg_engagement": 16.4,
-        "views": 4471,
-        "reach": 3179,
-        "reactions": 146,
-        "comments": 29,
-        "shares": 22,
-        "avg_pes": 22.5,
-        "rank": 13,
-        "engagement_share": 1.5
+        "engagement_share": 1.9
       },
       {
         "page_id": "61565865626361",
@@ -16152,7 +15690,7 @@
         "comments": 4,
         "shares": 0,
         "avg_pes": 4.7,
-        "rank": 14,
+        "rank": 13,
         "engagement_share": 0.8
       }
     ],
@@ -16215,20 +15753,6 @@
           "count": 2,
           "engagement": 9,
           "avg_engagement": 4.5
-        }
-      ],
-      "61582036535912": [
-        {
-          "type": "Photos",
-          "count": 10,
-          "engagement": 161,
-          "avg_engagement": 16.1
-        },
-        {
-          "type": "Videos",
-          "count": 2,
-          "engagement": 36,
-          "avg_engagement": 18.0
         }
       ],
       "61583996447175": [
@@ -16474,10 +15998,6 @@
       "61565865626361": {
         "type": "Photos",
         "percentage": 54.5
-      },
-      "61582036535912": {
-        "type": "Photos",
-        "percentage": 83.3
       },
       "61583996447175": {
         "type": "Videos",
