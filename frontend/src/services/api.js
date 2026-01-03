@@ -9,7 +9,7 @@ let staticData = null;
 
 async function loadStaticData() {
   if (!staticData) {
-    const response = await fetch('/data/analytics.json');
+    const response = await fetch('/data/analytics-v2.json');
     staticData = await response.json();
   }
   return staticData;
