@@ -41,7 +41,19 @@ export default function Pages() {
     comments: acc.comments + (page.total_comments || 0),
     shares: acc.shares + (page.total_shares || 0),
     engagement: acc.engagement + (page.total_engagement || 0),
-  }), { posts: 0, views: 0, reach: 0, reactions: 0, comments: 0, shares: 0, engagement: 0 });
+    followers: acc.followers + (page.followers_count || 0),
+  }), { posts: 0, views: 0, reach: 0, reactions: 0, comments: 0, shares: 0, engagement: 0, followers: 0 });
+
+  // Sort pages by followers for ranking
+  const sortedByFollowers = [...pages].sort((a, b) => (b.followers_count || 0) - (a.followers_count || 0));
+
+  // Format large numbers
+  const formatNumber = (num) => {
+    if (!num) return '0';
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return num.toLocaleString();
+  };
 
   return (
     <div className="space-y-6">
@@ -56,10 +68,14 @@ export default function Pages() {
       </div>
 
       {/* Summary Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
         <div className="bg-white rounded-lg shadow p-4">
           <p className="text-sm text-gray-500">Total Posts</p>
           <p className="text-2xl font-bold text-indigo-600">{totals.posts.toLocaleString()}</p>
+        </div>
+        <div className="bg-white rounded-lg shadow p-4">
+          <p className="text-sm text-gray-500">Total Followers</p>
+          <p className="text-2xl font-bold text-rose-600">{formatNumber(totals.followers)}</p>
         </div>
         <div className="bg-white rounded-lg shadow p-4">
           <p className="text-sm text-gray-500">Total Views</p>
@@ -87,7 +103,74 @@ export default function Pages() {
         </div>
       </div>
 
-      {/* Comparison Chart */}
+      {/* Followers Comparison Chart */}
+      <div className="bg-white rounded-lg shadow p-6">
+        <h2 className="text-lg font-semibold mb-4">👥 Followers by Page</h2>
+        <ResponsiveContainer width="100%" height={300}>
+          <BarChart data={sortedByFollowers} layout="vertical">
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis type="number" fontSize={12} tickFormatter={(val) => formatNumber(val)} />
+            <YAxis
+              type="category"
+              dataKey="page_name"
+              fontSize={11}
+              width={120}
+              tickFormatter={(val) => val?.replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
+            />
+            <Tooltip
+              formatter={(value) => [formatNumber(value), 'Followers']}
+              labelFormatter={(val) => val}
+            />
+            <Bar dataKey="followers_count" name="Followers" fill="#E11D48" radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* Followers Ranking Table */}
+      <div className="bg-white rounded-lg shadow p-6">
+        <h2 className="text-lg font-semibold mb-4">🏆 Followers Ranking</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-gray-500 border-b">
+                <th className="pb-3 font-medium w-12">#</th>
+                <th className="pb-3 font-medium">Page</th>
+                <th className="pb-3 font-medium text-right">Followers</th>
+                <th className="pb-3 font-medium text-right">% of Total</th>
+                <th className="pb-3 font-medium text-right">Fans</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedByFollowers.map((page, i) => (
+                <tr key={page.page_id} className={`border-b hover:bg-gray-50 ${i === 0 ? 'bg-rose-50' : ''}`}>
+                  <td className="py-3 text-lg">
+                    {i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `#${i + 1}`}
+                  </td>
+                  <td className="py-3 font-medium">
+                    {page.page_name?.replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
+                    {i === 0 && (
+                      <span className="ml-2 px-2 py-0.5 bg-rose-600 text-white text-xs rounded">
+                        TOP
+                      </span>
+                    )}
+                  </td>
+                  <td className="py-3 text-right font-bold text-rose-600">
+                    {formatNumber(page.followers_count)}
+                  </td>
+                  <td className="py-3 text-right text-gray-600">
+                    {totals.followers > 0 ? ((page.followers_count / totals.followers) * 100).toFixed(1) : 0}%
+                  </td>
+                  <td className="py-3 text-right text-gray-500">
+                    {formatNumber(page.fan_count)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Engagement Comparison Chart */}
       <div className="bg-white rounded-lg shadow p-6">
         <h2 className="text-lg font-semibold mb-4">Engagement Comparison by Page</h2>
         <ResponsiveContainer width="100%" height={300}>
@@ -186,10 +269,10 @@ export default function Pages() {
                   {page.avg_engagement?.toLocaleString()}
                 </p>
               </div>
-              <div className="bg-gray-50 rounded p-3">
-                <p className="text-xs text-gray-500 uppercase">Fans</p>
-                <p className="text-lg font-semibold">
-                  {page.fan_count?.toLocaleString() || 'N/A'}
+              <div className="bg-rose-50 rounded p-3 ring-1 ring-rose-200">
+                <p className="text-xs text-rose-600 uppercase font-medium">Followers</p>
+                <p className="text-lg font-bold text-rose-600">
+                  {formatNumber(page.followers_count)}
                 </p>
               </div>
             </div>
