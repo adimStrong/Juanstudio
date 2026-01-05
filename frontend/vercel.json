@@ -13,7 +13,10 @@
     }
   ],
   "rewrites": [
-    { "source": "/data/:path*", "destination": "/data/:path*" },
-    { "source": "/((?!data/).*)", "destination": "/index.html" }
+    { "source": "/posts", "destination": "/index.html" },
+    { "source": "/pages", "destination": "/index.html" },
+    { "source": "/comments", "destination": "/index.html" },
+    { "source": "/overlap", "destination": "/index.html" },
+    { "source": "/imports", "destination": "/index.html" }
   ]
 }
