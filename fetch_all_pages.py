@@ -10,6 +10,18 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from facebook_api import FacebookAPI, calculate_engagement_metrics
 
 
+def normalize_post_id(post_id: str) -> str:
+    """Extract pure post ID, stripping page ID prefix if present.
+
+    API returns: '862622980275034_123456789'
+    We normalize to: '123456789'
+    """
+    post_id_str = str(post_id)
+    if '_' in post_id_str:
+        return post_id_str.split('_')[-1]
+    return post_id_str
+
+
 def classify_post_type(post):
     """Classify post type based on type and status_type fields."""
     post_type = post.get("type", "").lower()
@@ -272,6 +284,9 @@ def save_results(conn, results):
             reactions = post_data.get("reactions", {})
             metrics = post_data.get("metrics", {})
 
+            # Normalize post_id to prevent duplicates
+            normalized_post_id = normalize_post_id(post_data["post_id"])
+
             cursor.execute("""
                 INSERT OR REPLACE INTO posts
                 (post_id, page_id, title, permalink, post_type, publish_time,
@@ -281,7 +296,7 @@ def save_results(conn, results):
                  pes, qes, viral_coefficient, total_engagement, fetched_at)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
-                post_data["post_id"],
+                normalized_post_id,
                 page_data["page_id"],
                 post_data.get("message", "")[:200],
                 post_data.get("permalink"),

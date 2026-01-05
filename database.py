@@ -22,6 +22,21 @@ def get_db_path() -> Path:
     return DB_PATH
 
 
+def normalize_post_id(post_id: str) -> str:
+    """Extract pure post ID, stripping page ID prefix if present.
+
+    API returns: '862622980275034_123456789'
+    CSV has: '123456789'
+    Both normalize to: '123456789'
+
+    This prevents duplicates when same post imported via API and CSV.
+    """
+    post_id_str = str(post_id)
+    if '_' in post_id_str:
+        return post_id_str.split('_')[-1]
+    return post_id_str
+
+
 def get_connection(db_path: Optional[Path] = None) -> sqlite3.Connection:
     """
     Get a database connection with row factory enabled.
@@ -191,6 +206,9 @@ def upsert_post(
     conn: Optional[sqlite3.Connection] = None
 ) -> None:
     """Insert or update a post record."""
+    # Normalize post_id to prevent duplicates from API vs CSV formats
+    post_id = normalize_post_id(post_id)
+
     sql = """
         INSERT INTO posts (
             post_id, page_id, title, description, post_type,
@@ -309,6 +327,9 @@ def insert_metrics(
     conn: Optional[sqlite3.Connection] = None
 ) -> None:
     """Insert metrics for a post (update if exists for same date/source)."""
+    # Normalize post_id to match posts table
+    post_id = normalize_post_id(post_id)
+
     sql = """
         INSERT INTO post_metrics (
             post_id, metric_date, reactions, comments, shares, views, reach,
@@ -357,52 +378,44 @@ def sync_metrics_to_posts():
     Update posts table with latest metrics from post_metrics.
     This ensures the posts table has up-to-date engagement data.
 
-    Note: API post_ids have format 'pageId_postId', CSV post_ids are just 'postId'.
-    We match by extracting the postId part after the underscore.
+    Note: All post_ids are now normalized (just the post ID, no page prefix).
     """
     sql = """
         UPDATE posts
         SET
             reactions_total = COALESCE((
                 SELECT pm.reactions FROM post_metrics pm
-                WHERE pm.post_id = SUBSTR(posts.post_id, INSTR(posts.post_id, '_') + 1)
-                   OR pm.post_id = posts.post_id
+                WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
             ), reactions_total, 0),
             comments_count = COALESCE((
                 SELECT pm.comments FROM post_metrics pm
-                WHERE pm.post_id = SUBSTR(posts.post_id, INSTR(posts.post_id, '_') + 1)
-                   OR pm.post_id = posts.post_id
+                WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
             ), comments_count, 0),
             shares_count = COALESCE((
                 SELECT pm.shares FROM post_metrics pm
-                WHERE pm.post_id = SUBSTR(posts.post_id, INSTR(posts.post_id, '_') + 1)
-                   OR pm.post_id = posts.post_id
+                WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
             ), shares_count, 0),
             views_count = COALESCE((
                 SELECT pm.views FROM post_metrics pm
-                WHERE pm.post_id = SUBSTR(posts.post_id, INSTR(posts.post_id, '_') + 1)
-                   OR pm.post_id = posts.post_id
+                WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
             ), views_count, 0),
             reach_count = COALESCE((
                 SELECT pm.reach FROM post_metrics pm
-                WHERE pm.post_id = SUBSTR(posts.post_id, INSTR(posts.post_id, '_') + 1)
-                   OR pm.post_id = posts.post_id
+                WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
             ), reach_count, 0),
             total_engagement = COALESCE((
                 SELECT pm.reactions + pm.comments + pm.shares FROM post_metrics pm
-                WHERE pm.post_id = SUBSTR(posts.post_id, INSTR(posts.post_id, '_') + 1)
-                   OR pm.post_id = posts.post_id
+                WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
             ), total_engagement, 0)
         WHERE EXISTS (
             SELECT 1 FROM post_metrics pm
-            WHERE pm.post_id = SUBSTR(posts.post_id, INSTR(posts.post_id, '_') + 1)
-               OR pm.post_id = posts.post_id
+            WHERE pm.post_id = posts.post_id
         )
     """
     with db_connection() as conn:
