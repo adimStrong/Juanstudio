@@ -3,7 +3,7 @@
 Export static JSON data for Vercel deployment.
 
 Run this after importing new CSV data to update the Vercel deployment.
-The output goes to frontend/public/data/analytics.json
+The output goes to frontend/public/data/analytics-v2.json
 
 Usage:
     python export_static_data.py
@@ -15,7 +15,7 @@ from datetime import datetime
 from database import sync_metrics_to_posts
 
 DATABASE_PATH = "data/juanstudio_analytics.db"
-OUTPUT_PATH = "frontend/public/data/analytics.json"
+OUTPUT_PATH = "frontend/public/data/analytics-v2.json"
 
 
 def get_conn():
@@ -1094,7 +1094,7 @@ def main():
 
     print(f"\n[OK] Exported to: {OUTPUT_PATH}")
     print("\nTo update Vercel:")
-    print("  git add frontend/public/data/analytics.json")
+    print("  git add frontend/public/data/analytics-v2.json")
     print("  git commit -m 'Update analytics data'")
     print("  git push")
 
