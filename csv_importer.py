@@ -13,7 +13,8 @@ from typing import Optional, List, Dict, Any, Tuple
 
 from database import (
     ensure_initialized, db_connection, upsert_page, upsert_post,
-    insert_metrics, record_import, get_import_history, get_database_stats
+    insert_metrics, record_import, get_import_history, get_database_stats,
+    get_page_by_name
 )
 from models import ImportResult
 from config import COLUMN_MAPPING, EXPORTS_DIR, CSV_DOWNLOADS_DIR
@@ -184,6 +185,11 @@ def import_csv(
             dates = []
             pages_seen = set()
 
+            # Track page_id remapping (CSV ID -> existing DB ID)
+            # This prevents duplicates when CSV uses different page_id than API
+            page_id_remap = {}
+            page_id_warnings = []
+
             # Process rows
             with db_connection() as conn:
                 for row_num, row in enumerate(reader, start=2):
@@ -194,7 +200,7 @@ def import_csv(
                             result.rows_skipped += 1
                             continue
 
-                        page_id = get_cell(row, column_map, 'page_id', 'unknown')
+                        csv_page_id = get_cell(row, column_map, 'page_id', 'unknown')
                         page_name = get_cell(row, column_map, 'page_name', 'Unknown Page')
 
                         # Apply page filter
@@ -202,6 +208,27 @@ def import_csv(
                             if page_filter.lower() not in page_name.lower():
                                 result.rows_skipped += 1
                                 continue
+
+                        # Check for duplicate page (same name, different ID)
+                        # This prevents duplicates when CSV has different page_id than API
+                        if csv_page_id in page_id_remap:
+                            # Already remapped this page_id
+                            page_id = page_id_remap[csv_page_id]
+                        else:
+                            # Check if page with same name exists under different ID
+                            existing_page = get_page_by_name(page_name, conn=conn) if not dry_run else None
+                            if existing_page and existing_page['page_id'] != csv_page_id:
+                                # Page exists with different ID - use existing ID
+                                page_id = existing_page['page_id']
+                                page_id_remap[csv_page_id] = page_id
+                                warning = f"⚠ Page '{page_name}': CSV ID {csv_page_id} → using existing ID {page_id}"
+                                if warning not in page_id_warnings:
+                                    page_id_warnings.append(warning)
+                                    print(warning)
+                            else:
+                                # No conflict - use CSV's page_id
+                                page_id = csv_page_id
+                                page_id_remap[csv_page_id] = csv_page_id
 
                         # Track pages
                         pages_seen.add((page_id, page_name))
@@ -299,6 +326,10 @@ def import_csv(
 
             result.status = 'completed'
             print(f"\nPages found: {[p[1] for p in pages_seen]}")
+
+            # Show page ID remapping summary if any occurred
+            if page_id_warnings:
+                print(f"\n[Duplicate Prevention] {len(page_id_warnings)} page(s) remapped to existing IDs")
 
     except Exception as e:
         result.status = 'failed'

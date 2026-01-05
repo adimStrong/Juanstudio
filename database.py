@@ -176,6 +176,25 @@ def get_page(page_id: str) -> Optional[Dict[str, Any]]:
         return dict(row) if row else None
 
 
+def get_page_by_name(page_name: str, conn: Optional[sqlite3.Connection] = None) -> Optional[Dict[str, Any]]:
+    """Get a page by name (case-insensitive).
+
+    Used to detect duplicate pages that have different IDs in API vs CSV.
+    """
+    sql = "SELECT * FROM pages WHERE LOWER(page_name) = LOWER(?)"
+
+    def execute(c):
+        cursor = c.execute(sql, (page_name,))
+        row = cursor.fetchone()
+        return dict(row) if row else None
+
+    if conn:
+        return execute(conn)
+    else:
+        with db_connection() as c:
+            return execute(c)
+
+
 def get_all_pages(include_competitors: bool = True) -> List[Dict[str, Any]]:
     """Get all pages."""
     with db_connection() as conn:
