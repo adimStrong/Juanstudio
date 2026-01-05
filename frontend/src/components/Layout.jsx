@@ -9,6 +9,7 @@ const navItems = [
   { path: '/overlap', label: 'Comparison', icon: '📈' },
 ];
 
+// v3 - force rebuild
 export default function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
