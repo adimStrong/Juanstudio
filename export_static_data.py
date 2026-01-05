@@ -1109,10 +1109,20 @@ def main():
         json.dump(data, f, indent=2)
 
     print(f"\n[OK] Exported to: {OUTPUT_PATH}")
-    print("\nTo update Vercel:")
-    print("  git add frontend/public/data/analytics-v2.json")
-    print("  git commit -m 'Update analytics data'")
-    print("  git push")
+
+    # Run pre-deploy verification
+    print("\n--- Running pre-deploy verification ---")
+    import subprocess
+    import sys
+    result = subprocess.run([sys.executable, 'smart_verify.py', '--pre-deploy'])
+
+    if result.returncode != 0:
+        print("\n[ERROR] Verification failed - Review issues before deploying!")
+    else:
+        print("\nTo update Vercel:")
+        print("  git add frontend/public/data/analytics-v2.json")
+        print("  git commit -m 'Update analytics data'")
+        print("  git push")
 
 
 if __name__ == "__main__":

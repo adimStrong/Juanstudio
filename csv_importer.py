@@ -511,6 +511,12 @@ def main():
             print(f"Error: {result.error_message}")
             sys.exit(1)
 
+        # Run smart verification after import
+        if not args.dry_run:
+            print("\n--- Running data verification ---")
+            import subprocess
+            subprocess.run([sys.executable, 'smart_verify.py', '--auto-fix'])
+
     elif args.command == 'import-all':
         results = import_all_csvs(
             args.folder,
@@ -526,6 +532,12 @@ def main():
         print(f"Total imported: {total_imported}")
         print(f"Total updated: {total_updated}")
         print(f"Total skipped: {total_skipped}")
+
+        # Run smart verification after import-all
+        if len(results) > 0:
+            print("\n--- Running data verification ---")
+            import subprocess
+            subprocess.run([sys.executable, 'smart_verify.py', '--auto-fix'])
 
     elif args.command == 'validate':
         result = validate_csv(args.file)

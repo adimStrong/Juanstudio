@@ -5,7 +5,7 @@ import {
 } from 'recharts';
 import StatCard from '../components/StatCard';
 import DateFilter from '../components/DateFilter';
-import { getStats, getDailyEngagement, getPostTypeStats, getTopPosts, getPages, getTimeSeries, getDailyByPage } from '../services/api';
+import { getStats, getDailyEngagement, getPostTypeStats, getTopPosts, getPages, getTimeSeries, getDailyByPage, getDateBoundaries } from '../services/api';
 
 const COLORS = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316', '#06b6d4', '#84cc16', '#a855f7', '#d946ef', '#0ea5e9'];
 
@@ -21,8 +21,18 @@ export default function Dashboard() {
   const [distributionView, setDistributionView] = useState('type'); // 'type' or 'page'
   const [pageMetric, setPageMetric] = useState('posts'); // posts, views, reach, engagement
   const [dateRange, setDateRange] = useState({ startDate: null, endDate: null });
+  const [dateBoundaries, setDateBoundaries] = useState({ minDate: null, maxDate: null });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // Fetch date boundaries once on mount
+  useEffect(() => {
+    async function fetchBoundaries() {
+      const boundaries = await getDateBoundaries();
+      setDateBoundaries(boundaries);
+    }
+    fetchBoundaries();
+  }, []);
 
   useEffect(() => {
     async function fetchData() {
@@ -95,7 +105,12 @@ export default function Dashboard() {
 
       {/* Date Filter */}
       <div className="bg-white rounded-lg shadow p-4">
-        <DateFilter onDateChange={setDateRange} defaultDays={0} />
+        <DateFilter
+          onDateChange={setDateRange}
+          defaultDays={0}
+          minDate={dateBoundaries.minDate}
+          maxDate={dateBoundaries.maxDate}
+        />
       </div>
 
       {/* Stats Cards - Row 1 */}

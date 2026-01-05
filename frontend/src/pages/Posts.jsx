@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getPosts, getPages } from '../services/api';
+import { getPosts, getPages, getDateBoundaries } from '../services/api';
 import DateFilter from '../components/DateFilter';
 
 export default function Posts() {
@@ -12,14 +12,19 @@ export default function Posts() {
   const [filter, setFilter] = useState({ post_type: '', page_id: '', search: '' });
   const [searchInput, setSearchInput] = useState('');
   const [dateRange, setDateRange] = useState({ startDate: null, endDate: null });
+  const [dateBoundaries, setDateBoundaries] = useState({ minDate: null, maxDate: null });
 
-  // Load pages for filter dropdown
+  // Load pages and date boundaries
   useEffect(() => {
-    async function fetchPages() {
-      const pageData = await getPages();
+    async function fetchInitialData() {
+      const [pageData, boundaries] = await Promise.all([
+        getPages(),
+        getDateBoundaries()
+      ]);
       setPages(pageData);
+      setDateBoundaries(boundaries);
     }
-    fetchPages();
+    fetchInitialData();
   }, []);
 
   useEffect(() => {
@@ -123,7 +128,12 @@ export default function Posts() {
 
       {/* Date Filter */}
       <div className="bg-white rounded-lg shadow p-4">
-        <DateFilter onDateChange={(range) => { setDateRange(range); setPage(1); }} defaultDays={0} />
+        <DateFilter
+          onDateChange={(range) => { setDateRange(range); setPage(1); }}
+          defaultDays={0}
+          minDate={dateBoundaries.minDate}
+          maxDate={dateBoundaries.maxDate}
+        />
       </div>
 
       <div className="bg-white rounded-lg shadow overflow-hidden">

@@ -11,13 +11,15 @@ echo ============================================================
 echo.
 echo   [1] CSV Import (Meta exports) + Export + Push
 echo   [2] API Fetch (posts + comments) + Export + Push
-echo   [3] Exit
+echo   [3] Verify Data Only (check for issues)
+echo   [4] Exit
 echo.
-set /p choice="Enter choice (1-3): "
+set /p choice="Enter choice (1-4): "
 
 if "%choice%"=="1" goto CSV_UPDATE
 if "%choice%"=="2" goto API_UPDATE
-if "%choice%"=="3" goto END
+if "%choice%"=="3" goto VERIFY_ONLY
+if "%choice%"=="4" goto END
 echo Invalid choice. Try again.
 goto MENU
 
@@ -95,6 +97,16 @@ echo.
 echo ============================================================
 echo DONE! API update complete.
 echo ============================================================
+pause
+goto MENU
+
+:VERIFY_ONLY
+echo.
+echo ============================================================
+echo DATA VERIFICATION
+echo ============================================================
+python smart_verify.py --check-only
+echo.
 pause
 goto MENU
 

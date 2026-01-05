@@ -451,4 +451,23 @@ export const getPageComparison = async (dateRange = {}) => {
   return api.get('/stats/page-comparison/').then(res => res.data);
 };
 
+export const getDateBoundaries = async () => {
+  if (IS_PRODUCTION) {
+    const data = await loadStaticData();
+    const posts = data.posts || [];
+    if (posts.length === 0) return { minDate: null, maxDate: null };
+
+    const dates = posts
+      .map(p => p.publish_time?.slice(0, 10))
+      .filter(d => d)
+      .sort();
+
+    return {
+      minDate: dates[0],
+      maxDate: dates[dates.length - 1]
+    };
+  }
+  return { minDate: null, maxDate: null };
+};
+
 export default api;

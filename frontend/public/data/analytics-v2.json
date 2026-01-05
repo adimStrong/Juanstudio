@@ -13686,11 +13686,11 @@
     "summary": {
       "total_posts_with_comments": 208,
       "posts_analyzed": 208,
-      "posts_with_self_comment": 26,
-      "total_self_comments": 29,
-      "total_organic_comments": 960,
-      "self_comment_rate": 2.9,
-      "posts_with_self_pct": 12.5
+      "posts_with_self_comment": 28,
+      "total_self_comments": 31,
+      "total_organic_comments": 958,
+      "self_comment_rate": 3.1,
+      "posts_with_self_pct": 13.5
     },
     "byPage": [
       {
@@ -13721,6 +13721,15 @@
         "self_rate": 5.4
       },
       {
+        "page_name": "Juankada Shann",
+        "page_id": "61584482528597",
+        "posts_with_comments": 21,
+        "self_comments": 4,
+        "organic_comments": 39,
+        "posts_with_self": 4,
+        "self_rate": 9.3
+      },
+      {
         "page_name": "Juankada Ellise",
         "page_id": "61585679673115",
         "posts_with_comments": 20,
@@ -13746,15 +13755,6 @@
         "organic_comments": 63,
         "posts_with_self": 2,
         "self_rate": 3.1
-      },
-      {
-        "page_name": "Juankada Shann",
-        "page_id": "61584482528597",
-        "posts_with_comments": 21,
-        "self_comments": 2,
-        "organic_comments": 41,
-        "posts_with_self": 2,
-        "self_rate": 4.7
       },
       {
         "page_name": "Juankada host Drae",
@@ -13821,11 +13821,11 @@
       }
     ],
     "effectivity": {
-      "avg_engagement_with_self": 43.0,
-      "avg_engagement_without_self": 36.7,
-      "engagement_boost_pct": 17.0,
-      "avg_reactions_with": 34.8,
-      "avg_reactions_without": 30.2
+      "avg_engagement_with_self": 41.2,
+      "avg_engagement_without_self": 36.9,
+      "engagement_boost_pct": 11.7,
+      "avg_reactions_with": 33.4,
+      "avg_reactions_without": 30.4
     },
     "topSelfCommented": [
       {
