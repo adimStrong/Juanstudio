@@ -15,7 +15,7 @@ from datetime import datetime, timedelta
 from database import sync_metrics_to_posts
 
 DATABASE_PATH = "data/juanstudio_analytics.db"
-OUTPUT_PATH = "frontend/public/data/analytics-v2.json"
+OUTPUT_PATH = "frontend/public/data/analytics-v3.json"
 
 
 def get_conn():
