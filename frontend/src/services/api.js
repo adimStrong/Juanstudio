@@ -9,7 +9,8 @@ let staticData = null;
 
 async function loadStaticData() {
   if (!staticData) {
-    const response = await fetch('/data/analytics-v2.json');
+    // Add cache-busting version to force fresh data
+    const response = await fetch('/data/analytics-v2.json?v=20260105');
     staticData = await response.json();
   }
   return staticData;
