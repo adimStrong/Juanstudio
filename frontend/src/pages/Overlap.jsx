@@ -114,7 +114,8 @@ export default function Overlap() {
           <h1 className="text-2xl font-bold text-gray-900">Page Comparison</h1>
           <p className="text-sm text-gray-500">Compare performance across all JuanKada pages</p>
         </div>
-        <DateFilter onDateChange={handleDateChange} />
+        {/* DateFilter hidden - not working correctly */}
+        {/* <DateFilter onDateChange={handleDateChange} /> */}
       </div>
 
       {/* Rankings Table */}
@@ -126,13 +127,13 @@ export default function Overlap() {
               <tr className="text-left text-gray-500 border-b">
                 <th className="pb-3 font-medium w-12">Rank</th>
                 <th className="pb-3 font-medium">Page</th>
-                <th className="pb-3 font-medium text-right">Posts</th>
-                <th className="pb-3 font-medium text-right">Engagement</th>
-                <th className="pb-3 font-medium text-right">Avg/Post</th>
-                <th className="pb-3 font-medium text-right">Views</th>
-                <th className="pb-3 font-medium text-right">Reach</th>
-                <th className="pb-3 font-medium text-right">Fans</th>
-                <th className="pb-3 font-medium">Share</th>
+                <th className="pb-3 font-medium text-right px-2">Posts</th>
+                <th className="pb-3 font-medium text-right px-2">Engagement</th>
+                <th className="pb-3 font-medium text-right px-2">Avg/Post</th>
+                <th className="pb-3 font-medium text-right px-2">Views</th>
+                <th className="pb-3 font-medium text-right px-2">Reach</th>
+                <th className="pb-3 font-medium text-right px-3">Fans</th>
+                <th className="pb-3 font-medium px-3">Eng %</th>
               </tr>
             </thead>
             <tbody>
@@ -154,21 +155,21 @@ export default function Overlap() {
                       <span className="ml-2 text-xs bg-indigo-600 text-white px-2 py-0.5 rounded">TOP</span>
                     )}
                   </td>
-                  <td className="py-3 text-right">{page.posts?.toLocaleString()}</td>
-                  <td className="py-3 text-right font-semibold text-indigo-600">
+                  <td className="py-3 text-right px-2">{page.posts?.toLocaleString()}</td>
+                  <td className="py-3 text-right px-2 font-semibold text-indigo-600">
                     {page.engagement?.toLocaleString()}
                   </td>
-                  <td className="py-3 text-right text-green-600">{page.avg_engagement?.toLocaleString()}</td>
-                  <td className="py-3 text-right text-purple-600">
+                  <td className="py-3 text-right px-2 text-green-600">{page.avg_engagement?.toLocaleString()}</td>
+                  <td className="py-3 text-right px-2 text-purple-600">
                     {page.views?.toLocaleString()}
                   </td>
-                  <td className="py-3 text-right text-cyan-600">
+                  <td className="py-3 text-right px-2 text-cyan-600">
                     {page.reach?.toLocaleString()}
                   </td>
-                  <td className="py-3 text-right">
+                  <td className="py-3 text-right px-3">
                     {page.fan_count?.toLocaleString() || 'N/A'}
                   </td>
-                  <td className="py-3 w-32">
+                  <td className="py-3 px-3 w-28">
                     <div className="flex items-center gap-2">
                       <div className="flex-1 bg-gray-200 rounded-full h-2">
                         <div

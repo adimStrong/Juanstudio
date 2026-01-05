@@ -18,3 +18,5 @@ dist/
 page_tokens.json
 page_tokens_raw.json
 .env
+
+.vercel

@@ -60,25 +60,31 @@ goto MENU
 :API_UPDATE
 echo.
 echo ============================================================
-echo [1/4] API FETCH - Fetching missing posts...
+echo [1/5] API FETCH - Fetching missing posts...
 echo ============================================================
 python fetch_missing_posts.py
 
 echo.
 echo ============================================================
-echo [2/4] API FETCH - Fetching comments (10 workers)...
+echo [2/5] API FETCH - Fetching comments (10 workers)...
 echo ============================================================
 python fetch_comments.py --workers 10
 
 echo.
 echo ============================================================
-echo [3/4] EXPORT - Generating JSON for frontend...
+echo [3/5] API FETCH - Updating follower counts...
+echo ============================================================
+python update_fan_counts.py
+
+echo.
+echo ============================================================
+echo [4/5] EXPORT - Generating JSON for frontend...
 echo ============================================================
 python export_static_data.py
 
 echo.
 echo ============================================================
-echo [4/4] PUSH - Committing and pushing to GitHub...
+echo [5/5] PUSH - Committing and pushing to GitHub...
 echo ============================================================
 set GIT="C:\Users\us\AppData\Local\Programs\Git\bin\git.exe"
 %GIT% add -A

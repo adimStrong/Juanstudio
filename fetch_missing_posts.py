@@ -2,21 +2,34 @@
 """
 Fetch missing posts from FB API that aren't in CSV data.
 CSV data is prioritized (has views/reach), API ONLY fills gaps for dates NOT in CSV.
+
+Usage:
+    python fetch_missing_posts.py           # Normal mode (sends notifications)
+    python fetch_missing_posts.py --silent  # Silent mode (no notifications)
 """
 
 import json
 import sqlite3
 import requests
 import time
+import sys
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Telegram notifications - enabled for new post alerts
-TELEGRAM_ENABLED = True
+# Telegram notifications - can be disabled with --silent flag
+TELEGRAM_ENABLED = "--silent" not in sys.argv
 try:
     from telegram_notifier import send_new_post_alert
 except ImportError:
-    pass
+    TELEGRAM_ENABLED = False
+
+
+def normalize_post_id(post_id):
+    """Extract pure post ID, stripping page ID prefix if present."""
+    post_id_str = str(post_id)
+    if '_' in post_id_str:
+        return post_id_str.split('_')[-1]
+    return post_id_str
 
 DATABASE_PATH = "data/juanstudio_analytics.db"
 
@@ -235,15 +248,16 @@ def main():
         posts = fetch_posts_from_api(token, api_page_id, page_name, days_back=7)
         print(f"  Found {len(posts)} posts from API")
 
-        # Filter to only new posts NOT in database
-        new_posts = [p for p in posts if p["id"] not in existing_ids]
+        # Filter to only new posts NOT in database (normalize IDs for comparison)
+        new_posts = [p for p in posts if normalize_post_id(p["id"]) not in existing_ids]
         print(f"  New posts not in database: {len(new_posts)}")
 
         # Save only posts from dates NOT in CSV
         page_new = 0
         page_skipped = 0
         for post in new_posts:
-            post_id = post["id"]
+            full_post_id = post["id"]
+            normalized_id = normalize_post_id(full_post_id)
             created_time = post.get("created_time", "")
             post_date = created_time[:10] if created_time else ""
 
@@ -252,11 +266,11 @@ def main():
                 page_skipped += 1
                 continue
 
-            reactions, comments, shares, post_type = get_post_details(token, post_id)
+            reactions, comments, shares, post_type = get_post_details(token, full_post_id)
 
-            if save_post(conn, db_page_id, post_id, post, reactions, comments, shares, post_type):
+            if save_post(conn, db_page_id, normalized_id, post, reactions, comments, shares, post_type):
                 page_new += 1
-                print(f"  + Added ({post_date}): {post_id[:25]}...")
+                print(f"  + Added ({post_date}): {normalized_id[:25]}...")
 
                 # Send Telegram notification for new post
                 if TELEGRAM_ENABLED:
@@ -275,12 +289,13 @@ def main():
             time.sleep(0.2)
 
         # Update existing API posts (refresh engagement data)
-        existing_posts = [p for p in posts if p["id"] in existing_ids]
+        existing_posts = [p for p in posts if normalize_post_id(p["id"]) in existing_ids]
         page_updated = 0
         for post in existing_posts:
-            post_id = post["id"]
-            reactions, comments, shares, post_type = get_post_details(token, post_id)
-            if update_post_engagement(conn, post_id, reactions, comments, shares):
+            full_post_id = post["id"]
+            normalized_id = normalize_post_id(full_post_id)
+            reactions, comments, shares, post_type = get_post_details(token, full_post_id)
+            if update_post_engagement(conn, normalized_id, reactions, comments, shares):
                 page_updated += 1
             time.sleep(0.1)
 

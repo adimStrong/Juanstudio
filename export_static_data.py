@@ -11,7 +11,7 @@ Usage:
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timedelta
 from database import sync_metrics_to_posts
 
 DATABASE_PATH = "data/juanstudio_analytics.db"
@@ -414,54 +414,70 @@ def export_time_series():
         })
         prev_engagement = engagement
 
-    # Weekly data (last 4 weeks)
-    # Week expression: use strftime on the converted ISO date
-    week_expr = f"strftime('%Y-%W', {date_expr})"
-    cursor.execute(f"""
-        SELECT
-            {week_expr} as week,
-            MIN({date_expr}) as week_start,
-            MAX({date_expr}) as week_end,
-            COUNT(*) as post_count,
-            COALESCE(SUM(reactions_total), 0) as reactions,
-            COALESCE(SUM(comments_count), 0) as comments,
-            COALESCE(SUM(shares_count), 0) as shares,
-            COALESCE(SUM(views_count), 0) as views,
-            COALESCE(SUM(reach_count), 0) as reach,
-            COALESCE(SUM(total_engagement), 0) as engagement,
-            COALESCE(AVG(total_engagement), 0) as avg_engagement
-        FROM posts
-        WHERE publish_time IS NOT NULL
-            AND {date_expr} >= DATE('now', '-28 days')
-            AND (reactions_total > 0 OR comments_count > 0 OR shares_count > 0)
-        GROUP BY {week_expr}
-        ORDER BY week DESC
-        LIMIT 4
-    """)
+    # Weekly data (last 4 weeks) - proper 7-day periods
+    # Calculate 4 complete weeks going backwards from yesterday (today may have incomplete data)
+    today = datetime.now().date()
+    # Start from yesterday to ensure we have complete data
+    end_date = today - timedelta(days=1)
 
     weekly = []
     prev_weekly_engagement = None
-    rows = list(cursor.fetchall())
-    for row in reversed(rows):  # Oldest first for WoW calculation
-        engagement = row[9]
-        wow_change = None
-        if prev_weekly_engagement and prev_weekly_engagement > 0:
-            wow_change = round(((engagement - prev_weekly_engagement) / prev_weekly_engagement) * 100, 1)
+
+    for week_num in range(4):
+        # Calculate week boundaries (7 days each)
+        week_end = end_date - timedelta(days=week_num * 7)
+        week_start = week_end - timedelta(days=6)
+
+        week_start_str = week_start.strftime('%Y-%m-%d')
+        week_end_str = week_end.strftime('%Y-%m-%d')
+
+        cursor.execute(f"""
+            SELECT
+                COUNT(*) as post_count,
+                COALESCE(SUM(reactions_total), 0) as reactions,
+                COALESCE(SUM(comments_count), 0) as comments,
+                COALESCE(SUM(shares_count), 0) as shares,
+                COALESCE(SUM(views_count), 0) as views,
+                COALESCE(SUM(reach_count), 0) as reach,
+                COALESCE(SUM(total_engagement), 0) as engagement,
+                COALESCE(AVG(total_engagement), 0) as avg_engagement
+            FROM posts
+            WHERE publish_time IS NOT NULL
+                AND {date_expr} >= ?
+                AND {date_expr} <= ?
+                AND (reactions_total > 0 OR comments_count > 0 OR shares_count > 0)
+        """, (week_start_str, week_end_str))
+
+        row = cursor.fetchone()
+        engagement = row[6]
+
         weekly.append({
-            "week": row[0],
-            "week_start": row[1],
-            "week_end": row[2],
-            "posts": row[3],
-            "reactions": row[4],
-            "comments": row[5],
-            "shares": row[6],
-            "views": row[7],
-            "reach": row[8],
+            "week": f"Week {4 - week_num}",
+            "week_start": week_start_str,
+            "week_end": week_end_str,
+            "posts": row[0],
+            "reactions": row[1],
+            "comments": row[2],
+            "shares": row[3],
+            "views": row[4],
+            "reach": row[5],
             "engagement": engagement,
-            "avg_engagement": round(row[10], 1),
-            "wow_change": wow_change
+            "avg_engagement": round(row[7], 1),
+            "wow_change": None  # Will be calculated after
         })
-        prev_weekly_engagement = engagement
+
+    # Reverse so oldest is first, then calculate WoW changes
+    weekly = list(reversed(weekly))
+
+    # Calculate WoW changes (week-over-week)
+    for i, week in enumerate(weekly):
+        if i > 0 and weekly[i-1]['engagement'] > 0:
+            prev_eng = weekly[i-1]['engagement']
+            curr_eng = week['engagement']
+            week['wow_change'] = round(((curr_eng - prev_eng) / prev_eng) * 100, 1)
+
+    # Reverse back so most recent is first
+    weekly = list(reversed(weekly))
 
     # Day of week analysis
     dow_expr = f"CAST(strftime('%w', {date_expr}) AS INTEGER)"

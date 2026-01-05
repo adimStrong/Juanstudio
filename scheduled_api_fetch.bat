@@ -34,13 +34,23 @@ if "%hour%"=="7" (
 )
 
 echo.
-echo [5/6] Exporting analytics data...
+echo [5/7] Exporting analytics data...
 python export_static_data.py
 
 echo.
-echo [6/6] Pushing to GitHub...
-C:\Users\us\AppData\Local\Programs\Git\bin\git.exe add frontend/public/data/analytics.json
-C:\Users\us\AppData\Local\Programs\Git\bin\git.exe commit -m "Scheduled update"
+echo [6/7] Verifying data integrity...
+python verify_data.py
+if errorlevel 1 (
+    echo.
+    echo ERROR: Verification failed! Skipping push.
+    pause
+    goto LOOP
+)
+
+echo.
+echo [7/7] Pushing to GitHub...
+C:\Users\us\AppData\Local\Programs\Git\bin\git.exe add frontend/public/data/analytics-v2.json
+C:\Users\us\AppData\Local\Programs\Git\bin\git.exe commit -m "Scheduled update - %date% %time%"
 C:\Users\us\AppData\Local\Programs\Git\bin\git.exe push origin main
 
 echo.
