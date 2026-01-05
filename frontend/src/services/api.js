@@ -6,12 +6,18 @@ const IS_PRODUCTION = import.meta.env.PROD || import.meta.env.MODE === 'producti
 const API_URL = 'http://localhost:8001/api';
 
 let staticData = null;
+let manifestCache = null;
 
 async function loadStaticData() {
   if (!staticData) {
-    // Add cache-busting version to force fresh data
-    const response = await fetch('/data/analytics-v3.json');
+    // Load manifest first to get current data file (with cache-bust)
+    const manifestRes = await fetch('/data/manifest.json?t=' + Date.now());
+    const manifest = await manifestRes.json();
+
+    // Load the actual data file (filename includes content hash for CDN cache-busting)
+    const response = await fetch('/data/' + manifest.current);
     staticData = await response.json();
+    manifestCache = manifest;
   }
   return staticData;
 }

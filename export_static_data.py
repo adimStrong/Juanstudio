@@ -11,11 +11,15 @@ Usage:
 
 import json
 import sqlite3
+import hashlib
+import glob
+import os
 from datetime import datetime, timedelta
 from database import sync_metrics_to_posts
 
 DATABASE_PATH = "data/juanstudio_analytics.db"
-OUTPUT_PATH = "frontend/public/data/analytics-v3.json"
+OUTPUT_DIR = "frontend/public/data"
+# Use content-hash filename to bust Vercel CDN cache automatically
 
 
 def get_conn():
@@ -1126,11 +1130,33 @@ def main():
     eff = comment_analysis_data['effectivity']
     print(f"  Engagement boost from self-comment: {eff['engagement_boost_pct']}%")
 
-    # Save to file
-    with open(OUTPUT_PATH, 'w') as f:
+    # Generate content hash for cache-busting filename
+    json_str = json.dumps(data, sort_keys=True)
+    content_hash = hashlib.md5(json_str.encode()).hexdigest()[:8]
+
+    # Clean up old analytics files
+    old_files = glob.glob(f"{OUTPUT_DIR}/analytics-*.json")
+    for old_file in old_files:
+        if 'manifest' not in old_file:
+            os.remove(old_file)
+            print(f"  Removed old: {os.path.basename(old_file)}")
+
+    # Save with hash in filename
+    output_file = f"{OUTPUT_DIR}/analytics-{content_hash}.json"
+    with open(output_file, 'w') as f:
         json.dump(data, f, indent=2)
 
-    print(f"\n[OK] Exported to: {OUTPUT_PATH}")
+    # Create manifest file that points to current data file
+    manifest = {
+        "current": f"analytics-{content_hash}.json",
+        "hash": content_hash,
+        "updated": datetime.now().isoformat()
+    }
+    with open(f"{OUTPUT_DIR}/manifest.json", 'w') as f:
+        json.dump(manifest, f, indent=2)
+
+    print(f"\n[OK] Exported to: {output_file}")
+    print(f"[OK] Manifest updated: manifest.json")
 
     # Run pre-deploy verification
     print("\n--- Running pre-deploy verification ---")
