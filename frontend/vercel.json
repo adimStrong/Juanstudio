@@ -2,21 +2,16 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/data/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
-        { "key": "Pragma", "value": "no-cache" },
-        { "key": "Expires", "value": "0" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/posts", "destination": "/index.html" },
-    { "source": "/pages", "destination": "/index.html" },
-    { "source": "/comments", "destination": "/index.html" },
-    { "source": "/overlap", "destination": "/index.html" },
-    { "source": "/imports", "destination": "/index.html" }
+    { "source": "/((?!data|assets).*)", "destination": "/index.html" }
   ]
 }
