@@ -17,6 +17,7 @@ dist/
 # Secrets
 page_tokens.json
 page_tokens_raw.json
+short_lived_tokens.json
 .env
 
 .vercel
