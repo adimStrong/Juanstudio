@@ -103,7 +103,7 @@ export default function Pages() {
           <h2 className="text-lg font-semibold">👥 Followers by Page</h2>
           <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">Current count only</span>
         </div>
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer width="100%" height={sortedByFollowers.length * 40}>
           <BarChart data={sortedByFollowers} layout="vertical">
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis type="number" fontSize={12} tickFormatter={(val) => formatNumber(val)} />
