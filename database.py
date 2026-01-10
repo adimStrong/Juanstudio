@@ -1,23 +1,37 @@
 """
 JuanStudio Analytics Database Module
-SQLite database connection and schema management
+Supports both SQLite (local) and PostgreSQL (production on Railway)
 """
 
-import sqlite3
 import os
+import sqlite3
 from pathlib import Path
 from datetime import datetime
 from contextlib import contextmanager
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Union
 
-# Database configuration
+# Check for PostgreSQL connection string (Railway sets this)
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+# SQLite configuration (fallback for local development)
 DB_DIR = Path(__file__).parent / "data"
 DB_PATH = DB_DIR / "juanstudio_analytics.db"
+DATABASE_PATH = str(DB_PATH)  # Alias for backward compatibility
 MIGRATIONS_DIR = Path(__file__).parent / "migrations"
+
+# Database type detection
+USE_POSTGRES = DATABASE_URL is not None and DATABASE_URL.startswith("postgres")
+
+if USE_POSTGRES:
+    import psycopg2
+    from psycopg2.extras import RealDictCursor
+    print(f"Using PostgreSQL database")
+else:
+    print(f"Using SQLite database at {DB_PATH}")
 
 
 def get_db_path() -> Path:
-    """Get the database file path, creating directory if needed."""
+    """Get the database file path, creating directory if needed (SQLite only)."""
     DB_DIR.mkdir(parents=True, exist_ok=True)
     return DB_PATH
 
@@ -37,22 +51,42 @@ def normalize_post_id(post_id: str) -> str:
     return post_id_str
 
 
-def get_connection(db_path: Optional[Path] = None) -> sqlite3.Connection:
+def get_connection(db_path: Optional[Path] = None) -> Union[sqlite3.Connection, 'psycopg2.connection']:
     """
-    Get a database connection with row factory enabled.
-
-    Args:
-        db_path: Optional custom database path
+    Get a database connection.
 
     Returns:
-        SQLite connection object
+        Database connection object (SQLite or PostgreSQL)
     """
-    path = db_path or get_db_path()
-    conn = sqlite3.connect(str(path))
-    conn.row_factory = sqlite3.Row
-    # Enable foreign keys
-    conn.execute("PRAGMA foreign_keys = ON")
-    return conn
+    if USE_POSTGRES:
+        # PostgreSQL connection
+        conn = psycopg2.connect(DATABASE_URL)
+        return conn
+    else:
+        # SQLite connection
+        path = db_path or get_db_path()
+        conn = sqlite3.connect(str(path))
+        conn.row_factory = sqlite3.Row
+        conn.execute("PRAGMA foreign_keys = ON")
+        return conn
+
+
+def dict_cursor(conn):
+    """Get a cursor that returns dict-like rows."""
+    if USE_POSTGRES:
+        return conn.cursor(cursor_factory=RealDictCursor)
+    else:
+        return conn.cursor()
+
+
+def row_to_dict(row, cursor=None) -> Optional[Dict[str, Any]]:
+    """Convert a database row to a dictionary."""
+    if row is None:
+        return None
+    if USE_POSTGRES:
+        return dict(row) if row else None
+    else:
+        return dict(row) if row else None
 
 
 @contextmanager
@@ -75,6 +109,33 @@ def db_connection(db_path: Optional[Path] = None):
         conn.close()
 
 
+def param(index: int = 0) -> str:
+    """Return the correct parameter placeholder for the database type."""
+    return "%s" if USE_POSTGRES else "?"
+
+
+def execute_query(conn, sql: str, params: tuple = ()):
+    """Execute a query with proper parameter handling."""
+    if USE_POSTGRES:
+        # Convert ? placeholders to %s for PostgreSQL
+        sql = sql.replace("?", "%s")
+        cursor = conn.cursor(cursor_factory=RealDictCursor)
+        cursor.execute(sql, params)
+        return cursor
+    else:
+        return conn.execute(sql, params)
+
+
+def execute_script(conn, sql: str):
+    """Execute a SQL script (multiple statements)."""
+    if USE_POSTGRES:
+        cursor = conn.cursor()
+        cursor.execute(sql)
+        conn.commit()
+    else:
+        conn.executescript(sql)
+
+
 def init_database(db_path: Optional[Path] = None) -> bool:
     """
     Initialize the database with the schema from migrations.
@@ -85,7 +146,10 @@ def init_database(db_path: Optional[Path] = None) -> bool:
     Returns:
         True if successful
     """
-    schema_file = MIGRATIONS_DIR / "001_initial_schema.sql"
+    if USE_POSTGRES:
+        schema_file = MIGRATIONS_DIR / "002_postgresql_schema.sql"
+    else:
+        schema_file = MIGRATIONS_DIR / "001_initial_schema.sql"
 
     if not schema_file.exists():
         raise FileNotFoundError(f"Schema file not found: {schema_file}")
@@ -94,23 +158,34 @@ def init_database(db_path: Optional[Path] = None) -> bool:
         schema_sql = f.read()
 
     with db_connection(db_path) as conn:
-        conn.executescript(schema_sql)
-        print(f"Database initialized at: {db_path or get_db_path()}")
+        execute_script(conn, schema_sql)
+        if USE_POSTGRES:
+            print("PostgreSQL database initialized")
+        else:
+            print(f"SQLite database initialized at: {db_path or get_db_path()}")
 
     return True
 
 
 def is_initialized(db_path: Optional[Path] = None) -> bool:
     """Check if the database has been initialized with tables."""
-    path = db_path or get_db_path()
-    if not path.exists():
-        return False
-
-    with db_connection(path) as conn:
-        cursor = conn.execute(
-            "SELECT name FROM sqlite_master WHERE type='table' AND name='posts'"
-        )
-        return cursor.fetchone() is not None
+    if USE_POSTGRES:
+        with db_connection() as conn:
+            cursor = execute_query(
+                conn,
+                "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_name = 'posts')"
+            )
+            row = cursor.fetchone()
+            return row[0] if row else False
+    else:
+        path = db_path or get_db_path()
+        if not path.exists():
+            return False
+        with db_connection(path) as conn:
+            cursor = conn.execute(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name='posts'"
+            )
+            return cursor.fetchone() is not None
 
 
 def ensure_initialized(db_path: Optional[Path] = None) -> None:
@@ -133,7 +208,7 @@ def upsert_page(
     overall_star_rating: Optional[float] = None,
     rating_count: Optional[int] = None,
     is_competitor: bool = False,
-    conn: Optional[sqlite3.Connection] = None
+    conn=None
 ) -> None:
     """Insert or update a page record."""
     sql = """
@@ -144,39 +219,37 @@ def upsert_page(
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(page_id) DO UPDATE SET
             page_name = excluded.page_name,
-            page_url = COALESCE(excluded.page_url, page_url),
-            fan_count = COALESCE(excluded.fan_count, fan_count),
-            followers_count = COALESCE(excluded.followers_count, followers_count),
-            talking_about_count = COALESCE(excluded.talking_about_count, talking_about_count),
-            overall_star_rating = COALESCE(excluded.overall_star_rating, overall_star_rating),
-            rating_count = COALESCE(excluded.rating_count, rating_count),
+            page_url = COALESCE(excluded.page_url, pages.page_url),
+            fan_count = COALESCE(excluded.fan_count, pages.fan_count),
+            followers_count = COALESCE(excluded.followers_count, pages.followers_count),
+            talking_about_count = COALESCE(excluded.talking_about_count, pages.talking_about_count),
+            overall_star_rating = COALESCE(excluded.overall_star_rating, pages.overall_star_rating),
+            rating_count = COALESCE(excluded.rating_count, pages.rating_count),
             is_competitor = excluded.is_competitor,
             updated_at = excluded.updated_at
     """
-
-    def execute(c):
-        c.execute(sql, (
-            page_id, page_name, page_url, fan_count, followers_count,
-            talking_about_count, overall_star_rating, rating_count,
-            is_competitor, datetime.now().isoformat()
-        ))
+    params = (
+        page_id, page_name, page_url, fan_count, followers_count,
+        talking_about_count, overall_star_rating, rating_count,
+        is_competitor, datetime.now().isoformat()
+    )
 
     if conn:
-        execute(conn)
+        execute_query(conn, sql, params)
     else:
         with db_connection() as c:
-            execute(c)
+            execute_query(c, sql, params)
 
 
 def get_page(page_id: str) -> Optional[Dict[str, Any]]:
     """Get a page by ID."""
     with db_connection() as conn:
-        cursor = conn.execute("SELECT * FROM pages WHERE page_id = ?", (page_id,))
+        cursor = execute_query(conn, "SELECT * FROM pages WHERE page_id = ?", (page_id,))
         row = cursor.fetchone()
         return dict(row) if row else None
 
 
-def get_page_by_name(page_name: str, conn: Optional[sqlite3.Connection] = None) -> Optional[Dict[str, Any]]:
+def get_page_by_name(page_name: str, conn=None) -> Optional[Dict[str, Any]]:
     """Get a page by name (case-insensitive).
 
     Used to detect duplicate pages that have different IDs in API vs CSV.
@@ -184,7 +257,7 @@ def get_page_by_name(page_name: str, conn: Optional[sqlite3.Connection] = None) 
     sql = "SELECT * FROM pages WHERE LOWER(page_name) = LOWER(?)"
 
     def execute(c):
-        cursor = c.execute(sql, (page_name,))
+        cursor = execute_query(c, sql, (page_name,))
         row = cursor.fetchone()
         return dict(row) if row else None
 
@@ -199,10 +272,10 @@ def get_all_pages(include_competitors: bool = True) -> List[Dict[str, Any]]:
     """Get all pages."""
     with db_connection() as conn:
         if include_competitors:
-            cursor = conn.execute("SELECT * FROM pages ORDER BY page_name")
+            cursor = execute_query(conn, "SELECT * FROM pages ORDER BY page_name")
         else:
-            cursor = conn.execute(
-                "SELECT * FROM pages WHERE is_competitor = 0 ORDER BY page_name"
+            cursor = execute_query(
+                conn, "SELECT * FROM pages WHERE is_competitor = FALSE ORDER BY page_name"
             )
         return [dict(row) for row in cursor.fetchall()]
 
@@ -222,7 +295,7 @@ def upsert_post(
     is_crosspost: bool = False,
     is_share: bool = False,
     duration_sec: Optional[int] = None,
-    conn: Optional[sqlite3.Connection] = None
+    conn=None
 ) -> None:
     """Insert or update a post record."""
     # Normalize post_id to prevent duplicates from API vs CSV formats
@@ -234,34 +307,32 @@ def upsert_post(
             publish_time, permalink, is_crosspost, is_share, duration_sec
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(post_id) DO UPDATE SET
-            title = COALESCE(excluded.title, title),
-            description = COALESCE(excluded.description, description),
-            post_type = COALESCE(excluded.post_type, post_type),
-            publish_time = COALESCE(excluded.publish_time, publish_time),
-            permalink = COALESCE(excluded.permalink, permalink),
+            title = COALESCE(excluded.title, posts.title),
+            description = COALESCE(excluded.description, posts.description),
+            post_type = COALESCE(excluded.post_type, posts.post_type),
+            publish_time = COALESCE(excluded.publish_time, posts.publish_time),
+            permalink = COALESCE(excluded.permalink, posts.permalink),
             is_crosspost = excluded.is_crosspost,
             is_share = excluded.is_share,
-            duration_sec = COALESCE(excluded.duration_sec, duration_sec)
+            duration_sec = COALESCE(excluded.duration_sec, posts.duration_sec)
     """
-
-    def execute(c):
-        c.execute(sql, (
-            post_id, page_id, title, description, post_type,
-            publish_time, permalink, is_crosspost, is_share, duration_sec
-        ))
+    params = (
+        post_id, page_id, title, description, post_type,
+        publish_time, permalink, is_crosspost, is_share, duration_sec
+    )
 
     if conn:
-        execute(conn)
+        execute_query(conn, sql, params)
     else:
         with db_connection() as c:
-            execute(c)
+            execute_query(c, sql, params)
 
 
 def get_post(post_id: str) -> Optional[Dict[str, Any]]:
     """Get a post by ID with latest metrics."""
     with db_connection() as conn:
-        cursor = conn.execute(
-            "SELECT * FROM enhanced_metrics WHERE post_id = ?",
+        cursor = execute_query(
+            conn, "SELECT * FROM enhanced_metrics WHERE post_id = ?",
             (post_id,)
         )
         row = cursor.fetchone()
@@ -304,7 +375,7 @@ def get_posts(
     params.extend([limit, offset])
 
     with db_connection() as conn:
-        cursor = conn.execute(sql, params)
+        cursor = execute_query(conn, sql, tuple(params))
         return [dict(row) for row in cursor.fetchall()]
 
 
@@ -312,13 +383,14 @@ def get_post_count(page_id: Optional[str] = None) -> int:
     """Get total post count."""
     with db_connection() as conn:
         if page_id:
-            cursor = conn.execute(
-                "SELECT COUNT(*) FROM posts WHERE page_id = ?",
+            cursor = execute_query(
+                conn, "SELECT COUNT(*) FROM posts WHERE page_id = ?",
                 (page_id,)
             )
         else:
-            cursor = conn.execute("SELECT COUNT(*) FROM posts")
-        return cursor.fetchone()[0]
+            cursor = execute_query(conn, "SELECT COUNT(*) FROM posts")
+        row = cursor.fetchone()
+        return row[0] if isinstance(row, tuple) else row['count']
 
 
 # =============================================================================
@@ -343,7 +415,7 @@ def insert_metrics(
     sad_count: int = 0,
     angry_count: int = 0,
     source: str = 'csv',
-    conn: Optional[sqlite3.Connection] = None
+    conn=None
 ) -> None:
     """Insert metrics for a post (update if exists for same date/source)."""
     # Normalize post_id to match posts table
@@ -372,20 +444,18 @@ def insert_metrics(
             sad_count = excluded.sad_count,
             angry_count = excluded.angry_count
     """
-
-    def execute(c):
-        c.execute(sql, (
-            post_id, metric_date, reactions, comments, shares, views, reach,
-            total_clicks, link_clicks, other_clicks,
-            like_count, love_count, haha_count, wow_count, sad_count, angry_count,
-            source
-        ))
+    params = (
+        post_id, metric_date, reactions, comments, shares, views, reach,
+        total_clicks, link_clicks, other_clicks,
+        like_count, love_count, haha_count, wow_count, sad_count, angry_count,
+        source
+    )
 
     if conn:
-        execute(conn)
+        execute_query(conn, sql, params)
     else:
         with db_connection() as c:
-            execute(c)
+            execute_query(c, sql, params)
 
 
 # =============================================================================
@@ -438,7 +508,7 @@ def sync_metrics_to_posts():
         )
     """
     with db_connection() as conn:
-        cursor = conn.execute(sql)
+        cursor = execute_query(conn, sql)
         updated = cursor.rowcount
         print(f"Synced metrics to {updated} posts")
         return updated
@@ -460,26 +530,40 @@ def record_import(
     status: str = 'completed'
 ) -> int:
     """Record a CSV import in history."""
-    sql = """
-        INSERT INTO csv_imports (
-            filename, file_path, rows_imported, rows_updated, rows_skipped,
-            date_range_start, date_range_end, page_filter, status
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """
+    params = (
+        filename, file_path, rows_imported, rows_updated, rows_skipped,
+        date_range_start, date_range_end, page_filter, status
+    )
 
     with db_connection() as conn:
-        cursor = conn.execute(sql, (
-            filename, file_path, rows_imported, rows_updated, rows_skipped,
-            date_range_start, date_range_end, page_filter, status
-        ))
-        return cursor.lastrowid
+        if USE_POSTGRES:
+            sql = """
+                INSERT INTO csv_imports (
+                    filename, file_path, rows_imported, rows_updated, rows_skipped,
+                    date_range_start, date_range_end, page_filter, status
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                RETURNING id
+            """
+            cursor = conn.cursor()
+            cursor.execute(sql, params)
+            result = cursor.fetchone()
+            return result[0] if result else 0
+        else:
+            sql = """
+                INSERT INTO csv_imports (
+                    filename, file_path, rows_imported, rows_updated, rows_skipped,
+                    date_range_start, date_range_end, page_filter, status
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """
+            cursor = conn.execute(sql, params)
+            return cursor.lastrowid
 
 
 def get_import_history(limit: int = 20) -> List[Dict[str, Any]]:
     """Get recent import history."""
     with db_connection() as conn:
-        cursor = conn.execute(
-            "SELECT * FROM csv_imports ORDER BY import_date DESC LIMIT ?",
+        cursor = execute_query(
+            conn, "SELECT * FROM csv_imports ORDER BY import_date DESC LIMIT ?",
             (limit,)
         )
         return [dict(row) for row in cursor.fetchall()]
@@ -517,7 +601,7 @@ def get_daily_engagement(
     """
 
     with db_connection() as conn:
-        cursor = conn.execute(sql, params)
+        cursor = execute_query(conn, sql, tuple(params))
         return [dict(row) for row in cursor.fetchall()]
 
 
@@ -525,12 +609,12 @@ def get_post_type_performance(page_id: Optional[str] = None) -> List[Dict[str, A
     """Get performance metrics by post type."""
     with db_connection() as conn:
         if page_id:
-            cursor = conn.execute(
-                "SELECT * FROM post_type_performance WHERE page_id = ?",
+            cursor = execute_query(
+                conn, "SELECT * FROM post_type_performance WHERE page_id = ?",
                 (page_id,)
             )
         else:
-            cursor = conn.execute("SELECT * FROM post_type_performance")
+            cursor = execute_query(conn, "SELECT * FROM post_type_performance")
         return [dict(row) for row in cursor.fetchall()]
 
 
@@ -539,37 +623,54 @@ def get_database_stats() -> Dict[str, Any]:
     with db_connection() as conn:
         stats = {}
 
+        def get_count(row):
+            """Extract count from row regardless of DB type."""
+            if isinstance(row, tuple):
+                return row[0]
+            return row.get('count', row[0]) if hasattr(row, 'get') else row[0]
+
         # Page count
-        cursor = conn.execute("SELECT COUNT(*) FROM pages")
-        stats['page_count'] = cursor.fetchone()[0]
+        cursor = execute_query(conn, "SELECT COUNT(*) as count FROM pages")
+        stats['page_count'] = get_count(cursor.fetchone())
 
         # Post count
-        cursor = conn.execute("SELECT COUNT(*) FROM posts")
-        stats['post_count'] = cursor.fetchone()[0]
+        cursor = execute_query(conn, "SELECT COUNT(*) as count FROM posts")
+        stats['post_count'] = get_count(cursor.fetchone())
 
         # Metrics count
-        cursor = conn.execute("SELECT COUNT(*) FROM post_metrics")
-        stats['metrics_count'] = cursor.fetchone()[0]
+        cursor = execute_query(conn, "SELECT COUNT(*) as count FROM post_metrics")
+        stats['metrics_count'] = get_count(cursor.fetchone())
 
         # Date range
-        cursor = conn.execute("""
+        cursor = execute_query(conn, """
             SELECT MIN(publish_time) as earliest, MAX(publish_time) as latest
             FROM posts
         """)
         row = cursor.fetchone()
-        stats['earliest_post'] = row['earliest']
-        stats['latest_post'] = row['latest']
+        if row:
+            if isinstance(row, tuple):
+                stats['earliest_post'] = row[0]
+                stats['latest_post'] = row[1]
+            else:
+                stats['earliest_post'] = row.get('earliest') or row[0]
+                stats['latest_post'] = row.get('latest') or row[1]
+        else:
+            stats['earliest_post'] = None
+            stats['latest_post'] = None
 
         # Import history count
-        cursor = conn.execute("SELECT COUNT(*) FROM csv_imports")
-        stats['import_count'] = cursor.fetchone()[0]
+        cursor = execute_query(conn, "SELECT COUNT(*) as count FROM csv_imports")
+        stats['import_count'] = get_count(cursor.fetchone())
 
-        # Database file size
-        db_path = get_db_path()
-        if db_path.exists():
-            stats['db_size_mb'] = round(db_path.stat().st_size / (1024 * 1024), 2)
+        # Database file size (SQLite only)
+        if USE_POSTGRES:
+            stats['db_size_mb'] = 0  # Can't easily get PostgreSQL DB size
         else:
-            stats['db_size_mb'] = 0
+            db_path = get_db_path()
+            if db_path.exists():
+                stats['db_size_mb'] = round(db_path.stat().st_size / (1024 * 1024), 2)
+            else:
+                stats['db_size_mb'] = 0
 
         return stats
 

@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
-  RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Cell
+  RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Cell, PieChart, Pie
 } from 'recharts';
-import { getPageComparison } from '../services/api';
+import { getPageComparison, getPostTypeStats } from '../services/api';
 import DateFilter from '../components/DateFilter';
 
 const COLORS = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316', '#06b6d4', '#84cc16', '#a855f7', '#d946ef', '#0ea5e9'];
 
 export default function Overlap() {
   const [comparison, setComparison] = useState(null);
+  const [postTypes, setPostTypes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedMetric, setSelectedMetric] = useState('engagement');
   const [startDate, setStartDate] = useState(null);
@@ -27,8 +28,12 @@ export default function Overlap() {
     async function fetchData() {
       setLoading(true);
       try {
-        const data = await getPageComparison({ startDate, endDate });
-        setComparison(data);
+        const [compData, ptData] = await Promise.all([
+          getPageComparison({ startDate, endDate }),
+          getPostTypeStats()
+        ]);
+        setComparison(compData);
+        setPostTypes(ptData || []);
       } catch (err) {
         console.error(err);
       } finally {
@@ -75,11 +80,11 @@ export default function Overlap() {
 
   // Radar chart data (normalized for comparison)
   const maxValues = {
-    posts: Math.max(...pages.map(p => p.posts)),
-    engagement: Math.max(...pages.map(p => p.avg_engagement)),
-    views: Math.max(...pages.map(p => p.views)),
-    reach: Math.max(...pages.map(p => p.reach)),
-    comments: Math.max(...pages.map(p => p.comments))
+    posts: Math.max(...pages.map(p => p.post_count || p.posts || 0)),
+    engagement: Math.max(...pages.map(p => p.avg_engagement || 0)),
+    views: Math.max(...pages.map(p => p.total_views || p.views || 0)),
+    reach: Math.max(...pages.map(p => p.total_reach || p.reach || 0)),
+    comments: Math.max(...pages.map(p => p.total_comments || p.comments || 0))
   };
 
   const radarData = [
@@ -92,11 +97,15 @@ export default function Overlap() {
 
   pages.forEach(p => {
     const name = p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '');
-    radarData[0][name] = Math.round((p.posts / maxValues.posts) * 100);
-    radarData[1][name] = Math.round((p.avg_engagement / maxValues.engagement) * 100);
-    radarData[2][name] = Math.round((p.views / maxValues.views) * 100);
-    radarData[3][name] = Math.round((p.reach / maxValues.reach) * 100);
-    radarData[4][name] = Math.round((p.comments / maxValues.comments) * 100);
+    const posts = p.post_count || p.posts || 0;
+    const views = p.total_views || p.views || 0;
+    const reach = p.total_reach || p.reach || 0;
+    const comments = p.total_comments || p.comments || 0;
+    radarData[0][name] = maxValues.posts > 0 ? Math.round((posts / maxValues.posts) * 100) : 0;
+    radarData[1][name] = maxValues.engagement > 0 ? Math.round((p.avg_engagement / maxValues.engagement) * 100) : 0;
+    radarData[2][name] = maxValues.views > 0 ? Math.round((views / maxValues.views) * 100) : 0;
+    radarData[3][name] = maxValues.reach > 0 ? Math.round((reach / maxValues.reach) * 100) : 0;
+    radarData[4][name] = maxValues.comments > 0 ? Math.round((comments / maxValues.comments) * 100) : 0;
   });
 
   const metricOptions = [
@@ -223,9 +232,9 @@ export default function Overlap() {
           </ResponsiveContainer>
         </div>
 
-        {/* Radar Chart */}
+        {/* Radar Chart - Top 3 */}
         <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-lg font-semibold mb-4">Performance Profile</h2>
+          <h2 className="text-lg font-semibold mb-4">Top 3 Performance Profile</h2>
           <ResponsiveContainer width="100%" height={300}>
             <RadarChart data={radarData}>
               <PolarGrid />
@@ -236,18 +245,86 @@ export default function Overlap() {
                   key={p.page_id}
                   name={p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
                   dataKey={p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
-                  stroke={COLORS[index % COLORS.length]}
-                  fill={COLORS[index % COLORS.length]}
-                  fillOpacity={0.2}
+                  stroke={COLORS[index]}
+                  fill={COLORS[index]}
+                  fillOpacity={0.3}
                 />
               ))}
               <Legend />
             </RadarChart>
           </ResponsiveContainer>
-          <p className="text-xs text-gray-500 text-center mt-2">
-            Showing top 3 pages. Values normalized to 100%.
-          </p>
         </div>
+
+      </div>
+
+      {/* Bottom 3 and Engagement by Post Type - Side by Side */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Radar Chart - Bottom 3 */}
+        <div className="bg-white rounded-lg shadow p-6">
+          <h2 className="text-lg font-semibold mb-4">Bottom 3 Performance Profile</h2>
+          <ResponsiveContainer width="100%" height={300}>
+            <RadarChart data={radarData}>
+              <PolarGrid />
+              <PolarAngleAxis dataKey="metric" fontSize={12} />
+              <PolarRadiusAxis angle={30} domain={[0, 100]} fontSize={10} />
+              {pages.slice(-3).reverse().map((p, index) => (
+                <Radar
+                  key={p.page_id}
+                  name={p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
+                  dataKey={p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('JUANKada ', '').replace('Juankada ', '')}
+                  stroke={COLORS[index + 3]}
+                  fill={COLORS[index + 3]}
+                  fillOpacity={0.3}
+                />
+              ))}
+              <Legend />
+            </RadarChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Engagement by Post Type */}
+        <div className="bg-white rounded-lg shadow p-6">
+          <h2 className="text-lg font-semibold mb-4">Engagement by Post Type</h2>
+          {postTypes.length > 0 ? (
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={postTypes} layout="vertical">
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis type="number" fontSize={12} tickFormatter={(val) => val?.toLocaleString()} />
+                <YAxis type="category" dataKey="post_type" fontSize={12} width={70} />
+                <Tooltip formatter={(value) => value?.toLocaleString()} />
+                <Bar dataKey="total_engagement" name="Engagement">
+                  {postTypes.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          ) : (
+            <p className="text-gray-500 text-center py-8">No post type data available</p>
+          )}
+        </div>
+      </div>
+
+      {/* Comments by Post Type */}
+      <div className="bg-white rounded-lg shadow p-6">
+        <h2 className="text-lg font-semibold mb-4">Comments by Post Type</h2>
+        {postTypes.length > 0 ? (
+          <ResponsiveContainer width="100%" height={250}>
+            <BarChart data={postTypes}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="post_type" fontSize={12} />
+              <YAxis fontSize={12} tickFormatter={(val) => val?.toLocaleString()} />
+              <Tooltip formatter={(value) => value?.toLocaleString()} />
+              <Bar dataKey="comments" name="Comments">
+                {postTypes.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[(index + 5) % COLORS.length]} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        ) : (
+          <p className="text-gray-500 text-center py-8">No post type data available</p>
+        )}
       </div>
 
       {/* Content Strategy */}

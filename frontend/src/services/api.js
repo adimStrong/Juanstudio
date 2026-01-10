@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-// Use static data in production (Vercel), API in development
-// Force static mode for local preview (no backend needed)
-const IS_PRODUCTION = import.meta.env.PROD || import.meta.env.MODE === 'production' || true;
-const API_URL = 'http://localhost:8001/api';
+// Use static data in production, API in development
+const IS_PRODUCTION = true; // Using static data with fresh database export
+const API_URL = 'http://localhost:8003/api/v1';
 
 let staticData = null;
 
@@ -64,6 +63,19 @@ function normalizePostType(post) {
   return post;
 }
 
+// Normalize post field names for display
+function normalizePostFields(p) {
+  return {
+    ...p,
+    comments: p.comments ?? p.comments_count ?? 0,
+    reactions: p.reactions ?? p.reactions_total ?? 0,
+    shares: p.shares ?? p.shares_count ?? 0,
+    engagement: p.engagement ?? p.total_engagement ?? 0,
+    views: p.views ?? p.views_count ?? 0,
+    reach: p.reach ?? p.reach_count ?? 0,
+  };
+}
+
 const api = axios.create({
   baseURL: API_URL,
   headers: {
@@ -117,7 +129,7 @@ export const getStats = async (pageId = null, dateRange = {}) => {
     return data.stats.all || data.stats;
   }
   const params = pageId ? `?page=${pageId}` : '';
-  return api.get(`/stats/${params}`).then(res => res.data);
+  return api.get(`/stats/dashboard${params}`).then(res => res.data);
 };
 
 export const getDailyEngagement = async (days = 30, pageId = null, dateRange = {}) => {
@@ -143,24 +155,50 @@ export const getDailyEngagement = async (days = 30, pageId = null, dateRange = {
   }
   const params = new URLSearchParams({ days });
   if (pageId) params.append('page', pageId);
-  return api.get(`/stats/daily/?${params}`).then(res => res.data);
+  return api.get(`/stats/daily?${params}`).then(res => res.data);
 };
 
 export const getPostTypeStats = async (pageId = null) => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
-    // Support per-page post type filtering
-    let postTypes;
-    if (pageId && data.postTypes.byPage && data.postTypes.byPage[pageId]) {
-      postTypes = data.postTypes.byPage[pageId];
-    } else {
-      postTypes = data.postTypes.all || data.postTypes;
+    // Calculate from posts to include comments
+    let posts = data.posts || [];
+    if (pageId) {
+      posts = posts.filter(p => p.page_id === pageId);
     }
+
+    // Aggregate by post type
+    const typeStats = {};
+    posts.forEach(p => {
+      const type = p.post_type || 'UNKNOWN';
+      if (!typeStats[type]) {
+        typeStats[type] = {
+          post_type: type,
+          count: 0,
+          reactions: 0,
+          comments: 0,
+          shares: 0,
+          total_engagement: 0,
+        };
+      }
+      typeStats[type].count++;
+      typeStats[type].reactions += p.reactions || p.reactions_total || 0;
+      typeStats[type].comments += p.comments || p.comments_count || 0;
+      typeStats[type].shares += p.shares || p.shares_count || 0;
+      typeStats[type].total_engagement += p.engagement || p.total_engagement || 0;
+    });
+
+    // Calculate averages
+    const postTypes = Object.values(typeStats).map(pt => ({
+      ...pt,
+      avg_engagement: pt.count > 0 ? Math.round(pt.total_engagement / pt.count) : 0,
+    })).sort((a, b) => b.total_engagement - a.total_engagement);
+
     // Merge Videos and Reels into single category
     return mergeVideoReels(postTypes);
   }
   const params = pageId ? `?page=${pageId}` : '';
-  return api.get(`/stats/post-types/${params}`).then(res => res.data);
+  return api.get(`/stats/post-types${params}`).then(res => res.data);
 };
 
 export const getTopPosts = async (limit = 10, metric = 'engagement', pageId = null) => {
@@ -173,19 +211,19 @@ export const getTopPosts = async (limit = 10, metric = 'engagement', pageId = nu
     } else {
       posts = data.topPosts.all || data.topPosts;
     }
-    // Normalize post_type
-    return posts.slice(0, limit).map(normalizePostType);
+    // Normalize post_type and field names
+    return posts.slice(0, limit).map(p => normalizePostFields(normalizePostType(p)));
   }
   const params = new URLSearchParams({ limit, metric });
   if (pageId) params.append('page', pageId);
-  return api.get(`/stats/top-posts/?${params}`).then(res => res.data);
+  return api.get(`/posts/top?${params}`).then(res => res.data);
 };
 
 export const getPosts = async (params = {}, dateRange = {}) => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
-    // Normalize post_type (Videos/Reels -> Videos/Reels)
-    let posts = (data.posts || []).map(normalizePostType);
+    // Normalize post_type and field names
+    let posts = (data.posts || []).map(p => normalizePostFields(normalizePostType(p)));
 
     // Apply date filter
     const { startDate, endDate } = dateRange;
@@ -239,30 +277,33 @@ export const getPages = async (dateRange = {}) => {
     const data = await loadStaticData();
     const { startDate, endDate } = dateRange;
 
-    // If no date filter, return cached pages
-    if (!startDate && !endDate) {
-      return data.pages;
-    }
-
-    // Filter posts by date and recalculate page stats
+    // Always aggregate from posts to ensure total_comments is calculated
     let posts = (data.posts || []);
-    posts = posts.filter(p => {
-      const postDate = p.publish_time?.slice(0, 10);
-      if (!postDate) return true;
-      if (startDate && postDate < startDate) return false;
-      if (endDate && postDate > endDate) return false;
-      return true;
-    });
+
+    // Apply date filter if specified
+    if (startDate || endDate) {
+      posts = posts.filter(p => {
+        const postDate = p.publish_time?.slice(0, 10);
+        if (!postDate) return true;
+        if (startDate && postDate < startDate) return false;
+        if (endDate && postDate > endDate) return false;
+        return true;
+      });
+    }
 
     // Aggregate by page
     const pageStats = {};
     posts.forEach(p => {
       const pid = p.page_id;
       if (!pageStats[pid]) {
+        // Get base page info from data.pages
+        const basePage = (data.pages || []).find(pg => pg.page_id === pid) || {};
         pageStats[pid] = {
           page_id: pid,
-          page_name: p.page_name,
-          name: p.page_name,
+          page_name: p.page_name || basePage.page_name,
+          name: p.page_name || basePage.page_name,
+          fan_count: basePage.fan_count || 0,
+          followers_count: basePage.followers_count || 0,
           post_count: 0,
           total_views: 0,
           total_reach: 0,
@@ -273,12 +314,12 @@ export const getPages = async (dateRange = {}) => {
         };
       }
       pageStats[pid].post_count++;
-      pageStats[pid].total_views += p.views || 0;
-      pageStats[pid].total_reach += p.reach || 0;
-      pageStats[pid].total_reactions += p.reactions || 0;
-      pageStats[pid].total_comments += p.comments || 0;
-      pageStats[pid].total_shares += p.shares || 0;
-      pageStats[pid].total_engagement += p.engagement || 0;
+      pageStats[pid].total_views += p.views || p.views_count || 0;
+      pageStats[pid].total_reach += p.reach || p.reach_count || 0;
+      pageStats[pid].total_reactions += p.reactions || p.reactions_total || 0;
+      pageStats[pid].total_comments += p.comments || p.comments_count || 0;
+      pageStats[pid].total_shares += p.shares || p.shares_count || 0;
+      pageStats[pid].total_engagement += p.engagement || p.total_engagement || 0;
     });
 
     // Calculate averages and sort by engagement
@@ -293,47 +334,80 @@ export const getPages = async (dateRange = {}) => {
   return api.get('/pages/').then(res => res.data);
 };
 
-export const getImports = () => api.get('/imports/').then(res => res.data);
+export const getImports = () => {
+  // Endpoint not implemented in backend yet
+  return Promise.resolve([]);
+};
 
 export const getOverlaps = async () => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
     return data.overlaps || [];
   }
-  return api.get('/overlaps/').then(res => res.data);
+  // Endpoint not implemented in backend yet
+  return [];
 };
 
 export const getDailyByPage = async (days = 60) => {
-  const data = await loadStaticData();
-  const pages = data.pages || [];
-  const byPage = data.daily.byPage || {};
-  const allDaily = data.daily.all || [];
+  if (IS_PRODUCTION) {
+    const data = await loadStaticData();
+    const pages = data.pages || [];
+    const byPage = data.daily.byPage || {};
+    const allDaily = data.daily.all || [];
 
-  // Create a map of all dates from the last N days (no T+2 filter)
-  const dateMap = {};
-  allDaily.slice(-days).forEach(entry => {
-    dateMap[entry.date] = { date: entry.date };
-  });
-
-  // Add each page's posts to the date map
-  pages.forEach(page => {
-    const pageDaily = byPage[page.page_id] || [];
-    pageDaily.forEach(entry => {
-      if (dateMap[entry.date]) {
-        // Use short page name (e.g., "Star" instead of "JuanKada Star")
-        const shortName = page.page_name.replace('JuanKada ', '');
-        dateMap[entry.date][shortName] = entry.posts;
-      }
+    // Create a map of all dates from the last N days (no T+2 filter)
+    const dateMap = {};
+    allDaily.slice(-days).forEach(entry => {
+      dateMap[entry.date] = { date: entry.date };
     });
-  });
 
-  // Convert to array and sort by date
-  const result = Object.values(dateMap).sort((a, b) => a.date.localeCompare(b.date));
+    // Add each page's posts to the date map
+    pages.forEach(page => {
+      const pageDaily = byPage[page.page_id] || [];
+      pageDaily.forEach(entry => {
+        if (dateMap[entry.date]) {
+          // Use short page name (e.g., "Star" instead of "JuanKada Star")
+          const shortName = page.page_name.replace('JuanKada ', '');
+          dateMap[entry.date][shortName] = entry.posts;
+        }
+      });
+    });
 
-  // Get page names for the chart
-  const pageNames = pages.map(p => p.page_name.replace('JuanKada ', ''));
+    // Convert to array and sort by date
+    const result = Object.values(dateMap).sort((a, b) => a.date.localeCompare(b.date));
 
-  return { data: result, pageNames };
+    // Get page names for the chart
+    const pageNames = pages.map(p => p.page_name.replace('JuanKada ', ''));
+
+    return { data: result, pageNames };
+  }
+
+  // Non-production: use API
+  try {
+    const [pagesRes, dailyRes] = await Promise.all([
+      api.get('/pages/'),
+      api.get(`/stats/daily?days=${days}`)
+    ]);
+
+    const pages = pagesRes.data || [];
+    const dailyAll = dailyRes.data || [];
+
+    // Create date map from daily data
+    const dateMap = {};
+    dailyAll.forEach(entry => {
+      dateMap[entry.date] = { date: entry.date };
+    });
+
+    // For now, return simplified data (total posts per date, not by page)
+    // Full by-page breakdown would require multiple API calls
+    const result = Object.values(dateMap).sort((a, b) => a.date.localeCompare(b.date));
+    const pageNames = pages.map(p => (p.page_name || p.name || '').replace('JuanKada ', ''));
+
+    return { data: result, pageNames };
+  } catch (err) {
+    console.error('getDailyByPage API error:', err);
+    return { data: [], pageNames: [] };
+  }
 };
 
 export const getTimeSeries = async () => {
@@ -349,7 +423,7 @@ export const getTimeSeries = async () => {
     };
   }
   // For dev, calculate from daily data (simplified)
-  return api.get('/stats/time-series/').then(res => res.data);
+  return api.get('/stats/time-series').then(res => res.data);
 };
 
 export const getCommentAnalysis = async () => {
@@ -362,7 +436,104 @@ export const getCommentAnalysis = async () => {
       topSelfCommented: []
     };
   }
-  return api.get('/stats/comment-analysis/').then(res => res.data);
+
+  // Calculate comment analysis from posts data
+  try {
+    // Fetch all posts (multiple pages if needed)
+    const pagesRes = await api.get('/pages/');
+    const pages = pagesRes.data || [];
+
+    // Fetch posts in batches (max 200 per page)
+    let allPosts = [];
+    let page = 1;
+    let hasMore = true;
+
+    while (hasMore && page <= 10) { // Max 10 pages = 2000 posts
+      const postsRes = await api.get(`/posts/?per_page=200&page=${page}`);
+      const batch = postsRes.data?.posts || [];
+      allPosts = allPosts.concat(batch);
+      hasMore = batch.length === 200;
+      page++;
+    }
+
+    const posts = allPosts;
+
+    // Calculate totals
+    let totalComments = 0;
+    const pageComments = {};
+    const postTypeComments = {};
+
+    posts.forEach(post => {
+      const comments = post.comments_count || 0;
+      totalComments += comments;
+
+      // By page
+      const pageId = post.page_id;
+      if (!pageComments[pageId]) {
+        pageComments[pageId] = { comments: 0, posts: 0, page_name: post.page_name };
+      }
+      pageComments[pageId].comments += comments;
+      pageComments[pageId].posts += 1;
+
+      // By post type
+      const postType = post.post_type || 'Unknown';
+      if (!postTypeComments[postType]) {
+        postTypeComments[postType] = { comments: 0, posts: 0 };
+      }
+      postTypeComments[postType].comments += comments;
+      postTypeComments[postType].posts += 1;
+    });
+
+    // Build byPage array
+    const byPage = Object.entries(pageComments)
+      .map(([pageId, data]) => ({
+        page_id: pageId,
+        page_name: data.page_name,
+        comments: data.comments,
+        posts: data.posts,
+        avg_comments: data.posts > 0 ? (data.comments / data.posts).toFixed(1) : 0
+      }))
+      .sort((a, b) => b.comments - a.comments);
+
+    // Build byPostType array
+    const byPostType = Object.entries(postTypeComments)
+      .map(([type, data]) => ({
+        post_type: type,
+        comments: data.comments,
+        posts: data.posts
+      }))
+      .sort((a, b) => b.comments - a.comments);
+
+    // Top commented posts
+    const topSelfCommented = posts
+      .filter(p => (p.comments_count || 0) > 0)
+      .sort((a, b) => (b.comments_count || 0) - (a.comments_count || 0))
+      .slice(0, 10)
+      .map(p => ({
+        ...p,
+        comments: p.comments_count
+      }));
+
+    return {
+      summary: {
+        total_comments: totalComments,
+        total_posts: posts.length,
+        avg_comments_per_post: posts.length > 0 ? (totalComments / posts.length).toFixed(1) : 0
+      },
+      byPage,
+      byPostType,
+      effectivity: {},
+      topSelfCommented
+    };
+  } catch (err) {
+    console.error('getCommentAnalysis error:', err);
+    return {
+      summary: {},
+      byPage: [],
+      effectivity: {},
+      topSelfCommented: []
+    };
+  }
 };
 
 export const getPageComparison = async (dateRange = {}) => {
@@ -370,24 +541,19 @@ export const getPageComparison = async (dateRange = {}) => {
     const data = await loadStaticData();
     const { startDate, endDate } = dateRange;
 
-    // If no date filter, return cached comparison
-    if (!startDate && !endDate) {
-      return data.pageComparison || {
-        pages: [],
-        postTypesByPage: {},
-        dominantTypes: {}
-      };
-    }
-
-    // Filter posts by date and recalculate page comparison
+    // Always calculate from posts to ensure data is available
     let posts = (data.posts || []);
-    posts = posts.filter(p => {
-      const postDate = p.publish_time?.slice(0, 10);
-      if (!postDate) return true;
-      if (startDate && postDate < startDate) return false;
-      if (endDate && postDate > endDate) return false;
-      return true;
-    });
+
+    // Apply date filter if specified
+    if (startDate || endDate) {
+      posts = posts.filter(p => {
+        const postDate = p.publish_time?.slice(0, 10);
+        if (!postDate) return true;
+        if (startDate && postDate < startDate) return false;
+        if (endDate && postDate > endDate) return false;
+        return true;
+      });
+    }
 
     // Aggregate by page
     const pageStats = {};
@@ -396,6 +562,8 @@ export const getPageComparison = async (dateRange = {}) => {
     posts.forEach(p => {
       const pid = p.page_id;
       if (!pageStats[pid]) {
+        // Get base page info for fan_count
+        const basePage = (data.pages || []).find(pg => pg.page_id === pid) || {};
         pageStats[pid] = {
           page_id: pid,
           page_name: p.page_name,
@@ -406,17 +574,17 @@ export const getPageComparison = async (dateRange = {}) => {
           comments: 0,
           shares: 0,
           engagement: 0,
-          fan_count: 0,
+          fan_count: basePage.fan_count || 0,
         };
         postTypesByPage[pid] = {};
       }
       pageStats[pid].posts++;
-      pageStats[pid].views += p.views || 0;
-      pageStats[pid].reach += p.reach || 0;
-      pageStats[pid].reactions += p.reactions || 0;
-      pageStats[pid].comments += p.comments || 0;
-      pageStats[pid].shares += p.shares || 0;
-      pageStats[pid].engagement += p.engagement || 0;
+      pageStats[pid].views += p.views_count || p.views || 0;
+      pageStats[pid].reach += p.reach_count || p.reach || 0;
+      pageStats[pid].reactions += p.reactions_total || p.reactions || 0;
+      pageStats[pid].comments += p.comments_count || p.comments || 0;
+      pageStats[pid].shares += p.shares_count || p.shares || 0;
+      pageStats[pid].engagement += p.total_engagement || p.engagement || 0;
 
       // Track post types
       const ptype = p.post_type || 'Unknown';
@@ -424,7 +592,7 @@ export const getPageComparison = async (dateRange = {}) => {
         postTypesByPage[pid][ptype] = { type: ptype, count: 0, engagement: 0 };
       }
       postTypesByPage[pid][ptype].count++;
-      postTypesByPage[pid][ptype].engagement += p.engagement || 0;
+      postTypesByPage[pid][ptype].engagement += p.total_engagement || p.engagement || 0;
     });
 
     // Calculate averages, sort, and add rankings
@@ -449,7 +617,7 @@ export const getPageComparison = async (dateRange = {}) => {
 
     return { pages, postTypesByPage: postTypesResult, dominantTypes };
   }
-  return api.get('/stats/page-comparison/').then(res => res.data);
+  return api.get('/stats/page-comparison').then(res => res.data);
 };
 
 export const getDateBoundaries = async () => {

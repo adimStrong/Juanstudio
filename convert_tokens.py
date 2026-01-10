@@ -1,22 +1,39 @@
 #!/usr/bin/env python3
 """Convert short-lived Facebook tokens to long-lived tokens."""
 
+import os
 import requests
 import json
 from datetime import datetime
 
-# Facebook App credentials
-APP_ID = "876404458898363"
-APP_SECRET = "1464661e50abf1c3b76081f23d14ae14"
+# Load environment variables
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
-# Short-lived tokens with page names (will be replaced with actual names from API)
-SHORT_LIVED_TOKENS = {
-    "Ashley": "EAAMdFdBzw7sBQSQgFVMuaP3u4HhjmJpnd7JcwjQLaoIgUEzRu9vUE0jiIfeZCLL73nbvsnesw95hX9JmezC5cHYqjhWbcKdJ4VupFTVjGCDbaQJw7beSG2SvgwQZAnM0mHhudJBquTTAbNXCs6i1CaFF5ZBePZAZAGlYqZBl1PSEvNcFhsneRoA7vXh32PoFD9WZC3rRr6mZAiM5DadWGfcZBnNdJo6TwDcVbjaNnpbNBqKj9g8gMWlMlwY80wSwZD",
-    "Jam": "EAAMdFdBzw7sBQd9bAHky7HLVofbO12vGEFPzqzRXeTZA6LP0fOL9ONflE61skZCg49ZCfM5yofBCnUnkQu0tRQmNsADnWpHzZAhkmQRMjdqV09SeLqiTA8ZCQxcABmYx4m7OIbT8uJPSUfWWZBFscroTn3xT75lUOnZBY96ZC0brbKvrf6YIkplHSJGIwSQkS3XotKWGR2xt8gYN3E2tSEhCqt7ugb2gu0VdNlaauQCCtssFX9EyKImP1K93AAsZD",
-    "Abi": "EAAMdFdBzw7sBQfx6RaZBSuCyRLOCj8AFnbRtkhkMZA2blKHwNk5aPyMjVvxVFm2pIy4Td4ofEdimhRUcPZCnam0rYAsjyZAKpT8ZAU6zDHEVsEe3A95QcCK82k7fMlLvO2uW7r2hVcmJUZCGdEG0Js0462bZBnXMvPLGgO4bZB0WymmHBOsDGpcmMa5VRuhTQbZBgGPrgpq4SNPOBq1m6QZBZACtRwAULZALSTZB66cdHb05Em55Yj8hWzzEHfExg518ZD",
-    "Sena": "EAAMdFdBzw7sBQW0ZBTZBw3eYcZCzz3wzKPYzY8C1jGZB7g28RPjM1wZAlKLqkZBmg6IUZBv02KFNWOpufYlD3MPMXk5ZBFq9VlIsKFaOKTctuYleWZBzHw7muMVe5MKJkQ9NIYUZBX3jxTxEltYfVr38ns78mZA7ojuYEeAflhvTKiaHpNOSZAohX7wpbo7gcocQK87AZB8mVe2ZAmwWE8TuSZCIOFBULcNUwpOsgywraWBKecMsZC0y82eDv76b41O3l3sZD",
-    "Zell": "EAAMdFdBzw7sBQXyZAN2mejYPrTsE6ESJB71mNovATaUSRBHzs3nPhgdu9hO6GkZAQR6J8UHC5RourGth9B9wwoV0BZBG2fsYX8SbGC4QrPHSSRttCnVe6kTW2SVPW8BX3PA5ZBWqZBgyENpZB1xGk37PkR5kS2HFgNhJnGrQJ0r0ecrsxkZBp8lZAcbt4IxSEe88Y8EvFzC1jqAQVNZAMnuIa505A3NKyAyPdbpZAyqZC4bkZBvEIBTZCQdrtiGN2EzsZD"
-}
+# Facebook App credentials - load from environment
+APP_ID = os.environ.get("FACEBOOK_APP_ID", "")
+APP_SECRET = os.environ.get("FACEBOOK_APP_SECRET", "")
+
+if not APP_ID or not APP_SECRET:
+    print("ERROR: FACEBOOK_APP_ID and FACEBOOK_APP_SECRET must be set in .env file")
+    print("Create a .env file with:")
+    print("  FACEBOOK_APP_ID=your_app_id")
+    print("  FACEBOOK_APP_SECRET=your_app_secret")
+    exit(1)
+
+# Short-lived tokens - load from short_lived_tokens.json file
+# Create this file with format: {"PageName": "short_token", ...}
+SHORT_LIVED_TOKENS = {}
+if os.path.exists("short_lived_tokens.json"):
+    with open("short_lived_tokens.json") as f:
+        SHORT_LIVED_TOKENS = json.load(f)
+else:
+    print("WARNING: short_lived_tokens.json not found")
+    print("Create this file with format: {\"PageName\": \"short_token\", ...}")
+    print("Or enter tokens interactively below.")
 
 
 def convert_to_long_lived_token(short_token):

@@ -8,9 +8,19 @@ import sqlite3
 from datetime import datetime, timedelta
 from pathlib import Path
 
-# Telegram Configuration
-BOT_TOKEN = "8528398122:AAG9o7TOPrGxMEv_1eDIoiMO1cvTYq4Um7s"
-CHAT_ID = "-5157398384"  # JuanStudio Notification group
+# Telegram Configuration - Load from environment variables
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
+
+# Fallback for legacy usage (will be removed in future versions)
+if not BOT_TOKEN:
+    BOT_TOKEN = "8528398122:AAG9o7TOPrGxMEv_1eDIoiMO1cvTYq4Um7s"
+if not CHAT_ID:
+    CHAT_ID = "-5157398384"  # JuanStudio Notification group
 
 # Database path
 DB_PATH = Path(__file__).parent / "data" / "juanstudio_analytics.db"
