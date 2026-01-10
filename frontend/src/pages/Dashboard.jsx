@@ -310,6 +310,7 @@ export default function Dashboard() {
                   <option value="views">Views</option>
                   <option value="reach">Reach</option>
                   <option value="engagement">Engagement</option>
+                  <option value="followers">Followers</option>
                 </select>
               )}
               <div className="flex bg-gray-100 rounded-lg p-1">
@@ -336,9 +337,9 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              {distributionView === 'type' ? (
+          {distributionView === 'type' ? (
+            <ResponsiveContainer width="100%" height={300}>
+              <PieChart>
                 <Pie
                   data={postTypes}
                   dataKey="count"
@@ -355,34 +356,35 @@ export default function Dashboard() {
                     <Cell key={index} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
-              ) : (
-                <Pie
-                  data={pageComparison.map(p => ({
-                    ...p,
-                    short_name: p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('Juankada ', '').replace('JUANKada ', ''),
-                    value: pageMetric === 'posts' ? p.post_count :
-                           pageMetric === 'views' ? p.total_views :
-                           pageMetric === 'reach' ? p.total_reach : p.total_engagement
-                  }))}
-                  dataKey="value"
-                  nameKey="short_name"
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={50}
-                  outerRadius={100}
-                  paddingAngle={2}
-                  label={false}
-                  labelLine={false}
-                >
+                <Tooltip formatter={(value, name) => [value?.toLocaleString(), name]} />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          ) : (
+            <ResponsiveContainer width="100%" height={400}>
+              <BarChart
+                data={pageComparison.map(p => ({
+                  ...p,
+                  short_name: p.page_name?.replace('Juana Babe ', '').replace('JuanKada ', '').replace('Juankada ', '').replace('JUANKada ', ''),
+                  value: pageMetric === 'posts' ? p.post_count :
+                         pageMetric === 'views' ? p.total_views :
+                         pageMetric === 'reach' ? p.total_reach :
+                         pageMetric === 'followers' ? (p.followers_count || 0) : p.total_engagement
+                }))}
+                layout="vertical"
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis type="number" fontSize={12} tickFormatter={(val) => val?.toLocaleString()} />
+                <YAxis type="category" dataKey="short_name" fontSize={11} width={120} />
+                <Tooltip formatter={(value) => [value?.toLocaleString(), pageMetric]} />
+                <Bar dataKey="value" name={pageMetric.charAt(0).toUpperCase() + pageMetric.slice(1)} fill="#6366f1">
                   {pageComparison.map((_, index) => (
                     <Cell key={index} fill={COLORS[index % COLORS.length]} />
                   ))}
-                </Pie>
-              )}
-              <Tooltip formatter={(value, name) => [value?.toLocaleString(), name]} />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          )}
         </div>
       </div>
 
