@@ -20,21 +20,21 @@
     },
     "byPage": {
       "100064672885113": {
-        "total_posts": 62,
+        "total_posts": 33,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 810,
-        "total_comments": 163,
-        "total_shares": 65,
-        "total_engagement": 1038,
-        "total_pes": 1465.0,
-        "total_views": 16029,
-        "total_reach": 6885,
-        "avg_engagement": 16.7,
-        "avg_pes": 23.6,
-        "avg_views": 258.5,
-        "avg_reach": 111.0,
-        "date_range_start": "2025-12-21",
+        "total_reactions": 464,
+        "total_comments": 74,
+        "total_shares": 32,
+        "total_engagement": 570,
+        "total_pes": 771.0,
+        "total_views": 9969,
+        "total_reach": 4402,
+        "avg_engagement": 17.3,
+        "avg_pes": 23.4,
+        "avg_views": 302.1,
+        "avg_reach": 133.4,
+        "date_range_start": "2025-12-28",
         "date_range_end": "2026-01-10"
       },
       "305553999318966": {
@@ -55,23 +55,23 @@
         "date_range_start": "2025-12-20",
         "date_range_end": "2026-01-11"
       },
-      "397865533415866": {
-        "total_posts": 2,
+      "61565865626361": {
+        "total_posts": 31,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 17,
-        "total_comments": 1,
-        "total_shares": 0,
-        "total_engagement": 18,
-        "total_pes": 19.0,
-        "total_views": 0,
-        "total_reach": 0,
-        "avg_engagement": 9.0,
-        "avg_pes": 9.5,
-        "avg_views": 0.0,
-        "avg_reach": 0.0,
+        "total_reactions": 363,
+        "total_comments": 90,
+        "total_shares": 33,
+        "total_engagement": 486,
+        "total_pes": 713.0,
+        "total_views": 6060,
+        "total_reach": 2483,
+        "avg_engagement": 15.7,
+        "avg_pes": 23.0,
+        "avg_views": 195.5,
+        "avg_reach": 80.1,
         "date_range_start": "2025-12-21",
-        "date_range_end": "2026-01-03"
+        "date_range_end": "2026-01-10"
       },
       "61583996447175": {
         "total_posts": 48,
@@ -387,22 +387,6 @@
       "total_reach": 32086
     },
     {
-      "page_id": "100064672885113",
-      "name": "Juankada host Drae",
-      "page_name": "Juankada host Drae",
-      "fan_count": 350,
-      "followers_count": 350,
-      "post_count": 62,
-      "total_reactions": 810,
-      "total_comments": 163,
-      "total_shares": 65,
-      "total_engagement": 1038,
-      "avg_engagement": 16.7,
-      "avg_pes": 23.6,
-      "total_views": 16029,
-      "total_reach": 6885
-    },
-    {
       "page_id": "61583996447175",
       "name": "Juankada Jedi",
       "page_name": "Juankada Jedi",
@@ -483,20 +467,36 @@
       "total_reach": 4096
     },
     {
-      "page_id": "397865533415866",
+      "page_id": "100064672885113",
+      "name": "Juankada host Drae",
+      "page_name": "Juankada host Drae",
+      "fan_count": 350,
+      "followers_count": 350,
+      "post_count": 33,
+      "total_reactions": 464,
+      "total_comments": 74,
+      "total_shares": 32,
+      "total_engagement": 570,
+      "avg_engagement": 17.3,
+      "avg_pes": 23.4,
+      "total_views": 9969,
+      "total_reach": 4402
+    },
+    {
+      "page_id": "61565865626361",
       "name": "Juankada Geoff",
       "page_name": "Juankada Geoff",
       "fan_count": 626,
       "followers_count": 626,
-      "post_count": 2,
-      "total_reactions": 17,
-      "total_comments": 1,
-      "total_shares": 0,
-      "total_engagement": 18,
-      "avg_engagement": 9.0,
-      "avg_pes": 9.5,
-      "total_views": 0,
-      "total_reach": 0
+      "post_count": 31,
+      "total_reactions": 363,
+      "total_comments": 90,
+      "total_shares": 33,
+      "total_engagement": 486,
+      "avg_engagement": 15.7,
+      "avg_pes": 23.0,
+      "total_views": 6060,
+      "total_reach": 2483
     }
   ],
   "postTypes": {
@@ -576,33 +576,23 @@
       "100064672885113": [
         {
           "post_type": "Photos",
-          "count": 40,
-          "reactions": 484,
-          "comments": 73,
-          "shares": 41,
-          "total_engagement": 598,
-          "avg_engagement": 14.9,
-          "avg_pes": 20.4
+          "count": 22,
+          "reactions": 249,
+          "comments": 28,
+          "shares": 18,
+          "total_engagement": 295,
+          "avg_engagement": 13.4,
+          "avg_pes": 17.1
         },
         {
           "post_type": "Videos",
-          "count": 21,
-          "reactions": 311,
-          "comments": 74,
-          "shares": 17,
-          "total_engagement": 402,
-          "avg_engagement": 19.1,
-          "avg_pes": 27.4
-        },
-        {
-          "post_type": "Live",
-          "count": 1,
-          "reactions": 15,
-          "comments": 16,
-          "shares": 7,
-          "total_engagement": 38,
-          "avg_engagement": 38.0,
-          "avg_pes": 75.0
+          "count": 11,
+          "reactions": 215,
+          "comments": 46,
+          "shares": 14,
+          "total_engagement": 275,
+          "avg_engagement": 25.0,
+          "avg_pes": 35.8
         }
       ],
       "305553999318966": [
@@ -637,16 +627,36 @@
           "avg_pes": 24.0
         }
       ],
-      "397865533415866": [
+      "61565865626361": [
         {
           "post_type": "Photos",
-          "count": 2,
-          "reactions": 17,
-          "comments": 1,
-          "shares": 0,
-          "total_engagement": 18,
-          "avg_engagement": 9.0,
-          "avg_pes": 9.5
+          "count": 20,
+          "reactions": 252,
+          "comments": 46,
+          "shares": 23,
+          "total_engagement": 321,
+          "avg_engagement": 16.1,
+          "avg_pes": 22.8
+        },
+        {
+          "post_type": "Videos",
+          "count": 10,
+          "reactions": 96,
+          "comments": 28,
+          "shares": 3,
+          "total_engagement": 127,
+          "avg_engagement": 12.7,
+          "avg_pes": 18.2
+        },
+        {
+          "post_type": "Live",
+          "count": 1,
+          "reactions": 15,
+          "comments": 16,
+          "shares": 7,
+          "total_engagement": 38,
+          "avg_engagement": 38.0,
+          "avg_pes": 75.0
         }
       ],
       "61583996447175": [
@@ -1479,92 +1489,26 @@
     "byPage": {
       "100064672885113": [
         {
-          "date": "2025-12-21",
-          "posts": 2,
-          "reactions": 18,
-          "comments": 0,
-          "shares": 0,
-          "engagement": 18,
-          "pes": 18.0,
-          "views": 80,
-          "reach": 45
-        },
-        {
-          "date": "2025-12-24",
-          "posts": 1,
-          "reactions": 6,
-          "comments": 0,
-          "shares": 0,
-          "engagement": 6,
-          "pes": 6.0,
-          "views": 161,
-          "reach": 63
-        },
-        {
-          "date": "2025-12-25",
-          "posts": 1,
-          "reactions": 3,
-          "comments": 0,
-          "shares": 0,
-          "engagement": 3,
-          "pes": 3.0,
-          "views": 128,
-          "reach": 47
-        },
-        {
-          "date": "2025-12-27",
-          "posts": 1,
-          "reactions": 5,
-          "comments": 0,
-          "shares": 0,
-          "engagement": 5,
-          "pes": 5.0,
-          "views": 114,
-          "reach": 46
-        },
-        {
           "date": "2025-12-28",
-          "posts": 7,
-          "reactions": 21,
-          "comments": 4,
-          "shares": 0,
-          "engagement": 25,
-          "pes": 29.0,
-          "views": 628,
-          "reach": 271
-        },
-        {
-          "date": "2025-12-29",
-          "posts": 2,
-          "reactions": 15,
+          "posts": 6,
+          "reactions": 8,
           "comments": 0,
           "shares": 0,
-          "engagement": 15,
-          "pes": 15.0,
-          "views": 235,
-          "reach": 93
+          "engagement": 8,
+          "pes": 8.0,
+          "views": 403,
+          "reach": 194
         },
         {
           "date": "2025-12-30",
-          "posts": 5,
-          "reactions": 85,
-          "comments": 8,
+          "posts": 4,
+          "reactions": 77,
+          "comments": 6,
           "shares": 3,
-          "engagement": 96,
-          "pes": 110.0,
-          "views": 1907,
-          "reach": 770
-        },
-        {
-          "date": "2025-12-31",
-          "posts": 2,
-          "reactions": 16,
-          "comments": 0,
-          "shares": 0,
-          "engagement": 16,
-          "pes": 16.0,
-          "views": 66,
-          "reach": 63
+          "engagement": 86,
+          "pes": 98.0,
+          "views": 1804,
+          "reach": 729
         },
         {
           "date": "2026-01-01",
@@ -1579,102 +1523,102 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 3,
-          "reactions": 39,
-          "comments": 5,
+          "posts": 2,
+          "reactions": 25,
+          "comments": 3,
           "shares": 0,
-          "engagement": 44,
-          "pes": 49.0,
+          "engagement": 28,
+          "pes": 31.0,
           "views": 262,
-          "reach": 112
+          "reach": 111
         },
         {
           "date": "2026-01-03",
-          "posts": 2,
-          "reactions": 21,
-          "comments": 7,
-          "shares": 2,
-          "engagement": 30,
-          "pes": 42.0,
-          "views": 144,
-          "reach": 52
+          "posts": 1,
+          "reactions": 8,
+          "comments": 0,
+          "shares": 0,
+          "engagement": 8,
+          "pes": 8.0,
+          "views": 0,
+          "reach": 0
         },
         {
           "date": "2026-01-04",
-          "posts": 3,
-          "reactions": 77,
-          "comments": 20,
-          "shares": 8,
-          "engagement": 105,
-          "pes": 143.0,
-          "views": 2036,
-          "reach": 937
+          "posts": 1,
+          "reactions": 28,
+          "comments": 10,
+          "shares": 0,
+          "engagement": 38,
+          "pes": 48.0,
+          "views": 915,
+          "reach": 476
         },
         {
           "date": "2026-01-05",
-          "posts": 4,
-          "reactions": 61,
-          "comments": 15,
+          "posts": 1,
+          "reactions": 28,
+          "comments": 1,
           "shares": 0,
-          "engagement": 76,
-          "pes": 97.0,
-          "views": 899,
-          "reach": 330
+          "engagement": 29,
+          "pes": 30.0,
+          "views": 504,
+          "reach": 179
         },
         {
           "date": "2026-01-06",
-          "posts": 5,
-          "reactions": 109,
-          "comments": 32,
-          "shares": 12,
-          "engagement": 153,
-          "pes": 216.0,
-          "views": 1855,
-          "reach": 689
+          "posts": 3,
+          "reactions": 82,
+          "comments": 17,
+          "shares": 6,
+          "engagement": 105,
+          "pes": 136.0,
+          "views": 1457,
+          "reach": 544
         },
         {
           "date": "2026-01-07",
-          "posts": 11,
-          "reactions": 120,
-          "comments": 25,
-          "shares": 13,
-          "engagement": 158,
-          "pes": 250.0,
-          "views": 2860,
-          "reach": 1269
+          "posts": 5,
+          "reactions": 46,
+          "comments": 3,
+          "shares": 2,
+          "engagement": 51,
+          "pes": 59.0,
+          "views": 1139,
+          "reach": 549
         },
         {
           "date": "2026-01-08",
-          "posts": 4,
-          "reactions": 53,
+          "posts": 3,
+          "reactions": 50,
           "comments": 6,
           "shares": 7,
-          "engagement": 66,
-          "pes": 108.0,
-          "views": 1410,
-          "reach": 591
+          "engagement": 63,
+          "pes": 88.0,
+          "views": 1302,
+          "reach": 554
         },
         {
           "date": "2026-01-09",
-          "posts": 3,
-          "reactions": 45,
-          "comments": 5,
-          "shares": 8,
-          "engagement": 58,
-          "pes": 134.0,
-          "views": 757,
-          "reach": 344
+          "posts": 2,
+          "reactions": 24,
+          "comments": 2,
+          "shares": 5,
+          "engagement": 31,
+          "pes": 98.0,
+          "views": 303,
+          "reach": 159
         },
         {
           "date": "2026-01-10",
-          "posts": 4,
-          "reactions": 86,
-          "comments": 28,
-          "shares": 10,
-          "engagement": 124,
-          "pes": 172.0,
-          "views": 1739,
-          "reach": 889
+          "posts": 3,
+          "reactions": 58,
+          "comments": 18,
+          "shares": 7,
+          "engagement": 83,
+          "pes": 115.0,
+          "views": 1132,
+          "reach": 633
         }
       ],
       "305553999318966": [
@@ -1921,28 +1865,193 @@
           "reach": 0
         }
       ],
-      "397865533415866": [
+      "61565865626361": [
         {
           "date": "2025-12-21",
+          "posts": 3,
+          "reactions": 23,
+          "comments": 0,
+          "shares": 0,
+          "engagement": 23,
+          "pes": 23.0,
+          "views": 80,
+          "reach": 45
+        },
+        {
+          "date": "2025-12-24",
+          "posts": 1,
+          "reactions": 6,
+          "comments": 0,
+          "shares": 0,
+          "engagement": 6,
+          "pes": 6.0,
+          "views": 161,
+          "reach": 63
+        },
+        {
+          "date": "2025-12-25",
+          "posts": 1,
+          "reactions": 3,
+          "comments": 0,
+          "shares": 0,
+          "engagement": 3,
+          "pes": 3.0,
+          "views": 128,
+          "reach": 47
+        },
+        {
+          "date": "2025-12-27",
           "posts": 1,
           "reactions": 5,
           "comments": 0,
           "shares": 0,
           "engagement": 5,
           "pes": 5.0,
+          "views": 114,
+          "reach": 46
+        },
+        {
+          "date": "2025-12-28",
+          "posts": 1,
+          "reactions": 13,
+          "comments": 4,
+          "shares": 0,
+          "engagement": 17,
+          "pes": 21.0,
+          "views": 225,
+          "reach": 77
+        },
+        {
+          "date": "2025-12-29",
+          "posts": 2,
+          "reactions": 15,
+          "comments": 0,
+          "shares": 0,
+          "engagement": 15,
+          "pes": 15.0,
+          "views": 235,
+          "reach": 93
+        },
+        {
+          "date": "2025-12-30",
+          "posts": 1,
+          "reactions": 8,
+          "comments": 2,
+          "shares": 0,
+          "engagement": 10,
+          "pes": 12.0,
+          "views": 103,
+          "reach": 41
+        },
+        {
+          "date": "2025-12-31",
+          "posts": 2,
+          "reactions": 16,
+          "comments": 0,
+          "shares": 0,
+          "engagement": 16,
+          "pes": 16.0,
+          "views": 66,
+          "reach": 63
+        },
+        {
+          "date": "2026-01-02",
+          "posts": 1,
+          "reactions": 14,
+          "comments": 2,
+          "shares": 0,
+          "engagement": 16,
+          "pes": 18.0,
           "views": 0,
-          "reach": 0
+          "reach": 1
         },
         {
           "date": "2026-01-03",
-          "posts": 1,
-          "reactions": 12,
-          "comments": 1,
+          "posts": 2,
+          "reactions": 25,
+          "comments": 8,
+          "shares": 2,
+          "engagement": 35,
+          "pes": 48.0,
+          "views": 144,
+          "reach": 52
+        },
+        {
+          "date": "2026-01-04",
+          "posts": 2,
+          "reactions": 49,
+          "comments": 10,
+          "shares": 8,
+          "engagement": 67,
+          "pes": 95.0,
+          "views": 1121,
+          "reach": 461
+        },
+        {
+          "date": "2026-01-05",
+          "posts": 3,
+          "reactions": 33,
+          "comments": 14,
           "shares": 0,
-          "engagement": 13,
-          "pes": 14.0,
-          "views": 0,
-          "reach": 0
+          "engagement": 47,
+          "pes": 67.0,
+          "views": 395,
+          "reach": 151
+        },
+        {
+          "date": "2026-01-06",
+          "posts": 2,
+          "reactions": 27,
+          "comments": 15,
+          "shares": 6,
+          "engagement": 48,
+          "pes": 80.0,
+          "views": 398,
+          "reach": 145
+        },
+        {
+          "date": "2026-01-07",
+          "posts": 6,
+          "reactions": 74,
+          "comments": 22,
+          "shares": 11,
+          "engagement": 107,
+          "pes": 191.0,
+          "views": 1721,
+          "reach": 720
+        },
+        {
+          "date": "2026-01-08",
+          "posts": 1,
+          "reactions": 3,
+          "comments": 0,
+          "shares": 0,
+          "engagement": 3,
+          "pes": 20.0,
+          "views": 108,
+          "reach": 37
+        },
+        {
+          "date": "2026-01-09",
+          "posts": 1,
+          "reactions": 21,
+          "comments": 3,
+          "shares": 3,
+          "engagement": 27,
+          "pes": 36.0,
+          "views": 454,
+          "reach": 185
+        },
+        {
+          "date": "2026-01-10",
+          "posts": 1,
+          "reactions": 28,
+          "comments": 10,
+          "shares": 3,
+          "engagement": 41,
+          "pes": 57.0,
+          "views": 607,
+          "reach": 256
         }
       ],
       "61583996447175": [
@@ -4764,48 +4873,6 @@
           "pes": 71.0
         },
         {
-          "post_id": "122188233140528854",
-          "page_id": "100064672885113",
-          "page_name": "Juankada host Drae",
-          "title": "LIVE na tayo, Juankada! \ud83d\udcfd\ufe0f\nCome and join us together with Juankada Ligaya and Juankada Sabbie.\nLet\u2019s have some fun habang namimili ng inyong LUCKY color. \ud83d\udd35\ud83d\udd34\ud83d\udfe2\ud83d\udfe1\ud83d\udfe0\n\nDon\u2019t forget to Like, Share, and Follow",
-          "post_type": "Photos",
-          "publish_time": "2026-01-04T06:48:00",
-          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid0yVEjrVRRLZbHp27gR8xvukSrLhS8eH888kREdxxHXQAr7k6Ld7ejJuUwf9Pi8pMcl",
-          "reactions": 39,
-          "comments": 5,
-          "shares": 7,
-          "engagement": 51,
-          "pes": 71.0
-        },
-        {
-          "post_id": "122188998056528854",
-          "page_id": "100064672885113",
-          "page_name": "Juankada host Drae",
-          "title": "\ud83e\udee1\ud835\udc0b\ud835\udc08\ud835\udc15\ud835\udc04 tayo ngayon \ud835\udc09\ud835\udc14\ud835\udc00\ud835\udc0d\ud835\udc0a\ud835\udc00\ud835\udc03\ud835\udc00\u203c\ufe0f naka ilang pa \ud835\udc13\ud835\udc11\ud835\udc08\ud835\udc0f\ud835\udc0b\ud835\udc04 na..!!! \ud83d\udfe8\ud83d\udfe5\ud83d\udfe9 HABOL na! \ud83e\udd18\ud83c\udffd till 10pm pa ang chance mong PUMALDO\u2026 \n\n#juankada #juankadageofff #juankadaevo #juankadasabbie #juan365 #juan365PH #AllInJuan",
-          "post_type": "Photos",
-          "publish_time": "2026-01-10T00:11:00",
-          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid0MpMv19itJno4cScDhfLY4fK7MvKuRkrMFUkzckwBd8SEiyj3B3HojXUSHp5DE8yWl",
-          "reactions": 28,
-          "comments": 10,
-          "shares": 3,
-          "engagement": 41,
-          "pes": 57.0
-        },
-        {
-          "post_id": "1165907575625895",
-          "page_id": "100064672885113",
-          "page_name": "Juankada host Drae",
-          "title": "ROCK & RIDE",
-          "post_type": "Live",
-          "publish_time": "2026-01-07T16:48:00",
-          "permalink": "https://www.facebook.com/Juankadageoff/videos/1165907575625895/",
-          "reactions": 15,
-          "comments": 16,
-          "shares": 7,
-          "engagement": 38,
-          "pes": 75.0
-        },
-        {
           "post_id": "1307060014793082",
           "page_id": "100064672885113",
           "page_name": "Juankada host Drae",
@@ -4820,34 +4887,6 @@
           "pes": 48.0
         },
         {
-          "post_id": "122188595120528854",
-          "page_id": "100064672885113",
-          "page_name": "Juankada host Drae",
-          "title": "\ud83e\udee1 \ud835\udc07\ud835\udc04\ud835\udc0b\ud835\udc0b\ud835\udc0e mga ka \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc04\ud835\udc11\ud835\udc12..!!! \ud83d\udc4b\ud83c\udffd Sinong naka nood at nakipag \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc2b\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc27 sa LIVE namin kanina\u2753 Mamaya uli a.. \ud83d\udc4a\ud83c\udffd\ud83e\udd18\ud83c\udffd\n\nSame TIME, Same Host at ENERGY ang hatid naming \ud835\udc12\ud835\udc00\ud835\udc18\ud835\udc00 at \ud835\udc12\ud835\udc14\ud835\udc16\ud835\udc04\ud835\udc11\ud835\udc13\ud835\udc04 sa inyo mga ka #JuanKada",
-          "post_type": "Photos",
-          "publish_time": "2026-01-06T16:14:00",
-          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid0i7kkast3Dj5ebLaLE1JmBkUxh4veUtHzk9t8h8873hFUPhr5E4PpzEC5DhtKNWQ1l",
-          "reactions": 17,
-          "comments": 14,
-          "shares": 6,
-          "engagement": 37,
-          "pes": 66.0
-        },
-        {
-          "post_id": "122188684640528854",
-          "page_id": "100064672885113",
-          "page_name": "Juankada host Drae",
-          "title": "Whats up rockers fam? Simula na tayo sa'ating Color Game LIVE! \ud83e\udd18\n\nCome join us together with Juankada Shann and Juankada Ligaya at i-manifest na ang LUCK mo! \u2618\ufe0f\n\n#juankadageoff #juankadahost #Juan365P",
-          "post_type": "Photos",
-          "publish_time": "2026-01-07T08:50:00",
-          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid024aS294q8tCx4pxir2qtWcahYfDqk8nPXHZ9sjHPr4Va1XAotoga8yVUkn87oL2HHl",
-          "reactions": 28,
-          "comments": 2,
-          "shares": 4,
-          "engagement": 34,
-          "pes": 53.0
-        },
-        {
           "post_id": "1304962158336201",
           "page_id": "100064672885113",
           "page_name": "Juankada host Drae",
@@ -4860,6 +4899,76 @@
           "shares": 2,
           "engagement": 30,
           "pes": 41.0
+        },
+        {
+          "post_id": "1308828914616192",
+          "page_id": "100064672885113",
+          "page_name": "Juankada host Drae",
+          "title": "Hi Juankada! \ud83d\udc95\ud83d\udc83\nPa-sweet girl muna tayo today \ud83e\udd70\u2728\nKamusta ka today, Juankada? \ud83d\udc40\ud83d\udc96\nComment mo na mood mo ngayon gamit emoji! \ud83d\ude04\n\nHappy vibes lang tayo palagi, ha? \ud83d\udcab\ud83d\udc9e\n#Juan365  #Juan365Studios #Juan365Colo",
+          "post_type": "Videos",
+          "publish_time": "2026-01-06T23:00:00",
+          "permalink": "https://www.facebook.com/reel/25920446284225872/",
+          "reactions": 25,
+          "comments": 3,
+          "shares": 1,
+          "engagement": 29,
+          "pes": 34.0
+        },
+        {
+          "post_id": "1307673798065037",
+          "page_id": "100064672885113",
+          "page_name": "Juankada host Drae",
+          "title": "Juankadaaaa! Did you miss me?\ud83d\udd25\nIt\u2019s your Juankada Host Drae! \ud83d\ude0e\nTara na, gisingin ang saya at kulit. \n\nIt\u2019s your sign to open that website or app!  huwag na magpahuli Juankada sama na sa LIVE! \ud83d\udd25\n\n#Juan",
+          "post_type": "Photos",
+          "publish_time": "2026-01-05T14:17:00",
+          "permalink": "https://www.facebook.com/JuankadaDrae/posts/pfbid02Tcj88umUQwEXURMjervWyQLJznzG7qECsYcAwytY2j9YwmSQLSAG7RCxePoU9BRxl",
+          "reactions": 28,
+          "comments": 1,
+          "shares": 0,
+          "engagement": 29,
+          "pes": 30.0
+        },
+        {
+          "post_id": "1310351277797289",
+          "page_id": "100064672885113",
+          "page_name": "Juankada host Drae",
+          "title": "",
+          "post_type": "Photos",
+          "publish_time": "2026-01-08T19:07:00",
+          "permalink": "https://www.facebook.com/JuankadaDrae/posts/pfbid02k6yFyUE7DUrRSGV4G34SES6e7urcqk5T81K6toJvK9aVGC8rHej4YGE3Z9sMQHyYl",
+          "reactions": 16,
+          "comments": 6,
+          "shares": 5,
+          "engagement": 27,
+          "pes": 45.0
+        },
+        {
+          "post_id": "1308546541311096",
+          "page_id": "100064672885113",
+          "page_name": "Juankada host Drae",
+          "title": "Hi Juankada! \ud83d\udc95\ud83d\udc83\u2728\nSamahan n\u2019yo ako ulit makipagkulitan sa COLOR GAME LIVE ngayon na! \ud83c\udfa8\ud83d\udd25\nTawanan, saya, at good vibes lang tayo dito \ud83d\udc96\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALL",
+          "post_type": "Photos",
+          "publish_time": "2026-01-06T15:13:00",
+          "permalink": "https://www.facebook.com/JuankadaDrae/posts/pfbid0pmV6ehc2DgTg6sMD9DhpcKLqJvsxAC5EnZGzS7hsUNiruyHV6FaZr9QPFQpv4LK9l",
+          "reactions": 16,
+          "comments": 3,
+          "shares": 3,
+          "engagement": 22,
+          "pes": 31.0
+        },
+        {
+          "post_id": "1310785261087224",
+          "page_id": "100064672885113",
+          "page_name": "Juankada host Drae",
+          "title": "Helu Juankada!!! \ud83d\ude1c Magandang gabi! Hindi pa tapos ang araw quick dance muna tayo! \ud83d\udc83 Kamusta ka? Umabot ka ba sa live kanina o late ka na naman?\ud83d\ude02 \n\n#Juan365  #Juan365Studios #Juan365ColorGame #Juankada",
+          "post_type": "Videos",
+          "publish_time": "2026-01-09T07:00:00",
+          "permalink": "https://www.facebook.com/reel/1616499419346098/",
+          "reactions": 16,
+          "comments": 2,
+          "shares": 3,
+          "engagement": 21,
+          "pes": 69.0
         }
       ],
       "305553999318966": [
@@ -5004,34 +5113,146 @@
           "pes": 79.0
         }
       ],
-      "397865533415866": [
+      "61565865626361": [
         {
-          "post_id": "1878875989431601",
-          "page_id": "397865533415866",
+          "post_id": "122188233140528854",
+          "page_id": "61565865626361",
           "page_name": "Juankada Geoff",
-          "title": "",
+          "title": "LIVE na tayo, Juankada! \ud83d\udcfd\ufe0f\nCome and join us together with Juankada Ligaya and Juankada Sabbie.\nLet\u2019s have some fun habang namimili ng inyong LUCKY color. \ud83d\udd35\ud83d\udd34\ud83d\udfe2\ud83d\udfe1\ud83d\udfe0\n\nDon\u2019t forget to Like, Share, and Follow",
           "post_type": "Photos",
-          "publish_time": "2026-01-03T02:40:06+0000",
-          "permalink": "https://www.facebook.com/122187725540528854/posts/1878875989431601?substory_index=1878875989431601",
-          "reactions": 12,
-          "comments": 1,
-          "shares": 0,
-          "engagement": 13,
-          "pes": 14.0
+          "publish_time": "2026-01-04T06:48:00",
+          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid0yVEjrVRRLZbHp27gR8xvukSrLhS8eH888kREdxxHXQAr7k6Ld7ejJuUwf9Pi8pMcl",
+          "reactions": 39,
+          "comments": 5,
+          "shares": 7,
+          "engagement": 51,
+          "pes": 71.0
         },
         {
-          "post_id": "2219652025225389",
-          "page_id": "397865533415866",
+          "post_id": "122188998056528854",
+          "page_id": "61565865626361",
           "page_name": "Juankada Geoff",
-          "title": "Malapit na Juankada! Ready na ba kayo maki All in Juan sa Saya?\n\n#Juan365Studios #JuankadaGeoff #Juan365 #ALLINJUANLIVE #JuankadaHosts #Juankada",
+          "title": "\ud83e\udee1\ud835\udc0b\ud835\udc08\ud835\udc15\ud835\udc04 tayo ngayon \ud835\udc09\ud835\udc14\ud835\udc00\ud835\udc0d\ud835\udc0a\ud835\udc00\ud835\udc03\ud835\udc00\u203c\ufe0f naka ilang pa \ud835\udc13\ud835\udc11\ud835\udc08\ud835\udc0f\ud835\udc0b\ud835\udc04 na..!!! \ud83d\udfe8\ud83d\udfe5\ud83d\udfe9 HABOL na! \ud83e\udd18\ud83c\udffd till 10pm pa ang chance mong PUMALDO\u2026 \n\n#juankada #juankadageofff #juankadaevo #juankadasabbie #juan365 #juan365PH #AllInJuan",
           "post_type": "Photos",
-          "publish_time": "2025-12-21T09:02:23+0000",
-          "permalink": "https://www.facebook.com/122187725540528854/posts/2219652025225389?substory_index=2219652025225389",
-          "reactions": 5,
-          "comments": 0,
+          "publish_time": "2026-01-10T00:11:00",
+          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid0MpMv19itJno4cScDhfLY4fK7MvKuRkrMFUkzckwBd8SEiyj3B3HojXUSHp5DE8yWl",
+          "reactions": 28,
+          "comments": 10,
+          "shares": 3,
+          "engagement": 41,
+          "pes": 57.0
+        },
+        {
+          "post_id": "1165907575625895",
+          "page_id": "61565865626361",
+          "page_name": "Juankada Geoff",
+          "title": "ROCK & RIDE",
+          "post_type": "Live",
+          "publish_time": "2026-01-07T16:48:00",
+          "permalink": "https://www.facebook.com/Juankadageoff/videos/1165907575625895/",
+          "reactions": 15,
+          "comments": 16,
+          "shares": 7,
+          "engagement": 38,
+          "pes": 75.0
+        },
+        {
+          "post_id": "122188595120528854",
+          "page_id": "61565865626361",
+          "page_name": "Juankada Geoff",
+          "title": "\ud83e\udee1 \ud835\udc07\ud835\udc04\ud835\udc0b\ud835\udc0b\ud835\udc0e mga ka \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc04\ud835\udc11\ud835\udc12..!!! \ud83d\udc4b\ud83c\udffd Sinong naka nood at nakipag \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc2b\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc27 sa LIVE namin kanina\u2753 Mamaya uli a.. \ud83d\udc4a\ud83c\udffd\ud83e\udd18\ud83c\udffd\n\nSame TIME, Same Host at ENERGY ang hatid naming \ud835\udc12\ud835\udc00\ud835\udc18\ud835\udc00 at \ud835\udc12\ud835\udc14\ud835\udc16\ud835\udc04\ud835\udc11\ud835\udc13\ud835\udc04 sa inyo mga ka #JuanKada",
+          "post_type": "Photos",
+          "publish_time": "2026-01-06T16:14:00",
+          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid0i7kkast3Dj5ebLaLE1JmBkUxh4veUtHzk9t8h8873hFUPhr5E4PpzEC5DhtKNWQ1l",
+          "reactions": 17,
+          "comments": 14,
+          "shares": 6,
+          "engagement": 37,
+          "pes": 66.0
+        },
+        {
+          "post_id": "122188684640528854",
+          "page_id": "61565865626361",
+          "page_name": "Juankada Geoff",
+          "title": "Whats up rockers fam? Simula na tayo sa'ating Color Game LIVE! \ud83e\udd18\n\nCome join us together with Juankada Shann and Juankada Ligaya at i-manifest na ang LUCK mo! \u2618\ufe0f\n\n#juankadageoff #juankadahost #Juan365P",
+          "post_type": "Photos",
+          "publish_time": "2026-01-07T08:50:00",
+          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid024aS294q8tCx4pxir2qtWcahYfDqk8nPXHZ9sjHPr4Va1XAotoga8yVUkn87oL2HHl",
+          "reactions": 28,
+          "comments": 2,
+          "shares": 4,
+          "engagement": 34,
+          "pes": 53.0
+        },
+        {
+          "post_id": "122188977188528854",
+          "page_id": "61565865626361",
+          "page_name": "Juankada Geoff",
+          "title": "\ud83d\udc49\ud83c\udffdABANGAN! \ud835\udc02\ud835\udc0e\ud835\udc0b\ud835\udc0e\ud835\udc11 \ud835\udc06\ud835\udc00\ud835\udc0c\ud835\udc04 \ud835\udc0b\ud835\udc08\ud835\udc15\ud835\udc04 with Juankada Evo and Juankada Sabbie from 2PM to 10PM. See you there Rockers FAM! \ud83e\udd18\n\n#juankadageoff #juankadahost #Juan365 #Juan365PH #AllInJuanSaSaya #JuanKada #juan365col",
+          "post_type": "Photos",
+          "publish_time": "2026-01-09T18:08:00",
+          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid0tKti9k44qa5hzxKu4YBa41zsarirhrtmMSMtTSLJfdeVUN5bJrKtFDauocy7TuhTl",
+          "reactions": 21,
+          "comments": 3,
+          "shares": 3,
+          "engagement": 27,
+          "pes": 36.0
+        },
+        {
+          "post_id": "122188435292528854",
+          "page_id": "61565865626361",
+          "page_name": "Juankada Geoff",
+          "title": "Solo cruising while the beat runs the city. \ud83e\udd19\n\nComment suggestion ng soundtrip + Member ID. \ud83d\udcac\n\n#JuankadaGeoff #juankadahost #Juan365 #Juan365PH #AllInJuanSaSaya #JuanKada #Juan365ColorGame\n#Juan365Stu",
+          "post_type": "Videos",
+          "publish_time": "2026-01-05T09:29:00",
+          "permalink": "https://www.facebook.com/reel/25558279040498914/",
+          "reactions": 16,
+          "comments": 9,
           "shares": 0,
-          "engagement": 5,
-          "pes": 5.0
+          "engagement": 25,
+          "pes": 37.0
+        },
+        {
+          "post_id": "122188129148528854",
+          "page_id": "61565865626361",
+          "page_name": "Juankada Geoff",
+          "title": "Hindi perpektong tao pero perpekto para sa'yo. \ud83d\ude09\n\nDon't be shy and hit that Like, Follow, and Share button para perfect talaga! \n\n#JuankadaGeoff #Juan365 #Juan365PH\n#AllInJuanSaSaya #JuanKada #Juan365",
+          "post_type": "Videos",
+          "publish_time": "2026-01-03T06:34:00",
+          "permalink": "https://www.facebook.com/reel/1502070524217120/",
+          "reactions": 13,
+          "comments": 7,
+          "shares": 2,
+          "engagement": 22,
+          "pes": 34.0
+        },
+        {
+          "post_id": "122187426752528854",
+          "page_id": "61565865626361",
+          "page_name": "Juankada Geoff",
+          "title": "geoff 2",
+          "post_type": "Videos",
+          "publish_time": "2025-12-28T06:00:00",
+          "permalink": "https://www.facebook.com/reel/1182366410196039/",
+          "reactions": 13,
+          "comments": 4,
+          "shares": 0,
+          "engagement": 17,
+          "pes": 21.0
+        },
+        {
+          "post_id": "122188424588528854",
+          "page_id": "61565865626361",
+          "page_name": "Juankada Geoff",
+          "title": "Live na tayo sa Juan365 Color Game LIVE juankada! Come join us together with Juankada Sabbie and Juankada Ligaya \ud83e\udd29\n\n#juankadageoff #juankadahost #juankadasabbie #juankadaligaya #Juan365 #Juan365PH #Al",
+          "post_type": "Photos",
+          "publish_time": "2026-01-05T07:33:00",
+          "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid095zTRgKXm5Poo7yV2z5sZ95StKsBEybSvFvtoZLudQ62ug3h6ERYvXynF9mbDezsl",
+          "reactions": 13,
+          "comments": 4,
+          "shares": 0,
+          "engagement": 17,
+          "pes": 23.0
         }
       ],
       "61583996447175": [
@@ -7449,8 +7670,8 @@
     },
     {
       "post_id": "122188998056528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "\ud83e\udee1\ud835\udc0b\ud835\udc08\ud835\udc15\ud835\udc04 tayo ngayon \ud835\udc09\ud835\udc14\ud835\udc00\ud835\udc0d\ud835\udc0a\ud835\udc00\ud835\udc03\ud835\udc00\u203c\ufe0f naka ilang pa \ud835\udc13\ud835\udc11\ud835\udc08\ud835\udc0f\ud835\udc0b\ud835\udc04 na..!!! \ud83d\udfe8\ud83d\udfe5\ud83d\udfe9 HABOL na! \ud83e\udd18\ud83c\udffd till 10pm pa ang chance mong PUMALDO\u2026 \n\n#juankada #juankadageofff #juankadaevo #juankadasabbie #juan365 #juan365PH #AllInJuan",
       "post_type": "Photos",
       "publish_time": "2026-01-10T00:11:00",
@@ -7689,8 +7910,8 @@
     },
     {
       "post_id": "122188977188528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "\ud83d\udc49\ud83c\udffdABANGAN! \ud835\udc02\ud835\udc0e\ud835\udc0b\ud835\udc0e\ud835\udc11 \ud835\udc06\ud835\udc00\ud835\udc0c\ud835\udc04 \ud835\udc0b\ud835\udc08\ud835\udc15\ud835\udc04 with Juankada Evo and Juankada Sabbie from 2PM to 10PM. See you there Rockers FAM! \ud83e\udd18\n\n#juankadageoff #juankadahost #Juan365 #Juan365PH #AllInJuanSaSaya #JuanKada #juan365col",
       "post_type": "Photos",
       "publish_time": "2026-01-09T18:08:00",
@@ -8201,8 +8422,8 @@
     },
     {
       "post_id": "122188890968528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "\ud83d\udc4b\ud83c\udffd Namiss n\u2019yo ba ako JUANKADA? \ud83e\udee1 \ud835\udc11\ud835\udc04\ud835\udc12\ud835\udc13 \ud835\udc03\ud835\udc00\ud835\udc18 lang muna ang \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc04\ud835\udc11 \ud835\udc06\ud835\udc04\ud835\udc0e\ud835\udc05\ud835\udc05 n\u2019yo \ud83d\ude05\nBAWI sa puyat at pagod kaya eto, TRY ko daw ang kamatis sa face \ud83c\udf45\ud83e\udd23\n\nBalik ako BUKAS \ud83e\udef0\ud83c\udffc\n\ud835\udc02\ud835\udc0e\ud835\udc0b\ud835\udc0e\ud835\udc11 \ud835\udc06\ud835\udc00\ud835\udc0c\ud835\udc04 ulit everyJUAN from 2pm t",
       "post_type": "Photos",
       "publish_time": "2026-01-08T22:37:00",
@@ -9161,8 +9382,8 @@
     },
     {
       "post_id": "1165907575625895",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "ROCK & RIDE",
       "post_type": "Live",
       "publish_time": "2026-01-07T16:48:00",
@@ -9225,8 +9446,8 @@
     },
     {
       "post_id": "122188695116528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "AllinJuanSaRakrakan! Join na sa live at maki-feel the rakista vibes with me ROCKERS FAM! \ud83e\uddd1\u200d\ud83c\udfa4\n\n\ud83d\udcbd: Faint - by Linkin Park \ud83d\udc10\n\nShare niyo naman sa comment section kung ano ang favorite Rock Band niyo fam!",
       "post_type": "Videos",
       "publish_time": "2026-01-07T11:15:00",
@@ -9241,8 +9462,8 @@
     },
     {
       "post_id": "122188689632528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Before live, pa pitik muna tayo konti ROCKER FAM. \ud83d\ude1c\ud83e\udd18\n\nHit LIKE if ganito ka rin before ang gagawin mo. \ud83d\ude05\n\n#juankadageoff #juankadahost #Juan365PH #Juan365 #AllInJuanSaSaya #JuanKada #juan365colorgame\n",
       "post_type": "Photos",
       "publish_time": "2026-01-07T09:54:00",
@@ -9289,8 +9510,8 @@
     },
     {
       "post_id": "122188684640528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Whats up rockers fam? Simula na tayo sa'ating Color Game LIVE! \ud83e\udd18\n\nCome join us together with Juankada Shann and Juankada Ligaya at i-manifest na ang LUCK mo! \u2618\ufe0f\n\n#juankadageoff #juankadahost #Juan365P",
       "post_type": "Photos",
       "publish_time": "2026-01-07T08:50:00",
@@ -9305,8 +9526,8 @@
     },
     {
       "post_id": "122188680692528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "1K NA TAYO ROCKERS FAM! Salamat sa walang sawa'ng suporta at pagsubaybay saating Color Game LIVE. 1 month palang pero we already reached 1K. SOLID! \ud83d\ude4c\n\nLIKE, SHARE, FOLLOW, and set that notifications i",
       "post_type": "Photos",
       "publish_time": "2026-01-07T08:17:00",
@@ -9497,8 +9718,8 @@
     },
     {
       "post_id": "122188638626528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "GEOFF TAYLOR",
       "post_type": "Videos",
       "publish_time": "2026-01-07T01:52:00",
@@ -9913,8 +10134,8 @@
     },
     {
       "post_id": "122188595120528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "\ud83e\udee1 \ud835\udc07\ud835\udc04\ud835\udc0b\ud835\udc0b\ud835\udc0e mga ka \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc04\ud835\udc11\ud835\udc12..!!! \ud83d\udc4b\ud83c\udffd Sinong naka nood at nakipag \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc2b\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc27 sa LIVE namin kanina\u2753 Mamaya uli a.. \ud83d\udc4a\ud83c\udffd\ud83e\udd18\ud83c\udffd\n\nSame TIME, Same Host at ENERGY ang hatid naming \ud835\udc12\ud835\udc00\ud835\udc18\ud835\udc00 at \ud835\udc12\ud835\udc14\ud835\udc16\ud835\udc04\ud835\udc11\ud835\udc13\ud835\udc04 sa inyo mga ka #JuanKada",
       "post_type": "Photos",
       "publish_time": "2026-01-06T16:14:00",
@@ -10089,8 +10310,8 @@
     },
     {
       "post_id": "122188546208528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "\ud83e\udee1LIVE tayo ngayon mga ka ROCKERS!\ud83e\udd18\ud83c\udffd\n\nGAME na bang makipag ROCKrakan? COLOR GAME na..!!! !\ud83d\ude05\ud83d\ude18\n\n#Juan365 #Juan365PH #AllInJuanSaSaya #JuanKada #Juan365ColorGame #JuankadaGeoff\n#FollowMe #Trending #FYP #R",
       "post_type": "Photos",
       "publish_time": "2026-01-06T06:22:00",
@@ -10617,8 +10838,8 @@
     },
     {
       "post_id": "122188435292528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Solo cruising while the beat runs the city. \ud83e\udd19\n\nComment suggestion ng soundtrip + Member ID. \ud83d\udcac\n\n#JuankadaGeoff #juankadahost #Juan365 #Juan365PH #AllInJuanSaSaya #JuanKada #Juan365ColorGame\n#Juan365Stu",
       "post_type": "Videos",
       "publish_time": "2026-01-05T09:29:00",
@@ -10633,8 +10854,8 @@
     },
     {
       "post_id": "122188424588528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Live na tayo sa Juan365 Color Game LIVE juankada! Come join us together with Juankada Sabbie and Juankada Ligaya \ud83e\udd29\n\n#juankadageoff #juankadahost #juankadasabbie #juankadaligaya #Juan365 #Juan365PH #Al",
       "post_type": "Photos",
       "publish_time": "2026-01-05T07:33:00",
@@ -10649,8 +10870,8 @@
     },
     {
       "post_id": "122188423406528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "If you can dream it, you can do it. Your limits are all within yourself. \ud83d\ude4c -Brian Tracy\n\nLIKE, SHARE & FOLLOW!  Color Game LIVE daily, 6AM to 5AM \ud83e\udd1f\n\n#JuankadaGeoff #juankadahost #Juan365 #Juan365PH #A",
       "post_type": "Videos",
       "publish_time": "2026-01-05T07:21:00",
@@ -11145,8 +11366,8 @@
     },
     {
       "post_id": "122188247414528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "ABC",
       "post_type": "Videos",
       "publish_time": "2026-01-04T09:15:00",
@@ -11225,8 +11446,8 @@
     },
     {
       "post_id": "122188233140528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "LIVE na tayo, Juankada! \ud83d\udcfd\ufe0f\nCome and join us together with Juankada Ligaya and Juankada Sabbie.\nLet\u2019s have some fun habang namimili ng inyong LUCKY color. \ud83d\udd35\ud83d\udd34\ud83d\udfe2\ud83d\udfe1\ud83d\udfe0\n\nDon\u2019t forget to Like, Share, and Follow",
       "post_type": "Photos",
       "publish_time": "2026-01-04T06:48:00",
@@ -11817,8 +12038,8 @@
     },
     {
       "post_id": "122188129148528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Hindi perpektong tao pero perpekto para sa'yo. \ud83d\ude09\n\nDon't be shy and hit that Like, Follow, and Share button para perfect talaga! \n\n#JuankadaGeoff #Juan365 #Juan365PH\n#AllInJuanSaSaya #JuanKada #Juan365",
       "post_type": "Videos",
       "publish_time": "2026-01-03T06:34:00",
@@ -12057,7 +12278,7 @@
     },
     {
       "post_id": "1878875989431601",
-      "page_id": "397865533415866",
+      "page_id": "61565865626361",
       "page_name": "Juankada Geoff",
       "title": "",
       "post_type": "Photos",
@@ -12440,6 +12661,22 @@
       "pes": 14.0
     },
     {
+      "post_id": "122188074218528854",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
+      "title": "Juankada Geoff updated their cover photo.",
+      "post_type": "Photos",
+      "publish_time": "2026-01-02T18:40:00",
+      "permalink": "https://www.facebook.com/photo.php?fbid=122188074218528854&set=a.122095532852528854&type=3",
+      "reactions": 14,
+      "comments": 2,
+      "shares": 0,
+      "views": 0,
+      "reach": 1,
+      "engagement": 16,
+      "pes": 18.0
+    },
+    {
       "post_id": "122112683475145396",
       "page_id": "61584361885503",
       "page_name": "Juankada Sabbie",
@@ -12454,22 +12691,6 @@
       "reach": 1,
       "engagement": 23,
       "pes": 26.0
-    },
-    {
-      "post_id": "122188074218528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
-      "title": "Juankada Geoff updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:40:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122188074218528854&set=a.122095532852528854&type=3",
-      "reactions": 14,
-      "comments": 2,
-      "shares": 0,
-      "views": 0,
-      "reach": 1,
-      "engagement": 16,
-      "pes": 18.0
     },
     {
       "post_id": "122110408779144249",
@@ -13273,8 +13494,8 @@
     },
     {
       "post_id": "122187862226528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "HAPPY NEW YEAR, JUANKADA!",
       "post_type": "Videos",
       "publish_time": "2025-12-31T21:30:00",
@@ -13481,8 +13702,8 @@
     },
     {
       "post_id": "122187782534528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Hindi namin ito magagawa nang wala ka, Juankada! Salamat sa isang hindi malilimutang taon. \ud83e\udd1f From Juan365 family to yours, Happy New Year! \ud83c\udf86\n\nLike, Share, at Follow para sa mas exciting na memories th",
       "post_type": "Videos",
       "publish_time": "2025-12-31T07:25:00",
@@ -14057,8 +14278,8 @@
     },
     {
       "post_id": "122187673232528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "ROCKISTA SA STAGE, KULAY ANG PANALO! \ud83c\udfb8\ud83c\udfa8\nPag tumama ang trip mo sa kulay \u2014 boom! panalo ka agad!\nReady ka na bang i-rock ang Color Game at sumabay sa saya? \ud83e\udd18\ud83d\udd25\n\nDrop your kulay sa comments at sali na, J",
       "post_type": "Photos",
       "publish_time": "2025-12-30T07:37:00",
@@ -14729,8 +14950,8 @@
     },
     {
       "post_id": "122187590780528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "LIVE na ang Color Game, Juankada! Together with Juankada Juankada Sabbie, Juankada Juankada Ligaya & Juankada Juankada Shann piliin na ang Lucky COLOR mo! \ud83e\udd73\n\nComment your Lucky COLOR of the day and fo",
       "post_type": "Photos",
       "publish_time": "2025-12-29T14:13:00",
@@ -14745,8 +14966,8 @@
     },
     {
       "post_id": "122187566144528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Rockstar + sweet lover = certified Juankada vibes! \ud83d\ude09\n\nDrop a \"\ud83e\udd1f\" sa comments kung ikaw rin! \ud83d\ude01\n\n#JuankadaGeoff #Juan365 #Juan365PH\n#JuanSports #AllInJuanSaSaya #JuanKada #Juan365ColorGame\n#Juan365Studi",
       "post_type": "Videos",
       "publish_time": "2025-12-29T09:15:00",
@@ -15433,8 +15654,8 @@
     },
     {
       "post_id": "122187426752528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "geoff 2",
       "post_type": "Videos",
       "publish_time": "2025-12-28T06:00:00",
@@ -15865,8 +16086,8 @@
     },
     {
       "post_id": "122187307568528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "\ud835\udfd1\ud835\udfd5\ud835\udc0a panalo mula sa \ud835\udc13\ud835\udc11\ud835\udc08\ud835\udc0f\ud835\udc0b\ud835\udc04 \ud835\udc16\ud835\udc07\ud835\udc08\ud835\udc13\ud835\udc04 x150\n\n\ud83e\udee1CONGRATULATIONS JuanKada SUGARDAD!! \ud83e\udd18\ud83c\udffd",
       "post_type": "Photos",
       "publish_time": "2025-12-27T04:24:00",
@@ -16233,8 +16454,8 @@
     },
     {
       "post_id": "122187170894528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Like, share, and follow our official page and stay tuned para sa AllInJUAN na panalo! \ud83e\udd29\n\nInquiries is open 24/7. Please direct message to our pages for further assistance. \ud83d\udcac\n\nIsang kulay, isang damakm",
       "post_type": "Photos",
       "publish_time": "2025-12-25T23:39:00",
@@ -16425,8 +16646,8 @@
     },
     {
       "post_id": "122187064706528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Warmest wishes for a joyful holiday season.\nMerry christmas and advance happy new year to y'all Juankada! \ud83c\udf84\n\nPlease follow our official pages. Drop a \"\ud83c\udf89\" And spread love to all!\n\n#JuankadaGeoff #Juan3",
       "post_type": "Photos",
       "publish_time": "2025-12-24T23:53:00",
@@ -17177,7 +17398,7 @@
     },
     {
       "post_id": "2219652025225389",
-      "page_id": "397865533415866",
+      "page_id": "61565865626361",
       "page_name": "Juankada Geoff",
       "title": "Malapit na Juankada! Ready na ba kayo maki All in Juan sa Saya?\n\n#Juan365Studios #JuankadaGeoff #Juan365 #ALLINJUANLIVE #JuankadaHosts #Juankada",
       "post_type": "Photos",
@@ -17369,8 +17590,8 @@
     },
     {
       "post_id": "122186613290528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Malapit na Juankada! Ready na ba kayo maki All in Juan sa Saya?\n\n#Juan365Studios #JuankadaGeoff #Juan365 #ALLINJUANLIVE #JuankadaHosts #Juankada",
       "post_type": "Photos",
       "publish_time": "2025-12-21T01:02:00",
@@ -17401,8 +17622,8 @@
     },
     {
       "post_id": "122186613086528854",
-      "page_id": "100064672885113",
-      "page_name": "Juankada host Drae",
+      "page_id": "61565865626361",
+      "page_name": "Juankada Geoff",
       "title": "Hi Juankada! I\u2019m JuanKada Geoff, bringin\u2019 kulitan at saya sa Color Game ng Juan365 Studios!\ud83e\udd18\n\nKitakits everyJUAN!\n\n#Juan365Studios #JuankadaGeoff #Juan365 #ALLINJUANLIVE #JuankadaHosts #Juankada",
       "post_type": "Photos",
       "publish_time": "2025-12-21T00:57:00",
@@ -18594,17 +18815,6 @@
       },
       {
         "rank": 8,
-        "page_id": "100064672885113",
-        "name": "Juankada host Drae",
-        "page_name": "Juankada host Drae",
-        "posts": 62,
-        "views": 16029,
-        "reach": 6885,
-        "engagement": 1038,
-        "avg_engagement": 16.7
-      },
-      {
-        "rank": 9,
         "page_id": "61583996447175",
         "name": "Juankada Jedi",
         "page_name": "Juankada Jedi",
@@ -18615,7 +18825,7 @@
         "avg_engagement": 17.5
       },
       {
-        "rank": 10,
+        "rank": 9,
         "page_id": "61584243275518",
         "name": "Juankada Lance",
         "page_name": "Juankada Lance",
@@ -18626,7 +18836,7 @@
         "avg_engagement": 16.4
       },
       {
-        "rank": 11,
+        "rank": 10,
         "page_id": "61585109026232",
         "name": "Juankada Charm",
         "page_name": "Juankada Charm",
@@ -18637,7 +18847,7 @@
         "avg_engagement": 15.1
       },
       {
-        "rank": 12,
+        "rank": 11,
         "page_id": "61584482528597",
         "name": "Juankada Shann",
         "page_name": "Juankada Shann",
@@ -18648,7 +18858,7 @@
         "avg_engagement": 8.7
       },
       {
-        "rank": 13,
+        "rank": 12,
         "page_id": "61584432221426",
         "name": "Juankada Evo",
         "page_name": "Juankada Evo",
@@ -18659,15 +18869,26 @@
         "avg_engagement": 15.7
       },
       {
+        "rank": 13,
+        "page_id": "100064672885113",
+        "name": "Juankada host Drae",
+        "page_name": "Juankada host Drae",
+        "posts": 33,
+        "views": 9969,
+        "reach": 4402,
+        "engagement": 570,
+        "avg_engagement": 17.3
+      },
+      {
         "rank": 14,
-        "page_id": "397865533415866",
+        "page_id": "61565865626361",
         "name": "Juankada Geoff",
         "page_name": "Juankada Geoff",
-        "posts": 2,
-        "views": 0,
-        "reach": 0,
-        "engagement": 18,
-        "avg_engagement": 9.0
+        "posts": 31,
+        "views": 6060,
+        "reach": 2483,
+        "engagement": 486,
+        "avg_engagement": 15.7
       }
     ],
     "postTypePerf": [
@@ -18772,9 +18993,9 @@
       {
         "page_name": "Juankada host Drae",
         "page_id": "100064672885113",
-        "posts_with_comments": 34,
+        "posts_with_comments": 15,
         "self_comments": 0,
-        "organic_comments": 163,
+        "organic_comments": 74,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
@@ -18789,10 +19010,10 @@
       },
       {
         "page_name": "Juankada Geoff",
-        "page_id": "397865533415866",
-        "posts_with_comments": 1,
+        "page_id": "61565865626361",
+        "posts_with_comments": 20,
         "self_comments": 0,
-        "organic_comments": 1,
+        "organic_comments": 90,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
@@ -19027,23 +19248,6 @@
         "engagement_share": 7.4
       },
       {
-        "page_id": "100064672885113",
-        "name": "Juankada host Drae",
-        "page_name": "Juankada host Drae",
-        "fan_count": 350,
-        "posts": 65,
-        "engagement": 1038,
-        "avg_engagement": 16.0,
-        "views": 16183,
-        "reach": 7080,
-        "reactions": 810,
-        "comments": 163,
-        "shares": 65,
-        "avg_pes": 22.5,
-        "rank": 8,
-        "engagement_share": 5.6
-      },
-      {
         "page_id": "61583996447175",
         "name": "Juankada Jedi",
         "page_name": "Juankada Jedi",
@@ -19057,7 +19261,7 @@
         "comments": 115,
         "shares": 40,
         "avg_pes": 23.6,
-        "rank": 9,
+        "rank": 8,
         "engagement_share": 4.5
       },
       {
@@ -19074,7 +19278,7 @@
         "comments": 120,
         "shares": 52,
         "avg_pes": 20.8,
-        "rank": 10,
+        "rank": 9,
         "engagement_share": 4.5
       },
       {
@@ -19091,7 +19295,7 @@
         "comments": 86,
         "shares": 51,
         "avg_pes": 18.8,
-        "rank": 11,
+        "rank": 10,
         "engagement_share": 4.5
       },
       {
@@ -19108,7 +19312,7 @@
         "comments": 105,
         "shares": 50,
         "avg_pes": 11.0,
-        "rank": 12,
+        "rank": 11,
         "engagement_share": 4.4
       },
       {
@@ -19125,52 +19329,63 @@
         "comments": 97,
         "shares": 84,
         "avg_pes": 23.9,
-        "rank": 13,
+        "rank": 12,
         "engagement_share": 3.7
       },
       {
-        "page_id": "397865533415866",
+        "page_id": "100064672885113",
+        "name": "Juankada host Drae",
+        "page_name": "Juankada host Drae",
+        "fan_count": 350,
+        "posts": 36,
+        "engagement": 570,
+        "avg_engagement": 15.8,
+        "views": 10123,
+        "reach": 4597,
+        "reactions": 464,
+        "comments": 74,
+        "shares": 32,
+        "avg_pes": 21.4,
+        "rank": 13,
+        "engagement_share": 3.1
+      },
+      {
+        "page_id": "61565865626361",
         "name": "Juankada Geoff",
         "page_name": "Juankada Geoff",
         "fan_count": 626,
-        "posts": 2,
-        "engagement": 18,
-        "avg_engagement": 9.0,
-        "views": 0,
-        "reach": 0,
-        "reactions": 17,
-        "comments": 1,
-        "shares": 0,
-        "avg_pes": 9.5,
+        "posts": 31,
+        "engagement": 486,
+        "avg_engagement": 15.7,
+        "views": 6060,
+        "reach": 2483,
+        "reactions": 363,
+        "comments": 90,
+        "shares": 33,
+        "avg_pes": 23.0,
         "rank": 14,
-        "engagement_share": 0.1
+        "engagement_share": 2.6
       }
     ],
     "postTypesByPage": {
       "100064672885113": [
         {
           "type": "Photos",
-          "count": 41,
-          "engagement": 598,
-          "avg_engagement": 14.6
+          "count": 23,
+          "engagement": 295,
+          "avg_engagement": 12.8
         },
         {
           "type": "Videos",
-          "count": 22,
-          "engagement": 402,
-          "avg_engagement": 18.3
+          "count": 12,
+          "engagement": 275,
+          "avg_engagement": 22.9
         },
         {
           "type": "Text",
           "count": 1,
           "engagement": 0,
           "avg_engagement": 0.0
-        },
-        {
-          "type": "Live",
-          "count": 1,
-          "engagement": 38,
-          "avg_engagement": 38.0
         }
       ],
       "305553999318966": [
@@ -19193,12 +19408,24 @@
           "avg_engagement": 17.0
         }
       ],
-      "397865533415866": [
+      "61565865626361": [
         {
           "type": "Photos",
-          "count": 2,
-          "engagement": 18,
-          "avg_engagement": 9.0
+          "count": 20,
+          "engagement": 321,
+          "avg_engagement": 16.1
+        },
+        {
+          "type": "Videos",
+          "count": 10,
+          "engagement": 127,
+          "avg_engagement": 12.7
+        },
+        {
+          "type": "Live",
+          "count": 1,
+          "engagement": 38,
+          "avg_engagement": 38.0
         }
       ],
       "61583996447175": [
@@ -19443,15 +19670,15 @@
     "dominantTypes": {
       "100064672885113": {
         "type": "Photos",
-        "percentage": 63.1
+        "percentage": 63.9
       },
       "305553999318966": {
         "type": "Photos",
         "percentage": 62.8
       },
-      "397865533415866": {
+      "61565865626361": {
         "type": "Photos",
-        "percentage": 100.0
+        "percentage": 64.5
       },
       "61583996447175": {
         "type": "Videos",
