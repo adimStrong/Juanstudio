@@ -18983,13 +18983,94 @@
     "summary": {
       "total_posts_with_comments": 444,
       "posts_analyzed": 444,
-      "posts_with_self_comment": 0,
-      "total_self_comments": 0,
-      "total_organic_comments": 2167,
-      "self_comment_rate": 0.0,
-      "posts_with_self_pct": 0.0
+      "posts_with_self_comment": 76,
+      "total_self_comments": 79,
+      "total_organic_comments": 2088,
+      "self_comment_rate": 3.6,
+      "posts_with_self_pct": 17.1
     },
     "byPage": [
+      {
+        "page_name": "JuanKada Star",
+        "page_id": "949473921576703",
+        "posts_with_comments": 35,
+        "self_comments": 17,
+        "organic_comments": 146,
+        "posts_with_self": 17,
+        "self_rate": 10.4
+      },
+      {
+        "page_name": "Juankada Alexchoozy",
+        "page_id": "61584327477246",
+        "posts_with_comments": 47,
+        "self_comments": 14,
+        "organic_comments": 163,
+        "posts_with_self": 14,
+        "self_rate": 7.9
+      },
+      {
+        "page_name": "Juankada Evo",
+        "page_id": "61584432221426",
+        "posts_with_comments": 27,
+        "self_comments": 12,
+        "organic_comments": 85,
+        "posts_with_self": 12,
+        "self_rate": 12.4
+      },
+      {
+        "page_name": "Juankada Shann",
+        "page_id": "61584482528597",
+        "posts_with_comments": 42,
+        "self_comments": 11,
+        "organic_comments": 94,
+        "posts_with_self": 11,
+        "self_rate": 10.5
+      },
+      {
+        "page_name": "Juankada Geoff",
+        "page_id": "61565865626361",
+        "posts_with_comments": 20,
+        "self_comments": 7,
+        "organic_comments": 83,
+        "posts_with_self": 7,
+        "self_rate": 7.8
+      },
+      {
+        "page_name": "Juankada Papa Joe",
+        "page_id": "61584233476725",
+        "posts_with_comments": 26,
+        "self_comments": 7,
+        "organic_comments": 182,
+        "posts_with_self": 6,
+        "self_rate": 3.7
+      },
+      {
+        "page_name": "Juankada Lance",
+        "page_id": "61584243275518",
+        "posts_with_comments": 34,
+        "self_comments": 4,
+        "organic_comments": 116,
+        "posts_with_self": 4,
+        "self_rate": 3.3
+      },
+      {
+        "page_name": "Juankada Ellise",
+        "page_id": "61585679673115",
+        "posts_with_comments": 43,
+        "self_comments": 4,
+        "organic_comments": 199,
+        "posts_with_self": 2,
+        "self_rate": 2.0
+      },
+      {
+        "page_name": "Juankada Ligaya",
+        "page_id": "61584067509799",
+        "posts_with_comments": 38,
+        "self_comments": 3,
+        "organic_comments": 348,
+        "posts_with_self": 3,
+        "self_rate": 0.9
+      },
       {
         "page_name": "Juankada host Drae",
         "page_id": "100064672885113",
@@ -19009,56 +19090,11 @@
         "self_rate": 0.0
       },
       {
-        "page_name": "Juankada Geoff",
-        "page_id": "61565865626361",
-        "posts_with_comments": 20,
-        "self_comments": 0,
-        "organic_comments": 90,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
         "page_name": "Juankada Jedi",
         "page_id": "61583996447175",
         "posts_with_comments": 27,
         "self_comments": 0,
         "organic_comments": 115,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
-        "page_name": "Juankada Ligaya",
-        "page_id": "61584067509799",
-        "posts_with_comments": 38,
-        "self_comments": 0,
-        "organic_comments": 351,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
-        "page_name": "Juankada Papa Joe",
-        "page_id": "61584233476725",
-        "posts_with_comments": 26,
-        "self_comments": 0,
-        "organic_comments": 189,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
-        "page_name": "Juankada Lance",
-        "page_id": "61584243275518",
-        "posts_with_comments": 34,
-        "self_comments": 0,
-        "organic_comments": 120,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
-        "page_name": "Juankada Alexchoozy",
-        "page_id": "61584327477246",
-        "posts_with_comments": 47,
-        "self_comments": 0,
-        "organic_comments": 177,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
@@ -19072,24 +19108,6 @@
         "self_rate": 0.0
       },
       {
-        "page_name": "Juankada Evo",
-        "page_id": "61584432221426",
-        "posts_with_comments": 27,
-        "self_comments": 0,
-        "organic_comments": 97,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
-        "page_name": "Juankada Shann",
-        "page_id": "61584482528597",
-        "posts_with_comments": 42,
-        "self_comments": 0,
-        "organic_comments": 105,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
         "page_name": "Juankada Charm",
         "page_id": "61585109026232",
         "posts_with_comments": 29,
@@ -19097,34 +19115,107 @@
         "organic_comments": 86,
         "posts_with_self": 0,
         "self_rate": 0.0
-      },
-      {
-        "page_name": "Juankada Ellise",
-        "page_id": "61585679673115",
-        "posts_with_comments": 43,
-        "self_comments": 0,
-        "organic_comments": 203,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
-        "page_name": "JuanKada Star",
-        "page_id": "949473921576703",
-        "posts_with_comments": 35,
-        "self_comments": 0,
-        "organic_comments": 163,
-        "posts_with_self": 0,
-        "self_rate": 0.0
       }
     ],
     "effectivity": {
-      "avg_engagement_with_self": 0,
-      "avg_engagement_without_self": 35.5,
-      "engagement_boost_pct": -100.0,
-      "avg_reactions_with": 0,
+      "avg_engagement_with_self": 36.1,
+      "avg_engagement_without_self": 35.4,
+      "engagement_boost_pct": 2.1,
+      "avg_reactions_with": 28.4,
       "avg_reactions_without": 28.5
     },
-    "topSelfCommented": []
+    "topSelfCommented": [
+      {
+        "post_id": "122098546227189322",
+        "page_name": "Juankada Ellise",
+        "title": "Kung di ka nakapanood kagabi sa first LIVE ko\u2026 gra",
+        "self_comments": 3,
+        "total_comments": 24,
+        "engagement": 127,
+        "permalink": "https://www.facebook.com/reel/1522429599053617/"
+      },
+      {
+        "post_id": "122102917203141115",
+        "page_name": "Juankada Papa Joe",
+        "title": "JUANkadaaaaaaaa angkol is hereeee!!!!!",
+        "self_comments": 2,
+        "total_comments": 9,
+        "engagement": 9,
+        "permalink": "https://www.facebook.com/permalink.php?story_fbid=pfbid0iuQDgUbvipnss1iqPkrq4YxdkwdhTo9HaZF5s5X2frV8DKdMBdZTQv5B7PrrUGHVl&id=61584233476725"
+      },
+      {
+        "post_id": "122110076913144249",
+        "page_name": "Juankada Alexchoozy",
+        "title": "\ud835\udc09\ud835\udc2e\ud835\udc1a\ud835\udc27\ud835\udfd1\ud835\udfd4\ud835\udfd3 : \ud835\udfcf\ud835\udc2c\ud835\udc2d \ud835\udc1d\ud835\udc1a\ud835\udc32 \ud835\udc28\ud835\udc1f \ud835\udfd1\ud835\udfd4\ud835\udfd3 \ud835\udc1d\ud835\udc1a\ud835\udc32\ud835\udc2c (\ud835\udfcf/\ud835\udfd1\ud835\udfd4\ud835\udfd3)\n\nMga juankad",
+        "self_comments": 1,
+        "total_comments": 1,
+        "engagement": 21,
+        "permalink": "https://www.facebook.com/JuankadaAlexchoozyOfficialPage/posts/pfbid0pK416YCezpqKJDc9V9x8bhdqpeLjxcZePFFhPuaHcucSVky1gZwY3UHwC8kYGKVzl"
+      },
+      {
+        "post_id": "122109894531144249",
+        "page_name": "Juankada Alexchoozy",
+        "title": "\ud835\udc16\ud835\udc1e\ud835\udc25\ud835\udc1c\ud835\udc28\ud835\udc26\ud835\udc1e \ud835\udfd0\ud835\udfce\ud835\udfd0\ud835\udfd4!",
+        "self_comments": 1,
+        "total_comments": 3,
+        "engagement": 13,
+        "permalink": "https://www.facebook.com/reel/4321914381427900/"
+      },
+      {
+        "post_id": "122109877881144249",
+        "page_name": "Juankada Alexchoozy",
+        "title": "\ud835\udc71\ud835\udc96\ud835\udc82\ud835\udc8f\ud835\udc8c\ud835\udc82\ud835\udc85\ud835\udc82 \ud835\udc6f\ud835\udc90\ud835\udc94\ud835\udc95\ud835\udc94 \ud835\udc75\ud835\udc86\ud835\udc98 \ud835\udc80\ud835\udc86\ud835\udc82\ud835\udc93\u2019\ud835\udc94 \ud835\udc79\ud835\udc86\ud835\udc94\ud835\udc90\ud835\udc8d\ud835\udc96\ud835\udc95\ud835\udc8a\ud835\udc90\ud835\udc8f\ud835\udc94 (\ud835\udc77\ud835\udc82\ud835\udc93\ud835\udc95 \ud835\udc70\ud835\udc70)\u2728",
+        "self_comments": 1,
+        "total_comments": 3,
+        "engagement": 15,
+        "permalink": "https://www.facebook.com/reel/25657644713929795/"
+      },
+      {
+        "post_id": "122109722271144249",
+        "page_name": "Juankada Alexchoozy",
+        "title": "EP3 : \ud835\udddd\ud835\ude02\ud835\uddee\ud835\uddfb\ud835\uddf8\ud835\uddee\ud835\uddf1\ud835\uddee \ud835\udddb\ud835\uddfc\ud835\ude00\ud835\ude01\ud835\ude00 \ud835\udde1\ud835\uddf2\ud835\ude04 \ud835\uddec\ud835\uddf2\ud835\uddee\ud835\uddff\ud835\ude00 \ud835\udde5\ud835\uddf2\ud835\ude00\ud835\uddfc\ud835\uddf9\ud835\ude02\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb.",
+        "self_comments": 1,
+        "total_comments": 5,
+        "engagement": 29,
+        "permalink": "https://www.facebook.com/reel/809734125446775/"
+      },
+      {
+        "post_id": "122108203941144249",
+        "page_name": "Juankada Alexchoozy",
+        "title": "Mga JUANKADA! Bukas iikot na ang swerte mo! \ud83c\udf89\n\nHan",
+        "self_comments": 1,
+        "total_comments": 2,
+        "engagement": 19,
+        "permalink": "https://www.facebook.com/JuankadaAlexchoozyOfficialPage/posts/pfbid0hYDw9YRKevipUbq1tC6yewp5UL8Jx1R6aHS9vdVPiETaMV2uri1MoX3TesgDZ5K3l"
+      },
+      {
+        "post_id": "122109493101147740",
+        "page_name": "Juankada Evo",
+        "title": "Photo shoot day! Capture the pogi pose\ud83d\ude0e\n\nHit \"\u2665\ufe0f\" ",
+        "self_comments": 1,
+        "total_comments": 2,
+        "engagement": 11,
+        "permalink": "https://www.facebook.com/reel/1464991398555403/"
+      },
+      {
+        "post_id": "122109390177147740",
+        "page_name": "Juankada Evo",
+        "title": "Preparation for live later nuod ka \ud83d\ude09, lakas mo sak",
+        "self_comments": 1,
+        "total_comments": 1,
+        "engagement": 9,
+        "permalink": "https://www.facebook.com/reel/26564556873144741/"
+      },
+      {
+        "post_id": "122109133101147740",
+        "page_name": "Juankada Evo",
+        "title": "Mas gumaganda ang araw pag ganito ang kasama \ud83d\udc96\ud83d\ude06  S",
+        "self_comments": 1,
+        "total_comments": 2,
+        "engagement": 8,
+        "permalink": "https://www.facebook.com/reel/1650467395917401/"
+      }
+    ]
   },
   "pageComparison": {
     "pages": [
