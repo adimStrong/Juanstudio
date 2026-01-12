@@ -61,10 +61,10 @@ def run_sync():
 
         # Step 2: Update follower counts
         print("\n[2/6] Updating follower counts...")
-        if os.path.exists('update_fan_counts.py'):
-            subprocess.run([sys.executable, 'update_fan_counts.py'], check=True)
+        if os.path.exists('update_followers.py'):
+            subprocess.run([sys.executable, 'update_followers.py'], check=True)
         else:
-            print("   (update_fan_counts.py not found, skipping)")
+            print("   (update_followers.py not found, skipping)")
 
         # Step 3: Fetch comment data
         print("\n[3/6] Fetching comment data (self-comments)...")
@@ -94,11 +94,11 @@ def run_sync():
 
         # Step 6: Send notifications
         print("\n[6/6] Sending Telegram notifications...")
-        if os.path.exists('daily_update.py'):
-            result = subprocess.run([sys.executable, 'daily_update.py', '--notify'], capture_output=True, text=True)
+        if os.path.exists('send_daily_report.py'):
+            result = subprocess.run([sys.executable, 'send_daily_report.py'], capture_output=True, text=True)
             print("   Notifications sent")
         else:
-            print("   (daily_update.py not found, skipping)")
+            print("   (send_daily_report.py not found, skipping)")
 
         show_notification("JuanStudio Daily Sync", "Full sync complete!")
 
