@@ -7,12 +7,23 @@ import os
 from datetime import datetime
 from glob import glob
 
+# Import database function for duplicate prevention
+try:
+    from database import get_page_by_name
+except ImportError:
+    get_page_by_name = None
+
 DATABASE_PATH = "data/juanstudio_analytics.db"
 EXPORTS_FOLDER = "exports/from content manual Export"
 
+# Track page_id remapping (CSV ID -> existing DB ID)
+page_id_remap = {}
+
 
 def get_conn():
-    return sqlite3.connect(DATABASE_PATH)
+    conn = sqlite3.connect(DATABASE_PATH)
+    conn.row_factory = sqlite3.Row  # Enable dict-like access
+    return conn
 
 
 def parse_datetime(dt_str):
@@ -38,33 +49,60 @@ def safe_int(val):
 
 def import_csv(filepath):
     """Import a single CSV file."""
-    print(f"\nImporting: {os.path.basename(filepath)}")
+    global page_id_remap
+    print(f"
+Importing: {os.path.basename(filepath)}")
 
     conn = get_conn()
     cursor = conn.cursor()
 
     imported = 0
     pages_seen = set()
+    remapped_count = 0
 
     with open(filepath, "r", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
 
         for row in reader:
-            page_id = row.get("Page ID", "")
+            csv_page_id = row.get("Page ID", "")
             page_name = row.get("Page name", "")
             post_id = row.get("Post ID", "")
 
-            if not post_id or not page_id:
+            if not post_id or not csv_page_id:
                 continue
 
-            # Track pages
+            # DUPLICATE PREVENTION: Check if page with same name exists under different ID
+            if csv_page_id in page_id_remap:
+                # Already remapped this page_id
+                page_id = page_id_remap[csv_page_id]
+            elif get_page_by_name:
+                # Check if page with same name exists under different ID
+                existing_page = get_page_by_name(page_name, conn=conn)
+                if existing_page and existing_page["page_id"] != csv_page_id:
+                    # Page exists with different ID - use existing ID
+                    page_id = existing_page["page_id"]
+                    page_id_remap[csv_page_id] = page_id
+                    if remapped_count == 0:
+                        print(f"  [Duplicate Prevention] Remapping CSV IDs to existing page IDs")
+                    remapped_count += 1
+                else:
+                    # No conflict - use CSV's page_id
+                    page_id = csv_page_id
+                    page_id_remap[csv_page_id] = csv_page_id
+            else:
+                # No duplicate prevention available
+                page_id = csv_page_id
+
+            # Track pages - only insert if this is a NEW page_id (not remapped)
             if page_id not in pages_seen:
                 pages_seen.add(page_id)
-                # Save/update page info (use REPLACE to ensure page_name is updated)
-                cursor.execute("""
-                    INSERT OR REPLACE INTO pages (page_id, page_name, created_at, updated_at)
-                    VALUES (?, ?, COALESCE((SELECT created_at FROM pages WHERE page_id = ?), ?), ?)
-                """, (page_id, page_name, page_id, datetime.now().isoformat(), datetime.now().isoformat()))
+                # Only insert page if it doesn't already exist
+                cursor.execute("SELECT 1 FROM pages WHERE page_id = ?", (page_id,))
+                if not cursor.fetchone():
+                    cursor.execute("""
+                        INSERT INTO pages (page_id, page_name, created_at, updated_at)
+                        VALUES (?, ?, ?, ?)
+                    """, (page_id, page_name, datetime.now().isoformat(), datetime.now().isoformat()))
 
             # Parse post data
             title = row.get("Title", "")[:200] if row.get("Title") else ""
@@ -82,7 +120,7 @@ def import_csv(filepath):
             total_engagement = reactions + comments + shares
             pes = (reactions * 1.0) + (comments * 2.0) + (shares * 3.0)
 
-            # Insert or update post
+            # Insert or update post (use the remapped page_id)
             cursor.execute("""
                 INSERT OR REPLACE INTO posts
                 (post_id, page_id, title, permalink, post_type, publish_time,
@@ -91,7 +129,7 @@ def import_csv(filepath):
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 post_id,
-                page_id,
+                page_id,  # Use remapped page_id
                 title,
                 permalink,
                 post_type,
@@ -112,10 +150,15 @@ def import_csv(filepath):
     conn.close()
 
     print(f"  Imported {imported} posts from {len(pages_seen)} pages")
+    if remapped_count > 0:
+        print(f"  Remapped {remapped_count} duplicate page IDs to existing pages")
     return imported, pages_seen
 
 
 def main():
+    global page_id_remap
+    page_id_remap = {}  # Reset for each run
+    
     print("=" * 60)
     print("Importing Manual CSV Exports")
     print("=" * 60)
@@ -137,7 +180,8 @@ def main():
         total_posts += count
         all_pages.update(pages)
 
-    print("\n" + "=" * 60)
+    print("
+" + "=" * 60)
     print("SUMMARY")
     print("=" * 60)
     print(f"Total posts imported: {total_posts}")
@@ -159,7 +203,8 @@ def main():
         ORDER BY post_count DESC
     """)
 
-    print("\nPage breakdown:")
+    print("
+Page breakdown:")
     for row in cursor.fetchall():
         name, posts, reactions, comments, shares, views, reach = row
         print(f"  {name}: {posts} posts, {reactions or 0} reactions, {views or 0} views, {reach or 0} reach")
