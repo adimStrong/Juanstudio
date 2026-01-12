@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Scheduled Facebook API Sync for JuanBabes Analytics
+Scheduled Facebook API Sync for JuanStudio Analytics
 
 This script fetches the latest posts from Facebook Pages using the Graph API.
 Can be run manually or scheduled via Windows Task Scheduler / cron.
@@ -15,12 +15,12 @@ Usage:
 
 Schedule with Windows Task Scheduler:
 1. Open Task Scheduler
-2. Create Basic Task → "JuanBabes Daily Sync"
+2. Create Basic Task → "JuanStudio Daily Sync"
 3. Trigger: Daily at 6:00 AM
 4. Action: Start Program
    - Program: python
-   - Arguments: C:\Users\us\Desktop\juanbabes_project\scheduled_sync.py
-   - Start in: C:\Users\us\Desktop\juanbabes_project
+   - Arguments: C:\Users\us\Desktop\juanstudio_project\scheduled_sync.py
+   - Start in: C:\Users\us\Desktop\juanstudio_project
 
 Or with cron (Linux/Mac):
     0 6 * * * cd /path/to/project && python scheduled_sync.py >> sync.log 2>&1
@@ -34,7 +34,7 @@ import os
 import sys
 
 # Configuration
-DATABASE_PATH = "data/juanbabes_analytics.db"
+DATABASE_PATH = "data/juanstudio_analytics.db"
 TOKENS_FILE = "page_tokens.json"
 GRAPH_API_VERSION = "v18.0"
 GRAPH_API_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
@@ -187,7 +187,7 @@ def save_posts_to_db(page_id, page_name, posts):
 def run_sync(check_only=False):
     """Main sync function."""
     print("=" * 60)
-    print("JuanBabes Facebook API Sync")
+    print("JuanStudio Facebook API Sync")
     print(f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
 

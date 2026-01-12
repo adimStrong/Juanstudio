@@ -57,7 +57,7 @@ def fetch_api():
         result = subprocess.run(
             [sys.executable, "fetch_missing_posts.py"],
             cwd=PROJECT_DIR,
-            timeout=300
+            timeout=600  # 10 minutes for API fetch
         )
         log("API fetch complete")
         return result.returncode == 0

@@ -1,14 +1,14 @@
 @echo off
-cd /d C:\Users\us\Desktop\juanbabes_project
+cd /d C:\Users\us\Desktop\juanstudio_project
 
 echo ============================================
-echo JuanBabes API Sync - %date% %time%
+echo JuanStudio API Sync - %date% %time%
 echo ============================================
 echo.
 
 REM Step 1: Sync from Facebook API
 echo [1/3] Fetching from Facebook API...
-python scheduled_sync.py
+python fetch_missing_posts.py --no-notify
 
 REM Step 2: Export static data
 echo [2/3] Exporting analytics...
@@ -24,7 +24,7 @@ if %errorlevel% neq 0 (
     git push origin main
 
     REM Notify on success
-    powershell -Command "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('API data synced and deployed!', 'JuanBabes Daily Sync', 'OK', 'Information')"
+    powershell -Command "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('API data synced and deployed!', 'JuanStudio Daily Sync', 'OK', 'Information')"
 ) else (
     echo No changes detected.
 )
