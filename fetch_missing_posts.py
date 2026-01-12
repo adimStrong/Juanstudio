@@ -16,6 +16,12 @@ import sys
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+# Import database function for duplicate prevention
+try:
+    from database import get_page_by_name
+except ImportError:
+    get_page_by_name = None
+
 # Telegram notifications - can be disabled with --silent flag
 TELEGRAM_ENABLED = "--silent" not in sys.argv
 try:
@@ -230,6 +236,7 @@ def main():
     print(f"Page ID mappings: {len(api_to_csv)}")
 
     conn = sqlite3.connect(DATABASE_PATH)
+    conn.row_factory = sqlite3.Row  # Enable dict-like access for get_page_by_name
     total_new = 0
     total_skipped = 0
 
@@ -242,6 +249,13 @@ def main():
             continue
 
         db_page_id = api_to_csv.get(api_page_id, api_page_id)
+        # Duplicate prevention: check if page with same name exists under different ID
+        if get_page_by_name and db_page_id == api_page_id:
+            existing_page = get_page_by_name(page_name, conn=conn)
+            if existing_page and existing_page['page_id'] != api_page_id:
+                db_page_id = existing_page['page_id']
+                print(f"  [Duplicate Prevention] Using existing page_id: {db_page_id}")
+
 
         print(f"\n[{page_name}] Fetching recent posts...")
 
