@@ -10,6 +10,10 @@ echo Fetching posts from Facebook API...
 python fetch_missing_posts.py --no-notify
 
 echo.
+echo Updating follower counts...
+python update_followers.py
+
+echo.
 echo ============================================================
 echo   Rebuilding static data for frontend...
 echo ============================================================
