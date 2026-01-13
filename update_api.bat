@@ -6,16 +6,20 @@ echo.
 
 cd /d "%~dp0"
 
-echo Fetching posts from Facebook API...
+echo [1/4] Fetching posts from Facebook API...
 python fetch_missing_posts.py --no-notify
 
 echo.
-echo Updating follower counts...
+echo [2/4] Updating follower counts...
 python update_followers.py
 
 echo.
+echo [3/4] Fetching comment data (self-comments)...
+python fetch_comments.py
+
+echo.
 echo ============================================================
-echo   Rebuilding static data for frontend...
+echo [4/4] Rebuilding static data for frontend...
 echo ============================================================
 python export_static_data.py
 
