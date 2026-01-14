@@ -25,3 +25,5 @@ tmpclaude-*
 
 .vercel
 .env*.local
+tmpclaude-*
+.env.local
