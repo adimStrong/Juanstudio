@@ -1,57 +1,57 @@
 {
   "stats": {
     "all": {
-      "total_posts": 812,
+      "total_posts": 800,
       "total_pages": 14,
       "all_pages": 14,
-      "total_reactions": 16945,
-      "total_comments": 2511,
-      "total_shares": 1328,
-      "total_engagement": 20784,
-      "total_pes": 20483.0,
-      "total_views": 377902,
-      "total_reach": 176258,
+      "total_reactions": 16657,
+      "total_comments": 2471,
+      "total_shares": 1320,
+      "total_engagement": 20448,
+      "total_pes": 20080.0,
+      "total_views": 374020,
+      "total_reach": 175089,
       "avg_engagement": 25.6,
-      "avg_pes": 25.2,
-      "avg_views": 465.4,
-      "avg_reach": 217.1,
+      "avg_pes": 25.1,
+      "avg_views": 467.5,
+      "avg_reach": 218.9,
       "date_range_start": "2025-11-25",
       "date_range_end": "2026-01-14"
     },
     "byPage": {
       "112088047220992": {
-        "total_posts": 37,
+        "total_posts": 36,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 541,
+        "total_reactions": 534,
         "total_comments": 81,
         "total_shares": 49,
-        "total_engagement": 671,
-        "total_pes": 852.0,
+        "total_engagement": 664,
+        "total_pes": 844.0,
         "total_views": 8837,
         "total_reach": 3769,
-        "avg_engagement": 18.1,
-        "avg_pes": 23.0,
-        "avg_views": 238.8,
-        "avg_reach": 101.9,
+        "avg_engagement": 18.4,
+        "avg_pes": 23.4,
+        "avg_views": 245.5,
+        "avg_reach": 104.7,
         "date_range_start": "2025-12-28",
         "date_range_end": "2026-01-14"
       },
       "305553999318966": {
-        "total_posts": 47,
+        "total_posts": 46,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 1684,
-        "total_comments": 205,
-        "total_shares": 96,
-        "total_engagement": 1985,
-        "total_pes": 1649.0,
-        "total_views": 48336,
-        "total_reach": 17876,
-        "avg_engagement": 42.2,
-        "avg_pes": 35.1,
-        "avg_views": 1028.4,
-        "avg_reach": 380.3,
+        "total_reactions": 1668,
+        "total_comments": 204,
+        "total_shares": 95,
+        "total_engagement": 1967,
+        "total_pes": 1628.0,
+        "total_views": 48334,
+        "total_reach": 17875,
+        "avg_engagement": 42.8,
+        "avg_pes": 35.4,
+        "avg_views": 1050.7,
+        "avg_reach": 388.6,
         "date_range_start": "2025-12-21",
         "date_range_end": "2026-01-14"
       },
@@ -59,143 +59,143 @@
         "total_posts": 34,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 427,
-        "total_comments": 95,
+        "total_reactions": 414,
+        "total_comments": 93,
         "total_shares": 40,
-        "total_engagement": 562,
-        "total_pes": 675.0,
+        "total_engagement": 547,
+        "total_pes": 658.0,
         "total_views": 4999,
-        "total_reach": 2042,
-        "avg_engagement": 16.5,
-        "avg_pes": 19.9,
+        "total_reach": 2041,
+        "avg_engagement": 16.1,
+        "avg_pes": 19.4,
         "avg_views": 147.0,
-        "avg_reach": 60.1,
+        "avg_reach": 60.0,
         "date_range_start": "2025-12-21",
         "date_range_end": "2026-01-14"
       },
       "858606287343265": {
-        "total_posts": 53,
+        "total_posts": 52,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 887,
-        "total_comments": 136,
+        "total_reactions": 876,
+        "total_comments": 135,
         "total_shares": 52,
-        "total_engagement": 1075,
-        "total_pes": 1228.0,
+        "total_engagement": 1063,
+        "total_pes": 1215.0,
         "total_views": 37102,
-        "total_reach": 17588,
-        "avg_engagement": 20.3,
-        "avg_pes": 23.2,
-        "avg_views": 700.0,
-        "avg_reach": 331.8,
+        "total_reach": 17587,
+        "avg_engagement": 20.4,
+        "avg_pes": 23.4,
+        "avg_views": 713.5,
+        "avg_reach": 338.2,
         "date_range_start": "2025-11-27",
         "date_range_end": "2026-01-13"
       },
       "862622980275034": {
-        "total_posts": 98,
+        "total_posts": 97,
         "total_pages": 1,
         "all_pages": 1,
         "total_reactions": 916,
         "total_comments": 220,
-        "total_shares": 120,
-        "total_engagement": 1256,
-        "total_pes": 1604.0,
+        "total_shares": 121,
+        "total_engagement": 1257,
+        "total_pes": 1607.0,
         "total_views": 11378,
         "total_reach": 14052,
-        "avg_engagement": 12.8,
-        "avg_pes": 16.4,
-        "avg_views": 116.1,
-        "avg_reach": 143.4,
+        "avg_engagement": 13.0,
+        "avg_pes": 16.6,
+        "avg_views": 117.3,
+        "avg_reach": 144.9,
         "date_range_start": "2025-12-03",
         "date_range_end": "2026-01-14"
       },
       "874628665737433": {
-        "total_posts": 46,
+        "total_posts": 45,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 1172,
+        "total_reactions": 1162,
         "total_comments": 196,
         "total_shares": 134,
-        "total_engagement": 1502,
-        "total_pes": 1472.0,
+        "total_engagement": 1492,
+        "total_pes": 1462.0,
         "total_views": 45737,
         "total_reach": 10670,
-        "avg_engagement": 32.7,
-        "avg_pes": 32.0,
-        "avg_views": 994.3,
-        "avg_reach": 232.0,
+        "avg_engagement": 33.2,
+        "avg_pes": 32.5,
+        "avg_views": 1016.4,
+        "avg_reach": 237.1,
         "date_range_start": "2025-12-01",
         "date_range_end": "2026-01-13"
       },
       "874648655739835": {
-        "total_posts": 61,
+        "total_posts": 60,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 1193,
+        "total_reactions": 1185,
         "total_comments": 214,
         "total_shares": 81,
-        "total_engagement": 1488,
-        "total_pes": 1471.0,
+        "total_engagement": 1480,
+        "total_pes": 1463.0,
         "total_views": 46922,
         "total_reach": 26603,
-        "avg_engagement": 24.4,
-        "avg_pes": 24.1,
-        "avg_views": 769.2,
-        "avg_reach": 436.1,
+        "avg_engagement": 24.7,
+        "avg_pes": 24.4,
+        "avg_views": 782.0,
+        "avg_reach": 443.4,
         "date_range_start": "2025-12-27",
         "date_range_end": "2026-01-14"
       },
       "876401548892955": {
-        "total_posts": 47,
+        "total_posts": 46,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 1720,
-        "total_comments": 291,
-        "total_shares": 82,
-        "total_engagement": 2093,
-        "total_pes": 1825.0,
-        "total_views": 40755,
-        "total_reach": 25726,
-        "avg_engagement": 44.5,
-        "avg_pes": 38.8,
-        "avg_views": 867.1,
-        "avg_reach": 547.4,
+        "total_reactions": 1699,
+        "total_comments": 290,
+        "total_shares": 81,
+        "total_engagement": 2070,
+        "total_pes": 1799.0,
+        "total_views": 40754,
+        "total_reach": 25725,
+        "avg_engagement": 45.0,
+        "avg_pes": 39.1,
+        "avg_views": 886.0,
+        "avg_reach": 559.2,
         "date_range_start": "2025-11-25",
         "date_range_end": "2026-01-13"
       },
       "882499904951305": {
-        "total_posts": 58,
+        "total_posts": 57,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 752,
+        "total_reactions": 741,
         "total_comments": 135,
         "total_shares": 56,
-        "total_engagement": 943,
-        "total_pes": 1100.0,
+        "total_engagement": 932,
+        "total_pes": 1089.0,
         "total_views": 8307,
         "total_reach": 3701,
-        "avg_engagement": 16.3,
-        "avg_pes": 19.0,
-        "avg_views": 143.2,
-        "avg_reach": 63.8,
+        "avg_engagement": 16.4,
+        "avg_pes": 19.1,
+        "avg_views": 145.7,
+        "avg_reach": 64.9,
         "date_range_start": "2025-11-27",
         "date_range_end": "2026-01-14"
       },
       "897960886734144": {
-        "total_posts": 102,
+        "total_posts": 101,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 1540,
-        "total_comments": 182,
-        "total_shares": 74,
-        "total_engagement": 1796,
-        "total_pes": 1899.0,
-        "total_views": 19895,
-        "total_reach": 10415,
-        "avg_engagement": 17.6,
-        "avg_pes": 18.6,
-        "avg_views": 195.0,
-        "avg_reach": 102.1,
+        "total_reactions": 1517,
+        "total_comments": 181,
+        "total_shares": 73,
+        "total_engagement": 1771,
+        "total_pes": 1871.0,
+        "total_views": 19893,
+        "total_reach": 10414,
+        "avg_engagement": 17.5,
+        "avg_pes": 18.5,
+        "avg_views": 197.0,
+        "avg_reach": 103.1,
         "date_range_start": "2025-11-25",
         "date_range_end": "2026-01-14"
       },
@@ -203,15 +203,15 @@
         "total_posts": 61,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 767,
-        "total_comments": 101,
+        "total_reactions": 769,
+        "total_comments": 103,
         "total_shares": 64,
-        "total_engagement": 932,
-        "total_pes": 993.0,
+        "total_engagement": 936,
+        "total_pes": 999.0,
         "total_views": 7824,
         "total_reach": 4010,
         "avg_engagement": 15.3,
-        "avg_pes": 16.3,
+        "avg_pes": 16.4,
         "avg_views": 128.3,
         "avg_reach": 65.7,
         "date_range_start": "2025-12-20",
@@ -236,38 +236,38 @@
         "date_range_end": "2026-01-13"
       },
       "949473921576703": {
-        "total_posts": 66,
+        "total_posts": 64,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 1597,
-        "total_comments": 165,
-        "total_shares": 200,
-        "total_engagement": 1962,
-        "total_pes": 1996.0,
-        "total_views": 31244,
-        "total_reach": 11809,
-        "avg_engagement": 29.7,
-        "avg_pes": 30.2,
-        "avg_views": 473.4,
-        "avg_reach": 178.9,
+        "total_reactions": 1435,
+        "total_comments": 128,
+        "total_shares": 193,
+        "total_engagement": 1756,
+        "total_pes": 1730.0,
+        "total_views": 27369,
+        "total_reach": 10646,
+        "avg_engagement": 27.4,
+        "avg_pes": 27.0,
+        "avg_views": 427.6,
+        "avg_reach": 166.3,
         "date_range_start": "2025-12-27",
         "date_range_end": "2026-01-13"
       },
       "959243183930083": {
-        "total_posts": 53,
+        "total_posts": 52,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 3163,
-        "total_comments": 375,
-        "total_shares": 183,
-        "total_engagement": 3721,
-        "total_pes": 2637.0,
-        "total_views": 57546,
-        "total_reach": 24371,
-        "avg_engagement": 70.2,
-        "avg_pes": 49.8,
-        "avg_views": 1085.8,
-        "avg_reach": 459.8,
+        "total_reactions": 3155,
+        "total_comments": 376,
+        "total_shares": 184,
+        "total_engagement": 3715,
+        "total_pes": 2633.0,
+        "total_views": 57544,
+        "total_reach": 24370,
+        "avg_engagement": 71.4,
+        "avg_pes": 50.6,
+        "avg_views": 1106.6,
+        "avg_reach": 468.7,
         "date_range_start": "2025-11-25",
         "date_range_end": "2026-01-14"
       }
@@ -280,15 +280,15 @@
       "page_name": "Juankada Ligaya",
       "fan_count": 1357,
       "followers_count": 1357,
-      "post_count": 53,
-      "total_reactions": 3163,
-      "total_comments": 375,
-      "total_shares": 183,
-      "total_engagement": 3721,
-      "avg_engagement": 70.2,
-      "avg_pes": 49.8,
-      "total_views": 57546,
-      "total_reach": 24371
+      "post_count": 52,
+      "total_reactions": 3155,
+      "total_comments": 376,
+      "total_shares": 184,
+      "total_engagement": 3715,
+      "avg_engagement": 71.4,
+      "avg_pes": 50.6,
+      "total_views": 57544,
+      "total_reach": 24370
     },
     {
       "page_id": "876401548892955",
@@ -296,15 +296,15 @@
       "page_name": "Juankada Sabbie",
       "fan_count": 307,
       "followers_count": 307,
-      "post_count": 47,
-      "total_reactions": 1720,
-      "total_comments": 291,
-      "total_shares": 82,
-      "total_engagement": 2093,
-      "avg_engagement": 44.5,
-      "avg_pes": 38.8,
-      "total_views": 40755,
-      "total_reach": 25726
+      "post_count": 46,
+      "total_reactions": 1699,
+      "total_comments": 290,
+      "total_shares": 81,
+      "total_engagement": 2070,
+      "avg_engagement": 45.0,
+      "avg_pes": 39.1,
+      "total_views": 40754,
+      "total_reach": 25725
     },
     {
       "page_id": "305553999318966",
@@ -312,31 +312,15 @@
       "page_name": "JUANKada Host Ikay",
       "fan_count": 1495,
       "followers_count": 1495,
-      "post_count": 47,
-      "total_reactions": 1684,
-      "total_comments": 205,
-      "total_shares": 96,
-      "total_engagement": 1985,
-      "avg_engagement": 42.2,
-      "avg_pes": 35.1,
-      "total_views": 48336,
-      "total_reach": 17876
-    },
-    {
-      "page_id": "949473921576703",
-      "name": "JuanKada Star",
-      "page_name": "JuanKada Star",
-      "fan_count": 268,
-      "followers_count": 268,
-      "post_count": 66,
-      "total_reactions": 1597,
-      "total_comments": 165,
-      "total_shares": 200,
-      "total_engagement": 1962,
-      "avg_engagement": 29.7,
-      "avg_pes": 30.2,
-      "total_views": 31244,
-      "total_reach": 11809
+      "post_count": 46,
+      "total_reactions": 1668,
+      "total_comments": 204,
+      "total_shares": 95,
+      "total_engagement": 1967,
+      "avg_engagement": 42.8,
+      "avg_pes": 35.4,
+      "total_views": 48334,
+      "total_reach": 17875
     },
     {
       "page_id": "897960886734144",
@@ -344,15 +328,31 @@
       "page_name": "Juankada Alexchoozy",
       "fan_count": 1177,
       "followers_count": 1177,
-      "post_count": 102,
-      "total_reactions": 1540,
-      "total_comments": 182,
-      "total_shares": 74,
-      "total_engagement": 1796,
-      "avg_engagement": 17.6,
-      "avg_pes": 18.6,
-      "total_views": 19895,
-      "total_reach": 10415
+      "post_count": 101,
+      "total_reactions": 1517,
+      "total_comments": 181,
+      "total_shares": 73,
+      "total_engagement": 1771,
+      "avg_engagement": 17.5,
+      "avg_pes": 18.5,
+      "total_views": 19893,
+      "total_reach": 10414
+    },
+    {
+      "page_id": "949473921576703",
+      "name": "JuanKada Star",
+      "page_name": "JuanKada Star",
+      "fan_count": 268,
+      "followers_count": 268,
+      "post_count": 64,
+      "total_reactions": 1435,
+      "total_comments": 128,
+      "total_shares": 193,
+      "total_engagement": 1756,
+      "avg_engagement": 27.4,
+      "avg_pes": 27.0,
+      "total_views": 27369,
+      "total_reach": 10646
     },
     {
       "page_id": "874628665737433",
@@ -360,13 +360,13 @@
       "page_name": "Juankada Papa Joe",
       "fan_count": 1999,
       "followers_count": 1999,
-      "post_count": 46,
-      "total_reactions": 1172,
+      "post_count": 45,
+      "total_reactions": 1162,
       "total_comments": 196,
       "total_shares": 134,
-      "total_engagement": 1502,
-      "avg_engagement": 32.7,
-      "avg_pes": 32.0,
+      "total_engagement": 1492,
+      "avg_engagement": 33.2,
+      "avg_pes": 32.5,
       "total_views": 45737,
       "total_reach": 10670
     },
@@ -376,13 +376,13 @@
       "page_name": "Juankada Ellise",
       "fan_count": 733,
       "followers_count": 733,
-      "post_count": 61,
-      "total_reactions": 1193,
+      "post_count": 60,
+      "total_reactions": 1185,
       "total_comments": 214,
       "total_shares": 81,
-      "total_engagement": 1488,
-      "avg_engagement": 24.4,
-      "avg_pes": 24.1,
+      "total_engagement": 1480,
+      "avg_engagement": 24.7,
+      "avg_pes": 24.4,
       "total_views": 46922,
       "total_reach": 26603
     },
@@ -392,13 +392,13 @@
       "page_name": "Juankada Shann",
       "fan_count": 239,
       "followers_count": 239,
-      "post_count": 98,
+      "post_count": 97,
       "total_reactions": 916,
       "total_comments": 220,
-      "total_shares": 120,
-      "total_engagement": 1256,
-      "avg_engagement": 12.8,
-      "avg_pes": 16.4,
+      "total_shares": 121,
+      "total_engagement": 1257,
+      "avg_engagement": 13.0,
+      "avg_pes": 16.6,
       "total_views": 11378,
       "total_reach": 14052
     },
@@ -408,31 +408,15 @@
       "page_name": "Juankada Jedi",
       "fan_count": 7655,
       "followers_count": 7655,
-      "post_count": 53,
-      "total_reactions": 887,
-      "total_comments": 136,
-      "total_shares": 52,
-      "total_engagement": 1075,
-      "avg_engagement": 20.3,
-      "avg_pes": 23.2,
-      "total_views": 37102,
-      "total_reach": 17588
-    },
-    {
-      "page_id": "882499904951305",
-      "name": "Juankada Lance",
-      "page_name": "Juankada Lance",
-      "fan_count": 1471,
-      "followers_count": 1471,
-      "post_count": 58,
-      "total_reactions": 752,
+      "post_count": 52,
+      "total_reactions": 876,
       "total_comments": 135,
-      "total_shares": 56,
-      "total_engagement": 943,
-      "avg_engagement": 16.3,
-      "avg_pes": 19.0,
-      "total_views": 8307,
-      "total_reach": 3701
+      "total_shares": 52,
+      "total_engagement": 1063,
+      "avg_engagement": 20.4,
+      "avg_pes": 23.4,
+      "total_views": 37102,
+      "total_reach": 17587
     },
     {
       "page_id": "924225234111144",
@@ -441,14 +425,30 @@
       "fan_count": 195,
       "followers_count": 195,
       "post_count": 61,
-      "total_reactions": 767,
-      "total_comments": 101,
+      "total_reactions": 769,
+      "total_comments": 103,
       "total_shares": 64,
-      "total_engagement": 932,
+      "total_engagement": 936,
       "avg_engagement": 15.3,
-      "avg_pes": 16.3,
+      "avg_pes": 16.4,
       "total_views": 7824,
       "total_reach": 4010
+    },
+    {
+      "page_id": "882499904951305",
+      "name": "Juankada Lance",
+      "page_name": "Juankada Lance",
+      "fan_count": 1471,
+      "followers_count": 1471,
+      "post_count": 57,
+      "total_reactions": 741,
+      "total_comments": 135,
+      "total_shares": 56,
+      "total_engagement": 932,
+      "avg_engagement": 16.4,
+      "avg_pes": 19.1,
+      "total_views": 8307,
+      "total_reach": 3701
     },
     {
       "page_id": "927370847106754",
@@ -472,13 +472,13 @@
       "page_name": "Juankada host Drae",
       "fan_count": 350,
       "followers_count": 350,
-      "post_count": 37,
-      "total_reactions": 541,
+      "post_count": 36,
+      "total_reactions": 534,
       "total_comments": 81,
       "total_shares": 49,
-      "total_engagement": 671,
-      "avg_engagement": 18.1,
-      "avg_pes": 23.0,
+      "total_engagement": 664,
+      "avg_engagement": 18.4,
+      "avg_pes": 23.4,
       "total_views": 8837,
       "total_reach": 3769
     },
@@ -489,14 +489,14 @@
       "fan_count": 631,
       "followers_count": 631,
       "post_count": 34,
-      "total_reactions": 427,
-      "total_comments": 95,
+      "total_reactions": 414,
+      "total_comments": 93,
       "total_shares": 40,
-      "total_engagement": 562,
-      "avg_engagement": 16.5,
-      "avg_pes": 19.9,
+      "total_engagement": 547,
+      "avg_engagement": 16.1,
+      "avg_pes": 19.4,
       "total_views": 4999,
-      "total_reach": 2042
+      "total_reach": 2041
     }
   ],
   "postTypes": {
@@ -504,42 +504,32 @@
       {
         "post_type": "Videos",
         "count": 389,
-        "reactions": 9727,
-        "comments": 1601,
-        "shares": 683,
-        "total_engagement": 12011,
+        "reactions": 9740,
+        "comments": 1605,
+        "shares": 685,
+        "total_engagement": 12030,
         "avg_engagement": 30.9,
         "avg_pes": 30.6
       },
       {
         "post_type": "Photos",
-        "count": 220,
-        "reactions": 3669,
-        "comments": 433,
-        "shares": 265,
-        "total_engagement": 4367,
-        "avg_engagement": 19.9,
-        "avg_pes": 18.1
+        "count": 209,
+        "reactions": 3505,
+        "comments": 425,
+        "shares": 262,
+        "total_engagement": 4192,
+        "avg_engagement": 20.1,
+        "avg_pes": 18.2
       },
       {
         "post_type": "Text",
         "count": 201,
-        "reactions": 3406,
+        "reactions": 3408,
         "comments": 441,
-        "shares": 374,
-        "total_engagement": 4221,
+        "shares": 373,
+        "total_engagement": 4222,
         "avg_engagement": 21.0,
         "avg_pes": 21.7
-      },
-      {
-        "post_type": "Reels",
-        "count": 1,
-        "reactions": 139,
-        "comments": 36,
-        "shares": 6,
-        "total_engagement": 181,
-        "avg_engagement": 181.0,
-        "avg_pes": 238.0
       },
       {
         "post_type": "Links",
@@ -557,11 +547,11 @@
         {
           "post_type": "Text",
           "count": 14,
-          "reactions": 215,
+          "reactions": 216,
           "comments": 25,
           "shares": 18,
-          "total_engagement": 258,
-          "avg_engagement": 18.4,
+          "total_engagement": 259,
+          "avg_engagement": 18.5,
           "avg_pes": 22.4
         },
         {
@@ -576,13 +566,13 @@
         },
         {
           "post_type": "Photos",
-          "count": 10,
-          "reactions": 61,
+          "count": 9,
+          "reactions": 53,
           "comments": 9,
           "shares": 6,
-          "total_engagement": 76,
+          "total_engagement": 68,
           "avg_engagement": 7.6,
-          "avg_pes": 10.0
+          "avg_pes": 10.1
         }
       ],
       "305553999318966": [
@@ -599,22 +589,22 @@
         {
           "post_type": "Text",
           "count": 15,
-          "reactions": 351,
+          "reactions": 352,
           "comments": 54,
           "shares": 15,
-          "total_engagement": 420,
-          "avg_engagement": 28.0,
+          "total_engagement": 421,
+          "avg_engagement": 28.1,
           "avg_pes": 25.5
         },
         {
           "post_type": "Photos",
-          "count": 15,
-          "reactions": 441,
-          "comments": 36,
-          "shares": 43,
-          "total_engagement": 520,
-          "avg_engagement": 34.7,
-          "avg_pes": 28.1
+          "count": 14,
+          "reactions": 424,
+          "comments": 35,
+          "shares": 42,
+          "total_engagement": 501,
+          "avg_engagement": 35.8,
+          "avg_pes": 28.5
         }
       ],
       "397865533415866": [
@@ -641,12 +631,12 @@
         {
           "post_type": "Photos",
           "count": 9,
-          "reactions": 69,
-          "comments": 6,
+          "reactions": 56,
+          "comments": 4,
           "shares": 0,
-          "total_engagement": 75,
-          "avg_engagement": 8.3,
-          "avg_pes": 9.0
+          "total_engagement": 60,
+          "avg_engagement": 6.7,
+          "avg_pes": 7.1
         }
       ],
       "858606287343265": [
@@ -662,13 +652,13 @@
         },
         {
           "post_type": "Photos",
-          "count": 17,
-          "reactions": 141,
-          "comments": 20,
+          "count": 16,
+          "reactions": 130,
+          "comments": 19,
           "shares": 9,
-          "total_engagement": 170,
-          "avg_engagement": 10.0,
-          "avg_pes": 10.6
+          "total_engagement": 158,
+          "avg_engagement": 9.9,
+          "avg_pes": 10.4
         },
         {
           "post_type": "Text",
@@ -685,12 +675,12 @@
         {
           "post_type": "Videos",
           "count": 54,
-          "reactions": 642,
+          "reactions": 643,
           "comments": 190,
           "shares": 88,
-          "total_engagement": 920,
-          "avg_engagement": 17.0,
-          "avg_pes": 22.4
+          "total_engagement": 921,
+          "avg_engagement": 17.1,
+          "avg_pes": 22.5
         },
         {
           "post_type": "Text",
@@ -704,13 +694,13 @@
         },
         {
           "post_type": "Photos",
-          "count": 17,
-          "reactions": 74,
+          "count": 16,
+          "reactions": 73,
           "comments": 6,
-          "shares": 6,
+          "shares": 7,
           "total_engagement": 86,
-          "avg_engagement": 5.1,
-          "avg_pes": 6.3
+          "avg_engagement": 5.4,
+          "avg_pes": 6.8
         }
       ],
       "874628665737433": [
@@ -736,35 +726,35 @@
         },
         {
           "post_type": "Photos",
-          "count": 13,
-          "reactions": 176,
+          "count": 12,
+          "reactions": 166,
           "comments": 29,
           "shares": 14,
-          "total_engagement": 219,
-          "avg_engagement": 16.8,
-          "avg_pes": 19.1
+          "total_engagement": 209,
+          "avg_engagement": 17.4,
+          "avg_pes": 19.8
         }
       ],
       "874648655739835": [
         {
           "post_type": "Videos",
           "count": 28,
-          "reactions": 651,
+          "reactions": 652,
           "comments": 112,
           "shares": 48,
-          "total_engagement": 811,
+          "total_engagement": 812,
           "avg_engagement": 29.0,
-          "avg_pes": 28.5
+          "avg_pes": 28.6
         },
         {
           "post_type": "Photos",
-          "count": 18,
-          "reactions": 348,
+          "count": 17,
+          "reactions": 339,
           "comments": 81,
           "shares": 22,
-          "total_engagement": 451,
-          "avg_engagement": 25.1,
-          "avg_pes": 23.9
+          "total_engagement": 442,
+          "avg_engagement": 26.0,
+          "avg_pes": 24.8
         },
         {
           "post_type": "Text",
@@ -790,13 +780,13 @@
         },
         {
           "post_type": "Photos",
-          "count": 10,
-          "reactions": 212,
-          "comments": 25,
-          "shares": 8,
-          "total_engagement": 245,
-          "avg_engagement": 24.5,
-          "avg_pes": 18.0
+          "count": 9,
+          "reactions": 191,
+          "comments": 24,
+          "shares": 7,
+          "total_engagement": 222,
+          "avg_engagement": 24.7,
+          "avg_pes": 17.1
         },
         {
           "post_type": "Text",
@@ -813,22 +803,22 @@
         {
           "post_type": "Videos",
           "count": 25,
-          "reactions": 305,
+          "reactions": 308,
           "comments": 71,
           "shares": 21,
-          "total_engagement": 397,
-          "avg_engagement": 15.9,
-          "avg_pes": 20.5
+          "total_engagement": 400,
+          "avg_engagement": 16.0,
+          "avg_pes": 20.6
         },
         {
           "post_type": "Photos",
-          "count": 18,
-          "reactions": 217,
+          "count": 17,
+          "reactions": 203,
           "comments": 38,
           "shares": 15,
-          "total_engagement": 270,
-          "avg_engagement": 15.0,
-          "avg_pes": 18.3
+          "total_engagement": 256,
+          "avg_engagement": 15.1,
+          "avg_pes": 18.5
         },
         {
           "post_type": "Text",
@@ -845,32 +835,32 @@
         {
           "post_type": "Videos",
           "count": 46,
-          "reactions": 693,
-          "comments": 114,
-          "shares": 23,
-          "total_engagement": 830,
-          "avg_engagement": 18.0,
-          "avg_pes": 20.3
+          "reactions": 694,
+          "comments": 115,
+          "shares": 24,
+          "total_engagement": 833,
+          "avg_engagement": 18.1,
+          "avg_pes": 20.4
         },
         {
           "post_type": "Text",
           "count": 29,
           "reactions": 445,
           "comments": 47,
-          "shares": 40,
-          "total_engagement": 532,
+          "shares": 39,
+          "total_engagement": 531,
           "avg_engagement": 18.3,
-          "avg_pes": 17.7
+          "avg_pes": 17.6
         },
         {
           "post_type": "Photos",
-          "count": 26,
-          "reactions": 398,
-          "comments": 21,
-          "shares": 11,
-          "total_engagement": 430,
-          "avg_engagement": 16.5,
-          "avg_pes": 17.3
+          "count": 25,
+          "reactions": 374,
+          "comments": 19,
+          "shares": 10,
+          "total_engagement": 403,
+          "avg_engagement": 16.1,
+          "avg_pes": 16.7
         },
         {
           "post_type": "Links",
@@ -887,12 +877,12 @@
         {
           "post_type": "Videos",
           "count": 44,
-          "reactions": 493,
-          "comments": 70,
+          "reactions": 495,
+          "comments": 72,
           "shares": 36,
-          "total_engagement": 599,
-          "avg_engagement": 13.6,
-          "avg_pes": 17.3
+          "total_engagement": 603,
+          "avg_engagement": 13.7,
+          "avg_pes": 17.4
         },
         {
           "post_type": "Photos",
@@ -970,45 +960,35 @@
         },
         {
           "post_type": "Photos",
-          "count": 18,
-          "reactions": 260,
-          "comments": 12,
-          "shares": 30,
-          "total_engagement": 302,
-          "avg_engagement": 16.8,
-          "avg_pes": 15.6
-        },
-        {
-          "post_type": "Reels",
-          "count": 1,
-          "reactions": 139,
-          "comments": 36,
-          "shares": 6,
-          "total_engagement": 181,
-          "avg_engagement": 181.0,
-          "avg_pes": 238.0
+          "count": 17,
+          "reactions": 237,
+          "comments": 11,
+          "shares": 29,
+          "total_engagement": 277,
+          "avg_engagement": 16.3,
+          "avg_pes": 14.9
         }
       ],
       "959243183930083": [
         {
           "post_type": "Videos",
           "count": 25,
-          "reactions": 1930,
-          "comments": 237,
-          "shares": 108,
-          "total_engagement": 2275,
-          "avg_engagement": 91.0,
-          "avg_pes": 63.1
+          "reactions": 1935,
+          "comments": 238,
+          "shares": 109,
+          "total_engagement": 2282,
+          "avg_engagement": 91.3,
+          "avg_pes": 63.5
         },
         {
           "post_type": "Photos",
-          "count": 19,
-          "reactions": 883,
+          "count": 18,
+          "reactions": 870,
           "comments": 98,
           "shares": 45,
-          "total_engagement": 1026,
-          "avg_engagement": 54.0,
-          "avg_pes": 34.8
+          "total_engagement": 1013,
+          "avg_engagement": 56.3,
+          "avg_pes": 36.0
         },
         {
           "post_type": "Text",
@@ -1346,14 +1326,14 @@
       },
       {
         "date": "2026-01-02",
-        "posts": 37,
-        "reactions": 743,
-        "comments": 65,
-        "shares": 49,
-        "engagement": 857,
-        "pes": 785.0,
-        "views": 15782,
-        "reach": 6247
+        "posts": 26,
+        "reactions": 587,
+        "comments": 57,
+        "shares": 46,
+        "engagement": 690,
+        "pes": 602.0,
+        "views": 15107,
+        "reach": 5927
       },
       {
         "date": "2026-01-03",
@@ -1368,12 +1348,12 @@
       },
       {
         "date": "2026-01-04",
-        "posts": 43,
-        "reactions": 1223,
+        "posts": 42,
+        "reactions": 1214,
         "comments": 158,
         "shares": 66,
-        "engagement": 1447,
-        "pes": 1234.0,
+        "engagement": 1438,
+        "pes": 1225.0,
         "views": 40910,
         "reach": 20778
       },
@@ -1390,14 +1370,14 @@
       },
       {
         "date": "2026-01-06",
-        "posts": 41,
-        "reactions": 1235,
-        "comments": 202,
-        "shares": 89,
-        "engagement": 1526,
-        "pes": 1373.0,
-        "views": 27534,
-        "reach": 10519
+        "posts": 40,
+        "reactions": 1096,
+        "comments": 166,
+        "shares": 83,
+        "engagement": 1345,
+        "pes": 1135.0,
+        "views": 24327,
+        "reach": 9670
       },
       {
         "date": "2026-01-07",
@@ -1437,9 +1417,9 @@
         "posts": 37,
         "reactions": 629,
         "comments": 110,
-        "shares": 90,
-        "engagement": 829,
-        "pes": 1119.0,
+        "shares": 89,
+        "engagement": 828,
+        "pes": 1116.0,
         "views": 0,
         "reach": 0
       },
@@ -1457,33 +1437,33 @@
       {
         "date": "2026-01-12",
         "posts": 42,
-        "reactions": 777,
+        "reactions": 778,
         "comments": 116,
-        "shares": 92,
+        "shares": 91,
         "engagement": 985,
-        "pes": 1285.0,
+        "pes": 1283.0,
         "views": 0,
         "reach": 0
       },
       {
         "date": "2026-01-13",
         "posts": 31,
-        "reactions": 494,
+        "reactions": 496,
         "comments": 76,
         "shares": 78,
-        "engagement": 648,
-        "pes": 880.0,
+        "engagement": 650,
+        "pes": 882.0,
         "views": 0,
         "reach": 0
       },
       {
         "date": "2026-01-14",
-        "posts": 9,
-        "reactions": 64,
-        "comments": 8,
-        "shares": 3,
-        "engagement": 75,
-        "pes": 89.0,
+        "posts": 10,
+        "reactions": 77,
+        "comments": 12,
+        "shares": 6,
+        "engagement": 95,
+        "pes": 119.0,
         "views": 0,
         "reach": 0
       }
@@ -1525,12 +1505,12 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 3,
-          "reactions": 38,
+          "posts": 2,
+          "reactions": 30,
           "comments": 8,
           "shares": 2,
-          "engagement": 48,
-          "pes": 63.0,
+          "engagement": 40,
+          "pes": 54.0,
           "views": 748,
           "reach": 274
         },
@@ -1647,11 +1627,11 @@
         {
           "date": "2026-01-14",
           "posts": 1,
-          "reactions": 9,
+          "reactions": 10,
           "comments": 0,
           "shares": 0,
-          "engagement": 9,
-          "pes": 9.0,
+          "engagement": 10,
+          "pes": 10.0,
           "views": 0,
           "reach": 0
         }
@@ -1780,14 +1760,14 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 2,
-          "reactions": 68,
-          "comments": 2,
-          "shares": 4,
-          "engagement": 74,
-          "pes": 64.0,
-          "views": 2645,
-          "reach": 1007
+          "posts": 1,
+          "reactions": 51,
+          "comments": 1,
+          "shares": 3,
+          "engagement": 55,
+          "pes": 42.0,
+          "views": 2643,
+          "reach": 1006
         },
         {
           "date": "2026-01-03",
@@ -1913,11 +1893,11 @@
         {
           "date": "2026-01-14",
           "posts": 1,
-          "reactions": 20,
+          "reactions": 21,
           "comments": 5,
           "shares": 2,
-          "engagement": 27,
-          "pes": 36.0,
+          "engagement": 28,
+          "pes": 37.0,
           "views": 0,
           "reach": 0
         }
@@ -2021,17 +2001,6 @@
           "pes": 7.0,
           "views": 0,
           "reach": 29
-        },
-        {
-          "date": "2026-01-02",
-          "posts": 1,
-          "reactions": 14,
-          "comments": 2,
-          "shares": 0,
-          "engagement": 16,
-          "pes": 18.0,
-          "views": 0,
-          "reach": 1
         },
         {
           "date": "2026-01-03",
@@ -2140,6 +2109,17 @@
           "shares": 3,
           "engagement": 20,
           "pes": 29.0,
+          "views": 0,
+          "reach": 0
+        },
+        {
+          "date": "2026-01-14",
+          "posts": 1,
+          "reactions": 1,
+          "comments": 0,
+          "shares": 0,
+          "engagement": 1,
+          "pes": 1.0,
           "views": 0,
           "reach": 0
         }
@@ -2312,14 +2292,14 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 2,
-          "reactions": 28,
-          "comments": 8,
+          "posts": 1,
+          "reactions": 17,
+          "comments": 7,
           "shares": 3,
-          "engagement": 39,
-          "pes": 48.0,
+          "engagement": 27,
+          "pes": 35.0,
           "views": 518,
-          "reach": 171
+          "reach": 170
         },
         {
           "date": "2026-01-03",
@@ -2578,12 +2558,12 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 3,
-          "reactions": 58,
+          "posts": 2,
+          "reactions": 57,
           "comments": 1,
           "shares": 16,
-          "engagement": 75,
-          "pes": 61.0,
+          "engagement": 74,
+          "pes": 60.0,
           "views": 1768,
           "reach": 706
         },
@@ -2700,11 +2680,11 @@
         {
           "date": "2026-01-13",
           "posts": 1,
-          "reactions": 8,
+          "reactions": 9,
           "comments": 1,
           "shares": 0,
-          "engagement": 9,
-          "pes": 10.0,
+          "engagement": 10,
+          "pes": 11.0,
           "views": 0,
           "reach": 0
         },
@@ -2713,9 +2693,9 @@
           "posts": 1,
           "reactions": 5,
           "comments": 0,
-          "shares": 0,
-          "engagement": 5,
-          "pes": 5.0,
+          "shares": 1,
+          "engagement": 6,
+          "pes": 8.0,
           "views": 0,
           "reach": 0
         }
@@ -2844,12 +2824,12 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 3,
-          "reactions": 35,
+          "posts": 2,
+          "reactions": 25,
           "comments": 3,
           "shares": 3,
-          "engagement": 41,
-          "pes": 40.0,
+          "engagement": 31,
+          "pes": 30.0,
           "views": 1204,
           "reach": 459
         },
@@ -3055,12 +3035,12 @@
         },
         {
           "date": "2026-01-04",
-          "posts": 6,
-          "reactions": 95,
+          "posts": 5,
+          "reactions": 86,
           "comments": 9,
           "shares": 2,
-          "engagement": 106,
-          "pes": 106.0,
+          "engagement": 97,
+          "pes": 97.0,
           "views": 8962,
           "reach": 6642
         },
@@ -3155,11 +3135,11 @@
         {
           "date": "2026-01-13",
           "posts": 4,
-          "reactions": 63,
+          "reactions": 64,
           "comments": 16,
           "shares": 9,
-          "engagement": 88,
-          "pes": 122.0,
+          "engagement": 89,
+          "pes": 123.0,
           "views": 0,
           "reach": 0
         },
@@ -3288,14 +3268,14 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 4,
-          "reactions": 118,
-          "comments": 11,
-          "shares": 5,
-          "engagement": 134,
-          "pes": 116.0,
-          "views": 2145,
-          "reach": 644
+          "posts": 3,
+          "reactions": 97,
+          "comments": 10,
+          "shares": 4,
+          "engagement": 111,
+          "pes": 90.0,
+          "views": 2144,
+          "reach": 643
         },
         {
           "date": "2026-01-03",
@@ -3510,12 +3490,12 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 2,
-          "reactions": 37,
+          "posts": 1,
+          "reactions": 23,
           "comments": 5,
           "shares": 2,
-          "engagement": 44,
-          "pes": 50.0,
+          "engagement": 30,
+          "pes": 36.0,
           "views": 208,
           "reach": 79
         },
@@ -3643,11 +3623,11 @@
         {
           "date": "2026-01-14",
           "posts": 2,
-          "reactions": 8,
+          "reactions": 11,
           "comments": 1,
           "shares": 0,
-          "engagement": 9,
-          "pes": 10.0,
+          "engagement": 12,
+          "pes": 13.0,
           "views": 0,
           "reach": 0
         }
@@ -3875,14 +3855,14 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 3,
-          "reactions": 47,
-          "comments": 2,
+          "posts": 2,
+          "reactions": 23,
+          "comments": 0,
           "shares": 1,
-          "engagement": 50,
-          "pes": 54.0,
-          "views": 354,
-          "reach": 247
+          "engagement": 24,
+          "pes": 26.0,
+          "views": 352,
+          "reach": 246
         },
         {
           "date": "2026-01-03",
@@ -3966,9 +3946,9 @@
           "posts": 3,
           "reactions": 49,
           "comments": 14,
-          "shares": 8,
-          "engagement": 71,
-          "pes": 101.0,
+          "shares": 7,
+          "engagement": 70,
+          "pes": 98.0,
           "views": 0,
           "reach": 0
         },
@@ -3988,9 +3968,9 @@
           "posts": 5,
           "reactions": 63,
           "comments": 4,
-          "shares": 3,
-          "engagement": 70,
-          "pes": 80.0,
+          "shares": 2,
+          "engagement": 69,
+          "pes": 77.0,
           "views": 0,
           "reach": 0
         },
@@ -4008,11 +3988,11 @@
         {
           "date": "2026-01-14",
           "posts": 1,
-          "reactions": 1,
-          "comments": 0,
-          "shares": 0,
-          "engagement": 1,
-          "pes": 1.0,
+          "reactions": 2,
+          "comments": 1,
+          "shares": 1,
+          "engagement": 4,
+          "pes": 7.0,
           "views": 0,
           "reach": 0
         }
@@ -4263,11 +4243,11 @@
         {
           "date": "2026-01-14",
           "posts": 1,
-          "reactions": 2,
-          "comments": 0,
+          "reactions": 4,
+          "comments": 2,
           "shares": 0,
-          "engagement": 2,
-          "pes": 2.0,
+          "engagement": 6,
+          "pes": 8.0,
           "views": 0,
           "reach": 0
         }
@@ -4596,14 +4576,14 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 4,
-          "reactions": 92,
-          "comments": 3,
-          "shares": 7,
-          "engagement": 102,
-          "pes": 89.0,
-          "views": 2936,
-          "reach": 1328
+          "posts": 3,
+          "reactions": 69,
+          "comments": 2,
+          "shares": 6,
+          "engagement": 77,
+          "pes": 61.0,
+          "views": 2268,
+          "reach": 1014
         },
         {
           "date": "2026-01-03",
@@ -4640,14 +4620,14 @@
         },
         {
           "date": "2026-01-06",
-          "posts": 5,
-          "reactions": 215,
-          "comments": 40,
-          "shares": 18,
-          "engagement": 273,
-          "pes": 336.0,
-          "views": 5412,
-          "reach": 1800
+          "posts": 4,
+          "reactions": 76,
+          "comments": 4,
+          "shares": 12,
+          "engagement": 92,
+          "pes": 98.0,
+          "views": 2205,
+          "reach": 951
         },
         {
           "date": "2026-01-07",
@@ -4895,14 +4875,14 @@
         },
         {
           "date": "2026-01-02",
-          "posts": 3,
-          "reactions": 117,
+          "posts": 2,
+          "reactions": 104,
           "comments": 7,
           "shares": 4,
-          "engagement": 128,
-          "pes": 67.0,
-          "views": 1558,
-          "reach": 488
+          "engagement": 115,
+          "pes": 53.0,
+          "views": 1556,
+          "reach": 487
         },
         {
           "date": "2026-01-03",
@@ -5006,11 +4986,11 @@
         {
           "date": "2026-01-12",
           "posts": 2,
-          "reactions": 61,
+          "reactions": 62,
           "comments": 12,
           "shares": 6,
-          "engagement": 79,
-          "pes": 103.0,
+          "engagement": 80,
+          "pes": 104.0,
           "views": 0,
           "reach": 0
         },
@@ -5028,11 +5008,11 @@
         {
           "date": "2026-01-14",
           "posts": 1,
-          "reactions": 12,
-          "comments": 2,
-          "shares": 0,
-          "engagement": 14,
-          "pes": 16.0,
+          "reactions": 16,
+          "comments": 3,
+          "shares": 1,
+          "engagement": 20,
+          "pes": 25.0,
           "views": 0,
           "reach": 0
         }
@@ -5154,20 +5134,6 @@
         "pes": 50.0
       },
       {
-        "post_id": "122105889177185509",
-        "page_id": "949473921576703",
-        "page_name": "JuanKada Star",
-        "title": "Senti muna! \n\nStar Babies, bagay ba sakin ang emote era? \ud83e\udd23\ud83e\udd23\n\n#Juan365Studios #ALLINJUANLIVE #Juan365 #ColorGameLive #JuankadaStar #StarBabies",
-        "post_type": "Reels",
-        "publish_time": "2026-01-06T06:56:00",
-        "permalink": "https://www.facebook.com/reel/1977967359601304/",
-        "reactions": 139,
-        "comments": 36,
-        "shares": 6,
-        "engagement": 181,
-        "pes": 238.0
-      },
-      {
         "post_id": "122126552697135583",
         "page_id": "959243183930083",
         "page_name": "Juankada Ligaya",
@@ -5180,6 +5146,20 @@
         "shares": 9,
         "engagement": 181,
         "pes": 94.0
+      },
+      {
+        "post_id": "122122467537135583",
+        "page_id": "959243183930083",
+        "page_name": "Juankada Ligaya",
+        "title": "Hi Luvs! Gising na ba kayo? \ud83d\ude34\n\nKonting galaw para maalala ng katawan na need mo na mag work ulit \ud83d\ude35\u200d\ud83d\udcab\n\nComment \u201cAYOKO PA\u201d kung same feels. Follow for more kulitan araw-araw \u2764\ufe0f\n\n#Juan365 #Juan365PH #All",
+        "post_type": "Videos",
+        "publish_time": "2025-12-26T04:40:32+0000",
+        "permalink": "https://www.facebook.com/reel/25634964812850316/",
+        "reactions": 100,
+        "comments": 39,
+        "shares": 34,
+        "engagement": 173,
+        "pes": 197.0
       }
     ],
     "byPage": {
@@ -6149,6 +6129,20 @@
           "pes": 45.0
         },
         {
+          "post_id": "122107504701189322",
+          "page_id": "874648655739835",
+          "page_name": "Juankada Ellise",
+          "title": "\ud835\udc0f\ud835\udc1a\ud835\udc27\ud835\udc22\ud835\udc2c \ud835\udc24\ud835\udc1a \ud835\udc1b\ud835\udc28\ud835\udc32! pa pa panis ka boy...\nBeshies! \u2728 watch Color Game live sa Juan365  app at Website \ud83d\udc96\ud83c\udfac\n\n#Juan365 #Juan365Studios #ALLINJUANLIVE #Juan365ColorGame #JuankadaEllise #fyp\u30b7\u309aviral\u30b7 #reelsfyp\u30b7",
+          "post_type": "Videos",
+          "publish_time": "2026-01-13T07:00:36+0000",
+          "permalink": "https://www.facebook.com/reel/1282153177278239/",
+          "reactions": 26,
+          "comments": 8,
+          "shares": 2,
+          "engagement": 36,
+          "pes": 48.0
+        },
+        {
           "post_id": "122106187947189322",
           "page_id": "874648655739835",
           "page_name": "Juankada Ellise",
@@ -6161,20 +6155,6 @@
           "shares": 3,
           "engagement": 36,
           "pes": 34.0
-        },
-        {
-          "post_id": "122098593681189322",
-          "page_id": "874648655739835",
-          "page_name": "Juankada Ellise",
-          "title": "Juankada Ellise updated their cover photo.",
-          "post_type": "Photos",
-          "publish_time": "2025-12-28T17:58:00",
-          "permalink": "https://www.facebook.com/photo.php?fbid=122098593681189322&set=a.122097515811189322&type=3",
-          "reactions": 28,
-          "comments": 7,
-          "shares": 0,
-          "engagement": 35,
-          "pes": 42.0
         }
       ],
       "876401548892955": [
@@ -6528,9 +6508,9 @@
           "permalink": "https://www.facebook.com/122109892209144249/posts/122111844483144249",
           "reactions": 26,
           "comments": 6,
-          "shares": 4,
-          "engagement": 36,
-          "pes": 50.0
+          "shares": 3,
+          "engagement": 35,
+          "pes": 47.0
         },
         {
           "post_id": "122111065815144249",
@@ -6903,20 +6883,6 @@
           "pes": 112.0
         },
         {
-          "post_id": "122105889177185509",
-          "page_id": "949473921576703",
-          "page_name": "JuanKada Star",
-          "title": "Senti muna! \n\nStar Babies, bagay ba sakin ang emote era? \ud83e\udd23\ud83e\udd23\n\n#Juan365Studios #ALLINJUANLIVE #Juan365 #ColorGameLive #JuankadaStar #StarBabies",
-          "post_type": "Reels",
-          "publish_time": "2026-01-06T06:56:00",
-          "permalink": "https://www.facebook.com/reel/1977967359601304/",
-          "reactions": 139,
-          "comments": 36,
-          "shares": 6,
-          "engagement": 181,
-          "pes": 238.0
-        },
-        {
           "post_id": "122099922429185509",
           "page_id": "949473921576703",
           "page_name": "JuanKada Star",
@@ -7027,6 +6993,20 @@
           "shares": 10,
           "engagement": 45,
           "pes": 70.0
+        },
+        {
+          "post_id": "122102194485185509",
+          "page_id": "949473921576703",
+          "page_name": "JuanKada Star",
+          "title": "Lucky night sa Color Game kagabi! \ud83d\ude31\n\nAbangan niyo ulit ako sa Color Game, baka ikaw na next na mabigyan ko ng shining moment! \u2728\n\nComment \"Manifesting!\" kung gusto mo rin mabasbasan ng swerte dust! \ud83d\udcab",
+          "post_type": "Videos",
+          "publish_time": "2025-12-30T04:03:53+0000",
+          "permalink": "https://www.facebook.com/reel/918139720541826/",
+          "reactions": 36,
+          "comments": 3,
+          "shares": 4,
+          "engagement": 43,
+          "pes": 27.0
         }
       ],
       "959243183930083": [
@@ -7182,13 +7162,13 @@
       "post_type": "Videos",
       "publish_time": "2026-01-14T04:30:21+0000",
       "permalink": "https://www.facebook.com/reel/897161562809581/",
-      "reactions": 2,
-      "comments": 0,
+      "reactions": 4,
+      "comments": 2,
       "shares": 0,
       "views": 0,
       "reach": 0,
-      "engagement": 2,
-      "pes": 2.0
+      "engagement": 6,
+      "pes": 8.0
     },
     {
       "post_id": "122121787707141442",
@@ -7198,13 +7178,13 @@
       "post_type": "Videos",
       "publish_time": "2026-01-14T04:05:54+0000",
       "permalink": "https://www.facebook.com/reel/24885109661162451/",
-      "reactions": 2,
+      "reactions": 5,
       "comments": 1,
       "shares": 0,
       "views": 0,
       "reach": 0,
-      "engagement": 3,
-      "pes": 4.0
+      "engagement": 6,
+      "pes": 7.0
     },
     {
       "post_id": "122133757779135583",
@@ -7214,13 +7194,13 @@
       "post_type": "Videos",
       "publish_time": "2026-01-14T04:00:22+0000",
       "permalink": "https://www.facebook.com/reel/1630499514809146/",
-      "reactions": 12,
-      "comments": 2,
-      "shares": 0,
+      "reactions": 16,
+      "comments": 3,
+      "shares": 1,
       "views": 0,
       "reach": 0,
-      "engagement": 14,
-      "pes": 16.0
+      "engagement": 20,
+      "pes": 25.0
     },
     {
       "post_id": "122111850471149417",
@@ -7232,11 +7212,27 @@
       "permalink": "https://www.facebook.com/122109231777149417/posts/122111850471149417",
       "reactions": 5,
       "comments": 0,
+      "shares": 1,
+      "views": 0,
+      "reach": 0,
+      "engagement": 6,
+      "pes": 8.0
+    },
+    {
+      "post_id": "122189443094528854",
+      "page_id": "397865533415866",
+      "page_name": "Juankada Geoff",
+      "title": "\ud835\udfcf\ud835\udfd3\ud835\udfce\ud835\udc31 \ud835\udc29\ud835\udc1a\ud835\udc27\ud835\udc1a\ud835\udc25\ud835\udc28, \u20b1\ud835\udfd1\ud835\udfce,\ud835\udfce\ud835\udfce\ud835\udfce \ud835\udc1a\ud835\udc20\ud835\udc1a\ud835\udc1d!\ud83d\ude31\ud83d\udd25\n\nIkaw, ready ka na bang salubungin ang swerte mo?\n\nBaka next winner ikaw na \ud83d\udc40\u2728\n\n#Juan365 #Juan365Studios #AllInJuanSaSaya #Juankada",
+      "post_type": "Photos",
+      "publish_time": "2026-01-14T02:07:48+0000",
+      "permalink": "https://www.facebook.com/122187725540528854/posts/122189443094528854",
+      "reactions": 1,
+      "comments": 0,
       "shares": 0,
       "views": 0,
       "reach": 0,
-      "engagement": 5,
-      "pes": 5.0
+      "engagement": 1,
+      "pes": 1.0
     },
     {
       "post_id": "122121779229141442",
@@ -7262,13 +7258,13 @@
       "post_type": "Videos",
       "publish_time": "2026-01-14T02:00:22+0000",
       "permalink": "https://www.facebook.com/reel/1315696963699769/",
-      "reactions": 1,
-      "comments": 0,
-      "shares": 0,
+      "reactions": 2,
+      "comments": 1,
+      "shares": 1,
       "views": 0,
       "reach": 0,
-      "engagement": 1,
-      "pes": 1.0
+      "engagement": 4,
+      "pes": 7.0
     },
     {
       "post_id": "122185804016383179",
@@ -7278,13 +7274,13 @@
       "post_type": "Text",
       "publish_time": "2026-01-14T01:19:07+0000",
       "permalink": "https://www.facebook.com/122184357608383179/posts/122185804016383179",
-      "reactions": 20,
+      "reactions": 21,
       "comments": 5,
       "shares": 2,
       "views": 0,
       "reach": 0,
-      "engagement": 27,
-      "pes": 36.0
+      "engagement": 28,
+      "pes": 37.0
     },
     {
       "post_id": "122107674369189322",
@@ -7310,13 +7306,13 @@
       "post_type": "Text",
       "publish_time": "2026-01-14T01:00:14+0000",
       "permalink": "https://www.facebook.com/1303130428519374/posts/1314120834087000",
-      "reactions": 9,
+      "reactions": 10,
       "comments": 0,
       "shares": 0,
       "views": 0,
       "reach": 0,
-      "engagement": 9,
-      "pes": 9.0
+      "engagement": 10,
+      "pes": 10.0
     },
     {
       "post_id": "122111955291147740",
@@ -7566,13 +7562,13 @@
       "post_type": "Videos",
       "publish_time": "2026-01-13T07:00:36+0000",
       "permalink": "https://www.facebook.com/reel/1282153177278239/",
-      "reactions": 25,
+      "reactions": 26,
       "comments": 8,
       "shares": 2,
       "views": 0,
       "reach": 0,
-      "engagement": 35,
-      "pes": 47.0
+      "engagement": 36,
+      "pes": 48.0
     },
     {
       "post_id": "122112258627144249",
@@ -7598,13 +7594,13 @@
       "post_type": "Videos",
       "publish_time": "2026-01-13T06:59:15+0000",
       "permalink": "https://www.facebook.com/reel/2654632998207922/",
-      "reactions": 8,
+      "reactions": 9,
       "comments": 1,
       "shares": 0,
       "views": 0,
       "reach": 0,
-      "engagement": 9,
-      "pes": 10.0
+      "engagement": 10,
+      "pes": 11.0
     },
     {
       "post_id": "122107520685185509",
@@ -7984,11 +7980,11 @@
       "permalink": "https://www.facebook.com/122109892209144249/posts/122112225105144249",
       "reactions": 11,
       "comments": 1,
-      "shares": 1,
+      "shares": 0,
       "views": 0,
       "reach": 0,
-      "engagement": 13,
-      "pes": 16.0
+      "engagement": 12,
+      "pes": 13.0
     },
     {
       "post_id": "122115601467133214",
@@ -8046,13 +8042,13 @@
       "post_type": "Videos",
       "publish_time": "2026-01-12T10:46:39+0000",
       "permalink": "https://www.facebook.com/reel/896615896180000/",
-      "reactions": 33,
+      "reactions": 34,
       "comments": 9,
       "shares": 2,
       "views": 0,
       "reach": 0,
-      "engagement": 44,
-      "pes": 57.0
+      "engagement": 45,
+      "pes": 58.0
     },
     {
       "post_id": "122111585019149417",
@@ -9296,11 +9292,11 @@
       "permalink": "https://www.facebook.com/122109892209144249/posts/122111844483144249",
       "reactions": 26,
       "comments": 6,
-      "shares": 4,
+      "shares": 3,
       "views": 0,
       "reach": 0,
-      "engagement": 36,
-      "pes": 50.0
+      "engagement": 35,
+      "pes": 47.0
     },
     {
       "post_id": "122185414982383179",
@@ -12151,22 +12147,6 @@
       "pes": 42.0
     },
     {
-      "post_id": "122105889177185509",
-      "page_id": "949473921576703",
-      "page_name": "JuanKada Star",
-      "title": "Senti muna! \n\nStar Babies, bagay ba sakin ang emote era? \ud83e\udd23\ud83e\udd23\n\n#Juan365Studios #ALLINJUANLIVE #Juan365 #ColorGameLive #JuankadaStar #StarBabies",
-      "post_type": "Reels",
-      "publish_time": "2026-01-06T06:56:00",
-      "permalink": "https://www.facebook.com/reel/1977967359601304/",
-      "reactions": 139,
-      "comments": 36,
-      "shares": 6,
-      "views": 3207,
-      "reach": 849,
-      "engagement": 181,
-      "pes": 238.0
-    },
-    {
       "post_id": "122108187447170300",
       "page_id": "924225234111144",
       "page_name": "Juankada Charm",
@@ -13287,22 +13267,6 @@
       "pes": 16.0
     },
     {
-      "post_id": "122104966581189322",
-      "page_id": "874648655739835",
-      "page_name": "Juankada Ellise",
-      "title": "Juankada Ellise updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-04T07:50:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122104966581189322&set=a.122097515811189322&type=3",
-      "reactions": 9,
-      "comments": 0,
-      "shares": 0,
-      "views": 0,
-      "reach": 0,
-      "engagement": 9,
-      "pes": 9.0
-    },
-    {
       "post_id": "122184789542383179",
       "page_id": "305553999318966",
       "page_name": "JUANKada Host Ikay",
@@ -14229,182 +14193,6 @@
       "reach": 303,
       "engagement": 18,
       "pes": 22.0
-    },
-    {
-      "post_id": "1305562984942785",
-      "page_id": "112088047220992",
-      "page_name": "Juankada host Drae",
-      "title": "Juankada host Drae updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T19:39:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=1305562984942785&set=a.467749982057427&type=3",
-      "reactions": 8,
-      "comments": 0,
-      "shares": 0,
-      "views": 0,
-      "reach": 0,
-      "engagement": 8,
-      "pes": 9.0
-    },
-    {
-      "post_id": "122109845013149417",
-      "page_id": "862622980275034",
-      "page_name": "Juankada Shann",
-      "title": "Juankada Shann updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:43:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122109845013149417&set=a.122099315145149417&type=3",
-      "reactions": 1,
-      "comments": 0,
-      "shares": 0,
-      "views": 0,
-      "reach": 0,
-      "engagement": 1,
-      "pes": 1.0
-    },
-    {
-      "post_id": "122126542149135583",
-      "page_id": "959243183930083",
-      "page_name": "Juankada Ligaya",
-      "title": "Juankada Ligaya updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:42:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122126542149135583&set=a.122100489423135583&type=3",
-      "reactions": 13,
-      "comments": 0,
-      "shares": 0,
-      "views": 2,
-      "reach": 1,
-      "engagement": 13,
-      "pes": 14.0
-    },
-    {
-      "post_id": "122113454265133214",
-      "page_id": "858606287343265",
-      "page_name": "Juankada Jedi",
-      "title": "Juankada Jedi updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:42:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122113454265133214&set=a.122110480779133214&type=3",
-      "reactions": 11,
-      "comments": 1,
-      "shares": 0,
-      "views": 0,
-      "reach": 1,
-      "engagement": 12,
-      "pes": 13.0
-    },
-    {
-      "post_id": "122110229583141115",
-      "page_id": "874628665737433",
-      "page_name": "Juankada Papa Joe",
-      "title": "Juankada Papa Joe updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:41:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122110229583141115&set=a.122102925279141115&type=3",
-      "reactions": 10,
-      "comments": 0,
-      "shares": 0,
-      "views": 0,
-      "reach": 0,
-      "engagement": 10,
-      "pes": 10.0
-    },
-    {
-      "post_id": "122120025507141442",
-      "page_id": "882499904951305",
-      "page_name": "Juankada Lance",
-      "title": "Juankada Lance updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:41:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122120025507141442&set=a.122098330299141442&type=3",
-      "reactions": 14,
-      "comments": 0,
-      "shares": 0,
-      "views": 0,
-      "reach": 0,
-      "engagement": 14,
-      "pes": 14.0
-    },
-    {
-      "post_id": "122112683475145396",
-      "page_id": "876401548892955",
-      "page_name": "Juankada Sabbie",
-      "title": "Juankada Sabbie updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:40:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122112683475145396&set=a.122094606033145396&type=3",
-      "reactions": 21,
-      "comments": 1,
-      "shares": 1,
-      "views": 1,
-      "reach": 1,
-      "engagement": 23,
-      "pes": 26.0
-    },
-    {
-      "post_id": "122188074218528854",
-      "page_id": "397865533415866",
-      "page_name": "Juankada Geoff",
-      "title": "Juankada Geoff updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:40:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122188074218528854&set=a.122095532852528854&type=3",
-      "reactions": 14,
-      "comments": 2,
-      "shares": 0,
-      "views": 0,
-      "reach": 1,
-      "engagement": 16,
-      "pes": 18.0
-    },
-    {
-      "post_id": "122110408779144249",
-      "page_id": "897960886734144",
-      "page_name": "Juankada Alexchoozy",
-      "title": "Juankada Alexchoozy updated his cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:39:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122110408779144249&set=a.122095215045144249&type=3",
-      "reactions": 24,
-      "comments": 2,
-      "shares": 0,
-      "views": 2,
-      "reach": 1,
-      "engagement": 26,
-      "pes": 28.0
-    },
-    {
-      "post_id": "122184669344383179",
-      "page_id": "305553999318966",
-      "page_name": "JUANKada Host Ikay",
-      "title": "JUANKada Host Ikay updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:39:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122184669344383179&set=a.122140909430383179&type=3",
-      "reactions": 17,
-      "comments": 1,
-      "shares": 1,
-      "views": 2,
-      "reach": 1,
-      "engagement": 19,
-      "pes": 22.0
-    },
-    {
-      "post_id": "122104867689185509",
-      "page_id": "949473921576703",
-      "page_name": "JuanKada Star",
-      "title": "JuanKada Star updated their cover photo.",
-      "post_type": "Photos",
-      "publish_time": "2026-01-02T18:38:00",
-      "permalink": "https://www.facebook.com/photo.php?fbid=122104867689185509&set=a.122101646277185509&type=3",
-      "reactions": 23,
-      "comments": 1,
-      "shares": 1,
-      "views": 668,
-      "reach": 314,
-      "engagement": 25,
-      "pes": 28.0
     },
     {
       "post_id": "122109924699147740",
@@ -20172,15 +19960,15 @@
     "monthly": [
       {
         "month": "2026-01",
-        "posts": 503,
-        "reactions": 10998,
-        "comments": 1907,
-        "shares": 1016,
-        "views": 201185,
-        "reach": 88735,
-        "engagement": 13921,
+        "posts": 491,
+        "reactions": 10710,
+        "comments": 1867,
+        "shares": 1008,
+        "views": 197303,
+        "reach": 87566,
+        "engagement": 13585,
         "avg_engagement": 27.7,
-        "mom_change": 107.2
+        "mom_change": 102.2
       },
       {
         "month": "2025-12",
@@ -20240,38 +20028,38 @@
         "week": "Week 3",
         "week_start": "2025-12-31",
         "week_end": "2026-01-06",
-        "posts": 253,
-        "reactions": 6009,
-        "comments": 877,
-        "shares": 384,
-        "views": 166211,
-        "reach": 69351,
-        "engagement": 7270,
-        "avg_engagement": 28.7,
-        "wow_change": 53.0
+        "posts": 240,
+        "reactions": 5705,
+        "comments": 833,
+        "shares": 375,
+        "views": 162329,
+        "reach": 68182,
+        "engagement": 6913,
+        "avg_engagement": 28.8,
+        "wow_change": 45.5
       },
       {
         "week": "Week 4",
         "week_start": "2026-01-07",
         "week_end": "2026-01-13",
         "posts": 277,
-        "reactions": 5556,
+        "reactions": 5559,
         "comments": 1094,
-        "shares": 651,
+        "shares": 649,
         "views": 55619,
         "reach": 29507,
-        "engagement": 7301,
+        "engagement": 7302,
         "avg_engagement": 26.4,
-        "wow_change": 0.4
+        "wow_change": 5.6
       }
     ],
     "dayOfWeek": [
       {
         "day": "Sun",
         "day_num": 0,
-        "posts": 136,
-        "total_engagement": 3695,
-        "avg_engagement": 27.2,
+        "posts": 135,
+        "total_engagement": 3686,
+        "avg_engagement": 27.3,
         "views": 68723,
         "reach": 31463,
         "is_best": false
@@ -20289,18 +20077,18 @@
       {
         "day": "Tue",
         "day_num": 2,
-        "posts": 132,
-        "total_engagement": 3229,
-        "avg_engagement": 24.5,
-        "views": 55130,
-        "reach": 25351,
+        "posts": 131,
+        "total_engagement": 3050,
+        "avg_engagement": 23.3,
+        "views": 51923,
+        "reach": 24502,
         "is_best": false
       },
       {
         "day": "Wed",
         "day_num": 3,
-        "posts": 112,
-        "total_engagement": 2724,
+        "posts": 113,
+        "total_engagement": 2744,
         "avg_engagement": 24.3,
         "views": 52440,
         "reach": 22604,
@@ -20319,18 +20107,18 @@
       {
         "day": "Fri",
         "day_num": 5,
-        "posts": 99,
-        "total_engagement": 2147,
-        "avg_engagement": 21.7,
-        "views": 36694,
-        "reach": 14683,
+        "posts": 88,
+        "total_engagement": 1980,
+        "avg_engagement": 22.5,
+        "views": 36019,
+        "reach": 14363,
         "is_best": false
       },
       {
         "day": "Sat",
         "day_num": 6,
         "posts": 109,
-        "total_engagement": 3013,
+        "total_engagement": 3012,
         "avg_engagement": 27.6,
         "views": 54707,
         "reach": 22898,
@@ -20343,121 +20131,121 @@
         "page_id": "959243183930083",
         "name": "Juankada Ligaya",
         "page_name": "Juankada Ligaya",
-        "posts": 53,
-        "views": 57546,
-        "reach": 24371,
-        "engagement": 3721,
-        "avg_engagement": 70.2
+        "posts": 52,
+        "views": 57544,
+        "reach": 24370,
+        "engagement": 3715,
+        "avg_engagement": 71.4
       },
       {
         "rank": 2,
         "page_id": "876401548892955",
         "name": "Juankada Sabbie",
         "page_name": "Juankada Sabbie",
-        "posts": 47,
-        "views": 40755,
-        "reach": 25726,
-        "engagement": 2093,
-        "avg_engagement": 44.5
+        "posts": 46,
+        "views": 40754,
+        "reach": 25725,
+        "engagement": 2070,
+        "avg_engagement": 45.0
       },
       {
         "rank": 3,
         "page_id": "305553999318966",
         "name": "JUANKada Host Ikay",
         "page_name": "JUANKada Host Ikay",
-        "posts": 47,
-        "views": 48336,
-        "reach": 17876,
-        "engagement": 1985,
-        "avg_engagement": 42.2
+        "posts": 46,
+        "views": 48334,
+        "reach": 17875,
+        "engagement": 1967,
+        "avg_engagement": 42.8
       },
       {
         "rank": 4,
-        "page_id": "949473921576703",
-        "name": "JuanKada Star",
-        "page_name": "JuanKada Star",
-        "posts": 66,
-        "views": 31244,
-        "reach": 11809,
-        "engagement": 1962,
-        "avg_engagement": 29.7
-      },
-      {
-        "rank": 5,
         "page_id": "897960886734144",
         "name": "Juankada Alexchoozy",
         "page_name": "Juankada Alexchoozy",
-        "posts": 102,
-        "views": 19895,
-        "reach": 10415,
-        "engagement": 1796,
-        "avg_engagement": 17.6
+        "posts": 101,
+        "views": 19893,
+        "reach": 10414,
+        "engagement": 1771,
+        "avg_engagement": 17.5
+      },
+      {
+        "rank": 5,
+        "page_id": "949473921576703",
+        "name": "JuanKada Star",
+        "page_name": "JuanKada Star",
+        "posts": 64,
+        "views": 27369,
+        "reach": 10646,
+        "engagement": 1756,
+        "avg_engagement": 27.4
       },
       {
         "rank": 6,
         "page_id": "874628665737433",
         "name": "Juankada Papa Joe",
         "page_name": "Juankada Papa Joe",
-        "posts": 46,
+        "posts": 45,
         "views": 45737,
         "reach": 10670,
-        "engagement": 1502,
-        "avg_engagement": 32.7
+        "engagement": 1492,
+        "avg_engagement": 33.2
       },
       {
         "rank": 7,
         "page_id": "874648655739835",
         "name": "Juankada Ellise",
         "page_name": "Juankada Ellise",
-        "posts": 61,
+        "posts": 60,
         "views": 46922,
         "reach": 26603,
-        "engagement": 1488,
-        "avg_engagement": 24.4
+        "engagement": 1480,
+        "avg_engagement": 24.7
       },
       {
         "rank": 8,
         "page_id": "862622980275034",
         "name": "Juankada Shann",
         "page_name": "Juankada Shann",
-        "posts": 98,
+        "posts": 97,
         "views": 11378,
         "reach": 14052,
-        "engagement": 1256,
-        "avg_engagement": 12.8
+        "engagement": 1257,
+        "avg_engagement": 13.0
       },
       {
         "rank": 9,
         "page_id": "858606287343265",
         "name": "Juankada Jedi",
         "page_name": "Juankada Jedi",
-        "posts": 53,
+        "posts": 52,
         "views": 37102,
-        "reach": 17588,
-        "engagement": 1075,
-        "avg_engagement": 20.3
+        "reach": 17587,
+        "engagement": 1063,
+        "avg_engagement": 20.4
       },
       {
         "rank": 10,
-        "page_id": "882499904951305",
-        "name": "Juankada Lance",
-        "page_name": "Juankada Lance",
-        "posts": 58,
-        "views": 8307,
-        "reach": 3701,
-        "engagement": 943,
-        "avg_engagement": 16.3
-      },
-      {
-        "rank": 11,
         "page_id": "924225234111144",
         "name": "Juankada Charm",
         "page_name": "Juankada Charm",
         "posts": 61,
         "views": 7824,
         "reach": 4010,
-        "engagement": 932,
+        "engagement": 936,
         "avg_engagement": 15.3
+      },
+      {
+        "rank": 11,
+        "page_id": "882499904951305",
+        "name": "Juankada Lance",
+        "page_name": "Juankada Lance",
+        "posts": 57,
+        "views": 8307,
+        "reach": 3701,
+        "engagement": 932,
+        "avg_engagement": 16.4
       },
       {
         "rank": 12,
@@ -20475,11 +20263,11 @@
         "page_id": "112088047220992",
         "name": "Juankada host Drae",
         "page_name": "Juankada host Drae",
-        "posts": 37,
+        "posts": 36,
         "views": 8837,
         "reach": 3769,
-        "engagement": 671,
-        "avg_engagement": 18.1
+        "engagement": 664,
+        "avg_engagement": 18.4
       },
       {
         "rank": 14,
@@ -20488,27 +20276,18 @@
         "page_name": "Juankada Geoff",
         "posts": 34,
         "views": 4999,
-        "reach": 2042,
-        "engagement": 562,
-        "avg_engagement": 16.5
+        "reach": 2041,
+        "engagement": 547,
+        "avg_engagement": 16.1
       }
     ],
     "postTypePerf": [
-      {
-        "type": "Reels",
-        "count": 1,
-        "views": 3207,
-        "reach": 849,
-        "engagement": 181,
-        "avg_engagement": 181.0,
-        "avg_views": 3207.0
-      },
       {
         "type": "Videos",
         "count": 389,
         "views": 213199,
         "reach": 107088,
-        "engagement": 12011,
+        "engagement": 12030,
         "avg_engagement": 30.9,
         "avg_views": 548.1
       },
@@ -20517,18 +20296,18 @@
         "count": 201,
         "views": 75851,
         "reach": 32279,
-        "engagement": 4221,
+        "engagement": 4222,
         "avg_engagement": 21.0,
         "avg_views": 377.4
       },
       {
         "type": "Photos",
-        "count": 220,
-        "views": 85402,
-        "reach": 35946,
-        "engagement": 4367,
-        "avg_engagement": 19.9,
-        "avg_views": 388.2
+        "count": 209,
+        "views": 84727,
+        "reach": 35626,
+        "engagement": 4192,
+        "avg_engagement": 20.1,
+        "avg_views": 405.4
       },
       {
         "type": "Links",
@@ -20544,7 +20323,7 @@
       {
         "type": "trend_up",
         "title": "Engagement Growing",
-        "text": "Engagement increased 107.2% from 2025-12 to 2026-01"
+        "text": "Engagement increased 102.2% from 2025-12 to 2026-01"
       },
       {
         "type": "best_day",
@@ -20553,25 +20332,25 @@
       },
       {
         "type": "content_type",
-        "title": "Reels Perform Best",
-        "text": "Reels average 181 engagement vs others"
+        "title": "Videos Perform Best",
+        "text": "Videos average 31 engagement vs others"
       },
       {
         "type": "top_page",
         "title": "Juankada Ligaya Leads",
-        "text": "Top performer with 3,721 total engagement (70/post)"
+        "text": "Top performer with 3,715 total engagement (71/post)"
       }
     ]
   },
   "commentAnalysis": {
     "summary": {
-      "total_posts_with_comments": 508,
-      "posts_analyzed": 508,
-      "posts_with_self_comment": 2,
-      "total_self_comments": 3,
-      "total_organic_comments": 2508,
+      "total_posts_with_comments": 503,
+      "posts_analyzed": 503,
+      "posts_with_self_comment": 1,
+      "total_self_comments": 2,
+      "total_organic_comments": 2469,
       "self_comment_rate": 0.1,
-      "posts_with_self_pct": 0.4
+      "posts_with_self_pct": 0.2
     },
     "byPage": [
       {
@@ -20582,15 +20361,6 @@
         "organic_comments": 194,
         "posts_with_self": 1,
         "self_rate": 1.0
-      },
-      {
-        "page_name": "JuanKada Star",
-        "page_id": "949473921576703",
-        "posts_with_comments": 40,
-        "self_comments": 1,
-        "organic_comments": 164,
-        "posts_with_self": 1,
-        "self_rate": 0.6
       },
       {
         "page_name": "Juankada host Drae",
@@ -20604,27 +20374,27 @@
       {
         "page_name": "JUANKada Host Ikay",
         "page_id": "305553999318966",
-        "posts_with_comments": 33,
+        "posts_with_comments": 32,
         "self_comments": 0,
-        "organic_comments": 205,
+        "organic_comments": 204,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
       {
         "page_name": "Juankada Geoff",
         "page_id": "397865533415866",
-        "posts_with_comments": 23,
+        "posts_with_comments": 22,
         "self_comments": 0,
-        "organic_comments": 95,
+        "organic_comments": 93,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
       {
         "page_name": "Juankada Jedi",
         "page_id": "858606287343265",
-        "posts_with_comments": 32,
+        "posts_with_comments": 31,
         "self_comments": 0,
-        "organic_comments": 136,
+        "organic_comments": 135,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
@@ -20649,9 +20419,9 @@
       {
         "page_name": "Juankada Sabbie",
         "page_id": "876401548892955",
-        "posts_with_comments": 36,
+        "posts_with_comments": 35,
         "self_comments": 0,
-        "organic_comments": 291,
+        "organic_comments": 290,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
@@ -20669,16 +20439,16 @@
         "page_id": "897960886734144",
         "posts_with_comments": 52,
         "self_comments": 0,
-        "organic_comments": 182,
+        "organic_comments": 181,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
       {
         "page_name": "Juankada Charm",
         "page_id": "924225234111144",
-        "posts_with_comments": 34,
+        "posts_with_comments": 35,
         "self_comments": 0,
-        "organic_comments": 101,
+        "organic_comments": 103,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
@@ -20692,20 +20462,29 @@
         "self_rate": 0.0
       },
       {
+        "page_name": "JuanKada Star",
+        "page_id": "949473921576703",
+        "posts_with_comments": 38,
+        "self_comments": 0,
+        "organic_comments": 128,
+        "posts_with_self": 0,
+        "self_rate": 0.0
+      },
+      {
         "page_name": "Juankada Ligaya",
         "page_id": "959243183930083",
         "posts_with_comments": 43,
         "self_comments": 0,
-        "organic_comments": 375,
+        "organic_comments": 376,
         "posts_with_self": 0,
         "self_rate": 0.0
       }
     ],
     "effectivity": {
-      "avg_engagement_with_self": 95.0,
-      "avg_engagement_without_self": 34.8,
-      "engagement_boost_pct": 172.8,
-      "avg_reactions_with": 69.5,
+      "avg_engagement_with_self": 9.0,
+      "avg_engagement_without_self": 34.9,
+      "engagement_boost_pct": -74.2,
+      "avg_reactions_with": 0,
       "avg_reactions_without": 27.6
     },
     "topSelfCommented": [
@@ -20717,15 +20496,6 @@
         "total_comments": 9,
         "engagement": 9,
         "permalink": "https://www.facebook.com/permalink.php?story_fbid=pfbid0iuQDgUbvipnss1iqPkrq4YxdkwdhTo9HaZF5s5X2frV8DKdMBdZTQv5B7PrrUGHVl&id=61584233476725"
-      },
-      {
-        "post_id": "122105889177185509",
-        "page_name": "JuanKada Star",
-        "title": "Senti muna! \n\nStar Babies, bagay ba sakin ang emot",
-        "self_comments": 1,
-        "total_comments": 36,
-        "engagement": 181,
-        "permalink": "https://www.facebook.com/reel/1977967359601304/"
       }
     ]
   },
@@ -20736,32 +20506,32 @@
         "name": "Juankada Ligaya",
         "page_name": "Juankada Ligaya",
         "fan_count": 1357,
-        "posts": 53,
-        "engagement": 3721,
-        "avg_engagement": 70.2,
-        "views": 57546,
-        "reach": 24371,
-        "reactions": 3163,
-        "comments": 375,
-        "shares": 183,
-        "avg_pes": 49.8,
+        "posts": 52,
+        "engagement": 3715,
+        "avg_engagement": 71.4,
+        "views": 57544,
+        "reach": 24370,
+        "reactions": 3155,
+        "comments": 376,
+        "shares": 184,
+        "avg_pes": 50.6,
         "rank": 1,
-        "engagement_share": 17.9
+        "engagement_share": 18.2
       },
       {
         "page_id": "876401548892955",
         "name": "Juankada Sabbie",
         "page_name": "Juankada Sabbie",
         "fan_count": 307,
-        "posts": 47,
-        "engagement": 2093,
-        "avg_engagement": 44.5,
-        "views": 40755,
-        "reach": 25726,
-        "reactions": 1720,
-        "comments": 291,
-        "shares": 82,
-        "avg_pes": 38.8,
+        "posts": 46,
+        "engagement": 2070,
+        "avg_engagement": 45.0,
+        "views": 40754,
+        "reach": 25725,
+        "reactions": 1699,
+        "comments": 290,
+        "shares": 81,
+        "avg_pes": 39.1,
         "rank": 2,
         "engagement_share": 10.1
       },
@@ -20770,49 +20540,49 @@
         "name": "JUANKada Host Ikay",
         "page_name": "JUANKada Host Ikay",
         "fan_count": 1495,
-        "posts": 47,
-        "engagement": 1985,
-        "avg_engagement": 42.2,
-        "views": 48336,
-        "reach": 17876,
-        "reactions": 1684,
-        "comments": 205,
-        "shares": 96,
-        "avg_pes": 35.1,
+        "posts": 46,
+        "engagement": 1967,
+        "avg_engagement": 42.8,
+        "views": 48334,
+        "reach": 17875,
+        "reactions": 1668,
+        "comments": 204,
+        "shares": 95,
+        "avg_pes": 35.4,
         "rank": 3,
         "engagement_share": 9.6
-      },
-      {
-        "page_id": "949473921576703",
-        "name": "JuanKada Star",
-        "page_name": "JuanKada Star",
-        "fan_count": 268,
-        "posts": 66,
-        "engagement": 1962,
-        "avg_engagement": 29.7,
-        "views": 31244,
-        "reach": 11809,
-        "reactions": 1597,
-        "comments": 165,
-        "shares": 200,
-        "avg_pes": 30.2,
-        "rank": 4,
-        "engagement_share": 9.4
       },
       {
         "page_id": "897960886734144",
         "name": "Juankada Alexchoozy",
         "page_name": "Juankada Alexchoozy",
         "fan_count": 1177,
-        "posts": 102,
-        "engagement": 1796,
-        "avg_engagement": 17.6,
-        "views": 19895,
-        "reach": 10415,
-        "reactions": 1540,
-        "comments": 182,
-        "shares": 74,
-        "avg_pes": 18.6,
+        "posts": 101,
+        "engagement": 1771,
+        "avg_engagement": 17.5,
+        "views": 19893,
+        "reach": 10414,
+        "reactions": 1517,
+        "comments": 181,
+        "shares": 73,
+        "avg_pes": 18.5,
+        "rank": 4,
+        "engagement_share": 8.7
+      },
+      {
+        "page_id": "949473921576703",
+        "name": "JuanKada Star",
+        "page_name": "JuanKada Star",
+        "fan_count": 268,
+        "posts": 64,
+        "engagement": 1756,
+        "avg_engagement": 27.4,
+        "views": 27369,
+        "reach": 10646,
+        "reactions": 1435,
+        "comments": 128,
+        "shares": 193,
+        "avg_pes": 27.0,
         "rank": 5,
         "engagement_share": 8.6
       },
@@ -20821,32 +20591,32 @@
         "name": "Juankada Papa Joe",
         "page_name": "Juankada Papa Joe",
         "fan_count": 1999,
-        "posts": 51,
-        "engagement": 1502,
-        "avg_engagement": 29.5,
+        "posts": 50,
+        "engagement": 1492,
+        "avg_engagement": 29.8,
         "views": 46029,
         "reach": 10869,
-        "reactions": 1172,
+        "reactions": 1162,
         "comments": 196,
         "shares": 134,
-        "avg_pes": 28.9,
+        "avg_pes": 29.2,
         "rank": 6,
-        "engagement_share": 7.2
+        "engagement_share": 7.3
       },
       {
         "page_id": "874648655739835",
         "name": "Juankada Ellise",
         "page_name": "Juankada Ellise",
         "fan_count": 733,
-        "posts": 61,
-        "engagement": 1488,
-        "avg_engagement": 24.4,
+        "posts": 60,
+        "engagement": 1480,
+        "avg_engagement": 24.7,
         "views": 46922,
         "reach": 26603,
-        "reactions": 1193,
+        "reactions": 1185,
         "comments": 214,
         "shares": 81,
-        "avg_pes": 24.1,
+        "avg_pes": 24.4,
         "rank": 7,
         "engagement_share": 7.2
       },
@@ -20855,51 +20625,34 @@
         "name": "Juankada Shann",
         "page_name": "Juankada Shann",
         "fan_count": 239,
-        "posts": 101,
-        "engagement": 1256,
-        "avg_engagement": 12.4,
+        "posts": 100,
+        "engagement": 1257,
+        "avg_engagement": 12.6,
         "views": 11467,
         "reach": 14160,
         "reactions": 916,
         "comments": 220,
-        "shares": 120,
-        "avg_pes": 15.9,
+        "shares": 121,
+        "avg_pes": 16.1,
         "rank": 8,
-        "engagement_share": 6.0
+        "engagement_share": 6.1
       },
       {
         "page_id": "858606287343265",
         "name": "Juankada Jedi",
         "page_name": "Juankada Jedi",
         "fan_count": 7655,
-        "posts": 53,
-        "engagement": 1075,
-        "avg_engagement": 20.3,
+        "posts": 52,
+        "engagement": 1063,
+        "avg_engagement": 20.4,
         "views": 37102,
-        "reach": 17588,
-        "reactions": 887,
-        "comments": 136,
+        "reach": 17587,
+        "reactions": 876,
+        "comments": 135,
         "shares": 52,
-        "avg_pes": 23.2,
+        "avg_pes": 23.4,
         "rank": 9,
         "engagement_share": 5.2
-      },
-      {
-        "page_id": "882499904951305",
-        "name": "Juankada Lance",
-        "page_name": "Juankada Lance",
-        "fan_count": 1471,
-        "posts": 58,
-        "engagement": 943,
-        "avg_engagement": 16.3,
-        "views": 8307,
-        "reach": 3701,
-        "reactions": 752,
-        "comments": 135,
-        "shares": 56,
-        "avg_pes": 19.0,
-        "rank": 10,
-        "engagement_share": 4.5
       },
       {
         "page_id": "924225234111144",
@@ -20907,16 +20660,33 @@
         "page_name": "Juankada Charm",
         "fan_count": 195,
         "posts": 61,
-        "engagement": 932,
+        "engagement": 936,
         "avg_engagement": 15.3,
         "views": 7824,
         "reach": 4010,
-        "reactions": 767,
-        "comments": 101,
+        "reactions": 769,
+        "comments": 103,
         "shares": 64,
-        "avg_pes": 16.3,
+        "avg_pes": 16.4,
+        "rank": 10,
+        "engagement_share": 4.6
+      },
+      {
+        "page_id": "882499904951305",
+        "name": "Juankada Lance",
+        "page_name": "Juankada Lance",
+        "fan_count": 1471,
+        "posts": 57,
+        "engagement": 932,
+        "avg_engagement": 16.4,
+        "views": 8307,
+        "reach": 3701,
+        "reactions": 741,
+        "comments": 135,
+        "shares": 56,
+        "avg_pes": 19.1,
         "rank": 11,
-        "engagement_share": 4.5
+        "engagement_share": 4.6
       },
       {
         "page_id": "927370847106754",
@@ -20933,22 +20703,22 @@
         "shares": 97,
         "avg_pes": 22.1,
         "rank": 12,
-        "engagement_share": 3.8
+        "engagement_share": 3.9
       },
       {
         "page_id": "112088047220992",
         "name": "Juankada host Drae",
         "page_name": "Juankada host Drae",
         "fan_count": 350,
-        "posts": 41,
-        "engagement": 671,
-        "avg_engagement": 16.4,
+        "posts": 40,
+        "engagement": 664,
+        "avg_engagement": 16.6,
         "views": 8991,
         "reach": 3964,
-        "reactions": 541,
+        "reactions": 534,
         "comments": 81,
         "shares": 49,
-        "avg_pes": 20.9,
+        "avg_pes": 21.2,
         "rank": 13,
         "engagement_share": 3.2
       },
@@ -20957,15 +20727,15 @@
         "name": "Juankada Geoff",
         "page_name": "Juankada Geoff",
         "fan_count": 631,
-        "posts": 35,
-        "engagement": 562,
+        "posts": 34,
+        "engagement": 547,
         "avg_engagement": 16.1,
         "views": 4999,
-        "reach": 2042,
-        "reactions": 427,
-        "comments": 95,
+        "reach": 2041,
+        "reactions": 414,
+        "comments": 93,
         "shares": 40,
-        "avg_pes": 19.3,
+        "avg_pes": 19.4,
         "rank": 14,
         "engagement_share": 2.7
       }
@@ -20975,8 +20745,8 @@
         {
           "type": "Text",
           "count": 16,
-          "engagement": 258,
-          "avg_engagement": 16.1
+          "engagement": 259,
+          "avg_engagement": 16.2
         },
         {
           "type": "Videos",
@@ -20986,9 +20756,9 @@
         },
         {
           "type": "Photos",
-          "count": 11,
-          "engagement": 76,
-          "avg_engagement": 6.9
+          "count": 10,
+          "engagement": 68,
+          "avg_engagement": 6.8
         }
       ],
       "305553999318966": [
@@ -21001,14 +20771,14 @@
         {
           "type": "Text",
           "count": 15,
-          "engagement": 420,
-          "avg_engagement": 28.0
+          "engagement": 421,
+          "avg_engagement": 28.1
         },
         {
           "type": "Photos",
-          "count": 15,
-          "engagement": 520,
-          "avg_engagement": 34.7
+          "count": 14,
+          "engagement": 501,
+          "avg_engagement": 35.8
         }
       ],
       "397865533415866": [
@@ -21026,9 +20796,9 @@
         },
         {
           "type": "Photos",
-          "count": 10,
-          "engagement": 75,
-          "avg_engagement": 7.5
+          "count": 9,
+          "engagement": 60,
+          "avg_engagement": 6.7
         }
       ],
       "858606287343265": [
@@ -21040,9 +20810,9 @@
         },
         {
           "type": "Photos",
-          "count": 17,
-          "engagement": 170,
-          "avg_engagement": 10.0
+          "count": 16,
+          "engagement": 158,
+          "avg_engagement": 9.9
         },
         {
           "type": "Text",
@@ -21055,8 +20825,8 @@
         {
           "type": "Videos",
           "count": 54,
-          "engagement": 920,
-          "avg_engagement": 17.0
+          "engagement": 921,
+          "avg_engagement": 17.1
         },
         {
           "type": "Text",
@@ -21066,9 +20836,9 @@
         },
         {
           "type": "Photos",
-          "count": 17,
+          "count": 16,
           "engagement": 86,
-          "avg_engagement": 5.1
+          "avg_engagement": 5.4
         }
       ],
       "874628665737433": [
@@ -21079,30 +20849,30 @@
           "avg_engagement": 25.7
         },
         {
-          "type": "Photos",
-          "count": 17,
-          "engagement": 219,
-          "avg_engagement": 12.9
-        },
-        {
           "type": "Videos",
           "count": 16,
           "engagement": 820,
           "avg_engagement": 51.2
+        },
+        {
+          "type": "Photos",
+          "count": 16,
+          "engagement": 209,
+          "avg_engagement": 13.1
         }
       ],
       "874648655739835": [
         {
           "type": "Videos",
           "count": 28,
-          "engagement": 811,
+          "engagement": 812,
           "avg_engagement": 29.0
         },
         {
           "type": "Photos",
-          "count": 18,
-          "engagement": 451,
-          "avg_engagement": 25.1
+          "count": 17,
+          "engagement": 442,
+          "avg_engagement": 26.0
         },
         {
           "type": "Text",
@@ -21120,9 +20890,9 @@
         },
         {
           "type": "Photos",
-          "count": 10,
-          "engagement": 245,
-          "avg_engagement": 24.5
+          "count": 9,
+          "engagement": 222,
+          "avg_engagement": 24.7
         },
         {
           "type": "Text",
@@ -21135,14 +20905,14 @@
         {
           "type": "Videos",
           "count": 25,
-          "engagement": 397,
-          "avg_engagement": 15.9
+          "engagement": 400,
+          "avg_engagement": 16.0
         },
         {
           "type": "Photos",
-          "count": 18,
-          "engagement": 270,
-          "avg_engagement": 15.0
+          "count": 17,
+          "engagement": 256,
+          "avg_engagement": 15.1
         },
         {
           "type": "Text",
@@ -21155,20 +20925,20 @@
         {
           "type": "Videos",
           "count": 46,
-          "engagement": 830,
-          "avg_engagement": 18.0
+          "engagement": 833,
+          "avg_engagement": 18.1
         },
         {
           "type": "Text",
           "count": 29,
-          "engagement": 532,
+          "engagement": 531,
           "avg_engagement": 18.3
         },
         {
           "type": "Photos",
-          "count": 26,
-          "engagement": 430,
-          "avg_engagement": 16.5
+          "count": 25,
+          "engagement": 403,
+          "avg_engagement": 16.1
         },
         {
           "type": "Links",
@@ -21181,8 +20951,8 @@
         {
           "type": "Videos",
           "count": 44,
-          "engagement": 599,
-          "avg_engagement": 13.6
+          "engagement": 603,
+          "avg_engagement": 13.7
         },
         {
           "type": "Photos",
@@ -21232,29 +21002,23 @@
         },
         {
           "type": "Photos",
-          "count": 18,
-          "engagement": 302,
-          "avg_engagement": 16.8
-        },
-        {
-          "type": "Reels",
-          "count": 1,
-          "engagement": 181,
-          "avg_engagement": 181.0
+          "count": 17,
+          "engagement": 277,
+          "avg_engagement": 16.3
         }
       ],
       "959243183930083": [
         {
           "type": "Videos",
           "count": 25,
-          "engagement": 2275,
-          "avg_engagement": 91.0
+          "engagement": 2282,
+          "avg_engagement": 91.3
         },
         {
           "type": "Photos",
-          "count": 19,
-          "engagement": 1026,
-          "avg_engagement": 54.0
+          "count": 18,
+          "engagement": 1013,
+          "avg_engagement": 56.3
         },
         {
           "type": "Text",
@@ -21267,43 +21031,43 @@
     "dominantTypes": {
       "112088047220992": {
         "type": "Text",
-        "percentage": 39.0
+        "percentage": 40.0
       },
       "305553999318966": {
         "type": "Videos",
-        "percentage": 36.2
+        "percentage": 37.0
       },
       "397865533415866": {
         "type": "Text",
-        "percentage": 37.1
+        "percentage": 38.2
       },
       "858606287343265": {
         "type": "Videos",
-        "percentage": 60.4
+        "percentage": 61.5
       },
       "862622980275034": {
         "type": "Videos",
-        "percentage": 53.5
+        "percentage": 54.0
       },
       "874628665737433": {
         "type": "Text",
-        "percentage": 35.3
+        "percentage": 36.0
       },
       "874648655739835": {
         "type": "Videos",
-        "percentage": 45.9
+        "percentage": 46.7
       },
       "876401548892955": {
         "type": "Videos",
-        "percentage": 63.8
+        "percentage": 65.2
       },
       "882499904951305": {
         "type": "Videos",
-        "percentage": 43.1
+        "percentage": 43.9
       },
       "897960886734144": {
         "type": "Videos",
-        "percentage": 45.1
+        "percentage": 45.5
       },
       "924225234111144": {
         "type": "Videos",
@@ -21315,11 +21079,11 @@
       },
       "949473921576703": {
         "type": "Videos",
-        "percentage": 36.4
+        "percentage": 37.5
       },
       "959243183930083": {
         "type": "Videos",
-        "percentage": 47.2
+        "percentage": 48.1
       }
     }
   }
