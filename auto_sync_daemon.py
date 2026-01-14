@@ -92,13 +92,19 @@ def run_sync():
         else:
             print("   (export_static_data.py not found, skipping)")
 
-        # Step 6: Send notifications
-        print("\n[6/6] Sending Telegram notifications...")
-        if os.path.exists('send_daily_report.py'):
-            result = subprocess.run([sys.executable, 'send_daily_report.py'], capture_output=True, text=True)
-            print("   Notifications sent")
+        # Step 6: Send daily report with dashboard screenshot
+        print("\n[6/6] Sending daily report with dashboard screenshot...")
+        if os.path.exists('send_daily_report_v2.py'):
+            result = subprocess.run(
+                [sys.executable, 'send_daily_report_v2.py', '--project', 'juanstudio'],
+                capture_output=True, text=True, timeout=120
+            )
+            if result.returncode == 0:
+                print("   Report sent with screenshot")
+            else:
+                print(f"   Warning: {result.stderr[:100] if result.stderr else 'Report may have failed'}")
         else:
-            print("   (send_daily_report.py not found, skipping)")
+            print("   (send_daily_report_v2.py not found, skipping)")
 
         show_notification("JuanStudio Daily Sync", "Full sync complete!")
 

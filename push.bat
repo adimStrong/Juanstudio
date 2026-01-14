@@ -1,29 +1,35 @@
 @echo off
-title JuanStudio Push to Vercel (via GitHub)
+title JuanStudio Push to Vercel
 cd /d C:\Users\us\Desktop\juanstudio_project
 
 set GIT="C:\Users\us\AppData\Local\Programs\Git\bin\git.exe"
 
 echo ============================================================
-echo PUSH TO VERCEL (JuanStudio) via GitHub
+echo PUSH TO VERCEL (JuanStudio)
 echo ============================================================
 echo.
 
-echo Adding changes...
+echo [1/3] Adding changes...
 %GIT% add -A
 
 echo.
-echo Committing changes...
+echo [2/3] Committing changes...
 %GIT% commit -m "Update data - %date% %time%"
 
 echo.
-echo Pushing to GitHub (auto-deploys to Vercel)...
+echo Pushing to GitHub...
 %GIT% push origin main
 
 echo.
 echo ============================================================
-echo PUSH COMPLETE
-echo Vercel will auto-deploy from GitHub.
+echo [3/3] Deploying frontend to Vercel...
+echo ============================================================
+cd frontend
+call npx vercel --prod --yes
+
+echo.
+echo ============================================================
+echo DEPLOY COMPLETE
 echo Live: https://juanstudio-analytics.vercel.app
 echo ============================================================
 pause

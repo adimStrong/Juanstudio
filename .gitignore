@@ -22,3 +22,6 @@ short_lived_tokens.json
 
 .vercel
 tmpclaude-*
+
+.vercel
+.env*.local
