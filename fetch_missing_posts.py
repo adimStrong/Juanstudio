@@ -44,22 +44,14 @@ with open("page_tokens.json", "r") as f:
     PAGE_TOKENS = json.load(f)
 
 
-def get_api_to_csv_mapping():
-    """Get mapping from API page_ids to CSV page_ids (case-insensitive)."""
+def get_db_page_ids():
+    """Get page_ids that exist in the database."""
     conn = sqlite3.connect(DATABASE_PATH)
     cursor = conn.cursor()
-    cursor.execute('SELECT page_id, page_name FROM pages WHERE page_id LIKE "61%" OR page_id LIKE "100%"')
-    # Use lowercase names for case-insensitive matching
-    csv_pages = {row[1].lower(): row[0] for row in cursor.fetchall()}
+    cursor.execute('SELECT page_id FROM pages')
+    page_ids = set(row[0] for row in cursor.fetchall())
     conn.close()
-
-    mapping = {}
-    for label, data in PAGE_TOKENS.items():
-        api_id = data.get("page_id")
-        name = data.get("page_name", "").lower()
-        if name in csv_pages:
-            mapping[api_id] = csv_pages[name]
-    return mapping
+    return page_ids
 
 
 def get_csv_dates():
@@ -231,35 +223,29 @@ def main():
     existing_ids = get_existing_post_ids()
     print(f"Existing posts in database: {len(existing_ids)}")
 
-    # Get API to CSV page_id mapping
-    api_to_csv = get_api_to_csv_mapping()
-    print(f"Page ID mappings: {len(api_to_csv)}")
+    # Get valid page IDs from database
+    db_page_ids = get_db_page_ids()
+    print(f"Pages in database: {len(db_page_ids)}")
 
     conn = sqlite3.connect(DATABASE_PATH)
-    conn.row_factory = sqlite3.Row  # Enable dict-like access for get_page_by_name
+    conn.row_factory = sqlite3.Row
     total_new = 0
     total_skipped = 0
 
     for label, data in PAGE_TOKENS.items():
-        api_page_id = data.get("page_id")
+        page_id = data.get("page_id")
         page_name = data.get("page_name", label)
         token = data.get("page_access_token")
 
-        if not token or not api_page_id:
+        if not token or not page_id:
             continue
 
-        db_page_id = api_to_csv.get(api_page_id, api_page_id)
-        # Duplicate prevention: check if page with same name exists under different ID
-        if get_page_by_name and db_page_id == api_page_id:
-            existing_page = get_page_by_name(page_name, conn=conn)
-            if existing_page and existing_page['page_id'] != api_page_id:
-                db_page_id = existing_page['page_id']
-                print(f"  [Duplicate Prevention] Using existing page_id: {db_page_id}")
-
+        # Use page_id directly (must match database)
+        db_page_id = page_id
 
         print(f"\n[{page_name}] Fetching recent posts...")
 
-        posts = fetch_posts_from_api(token, api_page_id, page_name, days_back=7)
+        posts = fetch_posts_from_api(token, page_id, page_name, days_back=7)
         print(f"  Found {len(posts)} posts from API")
 
         # Filter to only new posts NOT in database (normalize IDs for comparison)

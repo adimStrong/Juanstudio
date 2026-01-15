@@ -217,25 +217,31 @@ def hourly_check(state):
     save_state(state)
 
 def daily_push(state):
-    """Daily task at 6am: Export + Push to Vercel + Send Daily Report."""
+    """Daily task at 6am: Sync API, Export, Deploy, Send Report with Screenshot."""
     log("=" * 50)
     log("6AM DAILY PUSH")
     log("=" * 50)
 
-    # Export data
-    if export_data():
-        # Push to Vercel
-        push_to_vercel()
-
     state["last_push_date"] = datetime.now().strftime('%Y-%m-%d')
     save_state(state)
 
-    # Send daily report to Telegram
+    # Use send_daily_report_v2.py which handles:
+    # 1. API sync (T+1 data verification)
+    # 2. Export to JSON
+    # 3. Deploy to Vercel
+    # 4. Take dashboard screenshots
+    # 5. Send to Telegram
     try:
-        from telegram_notifier import send_daily_report
-        log("Sending daily report...")
-        send_daily_report()
-        log("Daily report sent!")
+        log("Running daily report v2 (sync + export + deploy + screenshot)...")
+        result = subprocess.run(
+            [sys.executable, "send_daily_report_v2.py", "--project", "juanstudio", "--screenshot-filter", "thismonth"],
+            cwd=PROJECT_DIR,
+            timeout=300  # 5 minutes for screenshot capture
+        )
+        if result.returncode == 0:
+            log("Daily report sent!")
+        else:
+            log("Daily report may have issues", "WARN")
     except Exception as e:
         log(f"Daily report error: {e}", "ERROR")
 
