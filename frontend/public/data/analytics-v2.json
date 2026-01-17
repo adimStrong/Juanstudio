@@ -1,20 +1,20 @@
 {
   "stats": {
     "all": {
-      "total_posts": 991,
-      "total_pages": 16,
-      "all_pages": 16,
-      "total_reactions": 28809,
-      "total_comments": 3785,
-      "total_shares": 1819,
-      "total_engagement": 34413,
-      "total_pes": 43218.0,
+      "total_posts": 989,
+      "total_pages": 14,
+      "all_pages": 14,
+      "total_reactions": 28468,
+      "total_comments": 3594,
+      "total_shares": 1739,
+      "total_engagement": 33801,
+      "total_pes": 42248.0,
       "total_views": 624143,
-      "total_reach": 261550,
-      "avg_engagement": 34.7,
-      "avg_pes": 43.6,
-      "avg_views": 629.8,
-      "avg_reach": 263.9,
+      "total_reach": 252480,
+      "avg_engagement": 34.2,
+      "avg_pes": 42.7,
+      "avg_views": 631.1,
+      "avg_reach": 255.3,
       "date_range_start": "2025-11-25",
       "date_range_end": "2026-01-17"
     },
@@ -72,42 +72,6 @@
         "avg_reach": 107.4,
         "date_range_start": "2025-12-21",
         "date_range_end": "2026-01-17"
-      },
-      "61572881214141": {
-        "total_posts": 1,
-        "total_pages": 1,
-        "all_pages": 1,
-        "total_reactions": 206,
-        "total_comments": 110,
-        "total_shares": 64,
-        "total_engagement": 380,
-        "total_pes": 625.0,
-        "total_views": 0,
-        "total_reach": 7696,
-        "avg_engagement": 380.0,
-        "avg_pes": 625.0,
-        "avg_views": 0.0,
-        "avg_reach": 7696.0,
-        "date_range_start": "2026-01-07",
-        "date_range_end": "2026-01-07"
-      },
-      "61580361006776": {
-        "total_posts": 1,
-        "total_pages": 1,
-        "all_pages": 1,
-        "total_reactions": 135,
-        "total_comments": 81,
-        "total_shares": 16,
-        "total_engagement": 232,
-        "total_pes": 345.0,
-        "total_views": 0,
-        "total_reach": 1374,
-        "avg_engagement": 232.0,
-        "avg_pes": 345.0,
-        "avg_views": 0.0,
-        "avg_reach": 1374.0,
-        "date_range_start": "2026-01-10",
-        "date_range_end": "2026-01-10"
       },
       "858606287343265": {
         "total_posts": 64,
@@ -533,51 +497,19 @@
       "avg_pes": 32.4,
       "total_views": 11254,
       "total_reach": 4832
-    },
-    {
-      "page_id": "61572881214141",
-      "name": "Juan365",
-      "page_name": "Juan365",
-      "fan_count": null,
-      "followers_count": null,
-      "post_count": 1,
-      "total_reactions": 206,
-      "total_comments": 110,
-      "total_shares": 64,
-      "total_engagement": 380,
-      "avg_engagement": 380.0,
-      "avg_pes": 625.0,
-      "total_views": 0,
-      "total_reach": 7696
-    },
-    {
-      "page_id": "61580361006776",
-      "name": "Juana Babe Sena",
-      "page_name": "Juana Babe Sena",
-      "fan_count": null,
-      "followers_count": null,
-      "post_count": 1,
-      "total_reactions": 135,
-      "total_comments": 81,
-      "total_shares": 16,
-      "total_engagement": 232,
-      "avg_engagement": 232.0,
-      "avg_pes": 345.0,
-      "total_views": 0,
-      "total_reach": 1374
     }
   ],
   "postTypes": {
     "all": [
       {
         "post_type": "Videos",
-        "count": 490,
-        "reactions": 14693,
-        "comments": 2394,
-        "shares": 972,
-        "total_engagement": 18059,
-        "avg_engagement": 36.9,
-        "avg_pes": 47.7
+        "count": 488,
+        "reactions": 14352,
+        "comments": 2203,
+        "shares": 892,
+        "total_engagement": 17447,
+        "avg_engagement": 35.8,
+        "avg_pes": 45.9
       },
       {
         "post_type": "Photos",
@@ -745,30 +677,6 @@
           "total_engagement": 13,
           "avg_engagement": 13.0,
           "avg_pes": 17.0
-        }
-      ],
-      "61572881214141": [
-        {
-          "post_type": "Videos",
-          "count": 1,
-          "reactions": 206,
-          "comments": 110,
-          "shares": 64,
-          "total_engagement": 380,
-          "avg_engagement": 380.0,
-          "avg_pes": 625.0
-        }
-      ],
-      "61580361006776": [
-        {
-          "post_type": "Videos",
-          "count": 1,
-          "reactions": 135,
-          "comments": 81,
-          "shares": 16,
-          "total_engagement": 232,
-          "avg_engagement": 232.0,
-          "avg_pes": 345.0
         }
       ],
       "858606287343265": [
@@ -1543,14 +1451,14 @@
       },
       {
         "date": "2026-01-07",
-        "posts": 59,
-        "reactions": 1302,
-        "comments": 339,
-        "shares": 159,
-        "engagement": 1800,
-        "pes": 2753.0,
+        "posts": 58,
+        "reactions": 1096,
+        "comments": 229,
+        "shares": 95,
+        "engagement": 1420,
+        "pes": 2128.0,
         "views": 20932,
-        "reach": 17619
+        "reach": 9923
       },
       {
         "date": "2026-01-08",
@@ -1576,14 +1484,14 @@
       },
       {
         "date": "2026-01-10",
-        "posts": 36,
-        "reactions": 1062,
-        "comments": 258,
-        "shares": 95,
-        "engagement": 1415,
-        "pes": 1863.0,
+        "posts": 35,
+        "reactions": 927,
+        "comments": 177,
+        "shares": 79,
+        "engagement": 1183,
+        "pes": 1518.0,
         "views": 26587,
-        "reach": 14050
+        "reach": 12676
       },
       {
         "date": "2026-01-11",
@@ -2416,32 +2324,6 @@
           "pes": 17.0,
           "views": 0,
           "reach": 0
-        }
-      ],
-      "61572881214141": [
-        {
-          "date": "2026-01-07",
-          "posts": 1,
-          "reactions": 206,
-          "comments": 110,
-          "shares": 64,
-          "engagement": 380,
-          "pes": 625.0,
-          "views": 0,
-          "reach": 7696
-        }
-      ],
-      "61580361006776": [
-        {
-          "date": "2026-01-10",
-          "posts": 1,
-          "reactions": 135,
-          "comments": 81,
-          "shares": 16,
-          "engagement": 232,
-          "pes": 345.0,
-          "views": 0,
-          "reach": 1374
         }
       ],
       "858606287343265": [
@@ -5830,20 +5712,6 @@
         "pes": 687.0
       },
       {
-        "post_id": "122175045374762707",
-        "page_id": "61572881214141",
-        "page_name": "Juan365",
-        "title": "Bakit hindi pareho? Sa \ud835\udc02\ud835\udc0e\ud835\udc0b\ud835\udc0e\ud835\udc11 \ud835\udc06\ud835\udc00\ud835\udc0c\ud835\udc04, Juankada, panalo ka sa swerte at saya! \ud83c\udfa8\u2728\n\nHuwag pahuli\u2014join the fun with Juan! Message us to guide you, Juankada \ud83e\uddd1\u200d\ud83c\udf3e\ud83c\udf89\n\n#Juan365 #Juan365PH #AllInJuanSaSaya #JuanKad",
-        "post_type": "Videos",
-        "publish_time": "2026-01-07T05:00:00",
-        "permalink": "https://www.facebook.com/reel/1170985318580735/",
-        "reactions": 206,
-        "comments": 110,
-        "shares": 64,
-        "engagement": 380,
-        "pes": 625.0
-      },
-      {
         "post_id": "122128645209135583",
         "page_id": "959243183930083",
         "page_name": "Juankada Ligaya",
@@ -5898,6 +5766,20 @@
         "shares": 4,
         "engagement": 248,
         "pes": 298.0
+      },
+      {
+        "post_id": "122124755967135583",
+        "page_id": "959243183930083",
+        "page_name": "Juankada Ligaya",
+        "title": "Monday mood: Counting down the hours hanggang mag-LIVE na tayo laterrr! 6am to 2pm\ud83d\ude0d \n\nSee you, LUVS! \ud83d\udc4b\u2728\n\n#Juan365 #Juan365PH #AllInJuanSaSaya #JuanKada #Juan365ColorGame #LigayaLuvs #Ligaya #FollowNow",
+        "post_type": "Photos",
+        "publish_time": "2025-12-28T20:30:00",
+        "permalink": "https://www.facebook.com/JuankadaLigayaOfficialPage/posts/pfbid02kHZTC1gLiJ2zzizfL8UMuxW2fjSXTux6UENy2gYYvFiyJ3YWUFQAPctYF1hk1DyTl",
+        "reactions": 222,
+        "comments": 16,
+        "shares": 8,
+        "engagement": 246,
+        "pes": 278.0
       }
     ],
     "byPage": {
@@ -6325,38 +6207,6 @@
           "shares": 7,
           "engagement": 38,
           "pes": 58.0
-        }
-      ],
-      "61572881214141": [
-        {
-          "post_id": "122175045374762707",
-          "page_id": "61572881214141",
-          "page_name": "Juan365",
-          "title": "Bakit hindi pareho? Sa \ud835\udc02\ud835\udc0e\ud835\udc0b\ud835\udc0e\ud835\udc11 \ud835\udc06\ud835\udc00\ud835\udc0c\ud835\udc04, Juankada, panalo ka sa swerte at saya! \ud83c\udfa8\u2728\n\nHuwag pahuli\u2014join the fun with Juan! Message us to guide you, Juankada \ud83e\uddd1\u200d\ud83c\udf3e\ud83c\udf89\n\n#Juan365 #Juan365PH #AllInJuanSaSaya #JuanKad",
-          "post_type": "Videos",
-          "publish_time": "2026-01-07T05:00:00",
-          "permalink": "https://www.facebook.com/reel/1170985318580735/",
-          "reactions": 206,
-          "comments": 110,
-          "shares": 64,
-          "engagement": 380,
-          "pes": 625.0
-        }
-      ],
-      "61580361006776": [
-        {
-          "post_id": "122118510057012033",
-          "page_id": "61580361006776",
-          "page_name": "Juana Babe Sena",
-          "title": "\ud835\udc04\ud835\udc2f\ud835\udc1e\ud835\udc2b\ud835\udc32\ud835\udc2d\ud835\udc21\ud835\udc22\ud835\udc27\ud835\udc20 \ud835\udc1f\ud835\udc2e\ud835\udc27 \ud835\udc30\ud835\udc22\ud835\udc2d\ud835\udc21 Juankada Sabbie \ud83e\udd70\n\n#JuanababeSena #Juanabies #Followme #TagAFriend #JuankadaSabbie #GoodVibesOnly",
-          "post_type": "Videos",
-          "publish_time": "2026-01-10T22:01:00",
-          "permalink": "https://www.facebook.com/reel/2293243437847253/",
-          "reactions": 135,
-          "comments": 81,
-          "shares": 16,
-          "engagement": 232,
-          "pes": 345.0
         }
       ],
       "858606287343265": [
@@ -11733,22 +11583,6 @@
       "pes": 43.0
     },
     {
-      "post_id": "122118510057012033",
-      "page_id": "61580361006776",
-      "page_name": "Juana Babe Sena",
-      "title": "\ud835\udc04\ud835\udc2f\ud835\udc1e\ud835\udc2b\ud835\udc32\ud835\udc2d\ud835\udc21\ud835\udc22\ud835\udc27\ud835\udc20 \ud835\udc1f\ud835\udc2e\ud835\udc27 \ud835\udc30\ud835\udc22\ud835\udc2d\ud835\udc21 Juankada Sabbie \ud83e\udd70\n\n#JuanababeSena #Juanabies #Followme #TagAFriend #JuankadaSabbie #GoodVibesOnly",
-      "post_type": "Videos",
-      "publish_time": "2026-01-10T22:01:00",
-      "permalink": "https://www.facebook.com/reel/2293243437847253/",
-      "reactions": 135,
-      "comments": 81,
-      "shares": 16,
-      "views": 0,
-      "reach": 1374,
-      "engagement": 232,
-      "pes": 345.0
-    },
-    {
       "post_id": "122185526606383179",
       "page_id": "305553999318966",
       "page_name": "JUANKada Host Ikay",
@@ -14403,22 +14237,6 @@
       "reach": 80,
       "engagement": 1,
       "pes": 1.0
-    },
-    {
-      "post_id": "122175045374762707",
-      "page_id": "61572881214141",
-      "page_name": "Juan365",
-      "title": "Bakit hindi pareho? Sa \ud835\udc02\ud835\udc0e\ud835\udc0b\ud835\udc0e\ud835\udc11 \ud835\udc06\ud835\udc00\ud835\udc0c\ud835\udc04, Juankada, panalo ka sa swerte at saya! \ud83c\udfa8\u2728\n\nHuwag pahuli\u2014join the fun with Juan! Message us to guide you, Juankada \ud83e\uddd1\u200d\ud83c\udf3e\ud83c\udf89\n\n#Juan365 #Juan365PH #AllInJuanSaSaya #JuanKad",
-      "post_type": "Videos",
-      "publish_time": "2026-01-07T05:00:00",
-      "permalink": "https://www.facebook.com/reel/1170985318580735/",
-      "reactions": 206,
-      "comments": 110,
-      "shares": 64,
-      "views": 0,
-      "reach": 7696,
-      "engagement": 380,
-      "pes": 625.0
     },
     {
       "post_id": "122110800225147740",
@@ -23786,15 +23604,15 @@
     "monthly": [
       {
         "month": "2026-01",
-        "posts": 662,
-        "reactions": 22475,
-        "comments": 3155,
-        "shares": 1498,
+        "posts": 660,
+        "reactions": 22134,
+        "comments": 2964,
+        "shares": 1418,
         "views": 439525,
-        "reach": 170992,
-        "engagement": 27128,
-        "avg_engagement": 41.0,
-        "mom_change": 279.9
+        "reach": 161922,
+        "engagement": 26516,
+        "avg_engagement": 40.2,
+        "mom_change": 271.3
       },
       {
         "month": "2025-12",
@@ -23854,29 +23672,29 @@
         "week": "Week 3",
         "week_start": "2026-01-03",
         "week_end": "2026-01-09",
-        "posts": 323,
-        "reactions": 7797,
-        "comments": 1430,
-        "shares": 677,
+        "posts": 322,
+        "reactions": 7591,
+        "comments": 1320,
+        "shares": 613,
         "views": 189743,
-        "reach": 86849,
-        "engagement": 9904,
-        "avg_engagement": 30.7,
-        "wow_change": 62.6
+        "reach": 79153,
+        "engagement": 9524,
+        "avg_engagement": 29.6,
+        "wow_change": 56.4
       },
       {
         "week": "Week 4",
         "week_start": "2026-01-10",
         "week_end": "2026-01-16",
-        "posts": 254,
-        "reactions": 13106,
-        "comments": 1504,
-        "shares": 707,
+        "posts": 253,
+        "reactions": 12971,
+        "comments": 1423,
+        "shares": 691,
         "views": 215238,
-        "reach": 72320,
-        "engagement": 15317,
-        "avg_engagement": 60.3,
-        "wow_change": 54.7
+        "reach": 70946,
+        "engagement": 15085,
+        "avg_engagement": 59.6,
+        "wow_change": 58.4
       }
     ],
     "dayOfWeek": [
@@ -23913,11 +23731,11 @@
       {
         "day": "Wed",
         "day_num": 3,
-        "posts": 155,
-        "total_engagement": 4868,
-        "avg_engagement": 31.4,
+        "posts": 154,
+        "total_engagement": 4488,
+        "avg_engagement": 29.1,
         "views": 85468,
-        "reach": 39256,
+        "reach": 31560,
         "is_best": false
       },
       {
@@ -23943,11 +23761,11 @@
       {
         "day": "Sat",
         "day_num": 6,
-        "posts": 133,
-        "total_engagement": 4070,
-        "avg_engagement": 30.6,
+        "posts": 132,
+        "total_engagement": 3838,
+        "avg_engagement": 29.1,
         "views": 84982,
-        "reach": 37499,
+        "reach": 36125,
         "is_best": false
       }
     ],
@@ -24105,28 +23923,6 @@
         "reach": 4832,
         "engagement": 1003,
         "avg_engagement": 22.3
-      },
-      {
-        "rank": 15,
-        "page_id": "61572881214141",
-        "name": "Juan365",
-        "page_name": "Juan365",
-        "posts": 1,
-        "views": 0,
-        "reach": 7696,
-        "engagement": 380,
-        "avg_engagement": 380.0
-      },
-      {
-        "rank": 16,
-        "page_id": "61580361006776",
-        "name": "Juana Babe Sena",
-        "page_name": "Juana Babe Sena",
-        "posts": 1,
-        "views": 0,
-        "reach": 1374,
-        "engagement": 232,
-        "avg_engagement": 232.0
       }
     ],
     "postTypePerf": [
@@ -24141,12 +23937,12 @@
       },
       {
         "type": "Videos",
-        "count": 490,
+        "count": 488,
         "views": 397547,
-        "reach": 166703,
-        "engagement": 18059,
-        "avg_engagement": 36.9,
-        "avg_views": 811.3
+        "reach": 157633,
+        "engagement": 17447,
+        "avg_engagement": 35.8,
+        "avg_views": 814.6
       },
       {
         "type": "Photos",
@@ -24198,7 +23994,7 @@
       {
         "type": "trend_up",
         "title": "Engagement Growing",
-        "text": "Engagement increased 279.9% from 2025-12 to 2026-01"
+        "text": "Engagement increased 271.3% from 2025-12 to 2026-01"
       },
       {
         "type": "best_day",
@@ -24219,12 +24015,12 @@
   },
   "commentAnalysis": {
     "summary": {
-      "total_posts_with_comments": 677,
-      "posts_analyzed": 677,
+      "total_posts_with_comments": 675,
+      "posts_analyzed": 675,
       "posts_with_self_comment": 102,
       "total_self_comments": 107,
-      "total_organic_comments": 3678,
-      "self_comment_rate": 2.8,
+      "total_organic_comments": 3487,
+      "self_comment_rate": 3.0,
       "posts_with_self_pct": 15.1
     },
     "byPage": [
@@ -24328,24 +24124,6 @@
         "self_rate": 0.0
       },
       {
-        "page_name": "Juan365",
-        "page_id": "61572881214141",
-        "posts_with_comments": 1,
-        "self_comments": 0,
-        "organic_comments": 110,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
-        "page_name": "Juana Babe Sena",
-        "page_id": "61580361006776",
-        "posts_with_comments": 1,
-        "self_comments": 0,
-        "organic_comments": 81,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
         "page_name": "Juankada Jedi",
         "page_id": "858606287343265",
         "posts_with_comments": 43,
@@ -24375,10 +24153,10 @@
     ],
     "effectivity": {
       "avg_engagement_with_self": 37.3,
-      "avg_engagement_without_self": 47.8,
-      "engagement_boost_pct": -21.9,
+      "avg_engagement_without_self": 46.9,
+      "engagement_boost_pct": -20.4,
       "avg_reactions_with": 28.5,
-      "avg_reactions_without": 39.8
+      "avg_reactions_without": 39.4
     },
     "topSelfCommented": [
       {
@@ -24490,7 +24268,7 @@
         "shares": 236,
         "avg_pes": 177.9,
         "rank": 1,
-        "engagement_share": 31.6
+        "engagement_share": 32.1
       },
       {
         "page_id": "305553999318966",
@@ -24507,7 +24285,7 @@
         "shares": 128,
         "avg_pes": 68.4,
         "rank": 2,
-        "engagement_share": 9.0
+        "engagement_share": 9.1
       },
       {
         "page_id": "949473921576703",
@@ -24524,7 +24302,7 @@
         "shares": 281,
         "avg_pes": 47.3,
         "rank": 3,
-        "engagement_share": 7.9
+        "engagement_share": 8.1
       },
       {
         "page_id": "876401548892955",
@@ -24541,7 +24319,7 @@
         "shares": 79,
         "avg_pes": 48.9,
         "rank": 4,
-        "engagement_share": 6.2
+        "engagement_share": 6.3
       },
       {
         "page_id": "874648655739835",
@@ -24558,7 +24336,7 @@
         "shares": 126,
         "avg_pes": 34.8,
         "rank": 5,
-        "engagement_share": 6.1
+        "engagement_share": 6.2
       },
       {
         "page_id": "897960886734144",
@@ -24575,7 +24353,7 @@
         "shares": 103,
         "avg_pes": 23.0,
         "rank": 6,
-        "engagement_share": 6.0
+        "engagement_share": 6.1
       },
       {
         "page_id": "858606287343265",
@@ -24592,7 +24370,7 @@
         "shares": 63,
         "avg_pes": 40.3,
         "rank": 7,
-        "engagement_share": 5.2
+        "engagement_share": 5.3
       },
       {
         "page_id": "874628665737433",
@@ -24609,7 +24387,7 @@
         "shares": 151,
         "avg_pes": 42.1,
         "rank": 8,
-        "engagement_share": 5.2
+        "engagement_share": 5.3
       },
       {
         "page_id": "112088047220992",
@@ -24643,7 +24421,7 @@
         "shares": 79,
         "avg_pes": 23.6,
         "rank": 10,
-        "engagement_share": 3.6
+        "engagement_share": 3.7
       },
       {
         "page_id": "862622980275034",
@@ -24660,7 +24438,7 @@
         "shares": 84,
         "avg_pes": 13.7,
         "rank": 11,
-        "engagement_share": 3.5
+        "engagement_share": 3.6
       },
       {
         "page_id": "924225234111144",
@@ -24677,7 +24455,7 @@
         "shares": 82,
         "avg_pes": 21.2,
         "rank": 12,
-        "engagement_share": 3.2
+        "engagement_share": 3.3
       },
       {
         "page_id": "927370847106754",
@@ -24694,7 +24472,7 @@
         "shares": 126,
         "avg_pes": 27.1,
         "rank": 13,
-        "engagement_share": 3.1
+        "engagement_share": 3.2
       },
       {
         "page_id": "397865533415866",
@@ -24711,41 +24489,7 @@
         "shares": 77,
         "avg_pes": 32.4,
         "rank": 14,
-        "engagement_share": 2.9
-      },
-      {
-        "page_id": "61572881214141",
-        "name": "Juan365",
-        "page_name": "Juan365",
-        "fan_count": null,
-        "posts": 1,
-        "engagement": 380,
-        "avg_engagement": 380.0,
-        "views": 0,
-        "reach": 7696,
-        "reactions": 206,
-        "comments": 110,
-        "shares": 64,
-        "avg_pes": 625.0,
-        "rank": 15,
-        "engagement_share": 1.1
-      },
-      {
-        "page_id": "61580361006776",
-        "name": "Juana Babe Sena",
-        "page_name": "Juana Babe Sena",
-        "fan_count": null,
-        "posts": 1,
-        "engagement": 232,
-        "avg_engagement": 232.0,
-        "views": 0,
-        "reach": 1374,
-        "reactions": 135,
-        "comments": 81,
-        "shares": 16,
-        "avg_pes": 345.0,
-        "rank": 16,
-        "engagement_share": 0.7
+        "engagement_share": 3.0
       }
     ],
     "postTypesByPage": {
@@ -24813,22 +24557,6 @@
           "count": 1,
           "engagement": 13,
           "avg_engagement": 13.0
-        }
-      ],
-      "61572881214141": [
-        {
-          "type": "Videos",
-          "count": 1,
-          "engagement": 380,
-          "avg_engagement": 380.0
-        }
-      ],
-      "61580361006776": [
-        {
-          "type": "Videos",
-          "count": 1,
-          "engagement": 232,
-          "avg_engagement": 232.0
         }
       ],
       "858606287343265": [
@@ -25088,14 +24816,6 @@
       "397865533415866": {
         "type": "Photos",
         "percentage": 62.2
-      },
-      "61572881214141": {
-        "type": "Videos",
-        "percentage": 100.0
-      },
-      "61580361006776": {
-        "type": "Videos",
-        "percentage": 100.0
       },
       "858606287343265": {
         "type": "Videos",
