@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligaya Content Analysis - Caption Deep Dive</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 10px; }
+        .section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .section h2 {
+            color: #f5576c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(245, 87, 108, 0.3);
+        }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        th { background: rgba(245, 87, 108, 0.2); font-weight: 600; }
+        .good { color: #4ade80; }
+        .bad { color: #f87171; }
+        .highlight { background: rgba(245, 87, 108, 0.15); }
+
+        .problem-box {
+            background: linear-gradient(135deg, #f87171 0%, #f5576c 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .solution-box {
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            color: #1a1a2e;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .hook-card {
+            background: rgba(0,0,0,0.3);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 4px solid;
+        }
+        .hook-card.good-hook { border-left-color: #4ade80; }
+        .hook-card.bad-hook { border-left-color: #f87171; }
+        .hook-card .date { font-size: 0.85rem; opacity: 0.7; }
+        .hook-card .caption { font-size: 1.1rem; margin: 8px 0; font-weight: 500; }
+        .hook-card .type {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .hook-card.good-hook .type { background: rgba(74, 222, 128, 0.3); color: #4ade80; }
+        .hook-card.bad-hook .type { background: rgba(248, 113, 113, 0.3); color: #f87171; }
+        .hook-card .analysis { font-size: 0.9rem; opacity: 0.85; margin-top: 8px; }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 20px 0;
+        }
+        .compare-column h3 {
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .compare-column.before h3 { background: rgba(74, 222, 128, 0.2); color: #4ade80; }
+        .compare-column.after h3 { background: rgba(248, 113, 113, 0.2); color: #f87171; }
+
+        .stat-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin: 8px 0;
+        }
+        .stat-card .value { font-weight: 700; font-size: 1.2rem; }
+
+        .insight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        footer { text-align: center; padding: 30px; opacity: 0.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LIGAYA CAPTION ANALYSIS</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">This Week vs Last Week - What Changed?</p>
+            <div style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 20px; display: inline-block; margin-top: 15px;">January 30, 2026</div>
+        </header>
+
+        <!-- Executive Summary for Management -->
+        <section class="section" style="background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%); border: 2px solid #667eea;">
+            <h2 style="color: #667eea; border-bottom-color: rgba(102, 126, 234, 0.3);">📊 EXECUTIVE SUMMARY - For Management</h2>
+
+            <p style="font-size: 1.1rem; margin-bottom: 20px; opacity: 0.9;">
+                Analysis of Ligaya's content performance comparing <strong>This Week (Jan 22-28)</strong> vs <strong>Last Week (Jan 15-21)</strong>
+            </p>
+
+            <table style="margin-bottom: 25px;">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>This Week</th>
+                        <th>Last Week</th>
+                        <th>Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight">
+                        <td><strong>Provocative/Flirty Content</strong></td>
+                        <td class="bad"><strong>0%</strong></td>
+                        <td class="good"><strong>36%</strong></td>
+                        <td class="bad"><strong>↓ 36 pts</strong></td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>Generic Questions</strong></td>
+                        <td class="bad"><strong>50%</strong></td>
+                        <td class="good"><strong>9%</strong></td>
+                        <td class="bad"><strong>↑ 41 pts</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Posting Frequency</td>
+                        <td>0.8/day</td>
+                        <td>3.3/day</td>
+                        <td class="bad">↓ 76%</td>
+                    </tr>
+                    <tr>
+                        <td>Personal Pronouns (ka/mo)</td>
+                        <td class="bad">50%</td>
+                        <td class="good">64%</td>
+                        <td class="bad">↓ 14 pts</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="background: rgba(248, 113, 113, 0.15); padding: 20px; border-radius: 12px; border-left: 4px solid #f87171;">
+                    <h4 style="color: #f87171; margin-bottom: 10px;">❌ ROOT CAUSE</h4>
+                    <p>Caption strategy changed from <strong>provocative/flirty</strong> to <strong>generic/vague</strong>. The content type (videos) is NOT the issue - the hook quality is.</p>
+                </div>
+                <div style="background: rgba(74, 222, 128, 0.15); padding: 20px; border-radius: 12px; border-left: 4px solid #4ade80;">
+                    <h4 style="color: #4ade80; margin-bottom: 10px;">✅ RECOMMENDATION</h4>
+                    <p>Return to <strong>provocative, personal, flirty caption style</strong> that drove engagement last week. Examples: "What if ako nalang yung bebot mo?"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Finding -->
+        <div class="problem-box">
+            <h3>🔥 KEY FINDING: Hook Type Changed</h3>
+            <p style="font-size: 1.1rem; margin-top: 10px;">
+                This week's captions are <strong>generic and vague</strong>.<br>
+                Last week's captions were <strong>provocative, flirty, and personal</strong>.
+            </p>
+        </div>
+
+        <!-- Statistical Comparison -->
+        <section class="section">
+            <h2>📊 Statistical Comparison</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>This Week (Jan 22-28)</th>
+                        <th>Last Week (Jan 15-21)</th>
+                        <th>Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total Posts</td>
+                        <td>8</td>
+                        <td>11</td>
+                        <td class="bad">-27%</td>
+                    </tr>
+                    <tr>
+                        <td>Posts with Questions</td>
+                        <td>88%</td>
+                        <td>73%</td>
+                        <td class="good">+15%</td>
+                    </tr>
+                    <tr>
+                        <td>Personal Pronouns (ka/ko/mo)</td>
+                        <td class="bad">50%</td>
+                        <td class="good">64%</td>
+                        <td class="bad">-14%</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>Provocative/Flirty Content</strong></td>
+                        <td class="bad"><strong>0%</strong></td>
+                        <td class="good"><strong>36%</strong></td>
+                        <td class="bad"><strong>-36%</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Average Hook Length</td>
+                        <td>4.4 words</td>
+                        <td>5.2 words</td>
+                        <td class="bad">-15%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box">
+                <h4>💡 The Missing Ingredient</h4>
+                <p>Last week had <strong>36% provocative/flirty content</strong>. This week has <strong>0%</strong>.
+                This type of content drives the highest engagement on entertainment pages.</p>
+            </div>
+        </section>
+
+        <!-- Hook Type Breakdown -->
+        <section class="section">
+            <h2>🎯 Hook Type Breakdown</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hook Type</th>
+                        <th>This Week</th>
+                        <th>Last Week</th>
+                        <th>Drives Engagement?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Provocative/Flirty</td>
+                        <td class="bad">0%</td>
+                        <td class="good">36%</td>
+                        <td class="good">✓ HIGH - Comments & shares</td>
+                    </tr>
+                    <tr>
+                        <td>Relatable ("sino naka relate?")</td>
+                        <td class="bad">0%</td>
+                        <td class="good">18%</td>
+                        <td class="good">✓ HIGH - Shares</td>
+                    </tr>
+                    <tr>
+                        <td>Curiosity Builder</td>
+                        <td>12%</td>
+                        <td>27%</td>
+                        <td class="good">✓ HIGH - Watch time</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Generic Question</td>
+                        <td class="bad">50%</td>
+                        <td class="good">9%</td>
+                        <td class="bad">✗ LOW - Weak engagement</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Vague/Incomplete</td>
+                        <td class="bad">25%</td>
+                        <td class="good">0%</td>
+                        <td class="bad">✗ LOW - Confusing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Side by Side Comparison -->
+        <section class="section">
+            <h2>📝 Caption Comparison: This Week vs Last Week</h2>
+
+            <div class="comparison-grid">
+                <div class="compare-column after">
+                    <h3>❌ THIS WEEK (Jan 22-28)</h3>
+
+                    <div class="hook-card bad-hook">
+                        <div class="date">Jan 28</div>
+                        <div class="caption">"ganito ba mag shake?"</div>
+                        <span class="type">Generic</span>
+                        <div class="analysis">Asking about dance style - no emotional trigger</div>
+                    </div>
+
+                    <div class="hook-card bad-hook">
+                        <div class="date">Jan 27</div>
+                        <div class="caption">"pwede na ba to?"</div>
+                        <span class="type">Vague</span>
+                        <div class="analysis">Unclear context - no curiosity builder</div>
+                    </div>
+
+                    <div class="hook-card bad-hook">
+                        <div class="date">Jan 26</div>
+                        <div class="caption">"Birthday treat for myself, coz who will?"</div>
+                        <span class="type">Self-Focused</span>
+                        <div class="analysis">About herself, not engaging audience</div>
+                    </div>
+
+                    <div class="hook-card bad-hook">
+                        <div class="date">Jan 24</div>
+                        <div class="caption">"What's your pick?"</div>
+                        <span class="type">Generic</span>
+                        <div class="analysis">Basic question, no context</div>
+                    </div>
+
+                    <div class="hook-card bad-hook">
+                        <div class="date">Jan 23</div>
+                        <div class="caption">"lalabas ka pa ba?"</div>
+                        <span class="type">Vague</span>
+                        <div class="analysis">Unclear context, weak hook</div>
+                    </div>
+
+                    <div class="hook-card bad-hook">
+                        <div class="date">Jan 22</div>
+                        <div class="caption">"Saksakan ng?"</div>
+                        <span class="type">Incomplete</span>
+                        <div class="analysis">Unfinished thought, confusing</div>
+                    </div>
+                </div>
+
+                <div class="compare-column before">
+                    <h3>✅ LAST WEEK (Jan 15-21)</h3>
+
+                    <div class="hook-card good-hook">
+                        <div class="date">Jan 16</div>
+                        <div class="caption">"What if ako nalang yung bebot mo?"</div>
+                        <span class="type">Provocative</span>
+                        <div class="analysis">Flirty roleplay fantasy - high engagement</div>
+                    </div>
+
+                    <div class="hook-card good-hook">
+                        <div class="date">Jan 15</div>
+                        <div class="caption">"Kung ako ba teacher mo papasok ka?"</div>
+                        <span class="type">Provocative</span>
+                        <div class="analysis">Teacher roleplay - drives comments</div>
+                    </div>
+
+                    <div class="hook-card good-hook">
+                        <div class="date">Jan 18</div>
+                        <div class="caption">"Baby lika?"</div>
+                        <span class="type">Provocative</span>
+                        <div class="analysis">Direct flirty invite - simple but effective</div>
+                    </div>
+
+                    <div class="hook-card good-hook">
+                        <div class="date">Jan 18</div>
+                        <div class="caption">"Maganda ba yung view?"</div>
+                        <span class="type">Suggestive</span>
+                        <div class="analysis">Double meaning - creates curiosity</div>
+                    </div>
+
+                    <div class="hook-card good-hook">
+                        <div class="date">Jan 21</div>
+                        <div class="caption">"Diring diri yarn? sino naka relate?"</div>
+                        <span class="type">Relatable</span>
+                        <div class="analysis">Creates connection + asks for response</div>
+                    </div>
+
+                    <div class="hook-card good-hook">
+                        <div class="date">Jan 20</div>
+                        <div class="caption">"Bigyan ko ng kulay yung mundo mo?"</div>
+                        <span class="type">Flirty/Poetic</span>
+                        <div class="analysis">Romantic, creates emotional response</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Changed Summary -->
+        <section class="section">
+            <h2>📋 Summary: What Changed</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Last Week (Working)</th>
+                        <th>This Week (Not Working)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Hook Style</strong></td>
+                        <td class="good">Provocative, flirty, personal</td>
+                        <td class="bad">Generic, vague, self-focused</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Audience Connection</strong></td>
+                        <td class="good">"ako nalang yung bebot MO"</td>
+                        <td class="bad">"treat for MYSELF"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Emotional Trigger</strong></td>
+                        <td class="good">Flirty, curious, playful</td>
+                        <td class="bad">Neutral, no emotion</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Context</strong></td>
+                        <td class="good">Clear scenario/roleplay</td>
+                        <td class="bad">Vague, unclear purpose</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Call to Engage</strong></td>
+                        <td class="good">"sino naka relate?" "lika?"</td>
+                        <td class="bad">Just questions with no context</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Solution -->
+        <section class="section solution-box">
+            <h2 style="color: #1a1a2e; border-bottom-color: rgba(0,0,0,0.2);">✅ WHAT TO DO NOW</h2>
+
+            <ol style="margin: 20px 0 0 20px; font-size: 1.05rem;">
+                <li style="margin-bottom: 15px;">
+                    <strong>BRING BACK PROVOCATIVE HOOKS</strong><br>
+                    <span style="opacity: 0.8;">Use flirty, playful captions like "What if ako nalang...", "Kung ako ba..."</span>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>MAKE IT ABOUT THE AUDIENCE, NOT SELF</strong><br>
+                    <span style="opacity: 0.8;">Change "for myself" to "for YOU" - use "mo", "ka", "kayo"</span>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>ADD EMOTIONAL TRIGGERS</strong><br>
+                    <span style="opacity: 0.8;">Create curiosity, flirtation, or relatability - not just neutral questions</span>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>GIVE CONTEXT TO QUESTIONS</strong><br>
+                    <span style="opacity: 0.8;">"Saksakan ng?" → "Saksakan ng ganda diba? Sino relate?" (complete + relatable)</span>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <strong>USE ROLEPLAY SCENARIOS</strong><br>
+                    <span style="opacity: 0.8;">"Kung ako ba teacher mo...", "What if ako nalang..." - these drive imagination</span>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Example Rewrites -->
+        <section class="section">
+            <h2>✏️ Caption Rewrite Examples</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Original (This Week)</th>
+                        <th style="width: 60%;">Better Version</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="bad">"ganito ba mag shake?"</td>
+                        <td class="good">"Kaya mo ba to? Sabayan mo ako! 😏 #dancechallenge"</td>
+                    </tr>
+                    <tr>
+                        <td class="bad">"pwede na ba to?"</td>
+                        <td class="good">"Bet mo ba to? O gusto mo iba? 🤭 Comment ka!"</td>
+                    </tr>
+                    <tr>
+                        <td class="bad">"Birthday treat for myself"</td>
+                        <td class="good">"Birthday ko today! Ano regalo mo sakin? 🎂😏"</td>
+                    </tr>
+                    <tr>
+                        <td class="bad">"What's your pick?"</td>
+                        <td class="good">"Kung pipili ka, ako o siya? Be honest! 👀"</td>
+                    </tr>
+                    <tr>
+                        <td class="bad">"Saksakan ng?"</td>
+                        <td class="good">"Saksakan ng ganda diba? Sino naka-relate? 😆"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Bottom Line -->
+        <section class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%); border: 2px solid #f5576c; text-align: center; padding: 40px;">
+            <h2 style="border: none; margin-bottom: 25px;">💡 THE BOTTOM LINE</h2>
+
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                <strong>This week's captions are "safe" and generic.</strong>
+            </p>
+
+            <p style="font-size: 1.1rem; opacity: 0.9; max-width: 700px; margin: 0 auto 25px;">
+                Last week worked because of:<br><br>
+                🔥 <strong>Provocative hooks</strong> ("ako nalang yung bebot mo?")<br>
+                💕 <strong>Flirty roleplay</strong> ("Kung ako ba teacher mo...")<br>
+                🤝 <strong>Audience connection</strong> ("sino naka relate?")<br>
+                😏 <strong>Playful teasing</strong> ("Baby lika?")
+            </p>
+
+            <p style="font-size: 1.3rem; color: #4ade80;">
+                <strong>Solution: Go back to provocative, personal, flirty content.</strong>
+            </p>
+        </section>
+
+        <footer>
+            <p>Report Generated: January 30, 2026</p>
+            <p>JuanStudio Analytics</p>
+        </footer>
+    </div>
+</body>
+</html>
