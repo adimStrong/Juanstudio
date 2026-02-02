@@ -37,7 +37,7 @@ from screenshot_capture import capture_screenshot_sync, capture_screenshots_sync
 BOT_TOKEN = "8528398122:AAG9o7TOPrGxMEv_1eDIoiMO1cvTYq4Um7s"
 
 # Facebook Graph API settings
-GRAPH_API_VERSION = "v18.0"
+GRAPH_API_VERSION = "v21.0"
 GRAPH_API_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
 POST_FIELDS = ["id", "created_time", "reactions.summary(true)", "comments.summary(true)", "shares"]
 
@@ -400,7 +400,7 @@ def fetch_api_posts_for_date(tokens: dict, target_date: str) -> list:
     # Extended fields to get full engagement data
     fields = [
         "id", "message", "created_time", "permalink_url",
-        "shares", "reactions.summary(true)", "comments.summary(true)",
+        "shares", "reactions.summary(total_count)", "comments.summary(total_count)",
         "attachments{type,media_type}"
     ]
 
