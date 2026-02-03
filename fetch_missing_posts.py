@@ -64,18 +64,18 @@ def get_existing_post_ids():
     return ids
 
 
-def fetch_posts_from_api(token, page_id, page_name, days_back=7):
+def fetch_posts_from_api(token, page_id, page_name, days_back=14):
     """Fetch recent posts from FB API."""
     since_date = datetime.now() - timedelta(days=days_back)
     fields = "id,message,created_time,permalink_url,reactions.summary(total_count),comments.summary(total_count),shares"
 
     all_posts = []
     url = f"https://graph.facebook.com/v21.0/{page_id}/posts"
+    # Note: since filter can cause inconsistent results, using limit=100 to get recent posts
     params = {
         "access_token": token,
         "fields": fields,
-        "limit": 100,
-        "since": int(since_date.timestamp())
+        "limit": 100
     }
 
     while True:
