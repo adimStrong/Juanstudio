@@ -158,13 +158,26 @@ export const getDailyEngagement = async (days = 30, pageId = null, dateRange = {
   return api.get(`/stats/daily?${params}`).then(res => res.data);
 };
 
-export const getPostTypeStats = async (pageId = null) => {
+export const getPostTypeStats = async (pageId = null, dateRange = {}) => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
+    const { startDate, endDate } = dateRange;
+
     // Calculate from posts to include comments
     let posts = data.posts || [];
     if (pageId) {
       posts = posts.filter(p => p.page_id === pageId);
+    }
+
+    // Apply date filter
+    if (startDate || endDate) {
+      posts = posts.filter(p => {
+        const postDate = p.publish_time?.slice(0, 10);
+        if (!postDate) return true;
+        if (startDate && postDate < startDate) return false;
+        if (endDate && postDate > endDate) return false;
+        return true;
+      });
     }
 
     // Aggregate by post type
@@ -201,10 +214,36 @@ export const getPostTypeStats = async (pageId = null) => {
   return api.get(`/stats/post-types${params}`).then(res => res.data);
 };
 
-export const getTopPosts = async (limit = 10, metric = 'engagement', pageId = null) => {
+export const getTopPosts = async (limit = 10, metric = 'engagement', pageId = null, dateRange = {}) => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
-    // Support per-page top posts filtering
+    const { startDate, endDate } = dateRange;
+
+    // If date range specified, calculate from all posts
+    if (startDate || endDate) {
+      let posts = (data.posts || []).map(p => normalizePostFields(normalizePostType(p)));
+
+      // Filter by page if specified
+      if (pageId) {
+        posts = posts.filter(p => p.page_id === pageId);
+      }
+
+      // Apply date filter
+      posts = posts.filter(p => {
+        const postDate = p.publish_time?.slice(0, 10);
+        if (!postDate) return true;
+        if (startDate && postDate < startDate) return false;
+        if (endDate && postDate > endDate) return false;
+        return true;
+      });
+
+      // Sort by metric and return top N
+      const sortKey = metric === 'engagement' ? 'engagement' : metric;
+      posts.sort((a, b) => (b[sortKey] || 0) - (a[sortKey] || 0));
+      return posts.slice(0, limit);
+    }
+
+    // No date range - use pre-calculated top posts
     let posts;
     if (pageId && data.topPosts.byPage && data.topPosts.byPage[pageId]) {
       posts = data.topPosts.byPage[pageId];
@@ -348,22 +387,34 @@ export const getOverlaps = async () => {
   return [];
 };
 
-export const getDailyByPage = async (days = 60) => {
+export const getDailyByPage = async (days = 60, dateRange = {}) => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
+    const { startDate, endDate } = dateRange;
     const pages = data.pages || [];
     const byPage = data.daily.byPage || {};
-    const allDaily = data.daily.all || [];
+    let allDaily = data.daily.all || [];
 
-    // Create a map of all dates from the last N days (no T+2 filter)
+    // Apply date filter if specified
+    if (startDate || endDate) {
+      allDaily = filterByDateRange(allDaily, startDate, endDate);
+    } else {
+      allDaily = allDaily.slice(-days);
+    }
+
+    // Create a map of all dates
     const dateMap = {};
-    allDaily.slice(-days).forEach(entry => {
+    allDaily.forEach(entry => {
       dateMap[entry.date] = { date: entry.date };
     });
 
     // Add each page's posts to the date map
     pages.forEach(page => {
-      const pageDaily = byPage[page.page_id] || [];
+      let pageDaily = byPage[page.page_id] || [];
+      // Apply date filter to page data as well
+      if (startDate || endDate) {
+        pageDaily = filterByDateRange(pageDaily, startDate, endDate);
+      }
       pageDaily.forEach(entry => {
         if (dateMap[entry.date]) {
           // Use short page name (e.g., "Star" instead of "JuanKada Star")
@@ -410,10 +461,11 @@ export const getDailyByPage = async (days = 60) => {
   }
 };
 
-export const getTimeSeries = async () => {
+export const getTimeSeries = async (dateRange = {}) => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
-    return data.timeSeries || {
+    const { startDate, endDate } = dateRange;
+    const timeSeries = data.timeSeries || {
       monthly: [],
       weekly: [],
       dayOfWeek: [],
@@ -421,6 +473,17 @@ export const getTimeSeries = async () => {
       postTypePerf: [],
       insights: []
     };
+
+    // If date range specified, filter the time series data
+    if (startDate || endDate) {
+      return {
+        ...timeSeries,
+        monthly: filterByDateRange(timeSeries.monthly || [], startDate, endDate, 'month'),
+        weekly: filterByDateRange(timeSeries.weekly || [], startDate, endDate, 'week'),
+      };
+    }
+
+    return timeSeries;
   }
   // For dev, calculate from daily data (simplified)
   return api.get('/stats/time-series').then(res => res.data);

@@ -398,10 +398,11 @@ def fetch_api_posts_for_date(tokens: dict, target_date: str) -> list:
     target_end_utc = target_start_utc + timedelta(days=1)
 
     # Extended fields to get full engagement data
+    # Note: attachments field removed - causes permission errors with some tokens
+    # Note: since/until params removed - causes permission errors, filter client-side instead
     fields = [
         "id", "message", "created_time", "permalink_url",
-        "shares", "reactions.summary(total_count)", "comments.summary(total_count)",
-        "attachments{type,media_type}"
+        "shares", "reactions.summary(total_count)", "comments.summary(total_count)"
     ]
 
     for page_name, page_data in tokens.items():
@@ -414,11 +415,11 @@ def fetch_api_posts_for_date(tokens: dict, target_date: str) -> list:
         video_views = fetch_video_views(page_id, token, target_date)
 
         url = f"{GRAPH_API_BASE}/{page_id}/posts"
+        # Note: Removed since/until params - they cause permission errors
+        # Fetch more posts and filter by date client-side instead
         params = {
             "access_token": token,
             "fields": ",".join(fields),
-            "since": int(target_start_utc.timestamp()),
-            "until": int(target_end_utc.timestamp()),
             "limit": 100
         }
 

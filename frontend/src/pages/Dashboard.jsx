@@ -40,11 +40,11 @@ export default function Dashboard() {
         const [statsData, dailyData, postTypeData, topPostsData, pageData, timeSeriesData, dailyByPageData] = await Promise.all([
           getStats(selectedPage, dateRange),
           getDailyEngagement(60, selectedPage, dateRange),
-          getPostTypeStats(selectedPage),
-          getTopPosts(5, 'engagement', selectedPage),
-          getPages(),
-          getTimeSeries(),
-          getDailyByPage(60),
+          getPostTypeStats(selectedPage, dateRange),
+          getTopPosts(5, 'engagement', selectedPage, dateRange),
+          getPages(dateRange),
+          getTimeSeries(dateRange),
+          getDailyByPage(60, dateRange),
         ]);
         setStats(statsData);
         setDailyData(dailyData);
