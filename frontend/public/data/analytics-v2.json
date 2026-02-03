@@ -1,20 +1,20 @@
 {
   "stats": {
     "all": {
-      "total_posts": 1298,
-      "total_pages": 17,
+      "total_posts": 1276,
+      "total_pages": 16,
       "all_pages": 16,
-      "total_reactions": 55352,
-      "total_comments": 4443,
-      "total_shares": 1959,
-      "total_engagement": 61754,
-      "total_pes": 61251.0,
-      "total_views": 834509,
+      "total_reactions": 55206,
+      "total_comments": 4429,
+      "total_shares": 1927,
+      "total_engagement": 61562,
+      "total_pes": 60981.0,
+      "total_views": 831153,
       "total_reach": 449486,
-      "avg_engagement": 47.6,
-      "avg_pes": 47.2,
-      "avg_views": 642.9,
-      "avg_reach": 346.3,
+      "avg_engagement": 48.2,
+      "avg_pes": 47.8,
+      "avg_views": 651.4,
+      "avg_reach": 352.3,
       "date_range_start": "2025-11-25",
       "date_range_end": "2026-02-03"
     },
@@ -90,24 +90,6 @@
         "avg_reach": 61.1,
         "date_range_start": "2025-12-21",
         "date_range_end": "2026-02-03"
-      },
-      "839729525890738": {
-        "total_posts": 22,
-        "total_pages": 1,
-        "all_pages": 1,
-        "total_reactions": 146,
-        "total_comments": 14,
-        "total_shares": 32,
-        "total_engagement": 192,
-        "total_pes": 270.0,
-        "total_views": 3356,
-        "total_reach": 0,
-        "avg_engagement": 8.7,
-        "avg_pes": 12.3,
-        "avg_views": 152.5,
-        "avg_reach": 0.0,
-        "date_range_start": "2026-01-29",
-        "date_range_end": "2026-02-02"
       },
       "858606287343265": {
         "total_posts": 80,
@@ -589,13 +571,13 @@
     "all": [
       {
         "post_type": "Videos",
-        "count": 638,
-        "reactions": 40907,
-        "comments": 2641,
-        "shares": 1009,
-        "total_engagement": 44557,
-        "avg_engagement": 69.8,
-        "avg_pes": 77.0
+        "count": 616,
+        "reactions": 40761,
+        "comments": 2627,
+        "shares": 977,
+        "total_engagement": 44365,
+        "avg_engagement": 72.0,
+        "avg_pes": 79.3
       },
       {
         "post_type": "Photos",
@@ -795,18 +777,6 @@
           "total_engagement": 50,
           "avg_engagement": 50.0,
           "avg_pes": 80.0
-        }
-      ],
-      "839729525890738": [
-        {
-          "post_type": "Videos",
-          "count": 22,
-          "reactions": 146,
-          "comments": 14,
-          "shares": 32,
-          "total_engagement": 192,
-          "avg_engagement": 8.7,
-          "avg_pes": 12.3
         }
       ],
       "858606287343265": [
@@ -1855,12 +1825,12 @@
       },
       {
         "date": "2026-01-29",
-        "posts": 50,
-        "reactions": 5368,
-        "comments": 157,
-        "shares": 49,
-        "engagement": 5574,
-        "pes": 5809.0,
+        "posts": 43,
+        "reactions": 5333,
+        "comments": 150,
+        "shares": 31,
+        "engagement": 5514,
+        "pes": 5706.0,
         "views": 1289,
         "reach": 554
       },
@@ -1877,35 +1847,35 @@
       },
       {
         "date": "2026-01-31",
-        "posts": 69,
-        "reactions": 4697,
-        "comments": 142,
-        "shares": 91,
-        "engagement": 4930,
-        "pes": 5254.0,
+        "posts": 64,
+        "reactions": 4657,
+        "comments": 140,
+        "shares": 83,
+        "engagement": 4880,
+        "pes": 5186.0,
         "views": 1581,
         "reach": 753
       },
       {
         "date": "2026-02-01",
-        "posts": 63,
-        "reactions": 1278,
-        "comments": 76,
-        "shares": 55,
-        "engagement": 1409,
-        "pes": 1595.0,
+        "posts": 57,
+        "reactions": 1234,
+        "comments": 72,
+        "shares": 51,
+        "engagement": 1357,
+        "pes": 1531.0,
         "views": 2007,
         "reach": 1269
       },
       {
         "date": "2026-02-02",
-        "posts": 43,
-        "reactions": 1155,
-        "comments": 122,
-        "shares": 55,
-        "engagement": 1332,
-        "pes": 1564.0,
-        "views": 29464,
+        "posts": 39,
+        "reactions": 1128,
+        "comments": 121,
+        "shares": 53,
+        "engagement": 1302,
+        "pes": 1529.0,
+        "views": 26108,
         "reach": 0
       },
       {
@@ -3158,52 +3128,6 @@
           "engagement": 2,
           "pes": 2.0,
           "views": 0,
-          "reach": 0
-        }
-      ],
-      "839729525890738": [
-        {
-          "date": "2026-01-29",
-          "posts": 7,
-          "reactions": 35,
-          "comments": 7,
-          "shares": 18,
-          "engagement": 60,
-          "pes": 103.0,
-          "views": 0,
-          "reach": 0
-        },
-        {
-          "date": "2026-01-31",
-          "posts": 5,
-          "reactions": 40,
-          "comments": 2,
-          "shares": 8,
-          "engagement": 50,
-          "pes": 68.0,
-          "views": 0,
-          "reach": 0
-        },
-        {
-          "date": "2026-02-01",
-          "posts": 6,
-          "reactions": 44,
-          "comments": 4,
-          "shares": 4,
-          "engagement": 52,
-          "pes": 64.0,
-          "views": 0,
-          "reach": 0
-        },
-        {
-          "date": "2026-02-02",
-          "posts": 4,
-          "reactions": 27,
-          "comments": 1,
-          "shares": 2,
-          "engagement": 30,
-          "pes": 35.0,
-          "views": 3356,
           "reach": 0
         }
       ],
@@ -8345,148 +8269,6 @@
           "pes": 52.0
         }
       ],
-      "839729525890738": [
-        {
-          "post_id": "122118175209067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "\ud835\uddde\ud835\uddf6\ud835\uddf2\ud835\uddf3\ud835\uddf2\ud835\uddff \ud835\udde5\ud835\uddee\ud835\ude03\ud835\uddf2\ud835\uddfb\ud835\uddee running the show like a true \ud835\uddf3\ud835\uddf9\ud835\uddfc\ud835\uddfc\ud835\uddff \ud835\uddf4\ud835\uddf2\ud835\uddfb\ud835\uddf2\ud835\uddff\ud835\uddee\ud835\uddf9 \ud83e\udde0\ud83c\udfc0\n\nIf you love smart basketball, this is your guy drop a \ud83d\udd25 if you\u2019re watching!\n\n#KieferRavena #FloorGeneral #SmartPlays #BasketballIQ #GameOn ",
-          "post_type": "Videos",
-          "publish_time": "2026-01-29T08:00:53+0000",
-          "permalink": "https://www.facebook.com/reel/1585753395881392/",
-          "reactions": 10,
-          "comments": 4,
-          "shares": 5,
-          "engagement": 19,
-          "pes": 33.0
-        },
-        {
-          "post_id": "122118469773067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "\ud835\uddde\ud835\uddee\ud835\uddf6 \ud835\udde6\ud835\uddfc\ud835\ude01\ud835\ude01\ud835\uddfc \ud835\uddf6\ud835\ude00 \ud835\uddf9\ud835\uddf2\ud835\ude03\ud835\uddf2\ud835\uddf9\ud835\uddf6\ud835\uddfb\ud835\uddf4 \ud835\ude02\ud835\uddfd! Smart moves, sharper plays don\u2019t miss his rise! \ud83d\udcaa\ud83c\udfc0\n\n\ud83d\udc49 Follow now for every highlight!\n\n#KaiSotto #NextLevel #PHBasketball #JuanSports #JuanCrew",
-          "post_type": "Videos",
-          "publish_time": "2026-02-01T02:57:11+0000",
-          "permalink": "https://www.facebook.com/reel/1225850262254482/",
-          "reactions": 12,
-          "comments": 3,
-          "shares": 1,
-          "engagement": 16,
-          "pes": 21.0
-        },
-        {
-          "post_id": "122118392757067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "\ud835\udde7\ud835\uddf5\ud835\uddf6\ud835\uddff\ud835\uddf1\ud835\ude06 \ud835\udde5\ud835\uddee\ud835\ude03\ud835\uddf2\ud835\uddfb\ud835\uddee\u2728 Sa bawat practice at laro, lagi siyang \ud835\ude00\ud835\uddf5\ud835\uddf6\ud835\uddfb\ud835\uddf6\ud835\uddfb\ud835\uddf4 proof na \ud835\uddf1\ud835\uddf2\ud835\uddf1\ud835\uddf6\ud835\uddf0\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb pays! \ud83d\udcaa\ud83c\udfc0\n\nCheer for the star follow for more court action! \ud83d\udc40\ud83d\udd25\n\n#ThirdyRavena #DedicationPays #BasketballStar #CourtVib",
-          "post_type": "Videos",
-          "publish_time": "2026-01-31T14:01:06+0000",
-          "permalink": "https://www.facebook.com/reel/1224862489042922/",
-          "reactions": 12,
-          "comments": 2,
-          "shares": 1,
-          "engagement": 15,
-          "pes": 19.0
-        },
-        {
-          "post_id": "122118360441067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "\ud835\udddd\ud835\udde2\ud835\uddde\ud835\udddc\u0106 \ud835\udde0\ud835\uddd4\ud835\udde6\ud835\udde7\ud835\uddd8\ud835\udde5\ud835\uddd6\ud835\udddf\ud835\uddd4\ud835\udde6\ud835\udde6! \ud83e\udde0\n\n\ud83d\udc49 Drop a \ud83d\udd25 kung unstoppable!\n\n#NikolaJokic #NBA #JuanSports #JuanCrew",
-          "post_type": "Videos",
-          "publish_time": "2026-01-31T06:25:15+0000",
-          "permalink": "https://www.facebook.com/122118710235067884/posts/122118360441067884",
-          "reactions": 14,
-          "comments": 0,
-          "shares": 1,
-          "engagement": 15,
-          "pes": 17.0
-        },
-        {
-          "post_id": "122118487713067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "Watch \ud835\udde5\ud835\uddee\ud835\ude06 \ud835\udde3\ud835\uddee\ud835\uddff\ud835\uddf8\ud835\ude00 \ud835\udddd\ud835\uddff. in action! Mature moves, clutch moments, pure talent. \ud83d\udd25\n\n\ud83d\udc49 Save, share, and join the hype!\n\n#RayParksJr #BasketballPH #RisingStar #JuanSports #JuanCrew",
-          "post_type": "Videos",
-          "publish_time": "2026-02-01T07:00:41+0000",
-          "permalink": "https://www.facebook.com/reel/1567472297809075/",
-          "reactions": 12,
-          "comments": 1,
-          "shares": 1,
-          "engagement": 14,
-          "pes": 17.0
-        },
-        {
-          "post_id": "122118157101067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "\ud835\uddde\ud835\uddee\ud835\uddf6 \ud835\udde6\ud835\uddfc\ud835\ude01\ud835\ude01\ud835\uddfc \ud835\uddf6\ud835\ude00 \ud835\uddfc\ud835\uddfb \ud835\uddee \ud835\uddfa\ud835\uddf6\ud835\ude00\ud835\ude00\ud835\uddf6\ud835\uddfc\ud835\uddfb. \ud83c\uddf5\ud83c\udded\ud83c\udfc0\n\nDon\u2019t blink the grind is getting serious. Tap in and show your support! \ud83d\udcaa\ud83d\udd25\n\n#KaiSotto #PusoNgPinoy #RiseUp #GameTime #BasketballJourney #JuanSports #JuanCrew",
-          "post_type": "Videos",
-          "publish_time": "2026-01-29T04:31:14+0000",
-          "permalink": "https://www.facebook.com/reel/1475303523960026/",
-          "reactions": 3,
-          "comments": 1,
-          "shares": 9,
-          "engagement": 13,
-          "pes": 32.0
-        },
-        {
-          "post_id": "122118597993067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "Game time means \ud835\udde5\ud835\uddee\ud835\ude06 \ud835\udde3\ud835\uddee\ud835\uddff\ud835\uddf8\ud835\ude00 \ud835\udddd\ud835\uddff. takes over! \ud83d\udd25\n\n\ud83d\udc49 Follow for nonstop highlights\n\n#RayParksJr #PHBasketball #ClutchPlayer #JuanSports #GameChanger",
-          "post_type": "Videos",
-          "publish_time": "2026-02-02T10:00:57+0000",
-          "permalink": "https://www.facebook.com/reel/2722369868142306/",
-          "reactions": 12,
-          "comments": 0,
-          "shares": 0,
-          "engagement": 12,
-          "pes": 12.0
-        },
-        {
-          "post_id": "122118503151067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "\ud835\uddda\ud835\uddee\ud835\uddfa\ud835\uddf2 \ud835\udff2 \ud835\udddb\ud835\uddf2\ud835\uddee\ud835\ude01! \ud83d\udd25\nTNT \ud83c\udd9a Beermen  lahat sa court, walang atrasan! \ud83c\udfc0\ud83d\udca5\n\n Comment, tag tropa, hit \u2665\ufe0f, i-share, at hype natin together!\n\n#FinalsGame6 #TNTvsBeermen #PBA #JuanSports #JuanCrew #GameTime #AllOut",
-          "post_type": "Videos",
-          "publish_time": "2026-02-01T10:00:17+0000",
-          "permalink": "https://www.facebook.com/122118710235067884/posts/122118503151067884",
-          "reactions": 10,
-          "comments": 0,
-          "shares": 1,
-          "engagement": 11,
-          "pes": 13.0
-        },
-        {
-          "post_id": "122118578379067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "Your \ud835\udde5\ud835\uddee\ud835\uddfa\ud835\uddfc\ud835\uddfb \ud835\uddd9\ud835\uddf2\ud835\uddff\ud835\uddfb\ud835\uddee\ud835\uddfb\ud835\uddf1\ud835\uddf2\ud835\ude07 \ud835\uddd9\ud835\uddf6\ud835\uddfb\ud835\uddee\ud835\uddf9\ud835\ude00 \ud835\udde0\ud835\udde9\ud835\udde3 and tonight\u2019s Daily Fantasy Best Player \ud835\udddd\ud835\udde8\ud835\udde1\ud835\uddd8 \ud835\udde0\ud835\uddd4\ud835\udde5 \ud835\uddd9\ud835\uddd4\ud835\udddd\ud835\uddd4\ud835\udde5\ud835\uddd7\ud835\udde2!\ud83c\udfc6\n\nHit \u2665\ufe0f, at i-share ang panalo vibes!\n\n#JuneMarFajardo #FinalsMVP #PBA #BestPlayer #GameTime #JuanSports #Jua",
-          "post_type": "Videos",
-          "publish_time": "2026-02-02T05:08:48+0000",
-          "permalink": "https://www.facebook.com/122118710235067884/posts/122118578379067884",
-          "reactions": 8,
-          "comments": 1,
-          "shares": 1,
-          "engagement": 10,
-          "pes": 13.0
-        },
-        {
-          "post_id": "122118379395067884",
-          "page_id": "839729525890738",
-          "page_name": null,
-          "title": "\ud835\udfef\ud835\udde5\ud835\uddd7\ud835\uddec \ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udde1\ud835\uddd4 & \ud835\uddde\ud835\udde2\ud835\uddd5\ud835\uddd8 \ud835\udde3\ud835\uddd4\ud835\udde5\ud835\uddd4\ud835\udde6 \ud83c\udfc0\ud83d\udca5\nSabay nag-training, handa sa next big challenge! \ud83d\udd25\n\nDon\u2019t miss their moves follow for more! \ud83d\udc40\n\n#ThirdyRavena #KobeParas #NextChallenge #BasketballHustle #CourtGoals",
-          "post_type": "Videos",
-          "publish_time": "2026-01-31T11:01:27+0000",
-          "permalink": "https://www.facebook.com/reel/1413800910210357/",
-          "reactions": 6,
-          "comments": 0,
-          "shares": 2,
-          "engagement": 8,
-          "pes": 12.0
-        }
-      ],
       "858606287343265": [
         {
           "post_id": "122118788145133214",
@@ -10723,22 +10505,6 @@
       "pes": 35.0
     },
     {
-      "post_id": "122118597993067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "Game time means \ud835\udde5\ud835\uddee\ud835\ude06 \ud835\udde3\ud835\uddee\ud835\uddff\ud835\uddf8\ud835\ude00 \ud835\udddd\ud835\uddff. takes over! \ud83d\udd25\n\n\ud83d\udc49 Follow for nonstop highlights\n\n#RayParksJr #PHBasketball #ClutchPlayer #JuanSports #GameChanger",
-      "post_type": "Videos",
-      "publish_time": "2026-02-02T10:00:57+0000",
-      "permalink": "https://www.facebook.com/reel/2722369868142306/",
-      "reactions": 12,
-      "comments": 0,
-      "shares": 0,
-      "views": 2548,
-      "reach": 0,
-      "engagement": 12,
-      "pes": 12.0
-    },
-    {
       "post_id": "122124542775141442",
       "page_id": "882499904951305",
       "page_name": "Juankada Lance",
@@ -10899,38 +10665,6 @@
       "pes": 5.0
     },
     {
-      "post_id": "122118578379067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "Your \ud835\udde5\ud835\uddee\ud835\uddfa\ud835\uddfc\ud835\uddfb \ud835\uddd9\ud835\uddf2\ud835\uddff\ud835\uddfb\ud835\uddee\ud835\uddfb\ud835\uddf1\ud835\uddf2\ud835\ude07 \ud835\uddd9\ud835\uddf6\ud835\uddfb\ud835\uddee\ud835\uddf9\ud835\ude00 \ud835\udde0\ud835\udde9\ud835\udde3 and tonight\u2019s Daily Fantasy Best Player \ud835\udddd\ud835\udde8\ud835\udde1\ud835\uddd8 \ud835\udde0\ud835\uddd4\ud835\udde5 \ud835\uddd9\ud835\uddd4\ud835\udddd\ud835\uddd4\ud835\udde5\ud835\uddd7\ud835\udde2!\ud83c\udfc6\n\nHit \u2665\ufe0f, at i-share ang panalo vibes!\n\n#JuneMarFajardo #FinalsMVP #PBA #BestPlayer #GameTime #JuanSports #Jua",
-      "post_type": "Videos",
-      "publish_time": "2026-02-02T05:08:48+0000",
-      "permalink": "https://www.facebook.com/122118710235067884/posts/122118578379067884",
-      "reactions": 8,
-      "comments": 1,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 10,
-      "pes": 13.0
-    },
-    {
-      "post_id": "122118577851067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddde\ud835\uddf6\ud835\uddf2\ud835\uddf3\ud835\uddf2\ud835\uddff \ud835\udde5\ud835\uddee\ud835\ude03\ud835\uddf2\ud835\uddfb\ud835\uddee running the show! \ud835\uddde\ud835\uddee\ud835\uddf9\ud835\uddfa\ud835\uddee lang pero \ud835\uddf8\ud835\uddf6\ud835\uddf9\ud835\uddf9\ud835\uddf2\ud835\uddff ang plays \ud83e\udde0\ud83c\udfc0 \n\n\ud83d\udc49 Follow for more highlights, comment your favorite Kiefer play.\n\n#KieferRavena #PHBasketball #FloorGeneral #GameIQ #JuanCrew #Jua",
-      "post_type": "Videos",
-      "publish_time": "2026-02-02T05:00:39+0000",
-      "permalink": "https://www.facebook.com/reel/879925265022826/",
-      "reactions": 4,
-      "comments": 0,
-      "shares": 0,
-      "views": 808,
-      "reach": 0,
-      "engagement": 4,
-      "pes": 4.0
-    },
-    {
       "post_id": "1195460426087220",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
@@ -11009,22 +10743,6 @@
       "reach": 0,
       "engagement": 28,
       "pes": 39.0
-    },
-    {
-      "post_id": "122118573285067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "Your \ud835\udde5\ud835\uddee\ud835\uddfa\ud835\uddfc\ud835\uddfb \ud835\uddd9\ud835\uddf2\ud835\uddff\ud835\uddfb\ud835\uddee\ud835\uddfb\ud835\uddf1\ud835\uddf2\ud835\ude07 \ud835\uddd9\ud835\uddf6\ud835\uddfb\ud835\uddee\ud835\uddf9\ud835\ude00 \ud835\udde0\ud835\udde9\ud835\udde3 and tonight\u2019s Daily Fantasy Best Player \ud835\udddd\ud835\udde8\ud835\udde1\ud835\uddd8 \ud835\udde0\ud835\uddd4\ud835\udde5 \ud835\uddd9\ud835\uddd4\ud835\udddd\ud835\uddd4\ud835\udde5\ud835\uddd7\ud835\udde2!\ud83c\udfc6\n\nHit \u2665\ufe0f, at i-share ang panalo vibes!\n\n#JuneMarFajardo #FinalsMVP #PBA #BestPlayer #GameTime #JuanSports #Jua",
-      "post_type": "Videos",
-      "publish_time": "2026-02-02T03:43:12+0000",
-      "permalink": "https://www.facebook.com/122118710235067884/posts/122118573285067884",
-      "reactions": 3,
-      "comments": 0,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 4,
-      "pes": 6.0
     },
     {
       "post_id": "122111765235185509",
@@ -11283,22 +11001,6 @@
       "pes": 15.0
     },
     {
-      "post_id": "122118511605067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "Watch \ud835\uddde\ud835\uddf2\ud835\ude03\ud835\uddf6\ud835\uddfb \ud835\udde4\ud835\ude02\ud835\uddf6\ud835\uddee\ud835\uddfa\ud835\uddef\ud835\uddee\ud835\uddfc make every play count! Smart, strong, unstoppable \ud83d\udca5\n\n\ud83d\udc49 Tap follow for highlights & cheer him on!\n\n#KevinQuiambao #NextLevel #BasketballPH #JuanSports #JuanCrew",
-      "post_type": "Videos",
-      "publish_time": "2026-02-01T12:00:54+0000",
-      "permalink": "https://www.facebook.com/reel/1811638722850588/",
-      "reactions": 2,
-      "comments": 0,
-      "shares": 0,
-      "views": 0,
-      "reach": 0,
-      "engagement": 2,
-      "pes": 2.0
-    },
-    {
       "post_id": "122187472196383179",
       "page_id": "305553999318966",
       "page_name": "JUANKada Host Ikay",
@@ -11409,22 +11111,6 @@
       "reach": 0,
       "engagement": 14,
       "pes": 15.0
-    },
-    {
-      "post_id": "122118503151067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddda\ud835\uddee\ud835\uddfa\ud835\uddf2 \ud835\udff2 \ud835\udddb\ud835\uddf2\ud835\uddee\ud835\ude01! \ud83d\udd25\nTNT \ud83c\udd9a Beermen  lahat sa court, walang atrasan! \ud83c\udfc0\ud83d\udca5\n\n Comment, tag tropa, hit \u2665\ufe0f, i-share, at hype natin together!\n\n#FinalsGame6 #TNTvsBeermen #PBA #JuanSports #JuanCrew #GameTime #AllOut",
-      "post_type": "Videos",
-      "publish_time": "2026-02-01T10:00:17+0000",
-      "permalink": "https://www.facebook.com/122118710235067884/posts/122118503151067884",
-      "reactions": 10,
-      "comments": 0,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 11,
-      "pes": 13.0
     },
     {
       "post_id": "122117365329145396",
@@ -11603,22 +11289,6 @@
       "pes": 16.0
     },
     {
-      "post_id": "122118487713067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "Watch \ud835\udde5\ud835\uddee\ud835\ude06 \ud835\udde3\ud835\uddee\ud835\uddff\ud835\uddf8\ud835\ude00 \ud835\udddd\ud835\uddff. in action! Mature moves, clutch moments, pure talent. \ud83d\udd25\n\n\ud83d\udc49 Save, share, and join the hype!\n\n#RayParksJr #BasketballPH #RisingStar #JuanSports #JuanCrew",
-      "post_type": "Videos",
-      "publish_time": "2026-02-01T07:00:41+0000",
-      "permalink": "https://www.facebook.com/reel/1567472297809075/",
-      "reactions": 12,
-      "comments": 1,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 14,
-      "pes": 17.0
-    },
-    {
       "post_id": "1195493039417292",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
@@ -11683,22 +11353,6 @@
       "pes": 15.0
     },
     {
-      "post_id": "122118486189067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddd4\ud835\udde1\ud835\udde7\ud835\udddb\ud835\udde2\ud835\udde1\ud835\uddec \ud835\uddd8\ud835\uddd7\ud835\uddea\ud835\uddd4\ud835\udde5\ud835\uddd7\ud835\udde6 \ud835\udde6\ud835\udddb\ud835\udde2\ud835\uddea\ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8 \ud835\uddd4\ud835\udde1\ud835\udde7! \ud83c\udfc0\n\nShare kung ramdam nyo takeover energy!\n\n#AnthonyEdwards #AntMan #NBA #JuanSports #JuanCrew #HighlightReel",
-      "post_type": "Videos",
-      "publish_time": "2026-02-01T06:32:02+0000",
-      "permalink": "https://www.facebook.com/122118710235067884/posts/122118486189067884",
-      "reactions": 5,
-      "comments": 0,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 6,
-      "pes": 8.0
-    },
-    {
       "post_id": "1195458902754039",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
@@ -11729,22 +11383,6 @@
       "reach": 0,
       "engagement": 13,
       "pes": 20.0
-    },
-    {
-      "post_id": "122118484089067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddd4\ud835\uddec\ud835\udde2 \ud835\uddd7\ud835\udde2\ud835\udde6\ud835\udde8\ud835\udde1\ud835\udde0\ud835\udde8 \ud835\udddb\ud835\udde8\ud835\udde6\ud835\udde7\ud835\udddf\ud835\uddd8 & \ud835\udddb\ud835\uddd8\ud835\uddd4\ud835\udde5\ud835\udde7! \ud83d\ude24\n\n\ud83d\udc49 Comment your favorite Ayo moment!\n\n#AyoDosunmu #JuanSports #JuanCrew #HoopsVibes #AllHeart",
-      "post_type": "Videos",
-      "publish_time": "2026-02-01T06:09:38+0000",
-      "permalink": "https://www.facebook.com/122118710235067884/posts/122118484089067884",
-      "reactions": 3,
-      "comments": 0,
-      "shares": 0,
-      "views": 0,
-      "reach": 0,
-      "engagement": 3,
-      "pes": 3.0
     },
     {
       "post_id": "1550100279442400",
@@ -11905,22 +11543,6 @@
       "reach": 0,
       "engagement": 282,
       "pes": 292.0
-    },
-    {
-      "post_id": "122118469773067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddde\ud835\uddee\ud835\uddf6 \ud835\udde6\ud835\uddfc\ud835\ude01\ud835\ude01\ud835\uddfc \ud835\uddf6\ud835\ude00 \ud835\uddf9\ud835\uddf2\ud835\ude03\ud835\uddf2\ud835\uddf9\ud835\uddf6\ud835\uddfb\ud835\uddf4 \ud835\ude02\ud835\uddfd! Smart moves, sharper plays don\u2019t miss his rise! \ud83d\udcaa\ud83c\udfc0\n\n\ud83d\udc49 Follow now for every highlight!\n\n#KaiSotto #NextLevel #PHBasketball #JuanSports #JuanCrew",
-      "post_type": "Videos",
-      "publish_time": "2026-02-01T02:57:11+0000",
-      "permalink": "https://www.facebook.com/reel/1225850262254482/",
-      "reactions": 12,
-      "comments": 3,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 16,
-      "pes": 21.0
     },
     {
       "post_id": "2279911762503887",
@@ -12403,22 +12025,6 @@
       "pes": 4.0
     },
     {
-      "post_id": "122118392757067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\udde7\ud835\uddf5\ud835\uddf6\ud835\uddff\ud835\uddf1\ud835\ude06 \ud835\udde5\ud835\uddee\ud835\ude03\ud835\uddf2\ud835\uddfb\ud835\uddee\u2728 Sa bawat practice at laro, lagi siyang \ud835\ude00\ud835\uddf5\ud835\uddf6\ud835\uddfb\ud835\uddf6\ud835\uddfb\ud835\uddf4 proof na \ud835\uddf1\ud835\uddf2\ud835\uddf1\ud835\uddf6\ud835\uddf0\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb pays! \ud83d\udcaa\ud83c\udfc0\n\nCheer for the star follow for more court action! \ud83d\udc40\ud83d\udd25\n\n#ThirdyRavena #DedicationPays #BasketballStar #CourtVib",
-      "post_type": "Videos",
-      "publish_time": "2026-01-31T14:01:06+0000",
-      "permalink": "https://www.facebook.com/reel/1224862489042922/",
-      "reactions": 12,
-      "comments": 2,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 15,
-      "pes": 19.0
-    },
-    {
       "post_id": "122114942823144249",
       "page_id": "897960886734144",
       "page_name": "Juankada Alexchoozy",
@@ -12529,22 +12135,6 @@
       "reach": 0,
       "engagement": 36,
       "pes": 46.0
-    },
-    {
-      "post_id": "122118379395067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\udfef\ud835\udde5\ud835\uddd7\ud835\uddec \ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udde1\ud835\uddd4 & \ud835\uddde\ud835\udde2\ud835\uddd5\ud835\uddd8 \ud835\udde3\ud835\uddd4\ud835\udde5\ud835\uddd4\ud835\udde6 \ud83c\udfc0\ud83d\udca5\nSabay nag-training, handa sa next big challenge! \ud83d\udd25\n\nDon\u2019t miss their moves follow for more! \ud83d\udc40\n\n#ThirdyRavena #KobeParas #NextChallenge #BasketballHustle #CourtGoals",
-      "post_type": "Videos",
-      "publish_time": "2026-01-31T11:01:27+0000",
-      "permalink": "https://www.facebook.com/reel/1413800910210357/",
-      "reactions": 6,
-      "comments": 0,
-      "shares": 2,
-      "views": 0,
-      "reach": 0,
-      "engagement": 8,
-      "pes": 12.0
     },
     {
       "post_id": "122119206543133214",
@@ -12803,22 +12393,6 @@
       "pes": 15.0
     },
     {
-      "post_id": "122118364977067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddd6\ud835\uddd4\ud835\uddd7\ud835\uddd8 \ud835\udde2\ud835\udde1 \ud835\uddd9\ud835\udddc\ud835\udde5\ud835\uddd8!\ud83d\udd25\nBuckets, assists, at pure domination \n\nJuankada, drop a \ud83d\udd25 sa comments!\n\n#CadeCunningham #NBANight #Juankada #Buckets #HoopsVibes",
-      "post_type": "Videos",
-      "publish_time": "2026-01-31T07:37:03+0000",
-      "permalink": "https://www.facebook.com/122118710235067884/posts/122118364977067884",
-      "reactions": 3,
-      "comments": 0,
-      "shares": 2,
-      "views": 0,
-      "reach": 0,
-      "engagement": 5,
-      "pes": 9.0
-    },
-    {
       "post_id": "122104252833231694",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
@@ -12833,22 +12407,6 @@
       "reach": 0,
       "engagement": 13,
       "pes": 15.0
-    },
-    {
-      "post_id": "122118360441067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\udddd\ud835\udde2\ud835\uddde\ud835\udddc\u0106 \ud835\udde0\ud835\uddd4\ud835\udde6\ud835\udde7\ud835\uddd8\ud835\udde5\ud835\uddd6\ud835\udddf\ud835\uddd4\ud835\udde6\ud835\udde6! \ud83e\udde0\n\n\ud83d\udc49 Drop a \ud83d\udd25 kung unstoppable!\n\n#NikolaJokic #NBA #JuanSports #JuanCrew",
-      "post_type": "Videos",
-      "publish_time": "2026-01-31T06:25:15+0000",
-      "permalink": "https://www.facebook.com/122118710235067884/posts/122118360441067884",
-      "reactions": 14,
-      "comments": 0,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 15,
-      "pes": 17.0
     },
     {
       "post_id": "122114897583144249",
@@ -12913,22 +12471,6 @@
       "reach": 0,
       "engagement": 10,
       "pes": 13.0
-    },
-    {
-      "post_id": "122118356151067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\udde5\ud835\uddee\ud835\ude06 \ud835\udde3\ud835\uddee\ud835\uddff\ud835\uddf8\ud835\ude00 \ud835\udddd\ud835\uddff. nasa \"CEBU\"? pero bakit may \u2744\ufe0f \ud835\udde6\ud835\udde1\ud835\udde2\ud835\uddea?! \ud83d\ude02\ud83c\udfc0\n\n Don\u2019t miss the action follow and catch every play! \ud83d\udc40\n\n#BobbyRayParksJr #CebuFeels #JuanSports #JuanCrew #osakaevessa",
-      "post_type": "Videos",
-      "publish_time": "2026-01-31T05:28:52+0000",
-      "permalink": "https://www.facebook.com/reel/1414403070178602/",
-      "reactions": 5,
-      "comments": 0,
-      "shares": 2,
-      "views": 0,
-      "reach": 0,
-      "engagement": 7,
-      "pes": 11.0
     },
     {
       "post_id": "122114516763149417",
@@ -13635,22 +13177,6 @@
       "pes": 21.0
     },
     {
-      "post_id": "122118202593067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddd4\ud835\uddf9\ud835\uddf2\ud835\ude05 \ud835\uddd8\ud835\uddee\ud835\uddf9\ud835\uddee in the zone! \ud83c\udfbe\n\nFollow for more! \n\n#AlexEala #NextGenChampion #GameSetMatch #JuanSports #JuanCrew",
-      "post_type": "Videos",
-      "publish_time": "2026-01-29T14:00:38+0000",
-      "permalink": "https://www.facebook.com/reel/2111440816264615/",
-      "reactions": 6,
-      "comments": 0,
-      "shares": 0,
-      "views": 0,
-      "reach": 0,
-      "engagement": 6,
-      "pes": 6.0
-    },
-    {
       "post_id": "122111025459185509",
       "page_id": "949473921576703",
       "page_name": "JuanKada Star",
@@ -13683,22 +13209,6 @@
       "pes": 6.0
     },
     {
-      "post_id": "122118192591067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\udde5\ud835\uddee\ud835\ude06 \ud835\udde3\ud835\uddee\ud835\uddff\ud835\uddf8\ud835\ude00 \ud835\udddd\ud835\uddff. in his bag \ud83d\udd25\n\nWitness the takeover drop a \ud83d\udd25 if you\u2019re watching!\n\n#RayParksJr #BucketsOnly #InTheZone #GameTime #BasketballVibes",
-      "post_type": "Videos",
-      "publish_time": "2026-01-29T12:00:42+0000",
-      "permalink": "https://www.facebook.com/reel/1481353636934717/",
-      "reactions": 3,
-      "comments": 0,
-      "shares": 2,
-      "views": 0,
-      "reach": 0,
-      "engagement": 5,
-      "pes": 9.0
-    },
-    {
       "post_id": "122187193388383179",
       "page_id": "305553999318966",
       "page_name": "JUANKada Host Ikay",
@@ -13729,22 +13239,6 @@
       "reach": 0,
       "engagement": 12,
       "pes": 12.0
-    },
-    {
-      "post_id": "122118183309067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\udde7\ud835\uddf5\ud835\uddf6\ud835\uddff\ud835\uddf1\ud835\ude06 \ud835\udde5\ud835\uddee\ud835\ude03\ud835\uddf2\ud835\uddfb\ud835\uddee brings the \ud835\uddf2\ud835\uddfb\ud835\uddf2\ud835\uddff\ud835\uddf4\ud835\ude06 every single play \u26a1\ufe0f\ud83c\udfc0\n\nYou can\u2019t teach that motor show some love if you\u2019re riding with Thirdy! \ud83d\udcaa\ud83d\udd25\n\n#ThirdyRavena #AllHeart #Relentless #GameDay #BasketballLife",
-      "post_type": "Videos",
-      "publish_time": "2026-01-29T10:00:16+0000",
-      "permalink": "https://www.facebook.com/reel/1431004375317183/",
-      "reactions": 4,
-      "comments": 1,
-      "shares": 0,
-      "views": 0,
-      "reach": 0,
-      "engagement": 5,
-      "pes": 6.0
     },
     {
       "post_id": "122118788145133214",
@@ -13859,22 +13353,6 @@
       "pes": 43.0
     },
     {
-      "post_id": "122118175209067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddde\ud835\uddf6\ud835\uddf2\ud835\uddf3\ud835\uddf2\ud835\uddff \ud835\udde5\ud835\uddee\ud835\ude03\ud835\uddf2\ud835\uddfb\ud835\uddee running the show like a true \ud835\uddf3\ud835\uddf9\ud835\uddfc\ud835\uddfc\ud835\uddff \ud835\uddf4\ud835\uddf2\ud835\uddfb\ud835\uddf2\ud835\uddff\ud835\uddee\ud835\uddf9 \ud83e\udde0\ud83c\udfc0\n\nIf you love smart basketball, this is your guy drop a \ud83d\udd25 if you\u2019re watching!\n\n#KieferRavena #FloorGeneral #SmartPlays #BasketballIQ #GameOn ",
-      "post_type": "Videos",
-      "publish_time": "2026-01-29T08:00:53+0000",
-      "permalink": "https://www.facebook.com/reel/1585753395881392/",
-      "reactions": 10,
-      "comments": 4,
-      "shares": 5,
-      "views": 0,
-      "reach": 0,
-      "engagement": 19,
-      "pes": 33.0
-    },
-    {
       "post_id": "122114283831170300",
       "page_id": "924225234111144",
       "page_name": "Juankada Charm",
@@ -13953,22 +13431,6 @@
       "reach": 0,
       "engagement": 13,
       "pes": 18.0
-    },
-    {
-      "post_id": "122118159441067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\udddd\ud835\udde8\ud835\udddf\ud835\udddc\ud835\udde8\ud835\udde6 \ud835\udde5\ud835\uddd4\ud835\udde1\ud835\uddd7\ud835\udddf\ud835\uddd8 \ud835\udde3\ud835\udde2\ud835\uddea\ud835\uddd8\ud835\udde5 & \ud835\uddd6\ud835\udddf\ud835\udde8\ud835\udde7\ud835\uddd6\ud835\udddb!\n\nTap \u2665\ufe0f kung ramdam nyo Randle takeover or share this post!!\n\n#JuliusRandle #NBANight #JuanSports #Buckets #ClutchPlays #JuanCrew",
-      "post_type": "Videos",
-      "publish_time": "2026-01-29T05:14:55+0000",
-      "permalink": "https://www.facebook.com/122118710235067884/posts/122118159441067884",
-      "reactions": 4,
-      "comments": 0,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 5,
-      "pes": 7.0
     },
     {
       "post_id": "1193052286328034",
@@ -14065,38 +13527,6 @@
       "reach": 0,
       "engagement": 8,
       "pes": 9.0
-    },
-    {
-      "post_id": "122118157101067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddde\ud835\uddee\ud835\uddf6 \ud835\udde6\ud835\uddfc\ud835\ude01\ud835\ude01\ud835\uddfc \ud835\uddf6\ud835\ude00 \ud835\uddfc\ud835\uddfb \ud835\uddee \ud835\uddfa\ud835\uddf6\ud835\ude00\ud835\ude00\ud835\uddf6\ud835\uddfc\ud835\uddfb. \ud83c\uddf5\ud83c\udded\ud83c\udfc0\n\nDon\u2019t blink the grind is getting serious. Tap in and show your support! \ud83d\udcaa\ud83d\udd25\n\n#KaiSotto #PusoNgPinoy #RiseUp #GameTime #BasketballJourney #JuanSports #JuanCrew",
-      "post_type": "Videos",
-      "publish_time": "2026-01-29T04:31:14+0000",
-      "permalink": "https://www.facebook.com/reel/1475303523960026/",
-      "reactions": 3,
-      "comments": 1,
-      "shares": 9,
-      "views": 0,
-      "reach": 0,
-      "engagement": 13,
-      "pes": 32.0
-    },
-    {
-      "post_id": "122118156855067884",
-      "page_id": "839729525890738",
-      "page_name": null,
-      "title": "\ud835\uddd5\ud835\uddd4\ud835\udde1\ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\udde5\ud835\udde2 \ud835\udde2\ud835\udde1 \ud835\uddd9\ud835\udddc\ud835\udde5\ud835\uddd8! \ud83d\ude0e\n\n Drop a \ud83d\udd25 sa comments!\n\n#PaoloBanchero #NBA #JuanSports #Buckets #JuanCrew",
-      "post_type": "Videos",
-      "publish_time": "2026-01-29T04:27:31+0000",
-      "permalink": "https://www.facebook.com/122118710235067884/posts/122118156855067884",
-      "reactions": 5,
-      "comments": 1,
-      "shares": 1,
-      "views": 0,
-      "reach": 0,
-      "engagement": 7,
-      "pes": 10.0
     },
     {
       "post_id": "122118701097133214",
@@ -30968,27 +30398,27 @@
     "monthly": [
       {
         "month": "2026-02",
-        "posts": 121,
-        "reactions": 2453,
-        "comments": 198,
-        "shares": 110,
-        "views": 31471,
+        "posts": 111,
+        "reactions": 2382,
+        "comments": 193,
+        "shares": 104,
+        "views": 28115,
         "reach": 1269,
-        "engagement": 2761,
-        "avg_engagement": 22.8,
-        "mom_change": -94.7
+        "engagement": 2679,
+        "avg_engagement": 24.1,
+        "mom_change": -94.8
       },
       {
         "month": "2026-01",
-        "posts": 854,
-        "reactions": 46720,
-        "comments": 3626,
-        "shares": 1531,
+        "posts": 842,
+        "reactions": 46645,
+        "comments": 3617,
+        "shares": 1505,
         "views": 621578,
         "reach": 358800,
-        "engagement": 51877,
-        "avg_engagement": 60.7,
-        "mom_change": 644.1
+        "engagement": 51767,
+        "avg_engagement": 61.5,
+        "mom_change": 642.5
       },
       {
         "month": "2025-12",
@@ -31062,24 +30492,24 @@
         "week": "Week 4",
         "week_start": "2026-01-27",
         "week_end": "2026-02-02",
-        "posts": 298,
-        "reactions": 18285,
-        "comments": 860,
-        "shares": 379,
-        "views": 93996,
+        "posts": 276,
+        "reactions": 18139,
+        "comments": 846,
+        "shares": 347,
+        "views": 90640,
         "reach": 41996,
-        "engagement": 19524,
-        "avg_engagement": 65.5,
-        "wow_change": 9.9
+        "engagement": 19332,
+        "avg_engagement": 70.0,
+        "wow_change": 8.8
       }
     ],
     "dayOfWeek": [
       {
         "day": "Sun",
         "day_num": 0,
-        "posts": 228,
-        "total_engagement": 6920,
-        "avg_engagement": 30.4,
+        "posts": 222,
+        "total_engagement": 6868,
+        "avg_engagement": 30.9,
         "views": 99760,
         "reach": 52734,
         "is_best": false
@@ -31087,10 +30517,10 @@
       {
         "day": "Mon",
         "day_num": 1,
-        "posts": 194,
-        "total_engagement": 5861,
-        "avg_engagement": 30.2,
-        "views": 129432,
+        "posts": 190,
+        "total_engagement": 5831,
+        "avg_engagement": 30.7,
+        "views": 126076,
         "reach": 51260,
         "is_best": false
       },
@@ -31117,9 +30547,9 @@
       {
         "day": "Thu",
         "day_num": 4,
-        "posts": 185,
-        "total_engagement": 14897,
-        "avg_engagement": 80.5,
+        "posts": 178,
+        "total_engagement": 14837,
+        "avg_engagement": 83.4,
         "views": 137979,
         "reach": 87418,
         "is_best": true
@@ -31137,9 +30567,9 @@
       {
         "day": "Sat",
         "day_num": 6,
-        "posts": 191,
-        "total_engagement": 14781,
-        "avg_engagement": 77.4,
+        "posts": 186,
+        "total_engagement": 14731,
+        "avg_engagement": 79.2,
         "views": 150942,
         "reach": 89231,
         "is_best": false
@@ -31335,12 +30765,12 @@
       },
       {
         "type": "Videos",
-        "count": 638,
-        "views": 528139,
+        "count": 616,
+        "views": 524783,
         "reach": 328129,
-        "engagement": 44557,
-        "avg_engagement": 69.8,
-        "avg_views": 827.8
+        "engagement": 44365,
+        "avg_engagement": 72.0,
+        "avg_views": 851.9
       },
       {
         "type": "Text",
@@ -31392,12 +30822,12 @@
       {
         "type": "trend_down",
         "title": "Engagement Declining",
-        "text": "Engagement dropped 94.7% - consider increasing content quality"
+        "text": "Engagement dropped 94.8% - consider increasing content quality"
       },
       {
         "type": "best_day",
         "title": "Thu is Best",
-        "text": "Thu generates 80 avg engagement - \ud83d\udcc8 optimal for posting"
+        "text": "Thu generates 83 avg engagement - \ud83d\udcc8 optimal for posting"
       },
       {
         "type": "content_type",
@@ -31413,11 +30843,11 @@
   },
   "commentAnalysis": {
     "summary": {
-      "total_posts_with_comments": 757,
-      "posts_analyzed": 757,
+      "total_posts_with_comments": 749,
+      "posts_analyzed": 749,
       "posts_with_self_comment": 13,
       "total_self_comments": 15,
-      "total_organic_comments": 4428,
+      "total_organic_comments": 4414,
       "self_comment_rate": 0.3,
       "posts_with_self_pct": 1.7
     },
@@ -31491,15 +30921,6 @@
         "posts_with_comments": 34,
         "self_comments": 0,
         "organic_comments": 191,
-        "posts_with_self": 0,
-        "self_rate": 0.0
-      },
-      {
-        "page_name": null,
-        "page_id": "839729525890738",
-        "posts_with_comments": 8,
-        "self_comments": 0,
-        "organic_comments": 14,
         "posts_with_self": 0,
         "self_rate": 0.0
       },
@@ -31578,10 +30999,10 @@
     ],
     "effectivity": {
       "avg_engagement_with_self": 55.8,
-      "avg_engagement_without_self": 75.6,
-      "engagement_boost_pct": -26.2,
+      "avg_engagement_without_self": 76.2,
+      "engagement_boost_pct": -26.9,
       "avg_reactions_with": 42.5,
-      "avg_reactions_without": 67.5
+      "avg_reactions_without": 68.2
     },
     "topSelfCommented": [
       {
@@ -31952,14 +31373,6 @@
       }
     ],
     "postTypesByPage": {
-      "101968408687724": [
-        {
-          "type": "Videos",
-          "count": 14,
-          "engagement": 0,
-          "avg_engagement": 0.0
-        }
-      ],
       "106014857827362": [
         {
           "type": "Videos",
@@ -32044,70 +31457,6 @@
           "count": 1,
           "engagement": 50,
           "avg_engagement": 50.0
-        }
-      ],
-      "481447078389174": [
-        {
-          "type": "Videos",
-          "count": 21,
-          "engagement": 0,
-          "avg_engagement": 0.0
-        }
-      ],
-      "580104038511364": [
-        {
-          "type": "Videos",
-          "count": 23,
-          "engagement": 0,
-          "avg_engagement": 0.0
-        }
-      ],
-      "708878528972997": [
-        {
-          "type": "Videos",
-          "count": 24,
-          "engagement": 0,
-          "avg_engagement": 0.0
-        }
-      ],
-      "731608473377029": [
-        {
-          "type": "Videos",
-          "count": 10,
-          "engagement": 0,
-          "avg_engagement": 0.0
-        }
-      ],
-      "747721128429855": [
-        {
-          "type": "Videos",
-          "count": 12,
-          "engagement": 0,
-          "avg_engagement": 0.0
-        }
-      ],
-      "748765068327821": [
-        {
-          "type": "Videos",
-          "count": 6,
-          "engagement": 0,
-          "avg_engagement": 0.0
-        }
-      ],
-      "807965705726273": [
-        {
-          "type": "Videos",
-          "count": 10,
-          "engagement": 0,
-          "avg_engagement": 0.0
-        }
-      ],
-      "839729525890738": [
-        {
-          "type": "Videos",
-          "count": 23,
-          "engagement": 192,
-          "avg_engagement": 8.3
         }
       ],
       "858606287343265": [
@@ -32376,10 +31725,6 @@
       ]
     },
     "dominantTypes": {
-      "101968408687724": {
-        "type": "Videos",
-        "percentage": 100.0
-      },
       "106014857827362": {
         "type": "Videos",
         "percentage": 72.4
@@ -32395,38 +31740,6 @@
       "397865533415866": {
         "type": "Photos",
         "percentage": 39.2
-      },
-      "481447078389174": {
-        "type": "Videos",
-        "percentage": 100.0
-      },
-      "580104038511364": {
-        "type": "Videos",
-        "percentage": 100.0
-      },
-      "708878528972997": {
-        "type": "Videos",
-        "percentage": 100.0
-      },
-      "731608473377029": {
-        "type": "Videos",
-        "percentage": 100.0
-      },
-      "747721128429855": {
-        "type": "Videos",
-        "percentage": 100.0
-      },
-      "748765068327821": {
-        "type": "Videos",
-        "percentage": 100.0
-      },
-      "807965705726273": {
-        "type": "Videos",
-        "percentage": 100.0
-      },
-      "839729525890738": {
-        "type": "Videos",
-        "percentage": 100.0
       },
       "858606287343265": {
         "type": "Videos",
