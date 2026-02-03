@@ -417,6 +417,7 @@ def fetch_api_posts_for_date(tokens: dict, target_date: str) -> list:
         url = f"{GRAPH_API_BASE}/{page_id}/posts"
         # Note: Removed since/until params - they cause permission errors
         # Fetch more posts and filter by date client-side instead
+        # Use pagination to go back further in time
         params = {
             "access_token": token,
             "fields": ",".join(fields),
@@ -424,14 +425,34 @@ def fetch_api_posts_for_date(tokens: dict, target_date: str) -> list:
         }
 
         try:
-            response = requests.get(url, params=params, timeout=30)
-            data = response.json()
+            all_page_posts = []
+            pages_fetched = 0
+            max_pages = 3  # Fetch up to 300 posts per page to go back further
 
-            if "error" in data:
-                print(f"    API error for page {page_id}: {data['error'].get('message', 'Unknown')}")
-                continue
+            while url and pages_fetched < max_pages:
+                response = requests.get(url, params=params, timeout=30)
+                data = response.json()
 
-            posts = data.get("data", [])
+                if "error" in data:
+                    print(f"    API error for page {page_id}: {data['error'].get('message', 'Unknown')}")
+                    break
+
+                page_posts = data.get("data", [])
+                all_page_posts.extend(page_posts)
+                pages_fetched += 1
+
+                # Check if we've gone past target date (posts are in reverse chronological order)
+                if page_posts:
+                    oldest_date = page_posts[-1].get("created_time", "")[:10]
+                    if oldest_date < target_date:
+                        break  # No need to fetch more, we've passed the target date
+
+                # Get next page URL
+                paging = data.get("paging", {})
+                url = paging.get("next")
+                params = {}  # Next URL includes all params
+
+            posts = all_page_posts
             for post in posts:
                 created = post.get("created_time", "")[:10]
                 if created == target_date:
@@ -485,9 +506,10 @@ def fetch_api_posts_for_date(tokens: dict, target_date: str) -> list:
 def sync_t1_data_from_api(db_path: str, target_date: str, api_posts: list) -> dict:
     """
     Sync T+1 data from API to database.
-    - Delete posts in DB that are NOT in API (for target_date only)
-    - Update/insert posts from API with latest engagement data
-    Returns stats after sync.
+    - Update engagement data for posts that ARE in API
+    - Insert new posts from API that aren't in DB
+    - DO NOT delete posts - they may have scrolled out of API's 100-post window
+    Returns stats from DATABASE after sync (includes posts not in current API window).
     """
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -502,12 +524,11 @@ def sync_t1_data_from_api(db_path: str, target_date: str, api_posts: list) -> di
     """, (target_date,))
     db_post_ids = set(row[0] for row in cursor.fetchall())
 
-    # Delete posts that are in DB but NOT in API (for this date only)
-    posts_to_delete = db_post_ids - api_post_ids
-    if posts_to_delete:
-        print(f"    Removing {len(posts_to_delete)} posts not in API...")
-        for post_id in posts_to_delete:
-            cursor.execute("DELETE FROM posts WHERE post_id = ?", (post_id,))
+    # NOTE: Don't delete posts that are in DB but not in API
+    # They may have scrolled out of the 100-post API window but are still valid
+    posts_only_in_db = db_post_ids - api_post_ids
+    if posts_only_in_db:
+        print(f"    {len(posts_only_in_db)} posts in DB not in current API window (keeping them)")
 
     # Update/insert posts from API
     updated = 0
@@ -566,18 +587,31 @@ def sync_t1_data_from_api(db_path: str, target_date: str, api_posts: list) -> di
             inserted += 1
 
     conn.commit()
+
+    # Calculate stats from DATABASE (includes all posts for target_date, not just API window)
+    cursor.execute("""
+        SELECT
+            COUNT(*) as post_count,
+            COALESCE(SUM(reactions_total), 0) as total_reactions,
+            COALESCE(SUM(comments_count), 0) as total_comments,
+            COALESCE(SUM(shares_count), 0) as total_shares,
+            COALESCE(SUM(total_engagement), 0) as total_engagement
+        FROM posts
+        WHERE substr(publish_time, 1, 10) = ?
+    """, (target_date,))
+    row = cursor.fetchone()
     conn.close()
 
-    # Calculate stats from API posts
     stats = {
-        "posts": len(api_posts),
-        "reactions": sum(p["reactions_total"] for p in api_posts),
-        "comments": sum(p["comments_count"] for p in api_posts),
-        "shares": sum(p["shares_count"] for p in api_posts),
-        "engagement": sum(p["total_engagement"] for p in api_posts)
+        "posts": row[0] or 0,
+        "reactions": row[1] or 0,
+        "comments": row[2] or 0,
+        "shares": row[3] or 0,
+        "engagement": row[4] or 0
     }
 
-    print(f"    Sync complete: {inserted} inserted, {updated} updated, {len(posts_to_delete)} deleted")
+    print(f"    Sync complete: {inserted} inserted, {updated} updated (from {len(api_posts)} API posts)")
+    print(f"    Database total for {target_date}: {stats['posts']} posts, {stats['engagement']} engagement")
     return stats
 
 
