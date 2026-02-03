@@ -67,7 +67,7 @@ def get_existing_post_ids():
 def fetch_posts_from_api(token, page_id, page_name, days_back=7):
     """Fetch recent posts from FB API."""
     since_date = datetime.now() - timedelta(days=days_back)
-    fields = "id,message,created_time,permalink_url"
+    fields = "id,message,created_time,permalink_url,reactions.summary(total_count),comments.summary(total_count),shares"
 
     all_posts = []
     url = f"https://graph.facebook.com/v21.0/{page_id}/posts"
@@ -107,13 +107,30 @@ def fetch_posts_from_api(token, page_id, page_name, days_back=7):
     return all_posts
 
 
+def extract_post_details(post):
+    """Extract reactions, comments, shares, post_type from post data."""
+    reactions = post.get("reactions", {}).get("summary", {}).get("total_count", 0)
+    comments = post.get("comments", {}).get("summary", {}).get("total_count", 0)
+    shares = post.get("shares", {}).get("count", 0)
+    # Default to Videos since most content is video - attachments field removed due to API issues
+    post_type = "Videos"
+    return reactions, comments, shares, post_type
+
+
 def get_post_details(token, post_id):
-    """Get reactions, comments, shares for a post."""
+    """DEPRECATED - Returns zeros. Use extract_post_details instead."""
+    # This function no longer works due to API permission issues
+    # Kept for backwards compatibility but returns zeros
+    return 0, 0, 0, "Videos"
+
+
+def _old_get_post_details(token, post_id):
+    """Old implementation - kept for reference only."""
     try:
         url = f"https://graph.facebook.com/v21.0/{post_id}"
         params = {
             "access_token": token,
-            "fields": "reactions.summary(total_count),comments.summary(total_count),shares,attachments{media_type}"
+            "fields": "reactions.summary(total_count),comments.summary(total_count),shares"
         }
         resp = requests.get(url, params=params)
         data = resp.json()
@@ -238,7 +255,7 @@ def main():
             created_time = post.get("created_time", "")
             post_date = created_time[:10] if created_time else ""
 
-            reactions, comments, shares, post_type = get_post_details(token, full_post_id)
+            reactions, comments, shares, post_type = extract_post_details(post)
 
             if save_post(conn, db_page_id, normalized_id, post, reactions, comments, shares, post_type):
                 page_new += 1
@@ -258,18 +275,14 @@ def main():
                     except Exception as e:
                         print(f"  -> Telegram error: {e}")
 
-            time.sleep(0.2)
-
         # Update existing API posts (refresh engagement data)
         existing_posts = [p for p in posts if normalize_post_id(p["id"]) in existing_ids]
         page_updated = 0
         for post in existing_posts:
-            full_post_id = post["id"]
-            normalized_id = normalize_post_id(full_post_id)
-            reactions, comments, shares, post_type = get_post_details(token, full_post_id)
+            normalized_id = normalize_post_id(post["id"])
+            reactions, comments, shares, post_type = extract_post_details(post)
             if update_post_engagement(conn, normalized_id, reactions, comments, shares):
                 page_updated += 1
-            time.sleep(0.1)
 
         if page_updated > 0:
             print(f"  ~ Updated {page_updated} existing posts")
