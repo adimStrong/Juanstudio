@@ -10,6 +10,14 @@ const PRESETS = [
   { label: 'All Time', days: 0 },
 ];
 
+// Format date as YYYY-MM-DD in local timezone (avoids UTC shift from toISOString)
+function toLocalDateStr(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
 export default function DateFilter({ onDateChange, defaultDays = 0, minDate, maxDate }) {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -64,8 +72,8 @@ export default function DateFilter({ onDateChange, defaultDays = 0, minDate, max
       const now = new Date();
       const start = new Date(now.getFullYear(), now.getMonth(), 1);
       const end = new Date();
-      const startStr = start.toISOString().split('T')[0];
-      const endStr = end.toISOString().split('T')[0];
+      const startStr = toLocalDateStr(start);
+      const endStr = toLocalDateStr(end);
       setStartDate(startStr);
       setEndDate(endStr);
       onDateChange({ startDate: startStr, endDate: endStr });
@@ -73,8 +81,8 @@ export default function DateFilter({ onDateChange, defaultDays = 0, minDate, max
       const now = new Date();
       const start = new Date(now.getFullYear(), now.getMonth() - 1, 1);
       const end = new Date(now.getFullYear(), now.getMonth(), 0); // Last day of previous month
-      const startStr = start.toISOString().split('T')[0];
-      const endStr = end.toISOString().split('T')[0];
+      const startStr = toLocalDateStr(start);
+      const endStr = toLocalDateStr(end);
       setStartDate(startStr);
       setEndDate(endStr);
       onDateChange({ startDate: startStr, endDate: endStr });
@@ -83,8 +91,8 @@ export default function DateFilter({ onDateChange, defaultDays = 0, minDate, max
       const start = new Date(end);
       start.setDate(start.getDate() - days);
 
-      const startStr = start.toISOString().split('T')[0];
-      const endStr = end.toISOString().split('T')[0];
+      const startStr = toLocalDateStr(start);
+      const endStr = toLocalDateStr(end);
 
       setStartDate(startStr);
       setEndDate(endStr);
