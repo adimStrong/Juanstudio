@@ -1,10 +1,20 @@
 #!/usr/bin/env python3
-"""Import manually exported CSV files from Meta Business Suite."""
+"""Import manually exported CSV files from Meta Business Suite.
+
+IMPORTANT: Meta CSV exports have Post IDs in scientific notation (e.g. 1.22187E+17)
+which causes precision loss — converting gives wrong IDs like 122187000000000000.
+1,718 rows can collapse to just 228 unique (wrong) IDs.
+
+Strategy: IGNORE the CSV Post ID entirely. Instead, match CSV rows to existing
+DB posts by (page_id + publish_time). Only UPDATE views/reach on matched posts.
+Posts not already in DB (from API fetch) are skipped — API is the source of truth
+for post identity, CSV is only for views/reach data.
+"""
 
 import csv
 import sqlite3
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from glob import glob
 
 # Import database function for duplicate prevention
@@ -26,14 +36,23 @@ def get_conn():
     return conn
 
 
-def parse_datetime(dt_str):
-    """Parse datetime from CSV format."""
+def parse_datetime_to_api_format(dt_str):
+    """Parse CSV datetime (MM/DD/YYYY HH:MM) to match DB format.
+
+    CSV exports UTC times. DB stores API times as ISO+0000 which are
+    offset by +8h from CSV (API returns PHT labeled as +0000).
+    So: CSV_time + 8h = DB_time (verified by title-matching posts).
+    """
     if not dt_str:
-        return None
+        return None, None
     try:
-        return datetime.strptime(dt_str, "%m/%d/%Y %H:%M").isoformat()
+        dt = datetime.strptime(dt_str.strip(), "%m/%d/%Y %H:%M")
+        # Add 8 hours to match DB time format (CSV UTC -> DB PHT-as-UTC)
+        dt_adjusted = dt + timedelta(hours=8)
+        iso = dt_adjusted.isoformat()
+        return iso, dt_adjusted
     except:
-        return dt_str
+        return dt_str, None
 
 
 def safe_int(val):
@@ -46,34 +65,18 @@ def safe_int(val):
         return 0
 
 
-def fix_post_id(post_id):
-    """Convert scientific notation post IDs (e.g. '1.22187E+17') to proper integers.
-    Also strips page_id prefix if present (e.g. '862622980275034_123456789' -> '123456789').
-    """
-    post_id = str(post_id).strip()
-    # Convert scientific notation to integer string
-    if 'E+' in post_id or 'e+' in post_id:
-        try:
-            post_id = str(int(float(post_id)))
-        except (ValueError, OverflowError):
-            pass  # keep as-is if conversion fails
-    # Strip page_id prefix
-    if '_' in post_id:
-        post_id = post_id.split('_')[-1]
-    return post_id
-
-
 def import_csv(filepath):
-    """Import a single CSV file."""
+    """Import a single CSV file by matching to existing DB posts."""
     global page_id_remap
     print(f"\nImporting: {os.path.basename(filepath)}")
 
     conn = get_conn()
     cursor = conn.cursor()
 
-    imported = 0
+    updated = 0
+    skipped = 0
+    not_found = 0
     pages_seen = set()
-    remapped_count = 0
 
     with open(filepath, "r", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
@@ -81,15 +84,13 @@ def import_csv(filepath):
         for row in reader:
             csv_page_id = row.get("Page ID", "")
             page_name = row.get("Page name", "")
-            post_id = row.get("Post ID", "")
+            post_id_raw = row.get("Post ID", "")
 
-            if not post_id or not csv_page_id:
+            if not post_id_raw or not csv_page_id:
+                skipped += 1
                 continue
 
-            # Fix scientific notation and normalize post_id
-            post_id = fix_post_id(post_id)
-
-            # DUPLICATE PREVENTION: Check if page with same name exists under different ID
+            # Resolve page_id (CSV may use different ID than API)
             if csv_page_id in page_id_remap:
                 page_id = page_id_remap[csv_page_id]
             elif get_page_by_name:
@@ -97,61 +98,71 @@ def import_csv(filepath):
                 if existing_page and existing_page["page_id"] != csv_page_id:
                     page_id = existing_page["page_id"]
                     page_id_remap[csv_page_id] = page_id
-                    if remapped_count == 0:
-                        print(f"  [Duplicate Prevention] Remapping CSV IDs to existing page IDs")
-                    remapped_count += 1
                 else:
                     page_id = csv_page_id
                     page_id_remap[csv_page_id] = csv_page_id
             else:
                 page_id = csv_page_id
 
-            # Track pages - only insert if this is a NEW page_id
-            if page_id not in pages_seen:
-                pages_seen.add(page_id)
-                cursor.execute("SELECT 1 FROM pages WHERE page_id = ?", (page_id,))
-                if not cursor.fetchone():
-                    cursor.execute("""
-                        INSERT INTO pages (page_id, page_name, created_at, updated_at)
-                        VALUES (?, ?, ?, ?)
-                    """, (page_id, page_name, datetime.now().isoformat(), datetime.now().isoformat()))
+            pages_seen.add(page_id)
 
-            # Parse post data
-            title = row.get("Title", "")[:200] if row.get("Title") else ""
-            permalink = row.get("Permalink", "")
-            post_type = row.get("Post type", "TEXT")
-            publish_time = parse_datetime(row.get("Publish time", ""))
+            # Parse CSV data
+            publish_time_str = row.get("Publish time", "")
+            publish_time, dt_obj = parse_datetime_to_api_format(publish_time_str)
+            if not publish_time:
+                skipped += 1
+                continue
 
+            views = safe_int(row.get("Views", 0))
+            reach = safe_int(row.get("Reach", 0))
             reactions = safe_int(row.get("Reactions", 0))
             comments = safe_int(row.get("Comments", 0))
             shares = safe_int(row.get("Shares", 0))
-            views = safe_int(row.get("Views", 0))
-            reach = safe_int(row.get("Reach", 0))
 
-            total_engagement = reactions + comments + shares
-            pes = (reactions * 1.0) + (comments * 2.0) + (shares * 3.0)
+            # Match to existing DB post by page_id + publish_time
+            # API stores times like: 2026-02-01T00:00:16+0000
+            # CSV times (after parse): 2026-02-01T00:00:00
+            # Match by truncating to minute (first 16 chars: 2026-02-01T00:00)
+            time_prefix = publish_time[:16] if publish_time else ""
 
             cursor.execute("""
-                INSERT OR REPLACE INTO posts
-                (post_id, page_id, title, permalink, post_type, publish_time,
-                 reactions_total, comments_count, shares_count, views_count, reach_count,
-                 pes, total_engagement, fetched_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                post_id, page_id, title, permalink, post_type, publish_time,
-                reactions, comments, shares, views, reach, pes, total_engagement,
-                datetime.now().isoformat()
-            ))
+                SELECT post_id FROM posts
+                WHERE page_id = ? AND SUBSTR(publish_time, 1, 16) = ?
+                LIMIT 1
+            """, (page_id, time_prefix))
+            match = cursor.fetchone()
 
-            imported += 1
+            if match:
+                matched_post_id = match[0]
+                # Update views/reach and engagement on the matched post
+                total_engagement = reactions + comments + shares
+                pes = (reactions * 1.0) + (comments * 2.0) + (shares * 3.0)
+
+                cursor.execute("""
+                    UPDATE posts SET
+                        views_count = MAX(COALESCE(views_count, 0), ?),
+                        reach_count = MAX(COALESCE(reach_count, 0), ?),
+                        reactions_total = MAX(COALESCE(reactions_total, 0), ?),
+                        comments_count = MAX(COALESCE(comments_count, 0), ?),
+                        shares_count = MAX(COALESCE(shares_count, 0), ?),
+                        total_engagement = MAX(COALESCE(total_engagement, 0), ?),
+                        pes = MAX(COALESCE(pes, 0), ?)
+                    WHERE post_id = ?
+                """, (views, reach, reactions, comments, shares,
+                      total_engagement, pes, matched_post_id))
+                updated += 1
+            else:
+                not_found += 1
 
     conn.commit()
     conn.close()
 
-    print(f"  Imported {imported} posts from {len(pages_seen)} pages")
-    if remapped_count > 0:
-        print(f"  Remapped {remapped_count} duplicate page IDs to existing pages")
-    return imported, pages_seen
+    print(f"  Updated {updated} posts with views/reach data")
+    if not_found > 0:
+        print(f"  {not_found} CSV rows had no matching DB post (not yet fetched via API)")
+    if skipped > 0:
+        print(f"  {skipped} rows skipped (missing data)")
+    return updated, pages_seen
 
 
 def main():
@@ -159,7 +170,7 @@ def main():
     page_id_remap = {}
 
     print("=" * 60)
-    print("Importing Manual CSV Exports")
+    print("Importing Manual CSV Exports (views/reach update only)")
     print("=" * 60)
 
     csv_files = glob(os.path.join(EXPORTS_FOLDER, "*.csv"))
@@ -170,18 +181,18 @@ def main():
 
     print(f"Found {len(csv_files)} CSV files")
 
-    total_posts = 0
+    total_updated = 0
     all_pages = set()
 
     for csv_file in sorted(csv_files):
         count, pages = import_csv(csv_file)
-        total_posts += count
+        total_updated += count
         all_pages.update(pages)
 
     print("\n" + "=" * 60)
     print("SUMMARY")
     print("=" * 60)
-    print(f"Total posts imported: {total_posts}")
+    print(f"Total posts updated: {total_updated}")
     print(f"Total pages: {len(all_pages)}")
 
     conn = get_conn()
