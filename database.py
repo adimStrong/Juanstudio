@@ -472,36 +472,36 @@ def sync_metrics_to_posts():
     sql = """
         UPDATE posts
         SET
-            reactions_total = COALESCE((
+            reactions_total = MAX(COALESCE(reactions_total, 0), COALESCE((
                 SELECT pm.reactions FROM post_metrics pm
                 WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
-            ), reactions_total, 0),
-            comments_count = COALESCE((
+            ), 0)),
+            comments_count = MAX(COALESCE(comments_count, 0), COALESCE((
                 SELECT pm.comments FROM post_metrics pm
                 WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
-            ), comments_count, 0),
-            shares_count = COALESCE((
+            ), 0)),
+            shares_count = MAX(COALESCE(shares_count, 0), COALESCE((
                 SELECT pm.shares FROM post_metrics pm
                 WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
-            ), shares_count, 0),
-            views_count = COALESCE((
+            ), 0)),
+            views_count = MAX(COALESCE(views_count, 0), COALESCE((
                 SELECT pm.views FROM post_metrics pm
                 WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
-            ), views_count, 0),
-            reach_count = COALESCE((
+            ), 0)),
+            reach_count = MAX(COALESCE(reach_count, 0), COALESCE((
                 SELECT pm.reach FROM post_metrics pm
                 WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
-            ), reach_count, 0),
-            total_engagement = COALESCE((
+            ), 0)),
+            total_engagement = MAX(COALESCE(total_engagement, 0), COALESCE((
                 SELECT pm.reactions + pm.comments + pm.shares FROM post_metrics pm
                 WHERE pm.post_id = posts.post_id
                 ORDER BY pm.metric_date DESC LIMIT 1
-            ), total_engagement, 0)
+            ), 0))
         WHERE EXISTS (
             SELECT 1 FROM post_metrics pm
             WHERE pm.post_id = posts.post_id
