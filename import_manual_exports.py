@@ -46,6 +46,23 @@ def safe_int(val):
         return 0
 
 
+def fix_post_id(post_id):
+    """Convert scientific notation post IDs (e.g. '1.22187E+17') to proper integers.
+    Also strips page_id prefix if present (e.g. '862622980275034_123456789' -> '123456789').
+    """
+    post_id = str(post_id).strip()
+    # Convert scientific notation to integer string
+    if 'E+' in post_id or 'e+' in post_id:
+        try:
+            post_id = str(int(float(post_id)))
+        except (ValueError, OverflowError):
+            pass  # keep as-is if conversion fails
+    # Strip page_id prefix
+    if '_' in post_id:
+        post_id = post_id.split('_')[-1]
+    return post_id
+
+
 def import_csv(filepath):
     """Import a single CSV file."""
     global page_id_remap
@@ -68,6 +85,9 @@ def import_csv(filepath):
 
             if not post_id or not csv_page_id:
                 continue
+
+            # Fix scientific notation and normalize post_id
+            post_id = fix_post_id(post_id)
 
             # DUPLICATE PREVENTION: Check if page with same name exists under different ID
             if csv_page_id in page_id_remap:

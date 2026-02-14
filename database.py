@@ -37,15 +37,23 @@ def get_db_path() -> Path:
 
 
 def normalize_post_id(post_id: str) -> str:
-    """Extract pure post ID, stripping page ID prefix if present.
+    """Extract pure post ID, stripping page ID prefix and fixing scientific notation.
 
     API returns: '862622980275034_123456789'
     CSV has: '123456789'
-    Both normalize to: '123456789'
+    CSV (broken): '1.22187E+17'
+    All normalize to proper integer strings.
 
     This prevents duplicates when same post imported via API and CSV.
     """
-    post_id_str = str(post_id)
+    post_id_str = str(post_id).strip()
+    # Fix scientific notation (e.g. '1.22187E+17' -> '122187000000000000')
+    if 'E+' in post_id_str or 'e+' in post_id_str:
+        try:
+            post_id_str = str(int(float(post_id_str)))
+        except (ValueError, OverflowError):
+            pass
+    # Strip page_id prefix
     if '_' in post_id_str:
         return post_id_str.split('_')[-1]
     return post_id_str

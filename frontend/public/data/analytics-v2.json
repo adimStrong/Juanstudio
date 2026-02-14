@@ -1,20 +1,20 @@
 {
   "stats": {
     "all": {
-      "total_posts": 2222,
+      "total_posts": 2221,
       "total_pages": 16,
       "all_pages": 16,
-      "total_reactions": 256350,
-      "total_comments": 15334,
-      "total_shares": 6525,
-      "total_engagement": 278209,
-      "total_pes": 173570.0,
-      "total_views": 4740780,
-      "total_reach": 3233691,
-      "avg_engagement": 125.2,
-      "avg_pes": 78.1,
-      "avg_views": 2133.6,
-      "avg_reach": 1455.3,
+      "total_reactions": 256363,
+      "total_comments": 15335,
+      "total_shares": 6526,
+      "total_engagement": 278224,
+      "total_pes": 173596.0,
+      "total_views": 4741622,
+      "total_reach": 3233928,
+      "avg_engagement": 125.3,
+      "avg_pes": 78.2,
+      "avg_views": 2134.9,
+      "avg_reach": 1456.1,
       "date_range_start": "2025-11-25",
       "date_range_end": "2026-02-14"
     },
@@ -38,20 +38,20 @@
         "date_range_end": "2026-02-14"
       },
       "112088047220992": {
-        "total_posts": 157,
+        "total_posts": 156,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 2077,
+        "total_reactions": 2074,
         "total_comments": 362,
         "total_shares": 161,
-        "total_engagement": 2600,
-        "total_pes": 3142.0,
+        "total_engagement": 2597,
+        "total_pes": 3139.0,
         "total_views": 65544,
-        "total_reach": 34164,
+        "total_reach": 34091,
         "avg_engagement": 16.6,
-        "avg_pes": 20.0,
-        "avg_views": 417.5,
-        "avg_reach": 217.6,
+        "avg_pes": 20.1,
+        "avg_views": 420.2,
+        "avg_reach": 218.5,
         "date_range_start": "2025-12-28",
         "date_range_end": "2026-02-14"
       },
@@ -59,17 +59,17 @@
         "total_posts": 112,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 6481,
+        "total_reactions": 6488,
         "total_comments": 885,
-        "total_shares": 332,
-        "total_engagement": 7698,
-        "total_pes": 4999.0,
-        "total_views": 185559,
-        "total_reach": 71186,
-        "avg_engagement": 68.7,
-        "avg_pes": 44.6,
-        "avg_views": 1656.8,
-        "avg_reach": 635.6,
+        "total_shares": 333,
+        "total_engagement": 7706,
+        "total_pes": 5009.0,
+        "total_views": 186297,
+        "total_reach": 71470,
+        "avg_engagement": 68.8,
+        "avg_pes": 44.7,
+        "avg_views": 1663.4,
+        "avg_reach": 638.1,
         "date_range_start": "2025-12-20",
         "date_range_end": "2026-02-14"
       },
@@ -77,17 +77,17 @@
         "total_posts": 117,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 2870,
+        "total_reactions": 2872,
         "total_comments": 702,
         "total_shares": 279,
-        "total_engagement": 3851,
-        "total_pes": 3179.0,
-        "total_views": 58816,
-        "total_reach": 25159,
+        "total_engagement": 3853,
+        "total_pes": 3181.0,
+        "total_views": 58920,
+        "total_reach": 25185,
         "avg_engagement": 32.9,
         "avg_pes": 27.2,
-        "avg_views": 502.7,
-        "avg_reach": 215.0,
+        "avg_views": 503.6,
+        "avg_reach": 215.3,
         "date_range_start": "2025-12-21",
         "date_range_end": "2026-02-14"
       },
@@ -117,7 +117,7 @@
         "total_comments": 562,
         "total_shares": 299,
         "total_engagement": 3107,
-        "total_pes": 3080.0,
+        "total_pes": 3081.0,
         "total_views": 47213,
         "total_reach": 24987,
         "avg_engagement": 15.1,
@@ -207,7 +207,7 @@
         "total_comments": 471,
         "total_shares": 191,
         "total_engagement": 4621,
-        "total_pes": 3137.0,
+        "total_pes": 3139.0,
         "total_views": 59755,
         "total_reach": 14419,
         "avg_engagement": 31.2,
@@ -221,11 +221,11 @@
         "total_posts": 195,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 3164,
+        "total_reactions": 3160,
         "total_comments": 588,
         "total_shares": 212,
-        "total_engagement": 3964,
-        "total_pes": 3309.0,
+        "total_engagement": 3960,
+        "total_pes": 3312.0,
         "total_views": 61310,
         "total_reach": 33424,
         "avg_engagement": 20.3,
@@ -293,15 +293,15 @@
         "total_posts": 114,
         "total_pages": 1,
         "all_pages": 1,
-        "total_reactions": 169959,
-        "total_comments": 6874,
+        "total_reactions": 169970,
+        "total_comments": 6875,
         "total_shares": 2491,
-        "total_engagement": 179324,
-        "total_pes": 104234.0,
+        "total_engagement": 179336,
+        "total_pes": 104245.0,
         "total_views": 3142565,
         "total_reach": 2624517,
-        "avg_engagement": 1573.0,
-        "avg_pes": 914.3,
+        "avg_engagement": 1573.1,
+        "avg_pes": 914.4,
         "avg_views": 27566.4,
         "avg_reach": 23022.1,
         "date_range_start": "2025-11-25",
@@ -317,12 +317,12 @@
       "fan_count": 44980,
       "followers_count": 44980,
       "post_count": 114,
-      "total_reactions": 169959,
-      "total_comments": 6874,
+      "total_reactions": 169970,
+      "total_comments": 6875,
       "total_shares": 2491,
-      "total_engagement": 179324,
-      "avg_engagement": 1573.0,
-      "avg_pes": 914.3,
+      "total_engagement": 179336,
+      "avg_engagement": 1573.1,
+      "avg_pes": 914.4,
       "total_views": 3142565,
       "total_reach": 2624517
     },
@@ -365,14 +365,14 @@
       "fan_count": 1743,
       "followers_count": 1743,
       "post_count": 112,
-      "total_reactions": 6481,
+      "total_reactions": 6488,
       "total_comments": 885,
-      "total_shares": 332,
-      "total_engagement": 7698,
-      "avg_engagement": 68.7,
-      "avg_pes": 44.6,
-      "total_views": 185559,
-      "total_reach": 71186
+      "total_shares": 333,
+      "total_engagement": 7706,
+      "avg_engagement": 68.8,
+      "avg_pes": 44.7,
+      "total_views": 186297,
+      "total_reach": 71470
     },
     {
       "page_id": "876401548892955",
@@ -413,10 +413,10 @@
       "fan_count": 1465,
       "followers_count": 1465,
       "post_count": 195,
-      "total_reactions": 3164,
+      "total_reactions": 3160,
       "total_comments": 588,
       "total_shares": 212,
-      "total_engagement": 3964,
+      "total_engagement": 3960,
       "avg_engagement": 20.3,
       "avg_pes": 17.0,
       "total_views": 61310,
@@ -429,14 +429,14 @@
       "fan_count": 1122,
       "followers_count": 1122,
       "post_count": 117,
-      "total_reactions": 2870,
+      "total_reactions": 2872,
       "total_comments": 702,
       "total_shares": 279,
-      "total_engagement": 3851,
+      "total_engagement": 3853,
       "avg_engagement": 32.9,
       "avg_pes": 27.2,
-      "total_views": 58816,
-      "total_reach": 25159
+      "total_views": 58920,
+      "total_reach": 25185
     },
     {
       "page_id": "874648655739835",
@@ -508,15 +508,15 @@
       "page_name": "Juankada host Drae",
       "fan_count": 562,
       "followers_count": 562,
-      "post_count": 157,
-      "total_reactions": 2077,
+      "post_count": 156,
+      "total_reactions": 2074,
       "total_comments": 362,
       "total_shares": 161,
-      "total_engagement": 2600,
+      "total_engagement": 2597,
       "avg_engagement": 16.6,
-      "avg_pes": 20.0,
+      "avg_pes": 20.1,
       "total_views": 65544,
-      "total_reach": 34164
+      "total_reach": 34091
     },
     {
       "page_id": "924225234111144",
@@ -572,31 +572,31 @@
       {
         "post_type": "Videos",
         "count": 1535,
-        "reactions": 219703,
+        "reactions": 219708,
         "comments": 12636,
-        "shares": 5243,
-        "total_engagement": 237582,
+        "shares": 5244,
+        "total_engagement": 237588,
         "avg_engagement": 154.8,
         "avg_pes": 104.9
       },
       {
         "post_type": "Photos",
         "count": 418,
-        "reactions": 9707,
-        "comments": 923,
+        "reactions": 9718,
+        "comments": 924,
         "shares": 568,
-        "total_engagement": 11198,
+        "total_engagement": 11210,
         "avg_engagement": 26.8,
-        "avg_pes": 27.2
+        "avg_pes": 27.3
       },
       {
         "post_type": "Text",
-        "count": 262,
-        "reactions": 24831,
+        "count": 261,
+        "reactions": 24828,
         "comments": 1730,
         "shares": 707,
-        "total_engagement": 27268,
-        "avg_engagement": 104.1,
+        "total_engagement": 27265,
+        "avg_engagement": 104.5,
         "avg_pes": 2.3
       },
       {
@@ -677,11 +677,11 @@
         {
           "post_type": "Videos",
           "count": 91,
-          "reactions": 1263,
+          "reactions": 1262,
           "comments": 223,
           "shares": 112,
-          "total_engagement": 1598,
-          "avg_engagement": 17.6,
+          "total_engagement": 1597,
+          "avg_engagement": 17.5,
           "avg_pes": 21.1
         },
         {
@@ -696,25 +696,25 @@
         },
         {
           "post_type": "Text",
-          "count": 9,
-          "reactions": 82,
+          "count": 8,
+          "reactions": 80,
           "comments": 4,
           "shares": 2,
-          "total_engagement": 88,
-          "avg_engagement": 9.8,
-          "avg_pes": 10.3
+          "total_engagement": 86,
+          "avg_engagement": 10.8,
+          "avg_pes": 11.4
         }
       ],
       "305553999318966": [
         {
           "post_type": "Videos",
           "count": 79,
-          "reactions": 5082,
+          "reactions": 5089,
           "comments": 724,
-          "shares": 269,
-          "total_engagement": 6075,
-          "avg_engagement": 76.9,
-          "avg_pes": 54.1
+          "shares": 270,
+          "total_engagement": 6083,
+          "avg_engagement": 77.0,
+          "avg_pes": 54.3
         },
         {
           "post_type": "Photos",
@@ -741,10 +741,10 @@
         {
           "post_type": "Videos",
           "count": 81,
-          "reactions": 2166,
+          "reactions": 2168,
           "comments": 571,
           "shares": 209,
-          "total_engagement": 2946,
+          "total_engagement": 2948,
           "avg_engagement": 36.4,
           "avg_pes": 33.8
         },
@@ -1010,17 +1010,17 @@
           "shares": 19,
           "total_engagement": 372,
           "avg_engagement": 21.9,
-          "avg_pes": 3.1
+          "avg_pes": 3.2
         }
       ],
       "897960886734144": [
         {
           "post_type": "Videos",
           "count": 121,
-          "reactions": 2026,
+          "reactions": 2023,
           "comments": 432,
           "shares": 155,
-          "total_engagement": 2613,
+          "total_engagement": 2610,
           "avg_engagement": 21.6,
           "avg_pes": 21.1
         },
@@ -1037,12 +1037,12 @@
         {
           "post_type": "Text",
           "count": 33,
-          "reactions": 527,
+          "reactions": 526,
           "comments": 122,
           "shares": 29,
-          "total_engagement": 678,
+          "total_engagement": 677,
           "avg_engagement": 20.5,
-          "avg_pes": 1.9
+          "avg_pes": 2.1
         },
         {
           "post_type": "Live",
@@ -1185,12 +1185,12 @@
         {
           "post_type": "Photos",
           "count": 23,
-          "reactions": 2971,
-          "comments": 198,
+          "reactions": 2982,
+          "comments": 199,
           "shares": 74,
-          "total_engagement": 3243,
-          "avg_engagement": 141.0,
-          "avg_pes": 152.3
+          "total_engagement": 3255,
+          "avg_engagement": 141.5,
+          "avg_pes": 152.7
         },
         {
           "post_type": "Text",
@@ -1291,18 +1291,18 @@
         "comments": 0,
         "shares": 2,
         "engagement": 50,
-        "pes": 53.0,
+        "pes": 54.0,
         "views": 1151,
         "reach": 525
       },
       {
         "date": "2025-12-06",
         "posts": 2,
-        "reactions": 18,
+        "reactions": 17,
         "comments": 0,
         "shares": 0,
-        "engagement": 18,
-        "pes": 18.0,
+        "engagement": 17,
+        "pes": 17.0,
         "views": 0,
         "reach": 141
       },
@@ -1346,7 +1346,7 @@
         "comments": 4,
         "shares": 0,
         "engagement": 45,
-        "pes": 43.0,
+        "pes": 49.0,
         "views": 342,
         "reach": 218
       },
@@ -1386,11 +1386,11 @@
       {
         "date": "2025-12-20",
         "posts": 15,
-        "reactions": 386,
+        "reactions": 385,
         "comments": 35,
         "shares": 16,
-        "engagement": 437,
-        "pes": 504.0,
+        "engagement": 436,
+        "pes": 503.0,
         "views": 12723,
         "reach": 5325
       },
@@ -1419,10 +1419,10 @@
       {
         "date": "2025-12-23",
         "posts": 9,
-        "reactions": 203,
+        "reactions": 202,
         "comments": 27,
         "shares": 8,
-        "engagement": 238,
+        "engagement": 237,
         "pes": 280.0,
         "views": 3662,
         "reach": 1808
@@ -1430,11 +1430,11 @@
       {
         "date": "2025-12-24",
         "posts": 14,
-        "reactions": 334,
+        "reactions": 333,
         "comments": 44,
         "shares": 11,
-        "engagement": 389,
-        "pes": 455.0,
+        "engagement": 388,
+        "pes": 454.0,
         "views": 8282,
         "reach": 3068
       },
@@ -1473,14 +1473,14 @@
       },
       {
         "date": "2025-12-28",
-        "posts": 42,
-        "reactions": 886,
+        "posts": 41,
+        "reactions": 884,
         "comments": 94,
         "shares": 49,
-        "engagement": 1029,
-        "pes": 1221.0,
+        "engagement": 1027,
+        "pes": 1219.0,
         "views": 31286,
-        "reach": 17238
+        "reach": 17165
       },
       {
         "date": "2025-12-29",
@@ -1496,24 +1496,24 @@
       {
         "date": "2025-12-30",
         "posts": 47,
-        "reactions": 948,
+        "reactions": 947,
         "comments": 96,
         "shares": 37,
-        "engagement": 1081,
-        "pes": 1096.0,
+        "engagement": 1080,
+        "pes": 1095.0,
         "views": 26101,
         "reach": 11907
       },
       {
         "date": "2025-12-31",
         "posts": 32,
-        "reactions": 482,
+        "reactions": 491,
         "comments": 53,
-        "shares": 15,
-        "engagement": 550,
-        "pes": 541.0,
-        "views": 17730,
-        "reach": 11504
+        "shares": 16,
+        "engagement": 560,
+        "pes": 555.0,
+        "views": 18572,
+        "reach": 11814
       },
       {
         "date": "2026-01-01",
@@ -1529,11 +1529,11 @@
       {
         "date": "2026-01-02",
         "posts": 35,
-        "reactions": 1204,
-        "comments": 114,
+        "reactions": 1215,
+        "comments": 115,
         "shares": 61,
-        "engagement": 1379,
-        "pes": 788.0,
+        "engagement": 1391,
+        "pes": 799.0,
         "views": 25917,
         "reach": 11865
       },
@@ -2380,23 +2380,23 @@
       "112088047220992": [
         {
           "date": "2025-12-28",
-          "posts": 7,
-          "reactions": 10,
+          "posts": 6,
+          "reactions": 8,
           "comments": 0,
           "shares": 0,
-          "engagement": 10,
-          "pes": 10.0,
+          "engagement": 8,
+          "pes": 8.0,
           "views": 403,
-          "reach": 267
+          "reach": 194
         },
         {
           "date": "2025-12-30",
           "posts": 4,
-          "reactions": 78,
+          "reactions": 77,
           "comments": 6,
           "shares": 3,
-          "engagement": 87,
-          "pes": 99.0,
+          "engagement": 86,
+          "pes": 98.0,
           "views": 1804,
           "reach": 729
         },
@@ -2999,13 +2999,13 @@
         {
           "date": "2025-12-31",
           "posts": 1,
-          "reactions": 75,
+          "reactions": 82,
           "comments": 3,
-          "shares": 1,
-          "engagement": 79,
-          "pes": 84.0,
-          "views": 1641,
-          "reach": 436
+          "shares": 2,
+          "engagement": 87,
+          "pes": 94.0,
+          "views": 2379,
+          "reach": 720
         },
         {
           "date": "2026-01-01",
@@ -3584,13 +3584,13 @@
         {
           "date": "2025-12-31",
           "posts": 2,
-          "reactions": 18,
+          "reactions": 20,
           "comments": 0,
           "shares": 0,
-          "engagement": 18,
-          "pes": 18.0,
-          "views": 66,
-          "reach": 63
+          "engagement": 20,
+          "pes": 20.0,
+          "views": 170,
+          "reach": 89
         },
         {
           "date": "2026-01-02",
@@ -4725,7 +4725,7 @@
           "comments": 8,
           "shares": 4,
           "engagement": 66,
-          "pes": 81.0,
+          "pes": 82.0,
           "views": 820,
           "reach": 316
         },
@@ -7364,7 +7364,7 @@
           "comments": 4,
           "shares": 0,
           "engagement": 38,
-          "pes": 40.0,
+          "pes": 42.0,
           "views": 153,
           "reach": 136
         },
@@ -7872,18 +7872,18 @@
           "comments": 0,
           "shares": 0,
           "engagement": 9,
-          "pes": 8.0,
+          "pes": 9.0,
           "views": 0,
           "reach": 68
         },
         {
           "date": "2025-12-06",
           "posts": 2,
-          "reactions": 18,
+          "reactions": 17,
           "comments": 0,
           "shares": 0,
-          "engagement": 18,
-          "pes": 18.0,
+          "engagement": 17,
+          "pes": 17.0,
           "views": 0,
           "reach": 141
         },
@@ -7916,7 +7916,7 @@
           "comments": 4,
           "shares": 0,
           "engagement": 45,
-          "pes": 43.0,
+          "pes": 49.0,
           "views": 342,
           "reach": 218
         },
@@ -7934,11 +7934,11 @@
         {
           "date": "2025-12-20",
           "posts": 4,
-          "reactions": 91,
+          "reactions": 90,
           "comments": 7,
           "shares": 1,
-          "engagement": 99,
-          "pes": 108.0,
+          "engagement": 98,
+          "pes": 107.0,
           "views": 584,
           "reach": 303
         },
@@ -7967,22 +7967,22 @@
         {
           "date": "2025-12-23",
           "posts": 2,
-          "reactions": 24,
+          "reactions": 23,
           "comments": 0,
           "shares": 0,
-          "engagement": 24,
-          "pes": 24.0,
+          "engagement": 23,
+          "pes": 23.0,
           "views": 139,
           "reach": 128
         },
         {
           "date": "2025-12-24",
           "posts": 2,
-          "reactions": 36,
+          "reactions": 35,
           "comments": 0,
           "shares": 0,
-          "engagement": 36,
-          "pes": 36.0,
+          "engagement": 35,
+          "pes": 35.0,
           "views": 377,
           "reach": 215
         },
@@ -10417,11 +10417,11 @@
         {
           "date": "2026-01-02",
           "posts": 4,
-          "reactions": 570,
-          "comments": 42,
+          "reactions": 581,
+          "comments": 43,
           "shares": 8,
-          "engagement": 620,
-          "pes": 355.0,
+          "engagement": 632,
+          "pes": 366.0,
           "views": 8932,
           "reach": 5528
         },
@@ -10871,7 +10871,7 @@
   "topPosts": {
     "all": [
       {
-        "post_id": "1.2215E+17",
+        "post_id": "122150000000000000",
         "page_id": "959243183930083",
         "page_name": "Juankada Ligaya",
         "title": "Bigguy",
@@ -10913,7 +10913,7 @@
         "pes": 9909.0
       },
       {
-        "post_id": "1.22152E+17",
+        "post_id": "122152000000000000",
         "page_id": "959243183930083",
         "page_name": "Juankada Ligaya",
         "title": "oho",
@@ -11042,7 +11042,7 @@
           "pes": 49.0
         },
         {
-          "post_id": "1.18554E+15",
+          "post_id": "1185540000000000",
           "page_id": "106014857827362",
           "page_name": "Juankada Zia",
           "title": "\ud83d\udc96Hi Zianatics!\ud83d\udc96\n\nA small look back at our hosting from the other day! \ud83d\ude18\n\nStay pretty, sexy, and lucky, Zianatics!\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -11112,7 +11112,7 @@
           "pes": 15.0
         },
         {
-          "post_id": "1.18202E+15",
+          "post_id": "1182020000000000",
           "page_id": "106014857827362",
           "page_name": "Juankada Zia",
           "title": "Juankada Zia added a new photo.",
@@ -11140,7 +11140,7 @@
           "pes": 32.0
         },
         {
-          "post_id": "1.18356E+15",
+          "post_id": "1183560000000000",
           "page_id": "106014857827362",
           "page_name": "Juankada Zia",
           "title": "JuanKada Zia",
@@ -11880,7 +11880,7 @@
           "pes": 49.0
         },
         {
-          "post_id": "1.22098E+17",
+          "post_id": "122098000000000000",
           "page_id": "870941016112134",
           "page_name": "Juankada Tanya",
           "title": "Nagsama ang dalawang maganda\ud83d\ude0e Emeeeeeeeeeee!\ud83d\ude1c\n\n#Juan365Studios #ALLINJUANLIVE #JuankadaTanya #JuankadaZia #JuankadaHosts #Juan365 #fbreelsfyp\u30b7\u309aviral\u30b7",
@@ -11992,7 +11992,7 @@
           "pes": 5.0
         },
         {
-          "post_id": "1.22097E+17",
+          "post_id": "122097000000000000",
           "page_id": "870941016112134",
           "page_name": "Juankada Tanya",
           "title": "Better than yoursssss\ud83d\ude09\u2728\n\nIf mahilig kayo sa Color Game samahan niyo kami sa Juan365 mamayang 2PM to 10PM live!\n\nFollow for more mga Juankada!\ud83e\udef6\n\n#Juan365Studios #ALLINJUANLIVE #JuankadaTanya #JuankadaH",
@@ -12958,7 +12958,7 @@
           "pes": 22.0
         },
         {
-          "post_id": "1.22118E+17",
+          "post_id": "122118000000000000",
           "page_id": "927370847106754",
           "page_name": "Juankada Evo",
           "title": "Nandito lang ako, waitings sa tawag mo \ud83d\ude09\n\n #JuankadaSabbie #Sabbies #LuckySabbie #foryoupagereels #followersreelsfyp\u30b7\u309aviral\u30b7fyp\u30b7\u309aviral\u30b7al\u30b7",
@@ -13144,7 +13144,7 @@
       ],
       "959243183930083": [
         {
-          "post_id": "1.2215E+17",
+          "post_id": "122150000000000000",
           "page_id": "959243183930083",
           "page_name": "Juankada Ligaya",
           "title": "Bigguy",
@@ -13172,7 +13172,7 @@
           "pes": 5391.0
         },
         {
-          "post_id": "1.22152E+17",
+          "post_id": "122152000000000000",
           "page_id": "959243183930083",
           "page_name": "Juankada Ligaya",
           "title": "oho",
@@ -13592,7 +13592,7 @@
       "pes": 7.0
     },
     {
-      "post_id": "1.34201E+15",
+      "post_id": "1342010000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Hanap ka date PWEDE KA BA?\n\n#Juan365Studios #Juan365 #valentinesday #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -13608,7 +13608,7 @@
       "pes": 38.0
     },
     {
-      "post_id": "1.22117E+17",
+      "post_id": "122117000000000000",
       "page_id": "862622980275034",
       "page_name": "Juankada Shann",
       "title": "Smiles loud, outfit louder \u2728\n\n#JuankadaShann #Shanshines #Followme #TagAFriend",
@@ -13640,7 +13640,7 @@
       "pes": 17.0
     },
     {
-      "post_id": "1.34186E+15",
+      "post_id": "1341860000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "AKO NA LANG KA DATE MO!\nPasasayahin ko ang PUSO MO! \nLive na with Juankada Drae! TARA na sa COLOR GAME LIVE!\n\n#J365Studios #Juan365 #fridaythe13th  #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -14088,7 +14088,7 @@
       "pes": 27.0
     },
     {
-      "post_id": "1.34125E+15",
+      "post_id": "1341250000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "FRIDAY the 13th ngayon! Nakita mo to? Swerte daw mag LIKE and SHARE nito! \ud83d\ude01\ud83e\udd70\n\n#Juan365Studios #Juan365 #fridaythe13th  #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -14136,7 +14136,7 @@
       "pes": 23.0
     },
     {
-      "post_id": "1.20531E+15",
+      "post_id": "1205310000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Fit check: RAKRAKAN!\ud83e\udd18\nPersonality: cutesy\u263a\ufe0f\n\nCatch me live sa COLOR GAME LIVE!!! \ud83d\udc96\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -14152,7 +14152,7 @@
       "pes": 20.0
     },
     {
-      "post_id": "1.20467E+15",
+      "post_id": "1204670000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "BTS of how I get ready before live!!! \ud83c\udfa5\ud83c\udfac\n\nCatch me again tomorrow on COLOR GAME LIVE! \ud83d\ude18\ud83d\udc96\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -14168,7 +14168,7 @@
       "pes": 14.0
     },
     {
-      "post_id": "1.20519E+15",
+      "post_id": "1205190000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -14184,7 +14184,7 @@
       "pes": 4.0
     },
     {
-      "post_id": "1.34089E+15",
+      "post_id": "1340890000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "February 15 na ba BUKAS? \ud83d\ude06\n\nFOLLOW for more\n\n#Juan365Studios #Juan365 #positiveenergy  #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -14488,7 +14488,7 @@
       "pes": 24.0
     },
     {
-      "post_id": "1.20483E+15",
+      "post_id": "1204830000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -14728,7 +14728,7 @@
       "pes": 11.0
     },
     {
-      "post_id": "1.22155E+17",
+      "post_id": "122155000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "KIKIAM",
@@ -14760,7 +14760,7 @@
       "pes": 24.0
     },
     {
-      "post_id": "1.22108E+17",
+      "post_id": "122108000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Yakapin mo akoooo.  \n#juankadatanya #fbreelsfyp\u30b7viral\u30b7 #Juan365 #fbreels #followerseveryonehighlights",
@@ -14776,7 +14776,7 @@
       "pes": 25.0
     },
     {
-      "post_id": "1.20456E+15",
+      "post_id": "1204560000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Wild at heart and free in spirit.\ud83c\udf35\ud83c\udf0c\n\nCheck out the Coachella fit, Zianatics! \n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -14808,7 +14808,7 @@
       "pes": 8.0
     },
     {
-      "post_id": "1.20452E+15",
+      "post_id": "1204520000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "I'll be OTW! \ud83c\udfc3\u200d\u2640\ufe0f\n\nSaan naman ang punta natin, Zianatics? \ud83e\udd28\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -14840,7 +14840,7 @@
       "pes": 64.0
     },
     {
-      "post_id": "1.34015E+15",
+      "post_id": "1340150000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "KONICHIWA! Ready na ba sa sabado? \ud83d\ude0d\n\n#Juan365Studios #Juan365 #colorgamelive  #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -14904,7 +14904,7 @@
       "pes": 12.0
     },
     {
-      "post_id": "1.22193E+17",
+      "post_id": "122193000000000000",
       "page_id": "397865533415866",
       "page_name": "Juankada Geoff",
       "title": "JuanKada Geoff",
@@ -15272,7 +15272,7 @@
       "pes": 16.0
     },
     {
-      "post_id": "1.33956E+15",
+      "post_id": "1339560000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "TARA NA SA COLORGAMEEE WITH Juankada Geoff Juankada Tanya and Juankada Papa Joe. \ud83e\udef6\ud83c\udffb \n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -15416,7 +15416,7 @@
       "pes": 11.0
     },
     {
-      "post_id": "1.2038E+15",
+      "post_id": "1203800000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "My recent LSS!!!\ud83e\udd70\n\nPwedeng sabihin niyo 'to sakanya? \ud83c\udfb5\ud83c\udfb6\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -15512,7 +15512,7 @@
       "pes": 8.0
     },
     {
-      "post_id": "1.20365E+15",
+      "post_id": "1203650000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Black & White. A Timeless color-combi \ud83e\udd0d\ud83d\udda4\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -15528,7 +15528,7 @@
       "pes": 29.0
     },
     {
-      "post_id": "1.20232E+15",
+      "post_id": "1202320000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Man, I feel just like a ROCKSTAR! \ud83e\udd18\ud83c\udfb8\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -15800,7 +15800,7 @@
       "pes": 13.0
     },
     {
-      "post_id": "1.33875E+15",
+      "post_id": "1338750000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "TUESDAY NAAA! ANO PA INAANTAY NIYO TARA NA SA COLORGAME LIVEEE!  \ud83c\udf08",
@@ -16104,7 +16104,7 @@
       "pes": 47.0
     },
     {
-      "post_id": "1.33845E+15",
+      "post_id": "1338450000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "READY na! Nakapag INVITE FRIENDS to FOLLOW me ka na ba? \ud83e\udd29\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -16184,7 +16184,7 @@
       "pes": 14.0
     },
     {
-      "post_id": "1.20231E+15",
+      "post_id": "1202310000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "BLACK ON BLACK ON BLACK! \ud83d\udd76\n\nCheck out the OOTD from yesterday's live \ud83e\udd19\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -16200,7 +16200,7 @@
       "pes": 23.0
     },
     {
-      "post_id": "1.20279E+15",
+      "post_id": "1202790000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Bakit ang daming sinasabi? \ud83e\udd28\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -16216,7 +16216,7 @@
       "pes": 27.0
     },
     {
-      "post_id": "1.33821E+15",
+      "post_id": "1338210000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "KATOK KA may SURPRISE!\ud83e\udd2d\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -16696,7 +16696,7 @@
       "pes": 12.0
     },
     {
-      "post_id": "1.33772E+15",
+      "post_id": "1337720000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "MONDAY NA! \u2728\nCOLOR GAME LIVE na \u2019yan! \ud83d\udd25\nLive with Juankada Drae!\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -16760,7 +16760,7 @@
       "pes": 17.0
     },
     {
-      "post_id": "1.20193E+15",
+      "post_id": "1201930000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Hosting highlights from our live yesterday!!! \ud83d\udc96\n\nWatch out for more kulitan and good vibes only on COLOR GAME LIVE of Juan365 Studios! \ud83d\ude18\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #Juan",
@@ -16856,7 +16856,7 @@
       "pes": 21.0
     },
     {
-      "post_id": "1.33753E+15",
+      "post_id": "1337530000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Ako na lang DARNA MO!\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel Juan365 Juan365 Studios",
@@ -16872,7 +16872,7 @@
       "pes": 12.0
     },
     {
-      "post_id": "1.20216E+15",
+      "post_id": "1202160000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "felt pretty blue \u274c\nFELT PRETTY IN BLUE \u2705\ud83d\udc99\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -16888,7 +16888,7 @@
       "pes": 9.0
     },
     {
-      "post_id": "1.20211E+15",
+      "post_id": "1202110000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "\ud83c\udf4a you glad that I'm this pretty?\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -16952,7 +16952,7 @@
       "pes": 10.0
     },
     {
-      "post_id": "1.20192E+15",
+      "post_id": "1201920000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "She's a BADDIE in the corporate world! \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udc96\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -16968,7 +16968,7 @@
       "pes": 25.0
     },
     {
-      "post_id": "1.3374E+15",
+      "post_id": "1337400000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "GENTLE WOMAN! \ud83d\ude0e\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel  Juan365 Juan365 Studios",
@@ -17000,7 +17000,7 @@
       "pes": 6.0
     },
     {
-      "post_id": "1.22119E+17",
+      "post_id": "122119000000000000",
       "page_id": "927370847106754",
       "page_name": "Juankada Evo",
       "title": "Your daily dose of Sabbie! Happy monday sabbies \ud83d\ude18\n\n#JuankadaSabbie #Sabbies #LuckySabbie  #followforfollowback #foryoupagereels",
@@ -17368,7 +17368,7 @@
       "pes": 9.0
     },
     {
-      "post_id": "1.3368E+15",
+      "post_id": "1336800000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "SUNDAY NA! Choose your LUCKY COLOR! Test your LUCK! \nLIVE COLOR GAME with Juankada Drae! \ud83e\udef6\ud83c\udffb\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel",
@@ -17528,7 +17528,7 @@
       "pes": 18.0
     },
     {
-      "post_id": "1.33668E+15",
+      "post_id": "1336680000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Tambalang Drae at Alex? Al-Drae! Kabahan na ang aldub? \ud83e\udd23 Juankada Alexchoozy \ud83e\udef6\ud83c\udffb",
@@ -17576,7 +17576,7 @@
       "pes": 30.0
     },
     {
-      "post_id": "1.33664E+15",
+      "post_id": "1336640000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Mag WALK OUT na lang!\ud83d\ude06\u270c\ud83c\udffb\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel  Juan365 Juan365 Studios",
@@ -17608,7 +17608,7 @@
       "pes": 7.0
     },
     {
-      "post_id": "1.22154E+17",
+      "post_id": "122154000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "bubuksan mo o papasukin kita? \ud83e\udd2d\n\n#fyp #followers #trendingreel #Ligaya",
@@ -17640,7 +17640,7 @@
       "pes": 12.0
     },
     {
-      "post_id": "1.22107E+17",
+      "post_id": "122107000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Opsss wag matulala  eme\ud83d\ude02\ud83d\ude1c\u2026 #juankadatanya #Juan365 #trendingpost #fbreels #fypage\u30b7",
@@ -17672,7 +17672,7 @@
       "pes": 6.0
     },
     {
-      "post_id": "1.33643E+15",
+      "post_id": "1336430000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Eyy! Sasabayan mo ba akong sumayaw?\n\n#Juan365Studios #Juan365 #colorgamelive  #JuankadaHostDrae #fyp\u30b7 #trendingreel Juan365 Juan365 Studios",
@@ -17688,7 +17688,7 @@
       "pes": 10.0
     },
     {
-      "post_id": "1.20109E+15",
+      "post_id": "1201090000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "before | AFTER!!! \ud83d\udc96\n\nStart the week with me, Zianatics! \ud83d\ude18\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -17960,7 +17960,7 @@
       "pes": 8.0
     },
     {
-      "post_id": "1.33603E+15",
+      "post_id": "1336030000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "SATURDAY ENERGY! \u26a1\ufe0f\nUmaapaw ng LUCK sa COLOR GAME LIVE! \ud83d\udd25\nHuwag magpahuli\u2014kasama si Juankada Alexchoozy Juankada Charm and Juankada Papa Joe!\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDra",
@@ -18280,7 +18280,7 @@
       "pes": 13.0
     },
     {
-      "post_id": "1.22116E+17",
+      "post_id": "122116000000000000",
       "page_id": "862622980275034",
       "page_name": "Juankada Shann",
       "title": "No long story needed. The photos say it all. \ud83d\udcf8\n\n#Captured #InTheMoment #JuankadaShann #Shanshines #Followme",
@@ -18296,7 +18296,7 @@
       "pes": 4.0
     },
     {
-      "post_id": "1.20026E+15",
+      "post_id": "1200260000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -18840,7 +18840,7 @@
       "pes": 33.0
     },
     {
-      "post_id": "1.22153E+17",
+      "post_id": "122153000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Awra",
@@ -18872,7 +18872,7 @@
       "pes": 22.0
     },
     {
-      "post_id": "1.22106E+17",
+      "post_id": "122106000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Teamwork makes the dream work\u2026  #juankadatanya #followerseveryonehighlights #fypage\u30b7 #followers #Juan365",
@@ -19000,7 +19000,7 @@
       "pes": 3.0
     },
     {
-      "post_id": "1.1993E+15",
+      "post_id": "1199300000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "As a corpo-baddie today! \ud83d\udc69\u200d\ud83d\udcbc\ud83d\udc69\u200d\ud83d\udcbb\n\nCheck out the OOTD Zianatics! \ud83d\udc96\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -19064,7 +19064,7 @@
       "pes": 5.0
     },
     {
-      "post_id": "4.42578E+15",
+      "post_id": "4425780000000000",
       "page_id": "897960886734144",
       "page_name": "Juankada Alexchoozy",
       "title": "Juankada Alexchoozy's Video",
@@ -19560,7 +19560,7 @@
       "pes": 28.0
     },
     {
-      "post_id": "1.22152E+17",
+      "post_id": "122152000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "oho",
@@ -19640,7 +19640,7 @@
       "pes": 12.0
     },
     {
-      "post_id": "1.19761E+15",
+      "post_id": "1197610000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "OBSESSED with this color on me!!! \ud83d\udc9c\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -19720,7 +19720,7 @@
       "pes": 6.0
     },
     {
-      "post_id": "1.19759E+15",
+      "post_id": "1197590000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Streetwear but make it classy as well! \ud83e\udd19\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -19752,7 +19752,7 @@
       "pes": 16.0
     },
     {
-      "post_id": "1.33361E+15",
+      "post_id": "1333610000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "PA KISS Lang eh! \ud83e\udd79\n\n#Juan365Studios #Juan365 #colorgamelive  #JuankadaHostDrae #fyp\u30b7 #trendingnow Juan365 Juan365 Studios",
@@ -19784,7 +19784,7 @@
       "pes": 10.0
     },
     {
-      "post_id": "1.19856E+15",
+      "post_id": "1198560000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -19800,7 +19800,7 @@
       "pes": 15.0
     },
     {
-      "post_id": "1.22151E+17",
+      "post_id": "122151000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Happy 30k mga luvs ko!! Thank you so much! Mahal ko kayo!! \ud83e\udd70\ud83d\ude18\u2764\ufe0f",
@@ -19816,7 +19816,7 @@
       "pes": 255.0
     },
     {
-      "post_id": "1.19844E+15",
+      "post_id": "1198440000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Thrilling Thursday Zianatics! \ud83d\udc96\n\nCheck out our OOTD for today!!! \ud83d\udc5a\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -19928,7 +19928,7 @@
       "pes": 23.0
     },
     {
-      "post_id": "4.39251E+15",
+      "post_id": "4392510000000000",
       "page_id": "897960886734144",
       "page_name": "Juankada Alexchoozy",
       "title": "Choozers, GOOD MORNING! See you from 6am to 2pm \u2764\ufe0f",
@@ -20152,7 +20152,7 @@
       "pes": 15.0
     },
     {
-      "post_id": "1.33307E+15",
+      "post_id": "1333070000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "MIDWEEK NA! \u2728\nPampa-good vibes? COLOR GAME LIVE na \u2019yan! \ud83d\udd25\nLive with Juankada Drae Juankada Tanya Juankada Geoff and Juankada Papa Joe!\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp",
@@ -20408,7 +20408,7 @@
       "pes": 6.0
     },
     {
-      "post_id": "1.2215E+17",
+      "post_id": "122150000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Bigguy",
@@ -20440,7 +20440,7 @@
       "pes": 16.0
     },
     {
-      "post_id": "1.19786E+15",
+      "post_id": "1197860000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Eat it up!!! \ud83d\ude18\ud83e\udd19\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -20520,7 +20520,7 @@
       "pes": 7.0
     },
     {
-      "post_id": "1.33266E+15",
+      "post_id": "1332660000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Looking ONLY at YOU! \ud83d\ude0d\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel Juan365 Juan365 Studios",
@@ -20536,7 +20536,7 @@
       "pes": 15.0
     },
     {
-      "post_id": "1.19775E+15",
+      "post_id": "1197750000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Ang lucky color mo today ay... BLUE! \ud83d\udc99\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -20568,7 +20568,7 @@
       "pes": 15.0
     },
     {
-      "post_id": "1.33239E+15",
+      "post_id": "1332390000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "EYES CAN'T LIE\ud83d\ude09\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel Juan365  Juan365 Studios",
@@ -20872,7 +20872,7 @@
       "pes": 9.0
     },
     {
-      "post_id": "1.22192E+17",
+      "post_id": "122192000000000000",
       "page_id": "397865533415866",
       "page_name": "Juankada Geoff",
       "title": "\ud83e\udee1\ud835\udc0e\ud835\udc2e\ud835\udc2d\ud835\udc1f\ud835\udc22\ud835\udc2d \ud835\udc2c\ud835\udc29\ud835\udc1e\ud835\udc1a\ud835\udc24\ud835\udc2c, \u2764\ufe0f\u200d\ud83d\udd25 \ud835\udc2f\ud835\udc22\ud835\udc1b\ud835\udc1e \ud835\udc2c\ud835\udc1c\ud835\udc2b\ud835\udc1e\ud835\udc1a\ud835\udc26\ud835\udc2c \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc12\ud835\udc13\ud835\udc00\ud835\udc11. \ud83e\udd1f\ud83c\udffd\ud835\udc12\ud835\udc2e\ud835\udc28\ud835\udc2d \ud835\udc29\ud835\udc1a \ud835\udc25\ud835\udc1a\ud835\udc27\ud835\udc20, \ud835\udc29\ud835\udc1a\ud835\udc27\ud835\udc1a\ud835\udc25\ud835\udc28 \ud835\udc27\ud835\udc1a \ud83d\udc49\ud83c\udffd \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc12\ud835\udc13\ud835\udc00\ud835\udc11 \ud835\udc26\ud835\udc28\ud835\udc1d\ud835\udc1e \ud835\udc00\ud835\udc02\ud835\udc13\ud835\udc08\ud835\udc15\ud835\udc00\ud835\udc13\ud835\udc04\ud835\udc03.. \ud83d\udc4a\ud83c\udffd\n\n\ud835\udc12\ud835\udc04\ud835\udc04 \ud835\udc18\ud835\udc0e\ud835\udc14 \ud835\udc13\ud835\udc0e\ud835\udc0d\ud835\udc08\ud835\udc06\ud835\udc07\ud835\udc13 \ud835\udfcf\ud835\udfce\ud835\udc0f\ud835\udc0c\n\n#Juan365PH #juankadageoff #Juan365 #JuanKada #AllInJuanSaSaya #rockers #col",
@@ -21064,7 +21064,7 @@
       "pes": 49.0
     },
     {
-      "post_id": "1.22149E+17",
+      "post_id": "122149000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "SUNGIT MO NAMAN",
@@ -21224,7 +21224,7 @@
       "pes": 10.0
     },
     {
-      "post_id": "1.19684E+15",
+      "post_id": "1196840000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -21272,7 +21272,7 @@
       "pes": 21.0
     },
     {
-      "post_id": "1.33135E+15",
+      "post_id": "1331350000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "GANITO BA MAG SHAKE! \ud83d\ude06\n\nGusto mo ba mabigyan ng drinks\ud83e\udd14\n\n#Juan365Studios #Juan365 #ColorGameLive  #JuankadaHostDrae #fyp\u30b7 #trendingreel Juan365",
@@ -21560,7 +21560,7 @@
       "pes": 8.0
     },
     {
-      "post_id": "1.33116E+15",
+      "post_id": "1331160000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Too cool to follow rules. \ud83d\ude0e\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -21752,7 +21752,7 @@
       "pes": 20.0
     },
     {
-      "post_id": "1.22118E+17",
+      "post_id": "122118000000000000",
       "page_id": "927370847106754",
       "page_name": "Juankada Evo",
       "title": "Nandito lang ako, waitings sa tawag mo \ud83d\ude09\n\n #JuankadaSabbie #Sabbies #LuckySabbie #foryoupagereels #followersreelsfyp\u30b7\u309aviral\u30b7fyp\u30b7\u309aviral\u30b7al\u30b7",
@@ -21768,7 +21768,7 @@
       "pes": 43.0
     },
     {
-      "post_id": "1.22125E+17",
+      "post_id": "122125000000000000",
       "page_id": "882499904951305",
       "page_name": "Juankada Lance",
       "title": "\ud835\udc02\ud835\udc22\ud835\udc27\ud835\udc1e\ud835\udc26\ud835\udc1a\ud835\udc2d\ud835\udc22\ud835\udc1c \ud835\udc26\ud835\udc28\ud835\udc1d\ud835\udc1e: \ud835\udc0e\ud835\udc0d\ud83d\udcf8\u26a1\n\n#JuankadaLance #Juan365Studios #trending #fyp\u30b7 #foryourpage #reelsviral\u30b7",
@@ -21864,7 +21864,7 @@
       "pes": 16.0
     },
     {
-      "post_id": "1.19602E+15",
+      "post_id": "1196020000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Tara na!\n\nSasama ba kayo sakin Zianatics?\ud83e\udd14\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -22184,7 +22184,7 @@
       "pes": 17.0
     },
     {
-      "post_id": "1.33034E+15",
+      "post_id": "1330340000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Layo ng tingin san kana ba bbq? \n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -22792,7 +22792,7 @@
       "pes": 1.0
     },
     {
-      "post_id": "1.1955E+15",
+      "post_id": "1195500000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Juankada Zia updated their cover photo.",
@@ -22840,7 +22840,7 @@
       "pes": 9.0
     },
     {
-      "post_id": "1.19549E+15",
+      "post_id": "1195490000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -22856,7 +22856,7 @@
       "pes": 10.0
     },
     {
-      "post_id": "1.19546E+15",
+      "post_id": "1195460000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "\ud83d\udc96Hi Zianatics!\ud83d\udc96\n\nOOTD from yesterday\u2019s live! \ud83d\ude18\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -22872,7 +22872,7 @@
       "pes": 36.0
     },
     {
-      "post_id": "1.22105E+17",
+      "post_id": "122105000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Malapit na araw ng puso!! \u2764\ufe0f\u2764\ufe0f\u2764\ufe0f  #juankadahosttanya\n#juan365 #happyhearts \n#followerseveryonehighlights #Juan365ColorGame",
@@ -23272,7 +23272,7 @@
       "pes": 17.0
     },
     {
-      "post_id": "1.32962E+15",
+      "post_id": "1329620000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Juankada host Drae updated their cover photo.",
@@ -23288,7 +23288,7 @@
       "pes": 16.0
     },
     {
-      "post_id": "1.32961E+15",
+      "post_id": "1329610000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Hi Draemons! \ud83d\udc96 February na, time for fun & kilig! \u2728\ud83d\ude1d",
@@ -23544,7 +23544,7 @@
       "pes": 20.0
     },
     {
-      "post_id": "1.22148E+17",
+      "post_id": "122148000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Sweetgurl",
@@ -23720,7 +23720,7 @@
       "pes": 304.0
     },
     {
-      "post_id": "1.19486E+15",
+      "post_id": "1194860000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -23736,7 +23736,7 @@
       "pes": 3.0
     },
     {
-      "post_id": "1.3293E+15",
+      "post_id": "1329300000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Proof that joy looks good on me\ud83e\udd0d\u2728\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -23864,7 +23864,7 @@
       "pes": 13.0
     },
     {
-      "post_id": "1.22104E+17",
+      "post_id": "122104000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Hindi ba ako kapansin-pansin?\ud83d\udc49\ud83e\udd7a\ud83d\udc48\n\n#JuankadaTanya #Juan365 #fbreelsfyp\u30b7viral\u30b7 #fbreelsvideo #fyp\u30b7 #followerseveryonehighlights",
@@ -23880,7 +23880,7 @@
       "pes": 23.0
     },
     {
-      "post_id": "1.19464E+15",
+      "post_id": "1194640000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Different squads, same family \ud83d\ude4c\ud83d\udc96\n\nCatch us all on COLOR GAME LIVE!!!\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -23896,7 +23896,7 @@
       "pes": 17.0
     },
     {
-      "post_id": "1.19463E+15",
+      "post_id": "1194630000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -23928,7 +23928,7 @@
       "pes": 39.0
     },
     {
-      "post_id": "1.22115E+17",
+      "post_id": "122115000000000000",
       "page_id": "862622980275034",
       "page_name": "Juankada Shann",
       "title": "\ud835\uddd9\ud835\uddf6\ud835\uddff\ud835\uddf2\ud835\uddef\ud835\uddee\ud835\uddf9\ud835\uddf9 \ud835\uddfa\ud835\uddfc\ud835\uddf1\ud835\uddf2 \ud835\udde2\ud835\udde1 \ud83d\udd25\u2728\n\n#JuankadaShann #Shanshines #Followme #TagAFriend #FireballVibes #ShanshinesEnergy",
@@ -24456,7 +24456,7 @@
       "pes": 11.0
     },
     {
-      "post_id": "1.22146E+17",
+      "post_id": "122146000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Pretty",
@@ -24488,7 +24488,7 @@
       "pes": 4.0
     },
     {
-      "post_id": "1.32835E+15",
+      "post_id": "1328350000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Press 1 totodo ko to\ud83e\udd2a\u2728\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -24536,7 +24536,7 @@
       "pes": 12.0
     },
     {
-      "post_id": "1.19381E+15",
+      "post_id": "1193810000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Black and white OOTD from yesterday's live, Zianatics! \u26ab\ufe0f\u26aa\ufe0f\n\nLookin' good, feelin' good!!! \ud83d\udc96\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -24552,7 +24552,7 @@
       "pes": 17.0
     },
     {
-      "post_id": "1.19395E+15",
+      "post_id": "1193950000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -24584,7 +24584,7 @@
       "pes": 22.0
     },
     {
-      "post_id": "1.19376E+15",
+      "post_id": "1193760000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Papapiliin mo pa talaga ako ah \ud83e\udd28\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -24648,7 +24648,7 @@
       "pes": 24.0
     },
     {
-      "post_id": "1.32799E+15",
+      "post_id": "1327990000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Dreams feel prettier on mornings like this \u2728\n\n#Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -25096,7 +25096,7 @@
       "pes": 0.0
     },
     {
-      "post_id": "1.19297E+15",
+      "post_id": "1192970000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "\ud83d\udc96 Kumusta, Zianatics? \ud83d\udc96\n\nLookin' good with the pretty girl host, @JuankadaStar \ud83d\udcab\n\nTune in live sa ating COLOR GAME LIVE!!!\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Ziana",
@@ -25128,7 +25128,7 @@
       "pes": 24.0
     },
     {
-      "post_id": "1.19319E+15",
+      "post_id": "1193190000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -25192,7 +25192,7 @@
       "pes": 9.0
     },
     {
-      "post_id": "1.22103E+17",
+      "post_id": "122103000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Titig lang po sa mata, wala pong subtitle yan\ud83e\udee3\n\n#JuankadaTanya #Juan365 #fbreelsfyp\u30b7viral\u30b7 #fbreelsvideo #fyp\u30b7 #followerseveryonehighlights",
@@ -25224,7 +25224,7 @@
       "pes": 16.0
     },
     {
-      "post_id": "1.19305E+15",
+      "post_id": "1193050000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -25240,7 +25240,7 @@
       "pes": 1.0
     },
     {
-      "post_id": "1.19296E+15",
+      "post_id": "1192960000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Wala, may mga ganun talaga \ud83e\udee1\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -25256,7 +25256,7 @@
       "pes": 15.0
     },
     {
-      "post_id": "1.32716E+15",
+      "post_id": "1327160000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Y2K Outfit \u2728 Tara na kaJuankadaaa sa Colorgame liveeee! \n\n#Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -25272,7 +25272,7 @@
       "pes": 24.0
     },
     {
-      "post_id": "1.32715E+15",
+      "post_id": "1327150000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Oh luku! Nakisali pa talaga! \ud83d\ude1c\n\n#Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -25544,7 +25544,7 @@
       "pes": 7.0
     },
     {
-      "post_id": "1.32688E+15",
+      "post_id": "1326880000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "",
@@ -25848,7 +25848,7 @@
       "pes": 20.0
     },
     {
-      "post_id": "1.19223E+15",
+      "post_id": "1192230000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Just two cuties dancing! \ud83d\udc83\n\nAno pang dance craze ang next namin sasayawin, ni @JuankadaStar? \ud83d\udc96 JuanKada Star\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -25864,7 +25864,7 @@
       "pes": 17.0
     },
     {
-      "post_id": "1.22144E+17",
+      "post_id": "122144000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "shake",
@@ -25944,7 +25944,7 @@
       "pes": 16.0
     },
     {
-      "post_id": "1.19231E+15",
+      "post_id": "1192310000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "JuanKada Host \u2764\ufe0f\u2764\ufe0f\u2764\ufe0f",
@@ -25976,7 +25976,7 @@
       "pes": 11.0
     },
     {
-      "post_id": "1.19222E+15",
+      "post_id": "1192220000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Hala! Nakakahiya naman \ud83e\udee3\n\nTag niyo na friends niyong nakakatakas sa gawaing bahay!\ud83e\udd2d\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -26008,7 +26008,7 @@
       "pes": 10.0
     },
     {
-      "post_id": "1.32642E+15",
+      "post_id": "1326420000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "ANG SAKIT SAKIT MO NA!! \ud83d\ude2d\ud83d\ude2d\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -26040,7 +26040,7 @@
       "pes": 9.0
     },
     {
-      "post_id": "1.19219E+15",
+      "post_id": "1192190000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -26056,7 +26056,7 @@
       "pes": 4.0
     },
     {
-      "post_id": "1.22102E+17",
+      "post_id": "122102000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "\ud835\udc16\ud835\udc04 \ud835\udc00\ud835\udc11\ud835\udc04 \ud835\udc01\ud835\udc00\ud835\udc02\ud835\udc0a! \ud83e\udd73\nLive na ulit ang \ud835\udc02\ud835\udc0e\ud835\udc0b\ud835\udc0e\ud835\udc11 \ud835\udc06\ud835\udc00\ud835\udc0c\ud835\udc04! Tara na at makisaya, naghihintay na sainyo ang \ud835\udc09\ud835\udc00\ud835\udc02\ud835\udc0a\ud835\udc0f\ud835\udc0e\ud835\udc13 \ud835\udc29\ud835\udc2b\ud835\udc22\ud835\udc33\ud835\udc1e!\n\n#JuankadaTanya #Juan365 #fbreelsfyp\u30b7viral\u30b7 #fbreelsvideo #fyp\u30b7 #followerseveryonehighlights",
@@ -26104,7 +26104,7 @@
       "pes": 28.0
     },
     {
-      "post_id": "1.32616E+15",
+      "post_id": "1326160000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Energy: chaotic but iconic. \u2728\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -26520,7 +26520,7 @@
       "pes": 30.0
     },
     {
-      "post_id": "1.19132E+15",
+      "post_id": "1191320000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "\ud83d\udc96Hi Zianatics!\ud83d\udc96\n\nSmall BTS for you guys!\ud83e\udd2d\n\nCatch more sa ating Color Game Live!\ud83d\ude18\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -26536,7 +26536,7 @@
       "pes": 21.0
     },
     {
-      "post_id": "1.22143E+17",
+      "post_id": "122143000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "potacca",
@@ -26584,7 +26584,7 @@
       "pes": 17.0
     },
     {
-      "post_id": "1.19102E+15",
+      "post_id": "1191020000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "\ud83d\udc96Hi Zianatics!\ud83d\udc96\n\nMeet my baby who is always present, never absent whenever I go out!\ud83d\udc36\n\nDrop a picture of your furbaby!\ud83e\udd2d\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatic",
@@ -26600,7 +26600,7 @@
       "pes": 11.0
     },
     {
-      "post_id": "1.19131E+15",
+      "post_id": "1191310000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Lookin' good in black!\ud83d\udda4\n\nZianatics, agree ba kayo?\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -26632,7 +26632,7 @@
       "pes": 29.0
     },
     {
-      "post_id": "1.22101E+17",
+      "post_id": "122101000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Join na sa Juan365 Color Game LIVE!\u2728\nBaka ikaw na ang swerteng makakakuha ng Jackpot prize! \ud83e\udd11\n\nDrop your lucky color\ud83d\udc47\n\n#JuankadaTanya #Juan365 #fbreelsfyp\u30b7viral\u30b7 #fbreelsvideo #fyp\u30b7 #followersreelsfyp",
@@ -26648,7 +26648,7 @@
       "pes": 25.0
     },
     {
-      "post_id": "1.22124E+17",
+      "post_id": "122124000000000000",
       "page_id": "882499904951305",
       "page_name": "Juankada Lance",
       "title": "Lalabas ang pa premyo!!!!\ud83d\ude0e\n\n#Juan365 #Juan365Studios #ALLINJUANLIVE #Juan365ColorGame #JuankadaLance #foryoupage\u30b7 #reelsvideo  #reelsvideo\u30b7",
@@ -26664,7 +26664,7 @@
       "pes": 36.0
     },
     {
-      "post_id": "1.32527E+15",
+      "post_id": "1325270000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Life's too short to overthink... so overthink with style. \u2728\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -27048,7 +27048,7 @@
       "pes": 63.0
     },
     {
-      "post_id": "1.19051E+15",
+      "post_id": "1190510000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Trying to get extra active with our OOTD from last night's live!\ud83e\udd2d\n\nMaganda ba ang OOTD natin kagabi, Zianatics?\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -27128,7 +27128,7 @@
       "pes": 27.0
     },
     {
-      "post_id": "1.22142E+17",
+      "post_id": "122142000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Birthday Treat",
@@ -27224,7 +27224,7 @@
       "pes": 3.0
     },
     {
-      "post_id": "1.1905E+15",
+      "post_id": "1190500000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Squad's present! Serving looks and good vibes!\ud83d\udc6d\ud83d\udc6c JuanKada Star Juankada Alexchoozy Juankada Evo\n\nPresent din ba ang Zianatics yesterday?\ud83e\udd14\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #Jua",
@@ -27240,7 +27240,7 @@
       "pes": 8.0
     },
     {
-      "post_id": "1.32443E+15",
+      "post_id": "1324430000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Chill lang, pero outfit ko solid. \ud83d\udc60\ud83e\udd75\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts",
@@ -27304,7 +27304,7 @@
       "pes": 45.0
     },
     {
-      "post_id": "1.221E+17",
+      "post_id": "122100000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Happy Monday Juankada!\ud83e\udd29\ud83e\udef6\n\n#JuankadaTanya #Juan365  #fbreelsfyp\u30b7viral\u30b7 #fbreelsvideo #fyp\u30b7 #followers",
@@ -27512,7 +27512,7 @@
       "pes": 5.0
     },
     {
-      "post_id": "1.19013E+15",
+      "post_id": "1190130000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -27576,7 +27576,7 @@
       "pes": 8.0
     },
     {
-      "post_id": "1.32406E+15",
+      "post_id": "1324060000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Behind the kulitan sa Color Game live kanina with a different kind of atake \ud83d\ude02\ud83d\udd25 Bet mo \u2019yon?\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts",
@@ -27992,7 +27992,7 @@
       "pes": 51.0
     },
     {
-      "post_id": "1.18964E+15",
+      "post_id": "1189640000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -28008,7 +28008,7 @@
       "pes": 2.0
     },
     {
-      "post_id": "1.18958E+15",
+      "post_id": "1189580000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Cute dance with the very gorgeous and one of my besties  Juankada Tanya\ud83d\udc83\n\nWho to collab next with, Zianatics?\ud83d\udc96\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -28040,7 +28040,7 @@
       "pes": 0.0
     },
     {
-      "post_id": "1.32345E+15",
+      "post_id": "1323450000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Umagang kay ganda, mga Draemons! \u2728\nKamusta kayo? Namiss niyo ba ako?\nTara na sa Color Game Live\u2014sabay saya, tawanan, at kwentuhan! \ud83d\udca5\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALL",
@@ -28072,7 +28072,7 @@
       "pes": 7.0
     },
     {
-      "post_id": "1.22099E+17",
+      "post_id": "122099000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Soft Sunday, papawis muna ang mowm niyo \ud83c\udf24\ud83e\uddd8\u200d\u2640\ufe0f\n\n#Juan365Studios #ALLINJUANLIVE #JuankadaTanya #JuankadaHosts #Juan365 #SundayVibe #PreWorkout",
@@ -28104,7 +28104,7 @@
       "pes": 40.0
     },
     {
-      "post_id": "1.22114E+17",
+      "post_id": "122114000000000000",
       "page_id": "862622980275034",
       "page_name": "Juankada Shann",
       "title": "\ud835\uddea\ud835\uddf5\ud835\uddf2\ud835\uddfb \ud835\uddf0\ud835\ude02\ud835\ude01\ud835\uddf2\ud835\uddfb\ud835\uddf2\ud835\ude00\ud835\ude00 \ud835\uddfa\ud835\uddf2\ud835\uddf2\ud835\ude01\ud835\ude00 \ud835\ude01\ud835\uddf5\ud835\uddf2 \ud835\uddf5\ud835\uddf2\ud835\uddee\ud835\uddff\ud835\ude01  \ud83e\udd70\n\n#ClassicCuteness #TimelessMoments #JuankadaShann #Shanshines #Followme #TagAFriend",
@@ -28376,7 +28376,7 @@
       "pes": 44.0
     },
     {
-      "post_id": "1.18921E+15",
+      "post_id": "1189210000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -28520,7 +28520,7 @@
       "pes": 5.0
     },
     {
-      "post_id": "1.32309E+15",
+      "post_id": "1323090000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "\ud835\udc08\ud835\udc24\ud835\udc1a\ud835\udc30 \ud835\udc27\ud835\udc1a \ud835\udc25\ud835\udc1a\ud835\udc27\ud835\udc20 \ud835\udc1a\ud835\udc27\ud835\udc20 \ud835\udc24\ud835\udc1a\ud835\udc2d\ud835\udc1a\ud835\udc1b\ud835\udc22...\n\ud835\udc27\ud835\udc20\ud835\udc1a\ud835\udc32\ud835\udc28\ud835\udc27\ud835\udc20 \ud835\udc20\ud835\udc1a\ud835\udc1b\ud835\udc22. \ud83e\udd70\u2728\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts",
@@ -28600,7 +28600,7 @@
       "pes": 11.0
     },
     {
-      "post_id": "1.18867E+15",
+      "post_id": "1188670000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Looking HOT in Hot Pink!\ud83d\udc96\n\nAgree ba kayo, Zianatics?\ud83e\udd14\n\nTara na sa Color Game Live ng Juan365 Studios!\ud83d\ude01\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -28712,7 +28712,7 @@
       "pes": 20.0
     },
     {
-      "post_id": "1.22191E+17",
+      "post_id": "122191000000000000",
       "page_id": "397865533415866",
       "page_name": "Juankada Geoff",
       "title": "\ud835\udc0b\ud835\udc28\ud835\udc28\ud835\udc24\ud835\udc2c \ud835\udc1f\ud835\udc1a\ud835\udc26\ud835\udc22\ud835\udc25\ud835\udc22\ud835\udc1a\ud835\udc2b \ud835\udc24\ud835\udc1a \ud835\udc26\ud835\udc20\ud835\udc1a \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc04\ud835\udc11? Johnny johnny yes papa?\ud83e\udd23\n\n#JuankadaGeoff #reels #fyp #trending #trendingpost",
@@ -28760,7 +28760,7 @@
       "pes": 6.0
     },
     {
-      "post_id": "1.22141E+17",
+      "post_id": "122141000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Happy 10k mga luvs ko! \ud83d\ude0d\ud83d\ude0d\ud83d\ude0d \n\n#fyp\u30b7 #followers #Ligaya",
@@ -28776,7 +28776,7 @@
       "pes": 146.0
     },
     {
-      "post_id": "1.32278E+15",
+      "post_id": "1322780000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Just a few shots from our Color Game live with \ud835\udc09\ud835\udc2e\ud835\udc1a\ud835\udc27\ud835\udc24\ud835\udc1a\ud835\udc1d\ud835\udc1a \ud835\udc21\ud835\udc28\ud835\udc2c\ud835\udc2d \ud835\udc09\ud835\udc1e\ud835\udc1d\ud835\udc22!\ud83d\udd25\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts",
@@ -28792,7 +28792,7 @@
       "pes": 5.0
     },
     {
-      "post_id": "1.18866E+15",
+      "post_id": "1188660000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Slight throwback tayo, Zianatics\ud83e\udd2d\n\nMiss Independent is in the house!\ud83d\udc96\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -28824,7 +28824,7 @@
       "pes": 27.0
     },
     {
-      "post_id": "1.18878E+15",
+      "post_id": "1188780000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -28840,7 +28840,7 @@
       "pes": 5.0
     },
     {
-      "post_id": "1.22098E+17",
+      "post_id": "122098000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Nagsama ang dalawang maganda\ud83d\ude0e Emeeeeeeeeeee!\ud83d\ude1c\n\n#Juan365Studios #ALLINJUANLIVE #JuankadaTanya #JuankadaZia #JuankadaHosts #Juan365 #fbreelsfyp\u30b7\u309aviral\u30b7",
@@ -29320,7 +29320,7 @@
       "pes": 35.0
     },
     {
-      "post_id": "1.32213E+15",
+      "post_id": "1322130000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Me: kinda felt cute \ud83d\ude07\nHaha kalma lang ha, baka masyadong ma-hook ka sa vibe\ud83d\udc99\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts",
@@ -29384,7 +29384,7 @@
       "pes": 13.0
     },
     {
-      "post_id": "1.2214E+17",
+      "post_id": "122140000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Pov",
@@ -29480,7 +29480,7 @@
       "pes": 12.0
     },
     {
-      "post_id": "1.18796E+15",
+      "post_id": "1187960000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Kahit anong mangyari, hindi ako mawawalan ng pag-asa. \ud83e\udee1\n\nDapat kayo din Zianatics ah!\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -30168,7 +30168,7 @@
       "pes": 11.0
     },
     {
-      "post_id": "1.32118E+15",
+      "post_id": "1321180000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "",
@@ -30344,7 +30344,7 @@
       "pes": 97.0
     },
     {
-      "post_id": "1.18717E+15",
+      "post_id": "1187170000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "\ud83d\udc96Hi Zianatics!\ud83d\udc96\n\nHindi pa tapos ang ating BTS content from our shoot from the other day!\ud83d\udcf8\ud83d\udcf7\n\nCutesy outfit, don't you guys agree?\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia ",
@@ -30360,7 +30360,7 @@
       "pes": 22.0
     },
     {
-      "post_id": "1.22187E+17",
+      "post_id": "122187000000000000",
       "page_id": "305553999318966",
       "page_name": "JUANKada Host Ikay",
       "title": "On Thursdays, we wear white! Fresh look, fresh vibes \ud83e\udd0d\u2728\n\n#Juan365Studios #ALLINJUANLIVE #Juan365 #ColorGameLive #JuankadaStar #StarBabie",
@@ -30376,7 +30376,7 @@
       "pes": 62.0
     },
     {
-      "post_id": "1.22097E+17",
+      "post_id": "122097000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Better than yoursssss\ud83d\ude09\u2728\n\nIf mahilig kayo sa Color Game samahan niyo kami sa Juan365 mamayang 2PM to 10PM live!\n\nFollow for more mga Juankada!\ud83e\udef6\n\n#Juan365Studios #ALLINJUANLIVE #JuankadaTanya #JuankadaH",
@@ -30392,7 +30392,7 @@
       "pes": 28.0
     },
     {
-      "post_id": "1.32088E+15",
+      "post_id": "1320880000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "",
@@ -30968,7 +30968,7 @@
       "pes": 66.0
     },
     {
-      "post_id": "1.22138E+17",
+      "post_id": "122138000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Juankada",
@@ -31128,7 +31128,7 @@
       "pes": 25.0
     },
     {
-      "post_id": "1.1864E+15",
+      "post_id": "1186400000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Slight BTS from yesterday's photoshoot! \ud83d\udcf8\ud83d\udcf7\n\nDo my Zianatics love the corporate girlie fit? \ud83d\udc69\u200d\ud83d\udcbc\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -31160,7 +31160,7 @@
       "pes": 47.0
     },
     {
-      "post_id": "1.32006E+15",
+      "post_id": "1320060000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Late? Nah, I call it \"fashionably on my own me. \ud83d\ude0e \n\n #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts #JuankadaHosts",
@@ -31176,7 +31176,7 @@
       "pes": 28.0
     },
     {
-      "post_id": "1.18639E+15",
+      "post_id": "1186390000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Uy Zianatics! \ud83d\udc96\n\nPinalaki din ba kayo ng Sexbomb Girlies? \ud83e\udd2d\n\nShare niyo naman ang core memory niyo ng Sexbomb!\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics #Sexbom",
@@ -31224,7 +31224,7 @@
       "pes": 22.0
     },
     {
-      "post_id": "1.22096E+17",
+      "post_id": "122096000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Juankada Tanya added a new photo.",
@@ -31240,7 +31240,7 @@
       "pes": 11.0
     },
     {
-      "post_id": "1.18627E+15",
+      "post_id": "1186270000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -31640,7 +31640,7 @@
       "pes": 22.0
     },
     {
-      "post_id": "1.18591E+15",
+      "post_id": "1185910000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -31800,7 +31800,7 @@
       "pes": 104.0
     },
     {
-      "post_id": "1.31926E+15",
+      "post_id": "1319260000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "\ud835\udc2c\ud835\udc21\ud835\udc1a\ud835\udc24\ud835\udc1e \ud835\udc22\ud835\udc2d \ud835\udc2c\ud835\udc21\ud835\udc1a\ud835\udc24\ud835\udc1e \ud835\udc22\ud835\udc2d, \ud835\udc2c\ud835\udc21\ud835\udc1a\ud835\udc24\ud835\udc1e \ud835\udc2d\ud835\udc21\ud835\udc1a\ud835\udc2d... \ud835\udc07\ud835\udc1e\ud835\udc1a\ud835\udc25\ud835\udc2d\ud835\udc21\ud835\udc32 \ud83c\udf51\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts",
@@ -31896,7 +31896,7 @@
       "pes": 27.0
     },
     {
-      "post_id": "1.22137E+17",
+      "post_id": "122137000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Lucky Color or mas Lucky kay Ligaya? \ud83e\udd70",
@@ -31960,7 +31960,7 @@
       "pes": 26.0
     },
     {
-      "post_id": "1.18554E+15",
+      "post_id": "1185540000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "\ud83d\udc96Hi Zianatics!\ud83d\udc96\n\nA small look back at our hosting from the other day! \ud83d\ude18\n\nStay pretty, sexy, and lucky, Zianatics!\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -32072,7 +32072,7 @@
       "pes": 15.0
     },
     {
-      "post_id": "1.22123E+17",
+      "post_id": "122123000000000000",
       "page_id": "882499904951305",
       "page_name": "Juankada Lance",
       "title": "apaka kulit...\ud83d\ude05\ud83e\udd23",
@@ -32312,7 +32312,7 @@
       "pes": 14.0
     },
     {
-      "post_id": "1.18502E+15",
+      "post_id": "1185020000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Araw-gabi nasa isip ka! \ud83c\udf1d\ud83c\udf1a\n\nZianatics, na-LSS din ba kayo dito? \ud83e\udd2d\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -32424,7 +32424,7 @@
       "pes": 0.0
     },
     {
-      "post_id": "1.18501E+15",
+      "post_id": "1185010000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Isang araw, nagmamaneho sa Cubao! \ud83d\ude97\n\nBEEP BEEP BEEP! May isang babaeng saksakan ng ganda! \ud83d\udc40\n\nSino kaya yun? \ud83e\udd14\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #JuankadaHosts #JuankadaZia #Zianatics",
@@ -32504,7 +32504,7 @@
       "pes": 35.0
     },
     {
-      "post_id": "1.185E+15",
+      "post_id": "1185000000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "",
@@ -32600,7 +32600,7 @@
       "pes": 33.0
     },
     {
-      "post_id": "1.1848E+15",
+      "post_id": "1184800000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "\ud83d\udc96Hello Zianatics!\ud83d\udc96\n\nCatch me and the other Juankada Hosts sa ating Color Game Live ng Juan365 Studios! \n\nTune in na from 6AM - 2PM! \ud83d\ude18\n\nSee ya, Zianatics!\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #Ju",
@@ -32632,7 +32632,7 @@
       "pes": 29.0
     },
     {
-      "post_id": "1.22113E+17",
+      "post_id": "122113000000000000",
       "page_id": "862622980275034",
       "page_name": "Juankada Shann",
       "title": "\ud835\udc16\ud835\udc21\ud835\udc22\ud835\udc2d\ud835\udc1e \ud835\udc25\ud835\udc28\ud835\udc2f\ud835\udc1e\ud835\udc2b \ud83e\udd0d\n\n#JuankadaShann #Shanshines #Followme #TagAFriend #Juan365Live #WhiteLover #AllWhiteLook",
@@ -33080,7 +33080,7 @@
       "pes": 20.0
     },
     {
-      "post_id": "1.31757E+15",
+      "post_id": "1317570000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Hi Draemons!\nListener ka nito noon?\nAyun oh\u2026 certified bebot na ngayon \ud83d\ude02\ud83d\udd25\n\n#Juan365  #Juan365Studios #Juan365ColorGame #JuankadaHostDrae #ALLINJUANLIVE #JuankadaHosts",
@@ -33144,7 +33144,7 @@
       "pes": 41.0
     },
     {
-      "post_id": "1.22093E+17",
+      "post_id": "122093000000000000",
       "page_id": "870941016112134",
       "page_name": "Juankada Tanya",
       "title": "Juankada Tanya added a new photo.",
@@ -33240,7 +33240,7 @@
       "pes": 26.0
     },
     {
-      "post_id": "1.31721E+15",
+      "post_id": "1317210000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "",
@@ -33560,7 +33560,7 @@
       "pes": 18.0
     },
     {
-      "post_id": "1.18356E+15",
+      "post_id": "1183560000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "JuanKada Zia",
@@ -33656,7 +33656,7 @@
       "pes": 74.0
     },
     {
-      "post_id": "1.22136E+17",
+      "post_id": "122136000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Juankada Ligaya's Video",
@@ -34264,7 +34264,7 @@
       "pes": 44.0
     },
     {
-      "post_id": "1.18268E+15",
+      "post_id": "1182680000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "\ud83d\udc96Hi there Zianatics!\ud83d\udc96\n\nStay pretty, sexy, and confident EveryJuan!\n\nCatch me and the other Juankada Hosts sa ating Color Game Live ng Juan365 Studios!\n\n#Juan365Studios #Juan365 #ALLINJUANSASAYA #Juank",
@@ -34712,7 +34712,7 @@
       "pes": 47.0
     },
     {
-      "post_id": "1.22135E+17",
+      "post_id": "122135000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Kung ako ba teacher mo papasok ka?\ud83e\udd2d \n\n#juankadahostligaya #Ligaya #FollowNow #Lovelots #fyp #followers",
@@ -34824,7 +34824,7 @@
       "pes": 104.0
     },
     {
-      "post_id": "1.18202E+15",
+      "post_id": "1182020000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Juankada Zia added a new photo.",
@@ -34872,7 +34872,7 @@
       "pes": 12.0
     },
     {
-      "post_id": "1.2219E+17",
+      "post_id": "122190000000000000",
       "page_id": "397865533415866",
       "page_name": "Juankada Geoff",
       "title": "\ud835\udc02\ud835\udc07\ud835\udc08\ud835\udc0b\ud835\udc0b\ud835\udc08\ud835\udc0d\u2019 \ud835\udc25\ud835\udc22\ud835\udc24\ud835\udc1e \ud835\udc1a \ud835\udc15\ud835\udc08\ud835\udc0b\ud835\udc0b\ud835\udc00\ud835\udc08\ud835\udc0d lang habang \ud835\udc11\ud835\udc04\ud835\udc12\ud835\udc13  \ud835\udc03\ud835\udc00\ud835\udc18 \ud835\udc11\ud835\udc0e\ud835\udc02\ud835\udc0a\ud835\udc04\ud835\udc11\ud835\udc12 FAM. \ud83d\ude2e\u200d\ud83d\udca8\ud83e\udd18\ud83c\udffd\n\nShare niyo naman ang daily routine niyo pag rest day via comments Juankada. \ud83d\ude01\n\n#juankadageoff #juankadahost #Juan365 #Juan365PH #AllIn",
@@ -35480,7 +35480,7 @@
       "pes": 12.0
     },
     {
-      "post_id": "1.31427E+15",
+      "post_id": "1314270000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "",
@@ -35544,7 +35544,7 @@
       "pes": 27.0
     },
     {
-      "post_id": "1.22134E+17",
+      "post_id": "122134000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Juankada Ligaya's Video",
@@ -35656,7 +35656,7 @@
       "pes": 17.0
     },
     {
-      "post_id": "1.31403E+15",
+      "post_id": "1314030000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "",
@@ -36120,7 +36120,7 @@
       "pes": 13.0
     },
     {
-      "post_id": "1.18044E+15",
+      "post_id": "1180440000000000",
       "page_id": "106014857827362",
       "page_name": "Juankada Zia",
       "title": "Juankada Zia updated their cover photo.",
@@ -36152,7 +36152,7 @@
       "pes": 29.0
     },
     {
-      "post_id": "1.22122E+17",
+      "post_id": "122122000000000000",
       "page_id": "882499904951305",
       "page_name": "Juankada Lance",
       "title": "\ud835\udc00\ud835\udc27\ud835\udc28 \ud835\udc1b\ud835\udc1a\u2019\ud835\udc27\ud835\udc20 \ud835\udc27\ud835\udc22\ud835\udc25\ud835\udc1a\ud835\udc26\ud835\udc1a\ud835\udc27\ud835\udc20 \ud835\udc27\ud835\udc22\ud835\udc32\ud835\udc1a \ud835\udc2c\ud835\udc1a\u2019\ud835\udc24\ud835\udc22\ud835\udc27?\ud83e\udd14\n\nSabihin mo nga sa comment section \ud83d\udc47\ud83d\ude02\n\n#Juan365 #Juan365Studios #ALLINJUANLIVE #Juan365ColorGame #JuankadaLance #fypreels\u30b7viral\u30b7 #fypchallenge #reelsfyp\u30b7",
@@ -36792,7 +36792,7 @@
       "pes": 28.0
     },
     {
-      "post_id": "1.22133E+17",
+      "post_id": "122133000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Pretty in White~\n\nJoin us on our LIVE, and let\u2019s see if white is your LUCKY COLOR \ud83e\udd0d\n\nCheck our Juan365 App or Website Luvss!\n\n#LigayaLuvs #JuankadaHostLigaya #Ligaya #FollowNow #Lovelots #fyp #followe",
@@ -36840,7 +36840,7 @@
       "pes": 13.0
     },
     {
-      "post_id": "1.22112E+17",
+      "post_id": "122112000000000000",
       "page_id": "862622980275034",
       "page_name": "Juankada Shann",
       "title": "\ud835\udc12\ud835\udc28\ud835\udc2b\ud835\udc2b\ud835\udc32 \ud835\udc27\ud835\udc1a \ud835\udc24\ud835\udc22\ud835\udc27\ud835\udc22\ud835\udc25\ud835\udc22\ud835\udc20 \ud835\udc25\ud835\udc1a\ud835\udc27\ud835\udc20 \ud835\udc1a\ud835\udc27\ud835\udc20 \ud835\udc04\ud835\udc00! \ud83d\ude33\ud83d\udc96\n\n#JuankadaShann #Shanshines #Followme #TagAFriend #KiligMoments  #JuankadaPapaJoe",
@@ -37352,7 +37352,7 @@
       "pes": 18.0
     },
     {
-      "post_id": "1.22132E+17",
+      "post_id": "122132000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "\ud835\udc04\ud835\udc18\ud835\udc18\ud835\udc18\ud835\udc18\ud835\udc18 \ud835\udc01\ud835\udc08\ud835\udc13\ud835\udc08\ud835\udc0d \ud835\udc01\ud835\udc00? \ud83e\udd2d\n\nAbangan na sa \ud835\udddf\ud835\udddc\ud835\udde9\ud835\uddd8 ng \ud835\uddd6\ud835\udde2\ud835\udddf\ud835\udde2\ud835\udde5 \ud835\uddda\ud835\uddd4\ud835\udde0\ud835\uddd8 para di ka na mabitin. Let\u2019s Goooo! See you there LUVS~ \ud83e\udd29\n\n#Juan365 #Juan365PH #AllInJuanSaSaya #JuanKada #Juan365ColorGame #LigayaLuvs #JuankadaHo",
@@ -37368,7 +37368,7 @@
       "pes": 387.0
     },
     {
-      "post_id": "1.22186E+17",
+      "post_id": "122186000000000000",
       "page_id": "305553999318966",
       "page_name": "JUANKada Host Ikay",
       "title": "Slayin\u2019 in shades of orange \ud83c\udf4a\n\nKamusta Kikays? How\u2019s your 2026 so far? \n\n#Juan365Studios #ALLINJUANLIVE #Juan365 #ColorGameLive #JuankadaIkay #Kikays",
@@ -38488,7 +38488,7 @@
       "pes": 0.0
     },
     {
-      "post_id": "1.22131E+17",
+      "post_id": "122131000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Kung di ka makuha sa tingin, makuha ka sa matatamis na ngiti \ud83e\udd70\n\nEndless love for LUVS! Irresistible looks with Juankada Host Star and Juankada Host Shann \u2728\n\n#Juan365 #Juan365PH #AllInJuanSaSaya #JuanK",
@@ -38632,7 +38632,7 @@
       "pes": 15.0
     },
     {
-      "post_id": "1.2213E+17",
+      "post_id": "122130000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Another Sayawan with our gorgeous Juankada Host Sabbie and Juankada Host Ikay~ \ud83c\udf38\n\nWant to see more Luvs? Follow and watch our LIVE on Juan365 Website or APP \ud83e\udd2d\n\n#Juan365 #Juan365PH #AllInJuanSaSaya #Ju",
@@ -39400,7 +39400,7 @@
       "pes": 0.0
     },
     {
-      "post_id": "1.30953E+15",
+      "post_id": "1309530000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "",
@@ -39880,7 +39880,7 @@
       "pes": 0.0
     },
     {
-      "post_id": "1.30909E+15",
+      "post_id": "1309090000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Juankada! \ud835\udc12\ud835\udc22\ud835\udc27\ud835\udc28 \ud835\udc1d\ud835\udc22\ud835\udc2d\ud835\udc28 \ud835\udc1a\ud835\udc27\ud835\udc20 \ud835\udc27\ud835\udc1a\ud835\udc24\ud835\udc1a-\ud835\udc1f\ud835\udc28\ud835\udc25\ud835\udc25\ud835\udc28\ud835\udc30 \ud835\udc27\ud835\udc1a? \ud83d\ude4b\u200d\u2642\ufe0f\ud83d\ude4b\u200d\u2640\ufe0f \nFollow now para una sa \ud835\udc1b\ud835\udc1a\ud835\udc25\ud835\udc22\ud835\udc2d\ud835\udc1a \ud835\udc1a\ud835\udc2d \ud835\udc29\ud835\udc2b\ud835\udc22\ud835\udc33\ud835\udc1e\ud835\udc2c!\ud83c\udf81\n\n #Juan365Studios #Juan365 #ALLINJUANLIVE #JuankadaHosts #Juankada",
@@ -40232,7 +40232,7 @@
       "pes": 19.0
     },
     {
-      "post_id": "1.22111E+17",
+      "post_id": "122111000000000000",
       "page_id": "862622980275034",
       "page_name": "Juankada Shann",
       "title": "\ud835\udc12\ud835\udc21\ud835\udc1a\ud835\udc27\ud835\udc2c\ud835\udc21\ud835\udc22\ud835\udc27\ud835\udc1e\ud835\udc2c \ud835\udc0b\ud835\udc22\ud835\udc24\ud835\udc1e \ud835\udc26\ud835\udc1e? \ud83d\udc96\n\nHit the \u2665\ufe0f and follow para ma-bless ka today! \u2728\ud83d\udcab\n\n#JuankadaShann #CommentYourThoughts #TagAFriend #Followme #Shanshines #Juan365 #AllInJuanSaSaya #Juan365Studios  #SweetEnergy #",
@@ -40504,7 +40504,7 @@
       "pes": 0.0
     },
     {
-      "post_id": "1.22129E+17",
+      "post_id": "122129000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "\ud835\udc0b\ud835\udc04\ud835\udc13\ud835\udc12 \ud835\udc0c\ud835\udc00\ud835\udc0a\ud835\udc04 \ud835\udc18\ud835\udc0e\ud835\udc14\ud835\udc11 \ud835\udc0d\ud835\udc08\ud835\udc06\ud835\udc07\ud835\udc13 \ud835\udc16\ud835\udc0e\ud835\udc0d\ud835\udc03\ud835\udc04\ud835\udc11\ud835\udc05\ud835\udc14\ud835\udc0b \ud835\udc0b\ud835\udc14\ud835\udc15\ud835\udc12! \ud83e\udee3\n\nKung di ka pa nanonood ng LIVE, its your time to watch now! Just open your Juan365 Website or App to catch up with our kulitan and sayawan! \ud83c\udf38\n\n#Juan365 #Juan365",
@@ -40632,7 +40632,7 @@
       "pes": 514.0
     },
     {
-      "post_id": "1.22189E+17",
+      "post_id": "122189000000000000",
       "page_id": "397865533415866",
       "page_name": "Juankada Geoff",
       "title": "\ud83e\udee1LIVE tayo ngayon mga ka ROCKERS!\ud83e\udd18\ud83c\udffd\n\nGAME na bang makipag ROCKrakan? COLOR GAME na..!!! !\ud83d\ude05\ud83d\ude18\n\n#Juan365 #Juan365PH #AllInJuanSaSaya #JuanKada #Juan365ColorGame #JuankadaGeoff\n#FollowMe #Trending #FYP #R",
@@ -40904,7 +40904,7 @@
       "pes": 0.0
     },
     {
-      "post_id": "1.2211E+17",
+      "post_id": "122110000000000000",
       "page_id": "862622980275034",
       "page_name": "Juankada Shann",
       "title": "\ud835\udfd0\ud835\udfd2/\ud835\udfd5 \ud835\udc27\ud835\udc22\ud835\udc32\ud835\udc28 \ud835\udc24\ud835\udc1a\ud835\udc26\ud835\udc22\ud835\udc27\ud835\udc20 \ud835\udc26\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc2c\ud835\udc1a\ud835\udc26\ud835\udc1a \ud835\udc2c\ud835\udc1a \ud835\udc09\ud835\udc2e\ud835\udc1a\ud835\udc27\ud835\udfd1\ud835\udfd4\ud835\udfd3 \ud835\udc02\ud835\udc28\ud835\udc25\ud835\udc28\ud835\udc2b \ud835\udc06\ud835\udc1a\ud835\udc26\ud835\udc1e \ud835\udc0b\ud835\udc08\ud835\udc15\ud835\udc04!\ud83d\udd25\n\nTap the \u2665\ufe0f and follow kung gusto niyong \ud835\udc26\ud835\udc1a\ud835\udc24\ud835\udc1a-\ud835\udc23\ud835\udc1a\ud835\udc1c\ud835\udc24\ud835\udc29\ud835\udc28\ud835\udc2d!\n\n#JuankadaShann #CommentYourThoughts #TagAFriend #Followme #Shanshines #Juan365 #AllInJu",
@@ -40952,7 +40952,7 @@
       "pes": 14.0
     },
     {
-      "post_id": "1.22128E+17",
+      "post_id": "122128000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "MGA LUVS! Ready na ang iyong one and only LIGAYA para sa ating LIVE mamaya! \n\nToday\u2019s Agenda: TODO NA SAYAW at WALANG HUMPAY NA PANALO \ud83e\udd29\n\nSee you LATER sa ating LIVE for color game \ud83d\ude09\n\nExcited ako maki",
@@ -40984,7 +40984,7 @@
       "pes": 8.0
     },
     {
-      "post_id": "1.22121E+17",
+      "post_id": "122121000000000000",
       "page_id": "882499904951305",
       "page_name": "Juankada Lance",
       "title": "\ud835\udc04\ud835\udc21\ud835\udc21? \n\nSurprise pala\ud83e\udd26\n\n\ud83d\udc49 Hit that Follow button!\n\n#Juan365 #Juan365Studios #ALLINJUANLIVE #juan365colorgame #juankadalance",
@@ -42792,7 +42792,7 @@
       "pes": 15.0
     },
     {
-      "post_id": "1.30558E+15",
+      "post_id": "1305580000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "Juankada host Drae added a new photo.",
@@ -42856,20 +42856,20 @@
       "pes": 1.0
     },
     {
-      "post_id": "122126542149135583",
+      "post_id": "122127000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Juankada Ligaya updated her cover photo.",
       "post_type": "Photos",
       "publish_time": "2026-01-02T18:42:00",
       "permalink": "https://www.facebook.com/photo.php?fbid=122126542149135583&set=a.122100489423135583&type=3",
-      "reactions": 13,
-      "comments": 0,
+      "reactions": 24,
+      "comments": 1,
       "shares": 0,
       "views": 2,
       "reach": 1,
-      "engagement": 13,
-      "pes": 15.0
+      "engagement": 25,
+      "pes": 26.0
     },
     {
       "post_id": "122113454265133214",
@@ -43224,7 +43224,7 @@
       "pes": 11.0
     },
     {
-      "post_id": "1.22126E+17",
+      "post_id": "122126000000000000",
       "page_id": "959243183930083",
       "page_name": "Juankada Ligaya",
       "title": "Hello Luvs!\ud83d\ude0d\n\nReady na ba kayong sumayaw at sumaya? \ud83d\udd7a\ud83d\udc83\n\nHindi lang sa sayaw niyo ako kasama\u2014subaybayan niyo rin araw-araw sa Live para kulayan natin ang bawat araw ng happiness at Color Game fun! \ud83c\udf08\u2728\n\n",
@@ -43336,7 +43336,7 @@
       "pes": 42.0
     },
     {
-      "post_id": "1.30496E+15",
+      "post_id": "1304960000000000",
       "page_id": "112088047220992",
       "page_name": "Juankada host Drae",
       "title": "",
@@ -43400,7 +43400,7 @@
       "pes": 0.0
     },
     {
-      "post_id": "1.22185E+17",
+      "post_id": "122185000000000000",
       "page_id": "305553999318966",
       "page_name": "JUANKada Host Ikay",
       "title": "Don't leave me dancin' alone \ud83c\udfb6\ud83e\udef6\n\nGood thing sinamahan ako ni Juankada Lance sa trend na \u2018to! \n\nKanino mas bagay yung trend na 'to? Comment na, Kikays! \ud83c\udf38\n\n#Juan365Studios\n#ALLINJUANLIVE #Juan365 #Color",
@@ -43656,20 +43656,20 @@
       "pes": 7.0
     },
     {
-      "post_id": "122184494114383179",
+      "post_id": "122184000000000000",
       "page_id": "305553999318966",
       "page_name": "JUANKada Host Ikay",
       "title": "A year older today! \ud83c\udf89\n\nThankful for all the blessings, the lessons, and every little moment that made me stronger.\n\nSuper grateful din sa inyo, Kikays \u2014 salamat sa love, support, at kulitan everyday! ",
       "post_type": "Videos",
       "publish_time": "2025-12-31T23:22:00",
       "permalink": "https://www.facebook.com/reel/1549172982956367/",
-      "reactions": 75,
+      "reactions": 82,
       "comments": 3,
-      "shares": 1,
-      "views": 1641,
-      "reach": 436,
-      "engagement": 79,
-      "pes": 84.0
+      "shares": 2,
+      "views": 2379,
+      "reach": 720,
+      "engagement": 87,
+      "pes": 94.0
     },
     {
       "post_id": "122109469527149417",
@@ -43736,20 +43736,20 @@
       "pes": 14.0
     },
     {
-      "post_id": "122187862226528854",
+      "post_id": "122188000000000000",
       "page_id": "397865533415866",
       "page_name": "Juankada Geoff",
       "title": "HAPPY NEW YEAR, JUANKADA!",
       "post_type": "Videos",
       "publish_time": "2025-12-31T21:30:00",
-      "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid0NWyz4C63GJJfgdLVQJ8NoehWjMrNcEGybvKNVgkzXXgYnn2g8hd5xtEfWVFF6WUAl",
-      "reactions": 10,
+      "permalink": "https://www.facebook.com/Juankadageoff/posts/pfbid0NPaa5sfhdaV5yj5stBFEn1URXJdDtPZyfXporR8avnPeK5UAnLo6rPCRYDBrpPzul",
+      "reactions": 12,
       "comments": 0,
       "shares": 0,
-      "views": 0,
-      "reach": 29,
-      "engagement": 10,
-      "pes": 10.0
+      "views": 104,
+      "reach": 55,
+      "engagement": 12,
+      "pes": 12.0
     },
     {
       "post_id": "122104123587185509",
@@ -43909,7 +43909,7 @@
       "views": 0,
       "reach": 58,
       "engagement": 12,
-      "pes": 10.0
+      "pes": 12.0
     },
     {
       "post_id": "122109407559149417",
@@ -44767,13 +44767,13 @@
       "post_type": "Videos",
       "publish_time": "2025-12-30T03:19:00",
       "permalink": "https://www.facebook.com/JuankadaDrae/posts/pfbid02e2ex8YhFjt2Jehmh2KZ1m1fvH7VTuNdTxJ8f1EjATmbchNYbqofCDLbSyEHW8Y4Xl",
-      "reactions": 2,
+      "reactions": 1,
       "comments": 0,
       "shares": 0,
       "views": 0,
       "reach": 63,
-      "engagement": 2,
-      "pes": 2.0
+      "engagement": 1,
+      "pes": 1.0
     },
     {
       "post_id": "122109104733149417",
@@ -45814,22 +45814,6 @@
       "reach": 233,
       "engagement": 6,
       "pes": 6.0
-    },
-    {
-      "post_id": "1301242715374812",
-      "page_id": "112088047220992",
-      "page_name": "Juankada host Drae",
-      "title": "",
-      "post_type": "Text",
-      "publish_time": "2025-12-28T08:31:00",
-      "permalink": "https://www.facebook.com/JuankadaDrae/posts/pfbid02oJJ9gHFk72QJWzLeudq1AnWQzVEqH3BCZz4hxk3qfuDgJyqzKJGLRxfqiPKXEepsl",
-      "reactions": 2,
-      "comments": 0,
-      "shares": 0,
-      "views": 0,
-      "reach": 73,
-      "engagement": 2,
-      "pes": 2.0
     },
     {
       "post_id": "1301242255374858",
@@ -47039,13 +47023,13 @@
       "post_type": "Text",
       "publish_time": "2025-12-24T11:06:00",
       "permalink": "https://www.facebook.com/JuankadaAlexchoozyOfficialPage/posts/pfbid04ttLPRXJeuXHfraCiRzL8bf9HnsF1LfXi5LnFQ1kBHWgpNwR8YbfQNDUd1iX34kpl",
-      "reactions": 12,
+      "reactions": 11,
       "comments": 0,
       "shares": 0,
       "views": 0,
       "reach": 70,
-      "engagement": 12,
-      "pes": 12.0
+      "engagement": 11,
+      "pes": 11.0
     },
     {
       "post_id": "122107935801149417",
@@ -47167,13 +47151,13 @@
       "post_type": "Videos",
       "publish_time": "2025-12-23T23:20:00",
       "permalink": "https://www.facebook.com/JuankadaAlexchoozyOfficialPage/posts/pfbid0dz2zQuUptbNAAL3DPUXWabPBnAeN9z1Bk5rWR7gmVdHdpXfLkfT3a3UWx31CCYaal",
-      "reactions": 12,
+      "reactions": 11,
       "comments": 0,
       "shares": 0,
       "views": 0,
       "reach": 64,
-      "engagement": 12,
-      "pes": 12.0
+      "engagement": 11,
+      "pes": 11.0
     },
     {
       "post_id": "122121555423135583",
@@ -47221,7 +47205,7 @@
       "views": 0,
       "reach": 24,
       "engagement": 6,
-      "pes": 5.0
+      "pes": 6.0
     },
     {
       "post_id": "122107766613149417",
@@ -48079,13 +48063,13 @@
       "post_type": "Videos",
       "publish_time": "2025-12-20T21:30:00",
       "permalink": "https://www.facebook.com/JuankadaAlexchoozyOfficialPage/posts/pfbid0T9y7Lbe3gCXmh4w8yYvMCx6WKB93vxZbvM32wcZBYMEt4mFCnj2zeJeGkGxvPcwol",
-      "reactions": 10,
+      "reactions": 9,
       "comments": 0,
       "shares": 0,
       "views": 0,
       "reach": 83,
-      "engagement": 10,
-      "pes": 10.0
+      "engagement": 9,
+      "pes": 9.0
     },
     {
       "post_id": "122107997715144249",
@@ -48341,7 +48325,7 @@
       "views": 0,
       "reach": 48,
       "engagement": 13,
-      "pes": 11.0
+      "pes": 17.0
     },
     {
       "post_id": "122107112985144249",
@@ -48447,13 +48431,13 @@
       "post_type": "Videos",
       "publish_time": "2025-12-06T20:48:00",
       "permalink": "https://www.facebook.com/JuankadaAlexchoozyOfficialPage/posts/pfbid024ZzTh948cX7qKAgAjRuRteqwsjHw7kC3uuPRLdTxn9BLx1YQnzmDrdB6bwc2n7btl",
-      "reactions": 10,
+      "reactions": 9,
       "comments": 0,
       "shares": 0,
       "views": 0,
       "reach": 68,
-      "engagement": 10,
-      "pes": 10.0
+      "engagement": 9,
+      "pes": 9.0
     },
     {
       "post_id": "122104314651141115",
@@ -48485,7 +48469,7 @@
       "views": 0,
       "reach": 68,
       "engagement": 9,
-      "pes": 8.0
+      "pes": 9.0
     },
     {
       "post_id": "1063348949191372",
@@ -48858,26 +48842,26 @@
       {
         "month": "2026-01",
         "posts": 1305,
-        "reactions": 154644,
-        "comments": 10531,
+        "reactions": 154655,
+        "comments": 10532,
         "shares": 4194,
         "views": 2684822,
         "reach": 1589293,
-        "engagement": 169369,
+        "engagement": 169381,
         "avg_engagement": 129.8,
-        "mom_change": 2228.1
+        "mom_change": 2227.3
       },
       {
         "month": "2025-12",
-        "posts": 311,
-        "reactions": 6327,
+        "posts": 310,
+        "reactions": 6329,
         "comments": 631,
-        "shares": 317,
-        "views": 186888,
-        "reach": 93282,
-        "engagement": 7275,
-        "avg_engagement": 23.4,
-        "mom_change": 4952.1
+        "shares": 318,
+        "views": 187730,
+        "reach": 93519,
+        "engagement": 7278,
+        "avg_engagement": 23.5,
+        "mom_change": 4954.2
       },
       {
         "month": "2025-11",
@@ -48954,11 +48938,11 @@
       {
         "day": "Sun",
         "day_num": 0,
-        "posts": 326,
-        "total_engagement": 32209,
-        "avg_engagement": 98.8,
+        "posts": 325,
+        "total_engagement": 32207,
+        "avg_engagement": 99.1,
         "views": 461079,
-        "reach": 253058,
+        "reach": 252985,
         "is_best": false
       },
       {
@@ -48975,7 +48959,7 @@
         "day": "Tue",
         "day_num": 2,
         "posts": 308,
-        "total_engagement": 23459,
+        "total_engagement": 23457,
         "avg_engagement": 76.2,
         "views": 370479,
         "reach": 203676,
@@ -48985,10 +48969,10 @@
         "day": "Wed",
         "day_num": 3,
         "posts": 336,
-        "total_engagement": 70297,
+        "total_engagement": 70306,
         "avg_engagement": 209.2,
-        "views": 1079234,
-        "reach": 845919,
+        "views": 1080076,
+        "reach": 846229,
         "is_best": true
       },
       {
@@ -49005,8 +48989,8 @@
         "day": "Fri",
         "day_num": 5,
         "posts": 304,
-        "total_engagement": 38010,
-        "avg_engagement": 125.0,
+        "total_engagement": 38022,
+        "avg_engagement": 125.1,
         "views": 968851,
         "reach": 762008,
         "is_best": false
@@ -49015,7 +48999,7 @@
         "day": "Sat",
         "day_num": 6,
         "posts": 321,
-        "total_engagement": 31072,
+        "total_engagement": 31070,
         "avg_engagement": 96.8,
         "views": 510363,
         "reach": 292036,
@@ -49031,8 +49015,8 @@
         "posts": 114,
         "views": 3142565,
         "reach": 2624517,
-        "engagement": 179324,
-        "avg_engagement": 1573.0
+        "engagement": 179336,
+        "avg_engagement": 1573.1
       },
       {
         "rank": 2,
@@ -49062,10 +49046,10 @@
         "name": "JUANKada Host Ikay",
         "page_name": "JUANKada Host Ikay",
         "posts": 112,
-        "views": 185559,
-        "reach": 71186,
-        "engagement": 7698,
-        "avg_engagement": 68.7
+        "views": 186297,
+        "reach": 71470,
+        "engagement": 7706,
+        "avg_engagement": 68.8
       },
       {
         "rank": 5,
@@ -49097,7 +49081,7 @@
         "posts": 195,
         "views": 61310,
         "reach": 33424,
-        "engagement": 3964,
+        "engagement": 3960,
         "avg_engagement": 20.3
       },
       {
@@ -49106,9 +49090,9 @@
         "name": "Juankada Geoff",
         "page_name": "Juankada Geoff",
         "posts": 117,
-        "views": 58816,
-        "reach": 25159,
-        "engagement": 3851,
+        "views": 58920,
+        "reach": 25185,
+        "engagement": 3853,
         "avg_engagement": 32.9
       },
       {
@@ -49160,10 +49144,10 @@
         "page_id": "112088047220992",
         "name": "Juankada host Drae",
         "page_name": "Juankada host Drae",
-        "posts": 157,
+        "posts": 156,
         "views": 65544,
-        "reach": 34164,
-        "engagement": 2600,
+        "reach": 34091,
+        "engagement": 2597,
         "avg_engagement": 16.6
       },
       {
@@ -49213,27 +49197,27 @@
       {
         "type": "Videos",
         "count": 1535,
-        "views": 4073988,
-        "reach": 2904041,
-        "engagement": 237582,
+        "views": 4074830,
+        "reach": 2904351,
+        "engagement": 237588,
         "avg_engagement": 154.8,
-        "avg_views": 2654.1
+        "avg_views": 2654.6
       },
       {
         "type": "Text",
-        "count": 262,
+        "count": 261,
         "views": 434668,
-        "reach": 231808,
-        "engagement": 27268,
-        "avg_engagement": 104.1,
-        "avg_views": 1659.0
+        "reach": 231735,
+        "engagement": 27265,
+        "avg_engagement": 104.5,
+        "avg_views": 1665.4
       },
       {
         "type": "Photos",
         "count": 418,
         "views": 224514,
         "reach": 96141,
-        "engagement": 11198,
+        "engagement": 11210,
         "avg_engagement": 26.8,
         "avg_views": 537.1
       },
@@ -49284,38 +49268,38 @@
       {
         "type": "top_page",
         "title": "Juankada Ligaya Leads",
-        "text": "Top performer with 179,324 total engagement (1573/post)"
+        "text": "Top performer with 179,336 total engagement (1573/post)"
       }
     ]
   },
   "commentAnalysis": {
     "summary": {
-      "total_posts_with_comments": 1726,
-      "posts_analyzed": 1726,
-      "posts_with_self_comment": 224,
-      "total_self_comments": 250,
-      "total_organic_comments": 15084,
-      "self_comment_rate": 1.6,
-      "posts_with_self_pct": 13.0
+      "total_posts_with_comments": 1727,
+      "posts_analyzed": 1727,
+      "posts_with_self_comment": 202,
+      "total_self_comments": 225,
+      "total_organic_comments": 15110,
+      "self_comment_rate": 1.5,
+      "posts_with_self_pct": 11.7
     },
     "byPage": [
       {
         "page_name": "Juankada Alexchoozy",
         "page_id": "897960886734144",
         "posts_with_comments": 133,
-        "self_comments": 46,
-        "organic_comments": 542,
-        "posts_with_self": 40,
-        "self_rate": 7.8
+        "self_comments": 41,
+        "organic_comments": 547,
+        "posts_with_self": 35,
+        "self_rate": 7.0
       },
       {
         "page_name": "Juankada Shann",
         "page_id": "862622980275034",
         "posts_with_comments": 138,
-        "self_comments": 39,
-        "organic_comments": 523,
-        "posts_with_self": 36,
-        "self_rate": 6.9
+        "self_comments": 36,
+        "organic_comments": 526,
+        "posts_with_self": 33,
+        "self_rate": 6.4
       },
       {
         "page_name": "JuanKada Star",
@@ -49336,15 +49320,6 @@
         "self_rate": 2.7
       },
       {
-        "page_name": "Juankada Evo",
-        "page_id": "927370847106754",
-        "posts_with_comments": 83,
-        "self_comments": 19,
-        "organic_comments": 311,
-        "posts_with_self": 17,
-        "self_rate": 5.8
-      },
-      {
         "page_name": "Juankada Jedi",
         "page_id": "858606287343265",
         "posts_with_comments": 109,
@@ -49354,22 +49329,13 @@
         "self_rate": 1.3
       },
       {
-        "page_name": "Juankada Lance",
-        "page_id": "882499904951305",
-        "posts_with_comments": 116,
+        "page_name": "Juankada Evo",
+        "page_id": "927370847106754",
+        "posts_with_comments": 83,
         "self_comments": 13,
-        "organic_comments": 458,
-        "posts_with_self": 12,
-        "self_rate": 2.8
-      },
-      {
-        "page_name": "Juankada Papa Joe",
-        "page_id": "874628665737433",
-        "posts_with_comments": 63,
-        "self_comments": 12,
-        "organic_comments": 396,
+        "organic_comments": 317,
         "posts_with_self": 11,
-        "self_rate": 2.9
+        "self_rate": 3.9
       },
       {
         "page_name": "Juankada Sabbie",
@@ -49381,13 +49347,22 @@
         "self_rate": 1.6
       },
       {
+        "page_name": "Juankada Lance",
+        "page_id": "882499904951305",
+        "posts_with_comments": 116,
+        "self_comments": 11,
+        "organic_comments": 460,
+        "posts_with_self": 10,
+        "self_rate": 2.3
+      },
+      {
         "page_name": "Juankada Ligaya",
         "page_id": "959243183930083",
-        "posts_with_comments": 107,
-        "self_comments": 12,
-        "organic_comments": 6862,
-        "posts_with_self": 11,
-        "self_rate": 0.2
+        "posts_with_comments": 108,
+        "self_comments": 10,
+        "organic_comments": 6865,
+        "posts_with_self": 9,
+        "self_rate": 0.1
       },
       {
         "page_name": "Juankada Tanya",
@@ -49408,13 +49383,22 @@
         "self_rate": 0.9
       },
       {
+        "page_name": "Juankada Papa Joe",
+        "page_id": "874628665737433",
+        "posts_with_comments": 63,
+        "self_comments": 8,
+        "organic_comments": 400,
+        "posts_with_self": 8,
+        "self_rate": 2.0
+      },
+      {
         "page_name": "Juankada Ellise",
         "page_id": "874648655739835",
         "posts_with_comments": 132,
-        "self_comments": 7,
-        "organic_comments": 542,
-        "posts_with_self": 5,
-        "self_rate": 1.3
+        "self_comments": 4,
+        "organic_comments": 545,
+        "posts_with_self": 4,
+        "self_rate": 0.7
       },
       {
         "page_name": "Juankada host Drae",
@@ -49445,11 +49429,11 @@
       }
     ],
     "effectivity": {
-      "avg_engagement_with_self": 295.2,
-      "avg_engagement_without_self": 137.9,
-      "engagement_boost_pct": 114.1,
-      "avg_reactions_with": 274.9,
-      "avg_reactions_without": 126.5
+      "avg_engagement_with_self": 323.7,
+      "avg_engagement_without_self": 136.3,
+      "engagement_boost_pct": 137.5,
+      "avg_reactions_with": 302.0,
+      "avg_reactions_without": 125.0
     },
     "topSelfCommented": [
       {
@@ -49478,15 +49462,6 @@
         "total_comments": 26,
         "engagement": 61,
         "permalink": "https://www.facebook.com/reel/1194589518976886/"
-      },
-      {
-        "post_id": "122098546227189322",
-        "page_name": "Juankada Ellise",
-        "title": "Kung di ka nakapanood kagabi sa first LIVE ko\u2026 gra",
-        "self_comments": 3,
-        "total_comments": 24,
-        "engagement": 127,
-        "permalink": "https://www.facebook.com/reel/1522429599053617/"
       },
       {
         "post_id": "876401548892955_122115346173145396",
@@ -49541,6 +49516,15 @@
         "total_comments": 10,
         "engagement": 139,
         "permalink": "https://www.facebook.com/reel/1423983019393790/"
+      },
+      {
+        "post_id": "122117080035133214",
+        "page_name": "Juankada Jedi",
+        "title": "One more dance, Jedi babes? \ud83d\ude09\ud83d\udc83\n\n#Juan365 #Juan365S",
+        "self_comments": 2,
+        "total_comments": 69,
+        "engagement": 922,
+        "permalink": "https://www.facebook.com/reel/25845040621823342/"
       }
     ]
   },
@@ -49552,14 +49536,14 @@
         "page_name": "Juankada Ligaya",
         "fan_count": 44980,
         "posts": 114,
-        "engagement": 179324,
-        "avg_engagement": 1573.0,
+        "engagement": 179336,
+        "avg_engagement": 1573.1,
         "views": 3142565,
         "reach": 2624517,
-        "reactions": 169959,
-        "comments": 6874,
+        "reactions": 169970,
+        "comments": 6875,
         "shares": 2491,
-        "avg_pes": 914.3,
+        "avg_pes": 914.4,
         "rank": 1,
         "engagement_share": 64.5
       },
@@ -49603,14 +49587,14 @@
         "page_name": "JUANKada Host Ikay",
         "fan_count": 1743,
         "posts": 112,
-        "engagement": 7698,
-        "avg_engagement": 68.7,
-        "views": 185559,
-        "reach": 71186,
-        "reactions": 6481,
+        "engagement": 7706,
+        "avg_engagement": 68.8,
+        "views": 186297,
+        "reach": 71470,
+        "reactions": 6488,
         "comments": 885,
-        "shares": 332,
-        "avg_pes": 44.6,
+        "shares": 333,
+        "avg_pes": 44.7,
         "rank": 4,
         "engagement_share": 2.8
       },
@@ -49654,11 +49638,11 @@
         "page_name": "Juankada Alexchoozy",
         "fan_count": 1465,
         "posts": 196,
-        "engagement": 3964,
+        "engagement": 3960,
         "avg_engagement": 20.2,
         "views": 61310,
         "reach": 33424,
-        "reactions": 3164,
+        "reactions": 3160,
         "comments": 588,
         "shares": 212,
         "avg_pes": 16.9,
@@ -49671,11 +49655,11 @@
         "page_name": "Juankada Geoff",
         "fan_count": 1122,
         "posts": 117,
-        "engagement": 3851,
+        "engagement": 3853,
         "avg_engagement": 32.9,
-        "views": 58816,
-        "reach": 25159,
-        "reactions": 2870,
+        "views": 58920,
+        "reach": 25185,
+        "reactions": 2872,
         "comments": 702,
         "shares": 279,
         "avg_pes": 27.2,
@@ -49756,11 +49740,11 @@
         "page_name": "Juankada host Drae",
         "fan_count": 562,
         "posts": 158,
-        "engagement": 2600,
-        "avg_engagement": 16.5,
+        "engagement": 2597,
+        "avg_engagement": 16.4,
         "views": 65544,
         "reach": 34222,
-        "reactions": 2077,
+        "reactions": 2074,
         "comments": 362,
         "shares": 161,
         "avg_pes": 19.9,
@@ -49844,7 +49828,7 @@
         {
           "type": "Videos",
           "count": 92,
-          "engagement": 1598,
+          "engagement": 1597,
           "avg_engagement": 17.4
         },
         {
@@ -49856,16 +49840,16 @@
         {
           "type": "Text",
           "count": 9,
-          "engagement": 88,
-          "avg_engagement": 9.8
+          "engagement": 86,
+          "avg_engagement": 9.6
         }
       ],
       "305553999318966": [
         {
           "type": "Videos",
           "count": 79,
-          "engagement": 6075,
-          "avg_engagement": 76.9
+          "engagement": 6083,
+          "avg_engagement": 77.0
         },
         {
           "type": "Photos",
@@ -49884,7 +49868,7 @@
         {
           "type": "Videos",
           "count": 81,
-          "engagement": 2946,
+          "engagement": 2948,
           "avg_engagement": 36.4
         },
         {
@@ -50056,7 +50040,7 @@
         {
           "type": "Videos",
           "count": 122,
-          "engagement": 2613,
+          "engagement": 2610,
           "avg_engagement": 21.4
         },
         {
@@ -50068,7 +50052,7 @@
         {
           "type": "Text",
           "count": 33,
-          "engagement": 678,
+          "engagement": 677,
           "avg_engagement": 20.5
         },
         {
@@ -50160,8 +50144,8 @@
         {
           "type": "Photos",
           "count": 23,
-          "engagement": 3243,
-          "avg_engagement": 141.0
+          "engagement": 3255,
+          "avg_engagement": 141.5
         },
         {
           "type": "Text",
