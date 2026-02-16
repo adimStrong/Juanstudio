@@ -258,16 +258,27 @@ def get_page(page_id: str) -> Optional[Dict[str, Any]]:
 
 
 def get_page_by_name(page_name: str, conn=None) -> Optional[Dict[str, Any]]:
-    """Get a page by name (case-insensitive).
+    """Get a page by name (case-insensitive, with fuzzy fallback).
 
     Used to detect duplicate pages that have different IDs in API vs CSV.
+    Falls back to space-stripped matching (e.g. "Juanababe Sena" vs "Juana babe Sena").
     """
     sql = "SELECT * FROM pages WHERE LOWER(page_name) = LOWER(?)"
+    sql_all = "SELECT * FROM pages"
 
     def execute(c):
         cursor = execute_query(c, sql, (page_name,))
         row = cursor.fetchone()
-        return dict(row) if row else None
+        if row:
+            return dict(row)
+        # Fuzzy fallback: strip spaces and compare
+        cursor = execute_query(c, sql_all)
+        needle = page_name.lower().replace(" ", "")
+        for r in cursor.fetchall():
+            db_name = r["page_name"].lower().replace(" ", "")
+            if needle == db_name or needle in db_name or db_name in needle:
+                return dict(r)
+        return None
 
     if conn:
         return execute(conn)
