@@ -65,17 +65,17 @@ def get_existing_post_ids():
 
 
 def fetch_posts_from_api(token, page_id, page_name, days_back=14):
-    """Fetch recent posts from FB API."""
+    """Fetch recent posts from FB API with automatic limit reduction on error."""
     since_date = datetime.now() - timedelta(days=days_back)
     fields = "id,message,created_time,permalink_url,reactions.summary(total_count),comments.summary(total_count),shares"
 
     all_posts = []
     url = f"https://graph.facebook.com/v21.0/{page_id}/posts"
-    # Note: since filter can cause inconsistent results, using limit=100 to get recent posts
+    limit = 25  # Safe default (100 causes errors on viral pages like Ligaya)
     params = {
         "access_token": token,
         "fields": fields,
-        "limit": 100
+        "limit": limit
     }
 
     while True:
@@ -84,7 +84,14 @@ def fetch_posts_from_api(token, page_id, page_name, days_back=14):
             data = resp.json()
 
             if "error" in data:
-                print(f"  [{page_name}] API Error: {data['error'].get('message', 'Unknown')}")
+                error_msg = data['error'].get('message', 'Unknown')
+                if "reduce the amount of data" in error_msg and limit > 5:
+                    # Retry with smaller limit
+                    limit = max(5, limit // 2)
+                    params["limit"] = limit
+                    print(f"  [{page_name}] Reducing limit to {limit} and retrying...")
+                    continue
+                print(f"  [{page_name}] API Error: {error_msg}")
                 break
 
             posts = data.get("data", [])
