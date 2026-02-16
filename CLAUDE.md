@@ -24,18 +24,35 @@ Meta CSV Export ──→ import_manual_exports.py ──→  SQLite (UPDATE vie
 4. **CSV times are UTC.** DB times are PHT (UTC+8) labeled as `+0000`. CSV importer adds +8h before matching.
 5. **deploy = push.bat** which runs: cleanup → export → git push → vercel deploy.
 
-## Daily Update Workflow
+## Daily Morning Workflow
+
+### When you have a NEW CSV from Meta:
 ```
-1. python fetch_missing_posts.py    # Fetch new posts from API (last 14 days)
-2. python import_manual_exports.py  # Update views/reach from CSV (if new CSV exported)
-3. python export_static_data.py     # Rebuild analytics JSON
-4. push.bat                         # Deploy to Vercel
+1. Download CSV from Meta Business Suite (Content > Export)
+2. Drop CSV into: exports\from content manual Export\
+3. Double-click update_csv.bat    (imports views/reach from CSV)
+4. Double-click update_api.bat    (fetches new posts + updates engagement for last 7 days)
+5. Double-click push.bat          (cleanup + export + deploy to Vercel)
 ```
 
-Or use the bat files:
-- `update_api.bat` — steps 1+3
-- `update_csv.bat` — steps 2+3
-- `push.bat` — step 4 (includes cleanup + export)
+### When NO new CSV (just daily refresh):
+```
+1. Double-click update_api.bat    (fetches new posts + updates engagement for last 7 days)
+2. Double-click push.bat          (cleanup + export + deploy to Vercel)
+```
+
+### IMPORTANT:
+- **Views/reach ONLY come from CSV**, NOT from the API. If views show 0, you need a fresh CSV.
+- **Meta CSV has 2-3 day lag** on views/reach data. Recent posts will show 0 until next CSV.
+- **API gives**: new posts + reactions/comments/shares (updates last 7 days of existing posts)
+- **CSV gives**: views, reach, reactions (overwrites with higher values only)
+- Always run `update_api.bat` AFTER `update_csv.bat` (API engagement is more current)
+
+### Bat files:
+- `update_csv.bat` — imports CSV views/reach + exports JSON
+- `update_api.bat` — fetches API posts + updates engagement + exports JSON
+- `push.bat` — cleanup + export + git push + vercel deploy
+- `daily.bat` — combines update_api + push (use when no new CSV)
 
 ## File Locations
 - **CSV exports**: `exports/from content manual Export/*.csv`
