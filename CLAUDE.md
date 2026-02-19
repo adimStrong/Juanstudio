@@ -26,33 +26,36 @@ Meta CSV Export ──→ import_manual_exports.py ──→  SQLite (UPDATE vie
 
 ## Daily Morning Workflow
 
-### When you have a NEW CSV from Meta:
+### RECOMMENDED: Use `daily.bat` (one click does everything)
 ```
-1. Download CSV from Meta Business Suite (Content > Export)
-2. Drop CSV into: exports\from content manual Export\
-3. Double-click update_csv.bat    (imports views/reach from CSV)
-4. Double-click update_api.bat    (fetches new posts + updates engagement for last 7 days)
-5. Double-click push.bat          (cleanup + export + deploy to Vercel)
+1. (Optional) Drop fresh CSV into: exports\from content manual Export\
+2. Double-click daily.bat
 ```
-
-### When NO new CSV (just daily refresh):
-```
-1. Double-click update_api.bat    (fetches new posts + updates engagement for last 7 days)
-2. Double-click push.bat          (cleanup + export + deploy to Vercel)
-```
+`daily.bat` runs all 5 steps automatically with error checking:
+1. Fetch new posts from API
+2. Import CSV views/reach (if CSV files exist)
+3. Clean up duplicates
+4. Export static JSON data
+5. Git push + Vercel deploy
 
 ### IMPORTANT:
 - **Views/reach ONLY come from CSV**, NOT from the API. If views show 0, you need a fresh CSV.
 - **Meta CSV has 2-3 day lag** on views/reach data. Recent posts will show 0 until next CSV.
 - **API gives**: new posts + reactions/comments/shares (updates last 7 days of existing posts)
-- **CSV gives**: views, reach, reactions (overwrites with higher values only)
-- Always run `update_api.bat` AFTER `update_csv.bat` (API engagement is more current)
+- **CSV gives**: views, reach (updates existing posts with higher values only, never creates posts)
+
+### Weekly: Full engagement refresh
+```
+python refresh_engagement.py          # Refresh ALL posts
+python refresh_engagement.py --month  # Refresh current month only
+```
 
 ### Bat files:
-- `update_csv.bat` — imports CSV views/reach + exports JSON
-- `update_api.bat` — fetches API posts + updates engagement + exports JSON
-- `push.bat` — cleanup + export + git push + vercel deploy
-- `daily.bat` — combines update_api + push (use when no new CSV)
+- `daily.bat` — **USE THIS** — full pipeline (API + CSV + cleanup + export + deploy)
+- `update_csv.bat` — imports CSV views/reach + exports JSON (standalone)
+- `update_api.bat` — fetches API posts + updates engagement + exports JSON (standalone)
+- `push.bat` — cleanup + export + git push + vercel deploy (standalone)
+- `refresh_engagement.py` — parallel API refresh of ALL posts (run weekly)
 
 ## File Locations
 - **CSV exports**: `exports/from content manual Export/*.csv`

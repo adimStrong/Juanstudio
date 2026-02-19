@@ -15,7 +15,7 @@ import hashlib
 import glob
 import os
 from datetime import datetime, timedelta
-from database import sync_metrics_to_posts
+# sync_metrics_to_posts REMOVED - it overwrites fresh API data with stale snapshots
 
 DATABASE_PATH = "data/juanstudio_analytics.db"
 OUTPUT_PATH = "frontend/public/data/analytics-v2.json"
@@ -1070,9 +1070,7 @@ def main():
     print("Exporting Static Data for Vercel")
     print("=" * 60)
 
-    # Sync latest metrics from post_metrics to posts table
-    print("\nSyncing metrics...")
-    sync_metrics_to_posts()
+    # sync_metrics_to_posts() REMOVED - posts table is now updated directly by API + CSV
 
     stats_data = export_stats()
     pages_data = export_pages()
