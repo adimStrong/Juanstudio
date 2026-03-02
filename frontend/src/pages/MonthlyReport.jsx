@@ -39,8 +39,17 @@ export default function MonthlyReport() {
     getMonthlyReport(dateRange)
       .then(result => {
         setData(result);
-        if (result.monthly?.length > 0 && !selectedMonth) {
-          setSelectedMonth(result.monthly[0].month);
+        // Always reset selectedMonth to first month matching the new filter
+        const filtered = (result.monthly || []).filter(m => {
+          if (!dateRange.startDate && !dateRange.endDate) return true;
+          const monthStart = m.month + '-01';
+          const monthEnd = m.month + '-31';
+          if (dateRange.startDate && monthEnd < dateRange.startDate) return false;
+          if (dateRange.endDate && monthStart > dateRange.endDate) return false;
+          return true;
+        });
+        if (filtered.length > 0) {
+          setSelectedMonth(filtered[0].month);
         }
       })
       .catch(err => setError(err.message))
