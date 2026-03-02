@@ -428,13 +428,20 @@ def fetch_api_posts_for_date(tokens: dict, target_date: str) -> list:
             all_page_posts = []
             pages_fetched = 0
             max_pages = 3  # Fetch up to 300 posts per page to go back further
+            limit = 100
 
             while url and pages_fetched < max_pages:
                 response = requests.get(url, params=params, timeout=30)
                 data = response.json()
 
                 if "error" in data:
-                    print(f"    API error for page {page_id}: {data['error'].get('message', 'Unknown')}")
+                    error_msg = data['error'].get('message', 'Unknown')
+                    if "reduce the amount of data" in error_msg and limit > 10:
+                        limit = max(10, limit // 2)
+                        params["limit"] = limit
+                        print(f"    [{page_name}] Reducing limit to {limit}, retrying...")
+                        continue
+                    print(f"    API error for page {page_id}: {error_msg}")
                     break
 
                 page_posts = data.get("data", [])
