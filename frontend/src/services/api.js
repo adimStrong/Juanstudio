@@ -692,6 +692,29 @@ export const getMonthlyReport = async (dateRange = {}) => {
   };
 };
 
+export const getPostsByMonth = async () => {
+  const data = await loadStaticData();
+  const posts = (data.posts || []).map(p => normalizePostFields(normalizePostType(p)));
+  const byMonthType = {};
+  posts.forEach(p => {
+    const month = p.publish_time?.slice(0, 7);
+    if (!month) return;
+    const type = p.post_type || 'Unknown';
+    const key = `${month}|${type}`;
+    if (!byMonthType[key]) {
+      byMonthType[key] = { month, post_type: type, count: 0, engagement: 0, reactions: 0, comments: 0, shares: 0, views: 0, reach: 0 };
+    }
+    byMonthType[key].count++;
+    byMonthType[key].engagement += p.engagement || 0;
+    byMonthType[key].reactions += p.reactions || 0;
+    byMonthType[key].comments += p.comments || 0;
+    byMonthType[key].shares += p.shares || 0;
+    byMonthType[key].views += p.views || 0;
+    byMonthType[key].reach += p.reach || 0;
+  });
+  return Object.values(byMonthType);
+};
+
 export const getDateBoundaries = async () => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
