@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   Legend, Cell
@@ -22,6 +22,17 @@ const formatMonth = (monthStr) => {
   return `${months[parseInt(month) - 1]} ${year}`;
 };
 
+function filterMonths(monthly, startDate, endDate) {
+  if (!startDate && !endDate) return monthly;
+  return monthly.filter(m => {
+    const monthStart = m.month + '-01';
+    const monthEnd = m.month + '-31';
+    if (startDate && monthEnd < startDate) return false;
+    if (endDate && monthStart > endDate) return false;
+    return true;
+  });
+}
+
 export default function MonthlyReport() {
   const [data, setData] = useState(null);
   const [selectedMonth, setSelectedMonth] = useState(null);
@@ -30,31 +41,39 @@ export default function MonthlyReport() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Load data once on mount
   useEffect(() => {
-    getDateBoundaries().then(setDateBoundaries).catch(() => {});
-  }, []);
-
-  useEffect(() => {
-    setLoading(true);
-    getMonthlyReport(dateRange)
-      .then(result => {
+    Promise.all([getMonthlyReport(), getDateBoundaries()])
+      .then(([result, bounds]) => {
         setData(result);
-        // Always reset selectedMonth to first month matching the new filter
-        const filtered = (result.monthly || []).filter(m => {
-          if (!dateRange.startDate && !dateRange.endDate) return true;
-          const monthStart = m.month + '-01';
-          const monthEnd = m.month + '-31';
-          if (dateRange.startDate && monthEnd < dateRange.startDate) return false;
-          if (dateRange.endDate && monthStart > dateRange.endDate) return false;
-          return true;
-        });
-        if (filtered.length > 0) {
-          setSelectedMonth(filtered[0].month);
+        setDateBoundaries(bounds);
+        if (result.monthly?.length > 0) {
+          setSelectedMonth(result.monthly[0].month);
         }
       })
       .catch(err => setError(err.message))
       .finally(() => setLoading(false));
-  }, [dateRange]);
+  }, []);
+
+  // Filter monthly data reactively based on dateRange
+  const filteredMonthly = useMemo(() => {
+    if (!data?.monthly) return [];
+    return filterMonths(data.monthly, dateRange.startDate, dateRange.endDate);
+  }, [data, dateRange.startDate, dateRange.endDate]);
+
+  // Reset selectedMonth when filter changes and current selection is outside filtered range
+  useEffect(() => {
+    if (filteredMonthly.length > 0) {
+      const stillValid = filteredMonthly.some(m => m.month === selectedMonth);
+      if (!stillValid) {
+        setSelectedMonth(filteredMonthly[0].month);
+      }
+    }
+  }, [filteredMonthly, selectedMonth]);
+
+  const handleDateChange = (newRange) => {
+    setDateRange(newRange);
+  };
 
   if (loading) return (
     <div className="flex items-center justify-center h-64">
@@ -66,17 +85,7 @@ export default function MonthlyReport() {
     <div className="bg-red-50 text-red-600 p-4 rounded-lg">Failed to load data: {error}</div>
   );
 
-  const { monthly = [], monthlyByPage = {} } = data || {};
-
-  // Filter monthly data by date range
-  const filteredMonthly = monthly.filter(m => {
-    if (!dateRange.startDate && !dateRange.endDate) return true;
-    const monthStart = m.month + '-01';
-    const monthEnd = m.month + '-31';
-    if (dateRange.startDate && monthEnd < dateRange.startDate) return false;
-    if (dateRange.endDate && monthStart > dateRange.endDate) return false;
-    return true;
-  });
+  const { monthlyByPage = {} } = data || {};
 
   // Summary stats across all filtered months
   const totalPosts = filteredMonthly.reduce((s, m) => s + m.posts, 0);
@@ -132,7 +141,7 @@ export default function MonthlyReport() {
           <p className="text-gray-500 text-sm">Monthly averages and per-page breakdown</p>
         </div>
         <DateFilter
-          onDateChange={setDateRange}
+          onDateChange={handleDateChange}
           minDate={dateBoundaries.minDate}
           maxDate={dateBoundaries.maxDate}
         />
