@@ -6,6 +6,7 @@ import Pages from './pages/Pages';
 import Comments from './pages/Comments';
 import Imports from './pages/Imports';
 import Overlap from './pages/Overlap';
+import MonthlyReport from './pages/MonthlyReport';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="comments" element={<Comments />} />
           <Route path="imports" element={<Imports />} />
           <Route path="overlap" element={<Overlap />} />
+          <Route path="monthly" element={<MonthlyReport />} />
         </Route>
       </Routes>
     </BrowserRouter>

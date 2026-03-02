@@ -613,10 +613,73 @@ def export_time_series():
             "avg_views": round(row[6], 1)
         })
 
+    # Monthly data by page
+    cursor = conn.cursor()
+    cursor.execute(f"""
+        SELECT
+            {month_expr} as month,
+            p.page_id,
+            pg.page_name,
+            COUNT(*) as post_count,
+            COALESCE(SUM(p.reactions_total), 0) as reactions,
+            COALESCE(SUM(p.comments_count), 0) as comments,
+            COALESCE(SUM(p.shares_count), 0) as shares,
+            COALESCE(SUM(p.views_count), 0) as views,
+            COALESCE(SUM(p.reach_count), 0) as reach,
+            COALESCE(SUM(p.total_engagement), 0) as engagement,
+            COALESCE(AVG(p.total_engagement), 0) as avg_engagement
+        FROM posts p
+        LEFT JOIN pages pg ON p.page_id = pg.page_id
+        WHERE p.publish_time IS NOT NULL
+            AND (p.reactions_total > 0 OR p.comments_count > 0 OR p.shares_count > 0)
+        GROUP BY {month_expr}, p.page_id
+        ORDER BY month DESC, engagement DESC
+    """)
+
+    monthly_by_page_raw = {}
+    for row in cursor.fetchall():
+        month, page_id, page_name = row[0], row[1], row[2]
+        if page_id not in monthly_by_page_raw:
+            monthly_by_page_raw[page_id] = {"page_name": page_name, "months": {}}
+        monthly_by_page_raw[page_id]["months"][month] = {
+            "month": month,
+            "posts": row[3],
+            "reactions": row[4],
+            "comments": row[5],
+            "shares": row[6],
+            "views": row[7],
+            "reach": row[8],
+            "engagement": row[9],
+            "avg_engagement": round(row[10], 1)
+        }
+
+    # Calculate MoM change per page and build final structure
+    monthly_by_page = {}
+    all_months_sorted = sorted(set(m["month"] for m in monthly), reverse=False)  # oldest first
+    for page_id, pdata in monthly_by_page_raw.items():
+        page_months = []
+        prev_eng = None
+        for m in all_months_sorted:
+            if m in pdata["months"]:
+                entry = pdata["months"][m]
+                mom_change = None
+                if prev_eng and prev_eng > 0:
+                    mom_change = round(((entry["engagement"] - prev_eng) / prev_eng) * 100, 1)
+                entry["mom_change"] = mom_change
+                page_months.append(entry)
+                prev_eng = entry["engagement"]
+            else:
+                prev_eng = None
+        monthly_by_page[page_id] = {
+            "page_name": pdata["page_name"],
+            "data": list(reversed(page_months))  # Most recent first
+        }
+
     conn.close()
 
     return {
         "monthly": list(reversed(monthly)),  # Most recent first
+        "monthlyByPage": monthly_by_page,
         "weekly": list(reversed(weekly)),    # Most recent first
         "dayOfWeek": day_of_week,
         "pageRankings": page_rankings,

@@ -683,6 +683,15 @@ export const getPageComparison = async (dateRange = {}) => {
   return api.get('/stats/page-comparison').then(res => res.data);
 };
 
+export const getMonthlyReport = async (dateRange = {}) => {
+  const data = await loadStaticData();
+  return {
+    monthly: data.timeSeries?.monthly || [],
+    monthlyByPage: data.timeSeries?.monthlyByPage || {},
+    pages: data.pages || []
+  };
+};
+
 export const getDateBoundaries = async () => {
   if (IS_PRODUCTION) {
     const data = await loadStaticData();
