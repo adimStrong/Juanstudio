@@ -8,6 +8,7 @@ const navItems = [
   { path: '/comments', label: 'Comments', icon: '💬' },
   { path: '/overlap', label: 'Comparison', icon: '📈' },
   { path: '/monthly', label: 'Monthly', icon: '📅' },
+  { path: '/daily', label: 'Daily', icon: '📆' },
 ];
 
 // v3 - force rebuild
