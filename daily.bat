@@ -11,7 +11,7 @@ echo   %date% %time%
 echo ============================================================
 echo.
 
-echo [1/5] Fetching new posts from API...
+echo [1/6] Fetching new posts from API...
 python fetch_missing_posts.py --silent
 if errorlevel 1 (
     echo ERROR: fetch_missing_posts.py failed!
@@ -19,7 +19,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo [2/5] Importing CSV views/reach...
+echo [2/6] Importing CSV views/reach...
 if exist "exports\from content manual Export\*.csv" (
     python import_manual_exports.py
     if errorlevel 1 (
@@ -31,7 +31,15 @@ if exist "exports\from content manual Export\*.csv" (
 )
 
 echo.
-echo [3/5] Cleaning up duplicates...
+echo [3/6] Backfilling views/reach from API insights...
+python backfill_views_reach.py
+if errorlevel 1 (
+    echo ERROR: backfill_views_reach.py failed!
+    set /a ERRORS+=1
+)
+
+echo.
+echo [4/6] Cleaning up duplicates...
 python cleanup_duplicates.py
 if errorlevel 1 (
     echo ERROR: cleanup_duplicates.py failed!
@@ -39,7 +47,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo [4/5] Exporting static data...
+echo [5/6] Exporting static data...
 python export_static_data.py
 if errorlevel 1 (
     echo ERROR: export_static_data.py failed!
@@ -50,7 +58,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo [5/5] Deploying to Vercel...
+echo [6/6] Deploying to Vercel...
 %GIT% add -A
 %GIT% commit -m "Daily update - %date% %time%"
 %GIT% push origin main
